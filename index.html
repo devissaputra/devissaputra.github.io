@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devis Wawan Saputra — Academic Portfolio</title>
+  <meta name="description" content="Academic portfolio of Devis Wawan Saputra: research interests in data-centric machine learning, reliability of ML-enabled systems, and learning analytics for workplace training." />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #12131a;
+      --text: #e8e8ee;
+      --muted: #b7b7c8;
+      --border: rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --accent: #7dd3fc;
+      --accent2: #a7f3d0;
+      --max: 980px;
+      --radius: 18px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #fafafa;
+        --panel: #ffffff;
+        --text: #14161a;
+        --muted: #4b5563;
+        --border: rgba(20,22,26,.12);
+        --shadow: 0 12px 30px rgba(20,22,26,.08);
+        --accent: #0284c7;
+        --accent2: #059669;
+      }
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(125, 211, 252,.18), transparent 60%),
+                  radial-gradient(900px 700px at 100% 10%, rgba(167, 243, 208,.14), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 28px 18px 70px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--bg) 78%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .nav .left {
+      display: flex; align-items: center; gap: 12px; min-width: 0;
+    }
+    .mark {
+      width: 36px; height: 36px; border-radius: 12px;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 85%, white), color-mix(in srgb, var(--accent2) 85%, white));
+      box-shadow: var(--shadow);
+      flex: 0 0 auto;
+    }
+    .nav .name {
+      font-weight: 700; letter-spacing: .2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .nav .links {
+      display: flex; flex-wrap: wrap; gap: 10px 14px; justify-content: flex-end;
+      font-size: 14px;
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 10px; border-radius: 999px;
+      border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--panel) 82%, transparent);
+    }
+    .chip span { color: var(--muted); }
+    .hero {
+      padding: 22px 0 6px;
+    }
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.08;
+      letter-spacing: -0.4px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 70ch;
+    }
+    .cta {
+      margin-top: 18px;
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 12px; border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .btn:hover { text-decoration: none; transform: translateY(-1px); }
+    .btn.primary {
+      border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 22%, var(--panel)), var(--panel));
+    }
+    .btn.ghost {
+      background: transparent;
+      box-shadow: none;
+    }
+    .grid {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+    }
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      .nav .links { display: none; }
+    }
+    section {
+      margin-top: 18px;
+      background: color-mix(in srgb, var(--panel) 90%, transparent);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    section h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: .1px;
+    }
+    .muted { color: var(--muted); }
+    .kpi {
+      display: grid; gap: 10px;
+    }
+    .kpi .row {
+      display: flex; justify-content: space-between; gap: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: color-mix(in srgb, var(--panel) 70%, transparent);
+    }
+    .kpi .row b { font-weight: 700; }
+    .kpi .row span { color: var(--muted); }
+    .items { display: grid; gap: 12px; }
+    .item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 14px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: color-mix(in srgb, var(--panel) 70%, transparent);
+    }
+    @media (max-width: 640px) {
+      .item { grid-template-columns: 1fr; }
+    }
+    .dates { font-weight: 700; font-size: 13px; color: color-mix(in srgb, var(--text) 88%, var(--muted)); }
+    .sub { color: var(--muted); font-size: 14px; margin-top: 2px; }
+    .small { color: var(--muted); font-size: 14px; margin: 8px 0 0; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 900px) { .cards { grid-template-columns: 1fr; } }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      background: color-mix(in srgb, var(--panel) 74%, transparent);
+    }
+    .card h3 { margin: 0 0 8px; font-size: 16px; }
+    .card p { margin: 0; color: var(--muted); }
+    .actions { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+    ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+    li { margin: 6px 0; }
+    .tag {
+      display: inline-flex; align-items: center;
+      padding: 3px 8px; border-radius: 999px;
+      border: 1px solid var(--border);
+      margin-right: 8px;
+      font-size: 12px;
+      color: color-mix(in srgb, var(--text) 85%, var(--muted));
+      background: color-mix(in srgb, var(--panel) 62%, transparent);
+    }
+    .pill {
+      display: inline-flex; align-items: center;
+      padding: 6px 10px; border-radius: 999px;
+      border: 1px solid var(--border);
+      margin: 4px 6px 0 0;
+      font-size: 13px;
+      color: color-mix(in srgb, var(--text) 88%, var(--muted));
+      background: color-mix(in srgb, var(--panel) 65%, transparent);
+    }
+    .skillrow {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 12px;
+      padding: 10px 0;
+      border-top: 1px dashed var(--border);
+    }
+    .skillrow:first-child { border-top: none; padding-top: 0; }
+    .skillkey { font-weight: 700; }
+    footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Devis Wawan Saputra",
+  "email": "mailto:devis.saputra@gmail.com",
+  "url": "https://github.com/devissaputra",
+  "sameAs": [
+    "https://github.com/devissaputra",
+    "https://linkedin.com/in/devissaputra",
+    "https://xing.com/profile/Devis_Saputra"
+  ],
+  "knowsAbout": [
+    "Data-centric Machine Learning",
+    "ML Reliability",
+    "Learning Analytics",
+    "Workplace Learning & Development"
+  ]
+}
+  </script>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="nav">
+      <div class="left">
+        <div class="mark" aria-hidden="true"></div>
+        <div class="name">Devis Wawan Saputra</div>
+      </div>
+      <div class="links">
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header class="hero" id="top">
+      <h1>Devis Wawan Saputra</h1>
+      <p class="subtitle">
+        Academic portfolio — focusing on <span class="mono">data-centric ML</span>, <span class="mono">ML reliability</span>, and <span class="mono">learning analytics</span>.
+      </p>
+      <div class="cta" id="contact">
+        <a class="btn primary" href="mailto:devis.saputra@gmail.com">Email</a>
+        <a class="btn" href="https://github.com/devissaputra" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/devissaputra" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://xing.com/profile/Devis_Saputra" target="_blank" rel="noopener">Xing</a>
+        <a class="btn ghost" href="#" target="_blank" rel="noopener" title="Replace # with your Google Scholar URL">Google Scholar</a>
+      </div>
+      <p class="small">Tip: replace the Google Scholar button link once you paste your Scholar profile URL.</p>
+    </header>
+
+    <div class="grid">
+      <section id="research">
+        <h2>Research</h2>
+        <p>I work at the intersection of <strong>data-centric machine learning</strong> and <strong>evidence-based Learning &amp; Development (L&amp;D)</strong>. My primary research interest is improving the <em>reliability</em> of ML-enabled systems through better data pipelines, data quality practices, and reproducible data-to-model workflows. My second research interest is designing workplace learning systems that measurably improve performance, using learning analytics and AI to personalize learning paths, evaluate outcomes, and continuously improve training programs.</p>
+        <h3 style="margin:14px 0 6px; font-size: 16px;">Potential PhD directions</h3>
+        <ul>
+          <li>Data-centric ML: dataset quality, labeling strategies, and reproducible pipelines for trustworthy models</li>
+<li>Reliability of ML-enabled systems: evaluation, monitoring, and robust data-to-model workflows</li>
+<li>Learning analytics for workplace training: measurement, personalization, and outcome evaluation</li>
+<li>AI-assisted instructional design: adaptive learning paths and continuous improvement loops</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>At a glance</h2>
+        <div class="kpi">
+          <div class="row"><b>Industry + academia</b><span>MBA + Informatics (B.Eng.)</span></div>
+          <div class="row"><b>Teaching & supervision</b><span>200+ bachelor projects/capstones</span></div>
+          <div class="row"><b>Learning systems</b><span>Rocketversity; data-driven L&amp;D</span></div>
+        </div>
+        <p class="small">This summary is based on the information in your academic portfolio document.</p>
+      </section>
+    </div>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="items">
+        
+    <article class="item">
+      <div class="meta">
+        <div class="dates">Oct 2012 – Jun 2014</div>
+      </div>
+      <div class="content">
+        <h3>MBA, International Business</h3>
+        <div class="sub">THWS – Technical University of Applied Sciences Würzburg-Schweinfurt, Germany</div>
+        <p class="small">Master Thesis: Leadership on Flat Organizational Structures (self-managing teams; open allocation strategy)<br><span class="muted">Advisor: Prof. Dr. Arnd Gottschalk</span></p>
+      </div>
+    </article>
+    
+    <article class="item">
+      <div class="meta">
+        <div class="dates">Aug 2004 – Mar 2010</div>
+      </div>
+      <div class="content">
+        <h3>B.Eng., Informatics</h3>
+        <div class="sub">Institut Teknologi Bandung (ITB), Indonesia</div>
+        <p class="small">Bachelor Thesis: Image Retrieval System Using Geotagging Information<br><span class="muted">Advisor: Ir. Rila Mandala, M.Eng., Ph.D.</span></p>
+      </div>
+    </article>
+    
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="items">
+        
+    <article class="item">
+      <div class="meta">
+        <div class="dates">Feb 2023 – Aug 2024</div>
+      </div>
+      <div class="content">
+        <h3>Learning & Development Manager</h3>
+        <div class="sub">Suitmedia · Jakarta, Indonesia</div>
+        <p class='small'>Led corporate learning initiatives; contributed to Rocketversity (online learning platform).</p>
+      </div>
+    </article>
+    
+    <article class="item">
+      <div class="meta">
+        <div class="dates">May 2016 – Jun 2023</div>
+      </div>
+      <div class="content">
+        <h3>Lecturer, Engineering Management Program</h3>
+        <div class="sub">Institut Teknologi Del · Laguboti, Indonesia</div>
+        <p class='small'>Taught Systems Thinking, Engineering Economics, Entrepreneurship, and Capstone; supervised 200+ bachelor projects/capstones.</p>
+      </div>
+    </article>
+    
+    <article class="item">
+      <div class="meta">
+        <div class="dates">May 2015 – Oct 2015</div>
+      </div>
+      <div class="content">
+        <h3>Program Manager (Health Tech Initiative)</h3>
+        <div class="sub">Summit Institute of Development · Mataram, Indonesia</div>
+        <p class='small'>Supported health-tech implementation work linked to OpenSRP/THRIVE.</p>
+      </div>
+    </article>
+    
+    <article class="item">
+      <div class="meta">
+        <div class="dates">Apr 2011 – Aug 2011</div>
+      </div>
+      <div class="content">
+        <h3>R&amp;D Engineer</h3>
+        <div class="sub">PT Cipta Srigati Lestari · Jakarta, Indonesia</div>
+        
+      </div>
+    </article>
+    
+    <article class="item">
+      <div class="meta">
+        <div class="dates">Aug 2008 – Jul 2009</div>
+      </div>
+      <div class="content">
+        <h3>Assistant</h3>
+        <div class="sub">Pusat Open Source Software ITB · Bandung, Indonesia</div>
+        
+      </div>
+    </article>
+    
+    <article class="item">
+      <div class="meta">
+        <div class="dates">May 2007 – Jul 2008</div>
+      </div>
+      <div class="content">
+        <h3>Network &amp; System Administrator</h3>
+        <div class="sub">STEI ITB · Bandung, Indonesia</div>
+        
+      </div>
+    </article>
+    
+    <article class="item">
+      <div class="meta">
+        <div class="dates">Jun 2007 – Aug 2007</div>
+      </div>
+      <div class="content">
+        <h3>Intern, Quality Assurance</h3>
+        <div class="sub">PT Visi Solusi Teknologi (Visitek) · Jakarta, Indonesia</div>
+        
+      </div>
+    </article>
+    
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Selected projects</h2>
+      <div class="cards">
+        
+    <article class="card">
+      <h3>Rocketversity (Suitmedia)</h3>
+      <p>Suitmedia’s online learning (corporate training) platform offering free, mostly self-paced courses to build practical digital skills (e.g., digital marketing, software/web development, UI/UX, and creative design).</p>
+      <div class="actions">
+        <a class='btn ghost' href='https://rocketversity.com/' target='_blank' rel='noopener'>Visit</a>
+      </div>
+    </article>
+    
+    <article class="card">
+      <h3>Open Smart Register Platform / THRIVE (Summit Institute of Development)</h3>
+      <p>THRIVE Indonesia is a multi-site research and implementation program that locally adapts and pilots OpenSRP (Open Smart Register Platform) to digitize frontline RMNCH service workflows and improve data quality and timeliness.</p>
+      <div class="actions">
+        <a class='btn ghost' href='https://www.sid-indonesia.org/id/thrive-indonesia-program' target='_blank' rel='noopener'>Visit</a>
+      </div>
+    </article>
+    
+    <article class="card">
+      <h3>Astra Lean Production System Laboratory (Institut Teknologi Del)</h3>
+      <p>A PT Astra–supported teaching laboratory for hands-on practicum in production systems and lean methods (e.g., 5S/5R, continuous improvement, kanban/JIT, standardized work) and industry-oriented training.</p>
+      <div class="actions">
+        
+      </div>
+    </article>
+    
+      </div>
+    </section>
+
+    <section id="grants">
+      <h2>Research grants</h2>
+      <ul>
+        <li><strong>2019</strong> — National competitive grant (PDP/Dosen Pemula): Performance Investigation of Geothermal Power Plant Based on Exergy and Exergoeconomic Analyses (Case Study: Sarulla Geothermal Power Plant)</li>
+<li><strong>2019</strong> — Internal fund project: Manufacturing and Application of Andaliman Drying Tools to Increase the Productivity of Andaliman Derivative Products (Case Study: Eden Park 100)</li>
+<li><strong>2019</strong> — Internal fund project: Development of Toba Andaliman (Zanthoxylum Acanthopodium) derivative products and community-based supply chain as a superior product of Toba Samosir supporting Lake Toba as a national strategic tourism area</li>
+<li><strong>2022</strong> — Internal fund project: Analysis of sport tourism potential in the Lake Toba area</li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul>
+        <li><strong>Courses:</strong> Systems Thinking, Engineering Economics, Entrepreneurship, Capstone</li>
+        <li><strong>Supervision:</strong> 200+ bachelor projects and capstones (software, system evaluation, AI applications)</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <h3 style="margin: 12px 0 6px; font-size: 16px;">Journal and conference papers</h3>
+      <ul>
+        <li><span class='tag'>Conference</span> Fitriani Tupa R. Silalahi, Devis W. Saputra, et al. (2022). Influencing Student Choice: A Case Study of a Boarding Private University in Indonesia. ICEBE. <a href='https://doi.org/10.2991/978-2-38476-064-0_46' target='_blank' rel='noopener'>DOI/Link</a></li>
+<li><span class='tag'>Conference/Journal</span> Simamora, N., Simanjuntak, Devis W.S., Tampubolon, N. (2022). Sport Tourism in Lake Toba Area: Moving Forward. APIAR.</li>
+<li><span class='tag'>Journal</span> Saputra, D.W. (2022). Optimization of Courier Distribution Routes Using the Traveling Salesman Problem Method (Case Study: JNE Balige). G-Tech Jurnal Teknologi Terapan. <a href='https://doi.org/10.33379/gtech.v6i2.1577' target='_blank' rel='noopener'>DOI/Link</a></li>
+<li><span class='tag'>Journal</span> Meliala, G.N., Saputra, D.W. (2020). Proposed Non-Cement Warehouse Layout Using Class-Based Storage Method. Jurnal Industri Kreatif (JIK). <a href='https://doi.org/10.36352/jik.v4i01.23' target='_blank' rel='noopener'>DOI/Link</a></li>
+<li><span class='tag'>Journal</span> Tampubolon, S.L., Saputra, D.W., Simanjuntak, M. (2020). Analysis of Tourist Satisfaction on Tourism Attributes Using CSI and IPA. Jurnal Sains dan Teknologi.</li>
+<li><span class='tag'>Journal</span> Siboro, B.A.H., Sinaga, R.H.M., Saputra, D.W. (2020). Design and Build Andaliman Dryer Using the QFD Method. Jurnal Sains dan Teknologi. <a href='https://doi.org/10.36275/stsp.v19i2.210' target='_blank' rel='noopener'>DOI/Link</a></li>
+<li><span class='tag'>Conference</span> Sinaga, R.H.M., Saputra, D.W. (2019). Performance Investigation of Geothermal Power Plant Based on Exergy and Exergoeconomic Analysis. IOP Conference Series: Materials Science and Engineering. <a href='https://doi.org/10.1088/1757-899X/546/7/072006' target='_blank' rel='noopener'>DOI/Link</a></li>
+
+      </ul>
+      <h3 style="margin: 14px 0 6px; font-size: 16px;">Books and technical publications</h3>
+      <ul>
+        <li>Saputra, D.W., Siboro, B.A.H., Sinaga, C. (2022). Methodology for the Implementation of Practical Work in Engineering Management.</li>
+<li>Siboro, B.A.H., Manik, Y., Pardede, S., Panjaitan, O., Siahaan, M., Simamora, E., Sinaga, R.H., Saputra, D.W., et al. (2022). Andaliman Value Enhancement: Supply Chain, Derivative Products, and Appropriate Technology.</li>
+<li>Saputra, D.W. (2019). Curriculum of Engineering Management Program Del Institute of Technology 2019–2024.</li>
+      </ul>
+    </section>
+
+    <section id="service">
+      <h2>Academic service and leadership</h2>
+      <ul>
+        <li>IT Del Senate member (Engineering Management Department)</li>
+<li>Examiner in bachelor thesis defenses</li>
+<li>Authored official curricula (Engineering Management Curriculum 2019–2024)</li>
+<li>Managed internship process for Engineering Management (2018–2023)</li>
+<li>Holder of Intellectual Property Right for an Andaliman fryer (QFD-based design)</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Technical skills</h2>
+      <div class='skillrow'><div class='skillkey'>Programming</div><div class='skillvals'><span class='pill'>Python</span> <span class='pill'>C</span> <span class='pill'>LISP</span> <span class='pill'>HTML</span> <span class='pill'>CSS</span> <span class='pill'>JavaScript</span> <span class='pill'>PHP</span></div></div><div class='skillrow'><div class='skillkey'>Platforms</div><div class='skillvals'><span class='pill'>Moodle</span> <span class='pill'>Rocketversity</span></div></div><div class='skillrow'><div class='skillkey'>Tools</div><div class='skillvals'><span class='pill'>Git</span> <span class='pill'>Trello</span> <span class='pill'>SQL</span></div></div><div class='skillrow'><div class='skillkey'>AI/ML</div><div class='skillvals'><span class='pill'>NumPy</span> <span class='pill'>TensorFlow</span> <span class='pill'>PyTorch</span></div></div>
+      <div style="margin-top: 12px;">
+        <div class="skillrow" style="border-top: 1px dashed var(--border); padding-top: 12px;">
+          <div class="skillkey">Languages</div>
+          <div class="skillvals muted">Bahasa Indonesia (native), English (C1), German (B2), Bataknese (native)</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="development">
+      <h2>Training and professional development</h2>
+      <ul>
+        <li>Machine Learning Bootcamp (Indonesia AI), 2025</li>
+<li>Intercultural Team-Building Seminar, Gayfié, France, 2013</li>
+<li>German Language Course (B2), Hartnackschule Berlin, Sep 2011 – Jan 2012</li>
+      </ul>
+    </section>
+
+    <section id="ipr">
+      <h2>Intellectual Property Rights</h2>
+      <p class="muted">Andaliman Dryer Design &amp; Construction Team (QFD method) — Intellectual Property Rights (IPR) Certificate, 2020</p>
+    </section>
+
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <ul>
+        <li>TOEFL iBT (2012): 101</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Devis Wawan Saputra · Built for GitHub Pages</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
