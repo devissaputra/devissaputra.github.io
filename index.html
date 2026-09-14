@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devis Wawan Saputra — Research Portfolio</title>
+<meta name="description" content="Research portfolio of Devis Wawan Saputra — instructional design, organizational learning, and AI adoption in emerging-economy organizations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF0EF;
+    --paper-raised:#F5F6F5;
+    --ink:#1B2430;
+    --ink-soft:#5B6660;
+    --line:#C9CDC5;
+    --accent:#2F5D62;
+    --accent-soft:#DDE6E4;
+    --live:#B5563B;
+    --live-soft:#F1DED7;
+    --serif: "Source Serif 4", Georgia, serif;
+    --sans: "IBM Plex Sans", -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:var(--accent);}
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+  }
+
+  h1,h2,h3{
+    font-family:var(--serif);
+    font-weight:600;
+    line-height:1.2;
+    margin:0;
+  }
+
+  .page{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    max-width:1180px;
+    margin:0 auto;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{
+    padding:64px 32px 64px 40px;
+    position:sticky;
+    top:0;
+    align-self:start;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+
+  .sidebar-top h1{
+    font-size:1.7rem;
+    letter-spacing:-0.01em;
+  }
+
+  .tagline{
+    margin-top:10px;
+    color:var(--ink-soft);
+    font-size:0.98rem;
+    max-width:22ch;
+  }
+
+  .meta-block{
+    margin-top:28px;
+    font-size:0.9rem;
+    color:var(--ink-soft);
+  }
+  .meta-block div{margin-bottom:4px;}
+
+  nav.toc{
+    margin-top:40px;
+  }
+  nav.toc a{
+    display:block;
+    padding:7px 0;
+    color:var(--ink);
+    text-decoration:none;
+    font-size:0.95rem;
+    border-left:2px solid transparent;
+    padding-left:12px;
+    margin-left:-12px;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  nav.toc a:hover,
+  nav.toc a:focus-visible{
+    border-left-color:var(--accent);
+    color:var(--accent);
+  }
+
+  .sidebar-bottom{
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+  .sidebar-bottom a{
+    display:inline-block;
+    margin-right:14px;
+  }
+
+  /* ---------- Main content ---------- */
+  .content{
+    padding:64px 48px 96px 24px;
+    border-left:1px solid var(--line);
+  }
+
+  section{
+    max-width:640px;
+    margin-bottom:76px;
+    scroll-margin-top:32px;
+  }
+  section:last-of-type{margin-bottom:0;}
+
+  .eyebrow-rule{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:22px;
+  }
+  .eyebrow-rule h2{
+    font-size:1.4rem;
+    white-space:nowrap;
+  }
+  .eyebrow-rule::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+
+  p{margin:0 0 16px 0;}
+  p:last-child{margin-bottom:0;}
+
+  .lede{
+    font-family:var(--serif);
+    font-size:1.18rem;
+    line-height:1.5;
+  }
+
+  .research-frame{
+    margin-top:20px;
+    font-size:0.92rem;
+    color:var(--ink-soft);
+  }
+  .research-frame span{
+    color:var(--ink);
+  }
+
+  /* ---------- Timeline ---------- */
+  .timeline{
+    position:relative;
+    padding-left:28px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:5px;
+    top:6px;
+    bottom:6px;
+    width:1px;
+    background:var(--line);
+  }
+
+  .entry{
+    position:relative;
+    padding-bottom:34px;
+  }
+  .entry:last-child{padding-bottom:0;}
+
+  .entry::before{
+    content:"";
+    position:absolute;
+    left:-28px;
+    top:5px;
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:var(--accent);
+    border:2px solid var(--paper);
+    box-shadow:0 0 0 1px var(--accent);
+  }
+  .entry.live::before{
+    background:var(--live);
+    box-shadow:0 0 0 1px var(--live);
+  }
+
+  .entry .years{
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    font-variant-numeric:tabular-nums;
+    margin-bottom:4px;
+  }
+  .entry h3{
+    font-size:1.05rem;
+  }
+  .entry .org{
+    font-size:0.92rem;
+    color:var(--ink-soft);
+    margin-top:2px;
+    margin-bottom:8px;
+  }
+  .entry p{font-size:0.95rem;}
+
+  .entry.live .years{
+    color:var(--live);
+    font-weight:500;
+  }
+
+  /* ---------- Publications ---------- */
+  .pub-list{
+    list-style:none;
+    margin:0 0 20px 0;
+    padding:0;
+  }
+  .pub-list li{
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+    font-size:0.95rem;
+  }
+  .pub-list li:first-child{padding-top:0;}
+  .pub-title{
+    font-family:var(--serif);
+    display:block;
+    margin-bottom:2px;
+  }
+  .pub-meta{
+    color:var(--ink-soft);
+    font-size:0.85rem;
+  }
+
+  .pub-note{
+    font-size:0.88rem;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- Skills ---------- */
+  .skill-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px 32px;
+  }
+  .skill-group h3{
+    font-size:0.82rem;
+    font-family:var(--sans);
+    font-weight:600;
+    color:var(--ink-soft);
+    margin-bottom:8px;
+  }
+  .skill-group p{
+    font-size:0.93rem;
+    margin-bottom:0;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:8px;
+  }
+  .contact-row a{
+    font-size:0.95rem;
+    padding:9px 16px;
+    border:1px solid var(--line);
+    border-radius:2px;
+    text-decoration:none;
+    color:var(--ink);
+    background:var(--paper-raised);
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .contact-row a:hover,
+  .contact-row a:focus-visible{
+    border-color:var(--accent);
+    color:var(--accent);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:860px){
+    .page{grid-template-columns:1fr;}
+    .sidebar{
+      position:static;
+      height:auto;
+      padding:40px 24px 32px 24px;
+      flex-direction:row;
+      justify-content:space-between;
+      align-items:flex-start;
+      flex-wrap:wrap;
+      border-bottom:1px solid var(--line);
+    }
+    .sidebar-top{flex:1 1 220px;}
+    nav.toc{display:none;}
+    .content{
+      padding:40px 24px 64px 24px;
+      border-left:none;
+    }
+    .skill-grid{grid-template-columns:1fr;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <h1>Devis Wawan Saputra</h1>
+      <p class="tagline">Learning designer working toward doctoral research on AI adoption in organizations.</p>
+      <div class="meta-block">
+        <div>Medan, Indonesia · UTC+7</div>
+        <div>Open to relocation</div>
+      </div>
+      <nav class="toc" aria-label="Section navigation">
+        <a href="#research">Research</a>
+        <a href="#path">Path</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="sidebar-bottom">
+      <a href="mailto:devis.saputra@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/devissaputra">LinkedIn</a>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <section id="research">
+      <div class="eyebrow-rule"><h2>Research</h2></div>
+      <p class="lede">Does adopting AI build genuine organizational capability in emerging-economy firms, or does it create a new form of dependency on tools designed elsewhere?</p>
+      <p>That is the question behind the doctoral work I am pursuing. It draws on dynamic capabilities theory and organizational learning theory, and reads both against a critical view of how technology transfers into institutional contexts it was not built for. Ten years spent building curricula, learning systems, and now evaluating AI-generated instructional content have shaped this question directly, rather than being reframed to justify it after the fact.</p>
+      <p class="research-frame">Target departments: <span>Management, Information Systems, and Educational Technology</span> — not general AI-labeled positions.</p>
+    </section>
+
+    <section id="path">
+      <div class="eyebrow-rule"><h2>Path</h2></div>
+      <div class="timeline">
+
+        <div class="entry live">
+          <div class="years">2025 — present</div>
+          <h3>Doctoral search &amp; freelance consulting</h3>
+          <div class="org">Independent · Remote, Indonesia</div>
+          <p>Advising international clients on instructional design while building toward a PhD position in Europe. Completed an Advanced Machine Learning and Deep Learning certification in 2025 to close the quantitative gap between an MBA background and a data-driven research direction.</p>
+        </div>
+
+        <div class="entry">
+          <div class="years">2023 — 2024</div>
+          <h3>Learning and Development Manager</h3>
+          <div class="org">Suitmedia · Jakarta (remote)</div>
+          <p>Led a four-person team to design and launch Rocketversity, a Moodle-based LMS with 120 SCORM courses, cutting new-hire time to productivity by 30% across a 100-plus person workforce.</p>
+        </div>
+
+        <div class="entry">
+          <div class="years">2016 — 2023</div>
+          <h3>Lecturer &amp; Head of Engineering Management Program</h3>
+          <div class="org">Institut Teknologi Del · Laguboti, Indonesia</div>
+          <p>Designed and governed a five-year, six-domain competency-based curriculum. Supervised more than fifty capstone thesis teams and delivered blended, competency-based instruction to 200-plus learners.</p>
+        </div>
+
+        <div class="entry">
+          <div class="years">2015</div>
+          <h3>Program Manager, Health Technology Initiative</h3>
+          <div class="org">Summit Institute for Development · Mataram, Indonesia</div>
+          <p>Directed a ten-person field and development team deploying a maternal and child health data system across sixteen districts, in partnership with PATH, UNICEF, the Gates Foundation, and the Lombok Health Department.</p>
+        </div>
+
+        <div class="entry">
+          <div class="years">2012 — 2014</div>
+          <h3>MBA, International Business</h3>
+          <div class="org">THWS Würzburg-Schweinfurt · Grade 1.8</div>
+          <p>Thesis: <em>Leadership on Flat Organizational Structures.</em> Two years full-time, in German.</p>
+        </div>
+
+        <div class="entry">
+          <div class="years">2004 — 2010</div>
+          <h3>BEng, Informatics</h3>
+          <div class="org">Institut Teknologi Bandung</div>
+          <p>Thesis: <em>Image Retrieval System using Geotagging Information.</em></p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="eyebrow-rule"><h2>Publications</h2></div>
+      <p>Seven peer-reviewed papers and two books on curriculum design, workplace learning systems, and applied operations research.</p>
+      <ul class="pub-list">
+        <li>
+          <span class="pub-title">Methodology for the Implementation of Practical Work in Engineering Management</span>
+          <span class="pub-meta">2022</span>
+        </li>
+        <li>
+          <span class="pub-title">Curriculum of Engineering Management Program, Institut Teknologi Del</span>
+          <span class="pub-meta">2019</span>
+        </li>
+      </ul>
+      <p class="pub-note">Full list with DOIs: <a href="https://sites.google.com/view/devissaputra">sites.google.com/view/devissaputra</a></p>
+    </section>
+
+    <section id="skills">
+      <div class="eyebrow-rule"><h2>Skills</h2></div>
+      <div class="skill-grid">
+        <div class="skill-group">
+          <h3>Instructional design</h3>
+          <p>ADDIE, SAM, learning experience design, competency framework design, training needs analysis</p>
+        </div>
+        <div class="skill-group">
+          <h3>Learning systems</h3>
+          <p>Moodle, Workday Learning, SAP SuccessFactors, Cornerstone OnDemand, SCORM, xAPI/Tin Can API</p>
+        </div>
+        <div class="skill-group">
+          <h3>AI &amp; evaluation</h3>
+          <p>AI output evaluation, RLHF workflows, prompt engineering for instructional content</p>
+        </div>
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <p>Bahasa Indonesia (native), English (C1, TOEFL iBT 101), German (B2)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="eyebrow-rule"><h2>Contact</h2></div>
+      <p>Open to hearing from prospective supervisors and doctoral programs in Management, Information Systems, or Educational Technology.</p>
+      <div class="contact-row">
+        <a href="mailto:devis.saputra@gmail.com">devis.saputra@gmail.com</a>
+        <a href="https://linkedin.com/in/devissaputra">LinkedIn</a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>
