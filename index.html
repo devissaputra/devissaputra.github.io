@@ -74,10 +74,10 @@
   }
 
   .tagline{
-    margin-top:10px;
+    margin-top:05px;
     color:var(--ink-soft);
     font-size:0.98rem;
-    max-width:22ch;
+    max-width:11ch;
   }
 
   .meta-block{
@@ -223,6 +223,39 @@
     color:var(--live);
     font-weight:500;
   }
+  
+  /* ---------- Research ---------- */
+  .portfolio-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.portfolio-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50px;
+
+  background-color: #f2f2f2;
+  color: #222;
+
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+
+  box-sizing: border-box;
+}
+
+.portfolio-nav a:hover {
+  background-color: #e4e4e4;
+}
 
   /* ---------- Publications ---------- */
   .pub-list{
@@ -358,11 +391,10 @@
     
       <nav class="toc" aria-label="Section navigation">
         <a href="#summary"><b>Professional Summary</b></a>
-        <a href=""><b>Portfolio</b></a>
+        <a href="portfolio"><b>Portfolio</b></a>
         <a href="#work"><b>Work Experience</b></a>
         <a href="#education"><b>Education</b></a>
         <a href="#publications"><b>Publications</b></a>
-        <a href="services"><b>Academic Services</b></a>
         <a href="#competence"><b>Competence</b></a>
         <a href="#contact"><b>Contact</b></a>
       </nav>
@@ -417,6 +449,17 @@
 Computer scientist, university lecturer, and learning systems specialist with experience in higher education teaching, curriculum development, thesis supervision, digital learning platforms, and AI model evaluation. Research interests focus on the design and evaluation of AI-supported learning systems that enhance learning, feedback, competency development, and educational decision-making.</p>
       <p class="research-frame">Target departments: <span>Artificial Intelligence in Education, Instructional Design, Information Systems, and Educational Technology</span> — not general AI-labeled positions.</p>
     </section>
+
+        <section id="portfolio">
+      <div class="eyebrow-rule"><h2>Portfolio</h2></div>
+        <div class="portfolio-nav">
+        <a href="research.html">Research</a>
+        <a href="learningdevelopment.html">Learning &amp; Development</a>
+        <a href="aieducation.html">AI in Education</a>
+        <a href="ai.html">AI</a>
+      </div>
+        </section>section>
+      
 
     <section id="work">
       <div class="eyebrow-rule"><h2>Work Experience</h2></div>
@@ -520,16 +563,24 @@ Computer scientist, university lecturer, and learning systems specialist with ex
           <p>ADDIE, SAM, learning experience design, competency framework design, training needs analysis</p>
         </div>
         <div class="skill-group">
+          <h3>Research Methods</h3>
+          <p>Qualitative research, expert interviews, case study design, thematic analysis, quantitative analysis, statistical modeling, and system performance evaluation.</p>
+        </div>
+        <div class="skill-group">
           <h3>Learning systems</h3>
           <p>Moodle, Workday Learning, SAP SuccessFactors, Cornerstone OnDemand, SCORM, xAPI/Tin Can API</p>
         </div>
         <div class="skill-group">
           <h3>AI &amp; evaluation</h3>
-          <p>AI output evaluation, RLHF workflows, prompt engineering for instructional content</p>
+          <p>Python, scikit-learn, TensorFlow, PyTorch, LLM integration, AI output evaluation, RLHF workflows, prompt engineering</p>
+        </div>
+        <div class="skill-group">
+          <h3>Development</h3>
+          <p>C, PHP, JavaScript, MySQL, HTML, CSS, LISP, GitHub.</p>
         </div>
         <div class="skill-group">
           <h3>Languages</h3>
-          <p>Bahasa Indonesia (native), English (C1, TOEFL iBT 101), German (B2)</p>
+          <p>Bahasa Indonesia (native), English (C1, TOEFL iBT 101), German (B2), Bataknese(native)</p>
         </div>
       </div>
     </section>
