@@ -269,6 +269,33 @@
     margin-bottom:0;
   }
 
+  .sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ---------- Contact ---------- */
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.sidebar-bottom img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
   /* ---------- Contact ---------- */
   .contact-row{
     display:flex;
@@ -321,7 +348,7 @@
 </style>
 </head>
 <body>
-
+  
 <div class="page">
 
   <aside class="sidebar">
@@ -341,12 +368,45 @@
       </nav>
     </div>
     <div class="sidebar-bottom">
-      <a href="mailto:devis.saputra@gmail.com">Email</a>
-      <a href="https://linkedin.com/in/devissaputra">LinkedIn</a>
-      <a href="https://www.xing.com/profile/Devis_Saputra">Xing</a>
-      <a href="https://github.com/devissaputra/">Github</a>
-      <a href="https://orcid.org/0000-0002-7133-9410">ORCID</a>
-    </div>
+
+  <a href="mailto:devis.saputra@gmail.com">
+    <img src="https://cdn.simpleicons.org/gmail" alt="Email">
+    Email
+  </a>
+
+  <a href="https://linkedin.com/in/devissaputra" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.simpleicons.org/linkedin" alt="LinkedIn">
+    LinkedIn
+  </a>
+
+  <a href="https://www.xing.com/profile/Devis_Saputra" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.simpleicons.org/xing" alt="Xing">
+    Xing
+  </a>
+
+  <a href="https://github.com/devissaputra/" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.simpleicons.org/github" alt="GitHub">
+    GitHub
+  </a>
+
+  <a href="https://orcid.org/0000-0002-7133-9410" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.simpleicons.org/orcid" alt="ORCID">
+    ORCID
+  </a>
+
+  <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.simpleicons.org/arxiv" alt="arXiv">
+    arXiv
+  </a>
+
+  <a href="https://scholar.google.com/citations?user=EB5_ZRMAAAAJ&hl=en&oi=ao"
+     target="_blank"
+     rel="noopener noreferrer">
+    <img src="https://cdn.simpleicons.org/googlescholar" alt="Google Scholar">
+    Google Scholar
+  </a>
+
+</div>
   </aside>
 
   <main class="content">
