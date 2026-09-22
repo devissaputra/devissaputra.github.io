@@ -137,7 +137,7 @@
     gap:34px;
     align-items:start;
   }
-  .visuals{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .visuals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-content:start;}
   .visual-frame{
     aspect-ratio:4/3;
     border:1px solid var(--line);
@@ -147,7 +147,8 @@
     align-items:center;
     justify-content:center;
   }
-  .visual-frame img{width:100%;height:100%;object-fit:contain;display:block;background:#fff;}
+  .visual-frame img{width:100%;height:100%;object-fit:contain;display:block;background:#fff;transition:transform .18s ease;}
+  .visual-frame:hover img{transform:scale(1.018);}
   .visual-frame svg{width:100%;height:100%;display:block;}
 
   .project-number{font-size:0.76rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:7px;}
@@ -253,7 +254,7 @@
     <section class="hero" id="overview">
       <div class="kicker">Portfolio</div>
       <h2>Learning &amp; Development</h2>
-      <p class="lede">A portfolio of enterprise learning systems, academic learning design, curriculum architecture, international student development, digital workflow improvement, and quality assurance. Each project below is condensed from the original project record into a two-paragraph maximum case summary, with supporting materials linked where available.</p>
+      <p class="lede">A portfolio of enterprise learning systems, academic learning design, curriculum architecture, international student development, digital workflow improvement, and quality assurance. Each project below is condensed from the original project record into a two-paragraph maximum case summary, with project evidence, reports, case studies, and supporting materials linked directly from this portfolio repository.</p>
 
       <div class="portfolio-nav" aria-label="Portfolio areas">
         <a href="research.html" target="_blank" rel="noopener noreferrer">Research</a>
@@ -275,8 +276,11 @@
     <article class="project" id="rocketversity">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72sqRYcONvimrbCPhOjZ8YlJZsomE9I6fW47HiNaiQXAOaIQ_iVDUxQc5E7M9xmsdRYEAZsEqBNTViwZJfddhkm1rnINYeLCHyHLGMz3phZxWyTxtmBFRW02AziweK3JLzZwYfZD-zsUOA2X2BULcAKCSSiMT9u6xafEAWv5vClyakhLH_zLADGAX_X7TC3fMnwT3jcGU6mPAmAW3MJv3O_Gw-LgI4r1n8qxizbW=w1280" alt="Rocketversity learning system project visual 1"></figure>
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72uNw7yZr2mBKdn-uppp96BTwAXefc0EcA0EYmHuSmopR_s_CMMjddhdJ6W_mu7JioEmyIifCCUrYc5G9xJGpimnw_nVIahNi3LErWd7qt2b_JM1midJyRaVmfXLLkPyGCJ9bHRxcTSh94F0hGFQh-uyVio7wZNcKNujgJcP1QmLSsSZvYCgLggz2LaH51GdD0a5hD0E0tsvig9zK2iHaOoh94APr6z5jbmHxZR_=w1280" alt="Rocketversity learning system project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/01_Rocketversity.jpg" alt="Rocketversity Learning Management System project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Rocketversity_X01.jpg" alt="Rocketversity Learning Management System project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Rocketversity_X02.jpg" alt="Rocketversity Learning Management System project visual 3"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Rocketversity_X03.jpg" alt="Rocketversity Learning Management System project visual 4"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Rocketversity_X04.png" alt="Rocketversity Learning Management System project visual 5"></figure>
         </div>
         <div>
           <div class="project-number">Project 01 · Enterprise Learning System</div>
@@ -287,7 +291,7 @@
             <p>The roadmap was designed as a three-year progression from content collection to internal onboarding and ultimately external paid training. Within 1.5 years, 80 courses were live, around 100 employees had been onboarded through the new structure, and onboarding time had been reduced by 30%. Rocketversity remained in operation after I left the role.</p>
           </div>
           <div class="metrics"><span>80 courses live</span><span>~100 employees onboarded</span><span>30% faster onboarding</span><span>4-person build team</span></div>
-          <div class="resource-box"><a href="https://drive.google.com/file/d/1hfJSDJPnbyctzhcoEO456ktr6DWuqdZR/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Case Study PDF</a><a href="https://sites.google.com/view/devissaputra/ld-project-page/rocketversity-lms" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="Rocketversity Learning Management System resources"><a href="assets/report/1_Devis_Rocketversity%20Project%20Overview.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report</a><a href="assets/report/1_Devis_Rocketversity_LMS_Case_Study.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Case Study</a></div>
         </div>
       </div>
     </article>
@@ -296,8 +300,14 @@
     <article class="project" id="thrive">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72spTuypQ7tC7XIirP0gvSBAkVKbHHjO-GAgBKmRKwpCqbkdBKSbO2q6VlJqCYyLp7o83MfIDht2t3SmM4tTSdm6FTKXsWNzRVPjLn8l414fBbpe8aq7_h-gIsdFU30DFApSES_AEh7hwaCa527OkyiREGT8tiSLBERlAxoCHSAS2DBQsiV1Kt3kSBqspCQeOPhfNzwVDPT4N326RYEuDJwyp9FMFYUmj6m7F3C2=w1280" alt="THRIVE OpenSRP project visual 1"></figure>
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72uWpSLWs9zl3gfcN6meoT58PZh38lGybJe1Es_HpNPyW-2eTGdohYx5gzHml2WHzxG97gcfRSbYtEzcyexWAx2is90K7Der6qfxLbWVlahGexrELTU4CXwbiytemQIk7DeL8wx8f81tcV9w4sAkCGFoOgcxiXMNk1lcdOAq0HeXpjZwoI1SXbeXg-foxD8jF3BQN-J1I7Q7xniQDEv6tf842U4RmxrBOe6CCDHa=w1280" alt="THRIVE OpenSRP project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/02_THRIVE.jpg" alt="THRIVE OpenSRP project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Thrive_X00.jpeg" alt="THRIVE OpenSRP project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Thrive_X01.jpg" alt="THRIVE OpenSRP project visual 3"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Thrive_X02.jpg" alt="THRIVE OpenSRP project visual 4"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Thrive_X03.jpg" alt="THRIVE OpenSRP project visual 5"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Thrive_X04.jpg" alt="THRIVE OpenSRP project visual 6"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Thrive_X05.jpg" alt="THRIVE OpenSRP project visual 7"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Thrive_X06.jpg" alt="THRIVE OpenSRP project visual 8"></figure>
         </div>
         <div>
           <div class="project-number">Project 02 · Digital Health Learning Workflow</div>
@@ -308,7 +318,7 @@
             <p>Baseline load times ranged from 20 seconds to 20 minutes, with some forms failing entirely. I compiled the evidence for consortium review and deployed an interim form-decomposition solution that reduced most forms to under 10 seconds and a subset to under 5 seconds, while preserving the approved clinical content and supporting the case for a longer-term rendering-technology change.</p>
           </div>
           <div class="metrics"><span>4 developers</span><span>6 field data collectors</span><span>16 districts</span><span>&lt;10 sec after mitigation</span></div>
-          <div class="resource-box"><a href="https://drive.google.com/file/d/1YyNdGsZGbIhGNfyKA2vTUmphHXVsy6lV/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Case Study PDF</a><a href="https://sites.google.com/view/devissaputra/ld-project-page/thrive-opensrp" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="THRIVE OpenSRP resources"><a href="assets/report/2_Devis_Program_Implementation_Report_Thrive_Indonesia.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report</a><a href="assets/report/2_Devis_THRIVE_OpenSRP_Case_Study.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Case Study</a></div>
         </div>
       </div>
     </article>
@@ -317,8 +327,11 @@
     <article class="project" id="astra">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72tNaox_ffGlLTiWiclVIX8J7bh_mYZGylXikaTKkUMqgaNek1zS9LEOEgfFFi70HMhEwcO4UguB0FVTT1bhav12bukoYEfQHMyn2IDagwtXgdNE1i60uTOiJi9lpnDtWYjVudqjIxVIHnHBZ_6Lf6sjmG883H1nLeljiDMPAE_S-hLpqeSoTE4xHdI5Cq9vOZo57P07vviDhp-ObRyCPkBTuFC2-HnmT2Bi7LHKXXE=w1280" alt="ASTRA Lean Production System Lab visual 1"></figure>
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72uUBwmSiIPn7Jjq-r5zjiDqmC0kDj5fxDY47LxqYIOYpY7JqS__qFN94H9SJ1m3Ucazh1sEzrHmjXuNuorFnKSEMrH_WjxM8i22JWBwB4eeTGW9ObgLIISeYrszUAKtAWjAELjRT128S_xsybUHzr0CgLdvUSmHig603WSs0ONPHGAXiHDuJCcmCapB1C5vtU9POrj7tvi3-_gd9MDtegg0-2vhg7kn5qFAYw=w1280" alt="ASTRA Lean Production System Lab visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/03_Astra.jpg" alt="ASTRA Lean Production System Lab project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Astra_X01.jpg" alt="ASTRA Lean Production System Lab project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Astra_X02.jpg" alt="ASTRA Lean Production System Lab project visual 3"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Astra_X03.jpg" alt="ASTRA Lean Production System Lab project visual 4"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Astra_X04.jpg" alt="ASTRA Lean Production System Lab project visual 5"></figure>
         </div>
         <div>
           <div class="project-number">Project 03 · Practice-Based Learning</div>
@@ -326,7 +339,7 @@
           <div class="meta">Institut Teknologi Del · Partnership with PT Astra</div>
           <div class="project-copy"><p>The ASTRA Lean Production System Lab was established to teach lean manufacturing through hands-on practice grounded in Toyota Production System principles, including 5S, waste elimination (Muda), Build in Quality, and pull systems. As part of the founding development team, I helped translate those concepts into practicum modules for students.</p><p>I also coordinated lab setup logistics, including budget planning, equipment procurement, and the MOU launch with Astra, connecting academic learning design with the physical learning environment required for experiential production-systems education.</p></div>
           <div class="metrics"><span>Lean manufacturing</span><span>5S</span><span>Muda</span><span>Pull systems</span></div>
-          <div class="resource-box"><a href="https://sites.google.com/view/devissaputra/ld-project-page/astra-lps-lab" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="ASTRA Lean Production System Lab resources"><a href="assets/report/3_Devis_Astra_LPSL_Establishment_Report.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report</a></div>
         </div>
       </div>
     </article>
@@ -335,8 +348,9 @@
     <article class="project" id="internship">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72uUS825nPAdBCgGPTy_Sa0daGfIlYLnHYfxkX6Cr2F5-afvNduvrXGZsLAaas618af7FlFWibS9aX4W3ZgvO89-KRX6KFNDKMinXPGxIwZnNit_RUYgANvdj7HVilWuntCxbFobo1jQwaZ02rdm-cjoBPAm3lo2w3fw0AVpabOmhCwLPtLF2OEEYJiZ5nNZTINsCaWW9eEBmToNrqtZpz55tQZnltfyVrYYcU0E=w1280" alt="Engineering Management internship project visual 1"></figure>
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72tEqVKhFBraOeteNbNFa-PkHoZr-ELWnwE62G3K0uY_cUodd39AeJxUEcl2F_NnTFsglWiFXRM487La841cd6bA8X7wXtk_mhfGlXHIBMuWsp0F5dZxOHLkrTcYxD87kehtrD-X5SwdY6fbYPEc-BJ5rHtyVk613UfgoDtBpnoydXdqiHkNMoW31vhzLkhDp2R1gOsa1F1mBo2x8J8jmaLxU9CTC5rC1DK4LTz6=w1280" alt="Engineering Management internship project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/04_Internship.jpg" alt="Internship Program project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Internship_X01.jpg" alt="Internship Program project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Internship_X02.jpg" alt="Internship Program project visual 3"></figure>
         </div>
         <div>
           <div class="project-number">Project 04 · Work-Integrated Learning</div>
@@ -344,7 +358,7 @@
           <div class="meta">Institut Teknologi Del · Program Coordinator &amp; Principal Lecturer</div>
           <div class="project-copy"><p>I built and ran the Engineering Management internship program as a structured bridge between classroom theory and industry practice, with placements at companies including PT Pertamina, PT Astra Otoparts, GMF AeroAsia, and PT Petrokimia Gresik. The model combined a year-long preparation phase, a dedicated handbook and CV workshops, a two-month industry placement, and a final technical report and seminar.</p><p>The placement phase encouraged students to use methods such as Statistical Process Control and Value Stream Mapping in real industrial contexts. I managed the program for seven years, steered it through the COVID-19 period, expanded it to cover the EM IT Program, and the project record reports 93% of the 2017 cohort receiving an A grade.</p></div>
           <div class="metrics"><span>7 years</span><span>2-month placement</span><span>93% A grade, 2017 cohort</span></div>
-          <div class="resource-box"><a href="https://sites.google.com/view/devissaputra/ld-project-page/internship-manual-for-em" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="Internship Program resources"><a href="assets/report/4_Devis_Internship_Program_Impact_Report_DWS.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report</a></div>
         </div>
       </div>
     </article>
@@ -353,8 +367,9 @@
     <article class="project" id="em-manual">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72sWzVJT76CG4tPfJnBMeNtB9KDxOiZ7UC7mXOhBDLUsvTKEzuN7j5vomdF66hyP5Zae4LZQv9xAA6bQELeRSvXLgDxhwypKg-2X0ekoOZl1rd63m2Qs4J3R9bv-uEe5xGKI3KNmSceJ4ADCOX2LCpkqkBm5NOZz-4n49tO6WK3UPGXLLPDh8tFccQNuOZN2NJ_iaA01TmNtA39MJIf-jZUEmWPZEf1_hzP-m12vOmU=w1280" alt="Engineering Management academic manual visual 1"></figure>
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72ujR2Zfn2bkONPBQCmqvT_hX_HDzDt1vvRa20-Jnk96z1JVqxGUECfRDhnsxrkO5AcpIhWVX4l8sz98Mun9MbZ2Gl6jS56JjQkyQNUV9eonLVFEtgxWzORn_p8QQFenBjoKt6EkoJOCeTGQAPRK3aOYEw6FhTsdR-ZtlL2eeFluNUiFKMIAGsnKPF1pMWM_lnx-ArcLX04MlESFzjQ9oxdUVg6Y9j5DEOYkvZU29ZI=w1280" alt="Engineering Management academic manual visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/05_EMManual.jpg" alt="Engineering Management Manual project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/EM_XO1.jpg" alt="Engineering Management Manual project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/EM_X02.jpeg" alt="Engineering Management Manual project visual 3"></figure>
         </div>
         <div>
           <div class="project-number">Project 05 · Academic Learning Architecture</div>
@@ -362,7 +377,7 @@
           <div class="meta">Institut Teknologi Del · Academic reference system</div>
           <div class="project-copy"><p>The Engineering Management Academic Manual was designed as a comprehensive reference for students, faculty, and administrative staff throughout the academic journey. It consolidates the study program's vision, mission, strategic objectives, graduate competency expectations, faculty information, facilities, and behavioral standards within the residential academic environment.</p><p>The manual also documents the 144-SKS curriculum architecture and its alignment with ABET criteria, giving the program a single shared reference point for academic expectations, progression, and program governance.</p></div>
           <div class="metrics"><span>144 SKS curriculum</span><span>ABET-aligned</span><span>Students + faculty + staff</span></div>
-          <div class="resource-box"><a href="https://sites.google.com/view/devissaputra/ld-project-page/em-manual" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="Engineering Management Manual resources"><a href="assets/report/5_Devis_EM_Campus_Handbook_Snippet.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Supporting File</a></div>
         </div>
       </div>
     </article>
@@ -371,8 +386,11 @@
     <article class="project" id="entrepreneurship">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72seJTxqTDYCXYdOuj16UOUEHrq9zCzvntXmGiff6I9J3rCJtwfu0iMjwIBR3BaQg4z2rg7SSVW2qzqYy0coJ6NlV6yYyeHnPADXz-e4heemMHL51KDkDu9ams45OC8EJBmX9IOPpXsYIVUltJFRpyfzmkGQRUu4C0sgxQyUfjALF8Aj4ZUCbyqbK-_uOJvSeGMEmOVIetDN_irCY-Auoa1C53z4yf-93Txup187=w1280" alt="Technopreneurship course visual 1"></figure>
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72syQAlwrt64wAxw7ndR5gZf1YvmFHobuLpsOWv6Kw-4Apfb345uvN4FQfFohf0s52zPaLWSO3z0LXH8jrTQwSQWidMYfZm-SqBoBdAWLcQ0YO7nn4Tz2I5-XnIiS3vJ0HkXIUIW5EFipooHwDaUiG1fDmZncte-yRM7wVdswB7YBMi23xeNpFEhNfAyD7gSHuluycfmiPGOIAP8x2JOoB5fPGBhh8EHvqXK5x-X=w1280" alt="Technopreneurship course visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/06_Techno.jpg" alt="Technopreneurship / Entrepreneurship project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Entre_XO1.jpg" alt="Technopreneurship / Entrepreneurship project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Entre_X02.jpg" alt="Technopreneurship / Entrepreneurship project visual 3"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Entre_X03.jpg" alt="Technopreneurship / Entrepreneurship project visual 4"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Entre_X04.jpg" alt="Technopreneurship / Entrepreneurship project visual 5"></figure>
         </div>
         <div>
           <div class="project-number">Project 06 · Experiential Course Design</div>
@@ -380,7 +398,7 @@
           <div class="meta">Technopreneurship (TIS3001) · Institut Teknologi Del</div>
           <div class="project-copy"><p>The course was designed as a practical startup simulation rather than a theory-heavy entrepreneurship class. Student teams moved through Lean Startup cycles, rapid customer discovery, Business Model Canvas development, prototyping with tools such as Figma and Canva, and AARRR funnel metrics to test market hypotheses through Build-Measure-Learn iteration.</p><p>Project tracks were tailored to the disciplines represented across campus, connecting mobile and web product initiatives for software students with specialized technical innovation in other engineering programs.</p></div>
           <div class="metrics"><span>Lean Startup</span><span>BMC</span><span>AARRR funnel</span><span>Build-Measure-Learn</span></div>
-          <div class="resource-box"><a href="https://sites.google.com/view/devissaputra/ld-project-page/entrepreneurship-course" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="Technopreneurship / Entrepreneurship resources"><a href="assets/report/6_Devis_Technopreneurship_Course_Report.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report</a></div>
         </div>
       </div>
     </article>
@@ -389,23 +407,9 @@
     <article class="project" id="curriculum-evaluation">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72tQBXkL4cfbh1trNp2A4QkEn4MAWDfnsxfnCL2dDHx8SvgJ1MGhioFvO600MCia9m6Qu-NMh9509bSACxkPtSTBN8YgzZskgXUqkzWEV9FWkx98SiaUbiFDUTLUUuW5CgQNphpJu_Jb0WiwTYrDzLppjwkqVt9mM_A78qi4AcBNWEO72L-ZgygpAVDre8vLdeDohqaVpqodqaFV5KWaDsa3sMM9WsXLGCI5N4bcfuw=w1280" alt="Engineering Management curriculum evaluation visual"></figure>
-          <figure class="visual-frame" aria-label="Source-derived curriculum evaluation framework visual">
-            <svg viewBox="0 0 600 450" role="img" aria-label="Curriculum evaluation inputs leading to Academic Senate approval">
-              <rect width="600" height="450" fill="#F7F8F7"/>
-              <text x="32" y="50" font-family="IBM Plex Sans, sans-serif" font-size="25" font-weight="600" fill="#1B2430">Curriculum Evaluation</text>
-              <text x="32" y="80" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#5B6660">Diagnostic inputs used before redesign</text>
-              <g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#1B2430">
-                <rect x="32" y="112" rx="8" width="250" height="54" fill="#DDE6E4"/><text x="50" y="145">Domain expert consultation</text>
-                <rect x="318" y="112" rx="8" width="250" height="54" fill="#DDE6E4"/><text x="338" y="145">Market trend analysis</text>
-                <rect x="32" y="185" rx="8" width="250" height="54" fill="#DDE6E4"/><text x="50" y="218">Tracer + alumni feedback</text>
-                <rect x="318" y="185" rx="8" width="250" height="54" fill="#DDE6E4"/><text x="338" y="218">Technology developments</text>
-                <rect x="175" y="258" rx="8" width="250" height="54" fill="#DDE6E4"/><text x="209" y="291">ABET / accreditation criteria</text>
-              </g>
-              <path d="M300 322 L300 360" stroke="#2F5D62" stroke-width="4"/><polygon points="300,378 288,356 312,356" fill="#2F5D62"/>
-              <rect x="135" y="378" rx="9" width="330" height="48" fill="#2F5D62"/><text x="300" y="408" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="17" font-weight="600" fill="white">Academic Senate review &amp; transition rules</text>
-            </svg>
-          </figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/07_EMEVAL.jpg" alt="Engineering Management Curriculum Evaluation project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/EMEVAL_01.jpg" alt="Engineering Management Curriculum Evaluation project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/EMEVAL_02.jpeg" alt="Engineering Management Curriculum Evaluation project visual 3"></figure>
         </div>
         <div>
           <div class="project-number">Project 07 · Curriculum Evaluation</div>
@@ -413,7 +417,7 @@
           <div class="meta">Institut Teknologi Del · Rector-mandated diagnostic review</div>
           <div class="project-copy"><p>The evaluation served as the diagnostic foundation for the next Engineering Management curriculum. It combined domain-expert consultation, market-trend analysis, graduate tracer data, alumni feedback, technology-development tracking, and review against accreditation expectations including ABET criteria.</p><p>Operating under the Rector's mandate, the evaluation culminated in a formal Academic Senate presentation used to establish transition rules and secure institutional approval for the strategic updates that followed.</p></div>
           <div class="metrics"><span>Expert input</span><span>Tracer data</span><span>ABET criteria</span><span>Academic Senate</span></div>
-          <div class="resource-box"><a href="https://sites.google.com/view/devissaputra/ld-project-page/em-curriculum-evaluation" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="Engineering Management Curriculum Evaluation resources"><a href="assets/report/7_Devis_Curriculum_Evaluation_Report_MR.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report</a><a href="assets/report/7_Devis_EM_Curriculum_Handbook_and_System_Mapping.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Supporting File</a></div>
         </div>
       </div>
     </article>
@@ -422,8 +426,9 @@
     <article class="project" id="new-curriculum">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72vVp-CjfWoZfo9wJobkh7nQGWFMb7iqP090OwpdxvX3M707b4pb7uYkyc0KiaSdp0FDtyk6GVSpGiTkK1LJPDD82ZSW1fUPRI8IJB2Jc-KW_QVS3v6cIJS6-7sAjj8Rv10PbKIKRgRXUoohP4X7E7bBo9aYuVTUzpO2IqWisG_SR_cmi2BwKss277R0aYMgEHlY21O5yQKF69rLuXpS1zE7AXHcZ201dTKB3sFv=w1280" alt="New Engineering Management curriculum visual 1"></figure>
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72v6hEoiMPXBT51m2QCczJn89UBITYjpXW4IQKZPZiHZoVUufeTyTtUK5guTQ9oFGWoZ3vkN_tqpMaGgnHz_0QUuEpfTJIZm8VxxLFiTxxsuSP0O98d6Si5oaogUl-xiFzTHJv-6Knor5k4eCVfCwOGcDW1GA_Tio7vTMFH-q1Xb2wSj7Y0Jyv19KC3zpr5WEEiZ1Nm4IVzILVT--sV40dUmc642C2ZvadiKYNFBj7Q=w1280" alt="New Engineering Management curriculum visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/08_NEWEM.jpg" alt="New Engineering Management Curriculum project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/NEWEM_X00.jpg" alt="New Engineering Management Curriculum project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/NEWEM_X01.jpg" alt="New Engineering Management Curriculum project visual 3"></figure>
         </div>
         <div>
           <div class="project-number">Project 08 · Curriculum Architecture</div>
@@ -431,7 +436,7 @@
           <div class="meta">Institut Teknologi Del · Ten-step institutional framework</div>
           <div class="project-copy"><p>The curriculum-development framework began with a diagnostic phase: expert consultation on cognitive taxonomies and Industry 4.0, market-needs assessment across automotive, FMCG, and technology organizations, graduate tracer studies, benchmarking against ASEM and ABET criteria, and an internal SWOT analysis of the existing course structure.</p><p>The synthesis phase converted those inputs into eight knowledge blocks forming a 144-credit, eight-semester sequence. After peer review and Academic Senate approval, course-equivalency matrices protected student progress, while the curriculum was automated in the Campus Information System and deployed through bilingual diploma supplements.</p></div>
           <div class="metrics"><span>10-step framework</span><span>8 knowledge blocks</span><span>144 credits</span><span>8 semesters</span></div>
-          <div class="resource-box"><a href="https://sites.google.com/view/devissaputra/ld-project-page/new-em-curriculum" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="New Engineering Management Curriculum resources"><a href="assets/report/8_Devis_EM_Curriculum_Handbook_and_System_Mapping.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Curriculum Mapping</a></div>
         </div>
       </div>
     </article>
@@ -440,8 +445,10 @@
     <article class="project" id="premaster">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72ts_KShiR8lX-WKjzLaE6krfBZFfpAJQdF7x56coE7ui1VVc0tLIao2-NCRs1RXZKStigHk_p7DEF153Zs2z-9FemlZ3Mlz1MgFyjTUICBEk6XO9dgxBjOywspcxKcHP60RIXc0xzqP14TiR1lcW2WpR5c6RabUSW5XXPCZUusbpR6zKZaV7mJFWz7bokixB1ueEJ_WWLszfxk-Z6i0jvV4cghEKKAZ4RSWNPKqta4=w1280" alt="IT Del and University of Amsterdam Pre-Master visual 1"></figure>
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72snNSvmDkLsjC6Zoid5wbmdI8IfXKV8SKT6y_ccK2CJttxz1E2yVjcqs9VMgmo4hAOheXD1P8sORfQK7Z-4SUr0On0qGKR_dFDU6R5r0J8fpk3knGw0nNEQPqO6xTmLW7NwCaGMALNUe4rOjanxG5ksrxD8wOoRNMOyJ5CUTIZLWXVkSUdZdrbDwFQBoAliNUorccU3ijQJm3GUMGt0bOLlny76oHE3zgkmERUf=w1280" alt="IT Del and University of Amsterdam Pre-Master visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/09_Premaster.jpg" alt="Pre-Master Program with University of Amsterdam project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Premaster_X01.jpg" alt="Pre-Master Program with University of Amsterdam project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Premaster_X02.jpg" alt="Pre-Master Program with University of Amsterdam project visual 3"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Premaster_X03.jpg" alt="Pre-Master Program with University of Amsterdam project visual 4"></figure>
         </div>
         <div>
           <div class="project-number">Project 09 · International Academic Pathway</div>
@@ -449,7 +456,7 @@
           <div class="meta">IT Del – UvA partnership · Lead Faculty Lecturer, Strategy &amp; Organization</div>
           <div class="project-copy"><p>The partnership created a unified progression path preparing undergraduate engineering students from North Sumatra for European MSc study through a 15-credit (30 ECTS) sequence. Local faculty delivered foundational business and research topics, while advanced core modules were co-taught through intensive on-campus sessions with visiting UvA professors.</p><p>As Lead Faculty Lecturer for Strategy and Organization, I co-managed curriculum design, integrated Sumatran commercial cases into global strategy frameworks, facilitated seminars, served on the joint candidate-selection committee, and supported visiting-faculty logistics and budget allocation. Modules used a double-pass model requiring at least 5.5 in both individual exams and group project components.</p></div>
           <div class="metrics"><span>15 credits / 30 ECTS</span><span>UvA partnership</span><span>Double-pass assessment</span><span>5.5 minimum</span></div>
-          <div class="resource-box"><a href="https://sites.google.com/view/devissaputra/ld-project-page/pre-master-with-uva" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="Pre-Master Program with University of Amsterdam resources"><a href="assets/report/9_Devis_Premaster_Program_Draft_Report.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report</a></div>
         </div>
       </div>
     </article>
@@ -458,34 +465,10 @@
     <article class="project" id="logistics">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame" aria-label="Source-derived logistics competency network visual">
-            <svg viewBox="0 0 600 450" role="img" aria-label="Integrated logistics competency network">
-              <rect width="600" height="450" fill="#F7F8F7"/>
-              <text x="32" y="50" font-family="IBM Plex Sans, sans-serif" font-size="24" font-weight="600" fill="#1B2430">Logistics Competency Network</text>
-              <text x="32" y="78" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#5B6660">Physical goods, capital and data as one system</text>
-              <circle cx="300" cy="235" r="70" fill="#2F5D62"/><text x="300" y="229" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="17" font-weight="600" fill="white">Integrated</text><text x="300" y="253" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="17" font-weight="600" fill="white">Logistics</text>
-              <g font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="600" text-anchor="middle">
-                <circle cx="115" cy="165" r="60" fill="#DDE6E4"/><text x="115" y="160" fill="#244A4E">Physical</text><text x="115" y="182" fill="#244A4E">goods</text>
-                <circle cx="485" cy="165" r="60" fill="#DDE6E4"/><text x="485" y="171" fill="#244A4E">Capital</text>
-                <circle cx="300" cy="370" r="60" fill="#DDE6E4"/><text x="300" y="376" fill="#244A4E">Data</text>
-              </g>
-              <g stroke="#2F5D62" stroke-width="5"><line x1="170" y1="185" x2="235" y2="215"/><line x1="430" y1="185" x2="365" y2="215"/><line x1="300" y1="305" x2="300" y2="310"/></g>
-            </svg>
-          </figure>
-          <figure class="visual-frame" aria-label="Source-derived future logistics curriculum visual">
-            <svg viewBox="0 0 600 450" role="img" aria-label="Future logistics curriculum alignment">
-              <rect width="600" height="450" fill="#F7F8F7"/>
-              <text x="32" y="50" font-family="IBM Plex Sans, sans-serif" font-size="24" font-weight="600" fill="#1B2430">Curriculum Alignment</text>
-              <text x="32" y="78" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#5B6660">Standards + emerging technology + systems risk</text>
-              <g font-family="IBM Plex Sans, sans-serif" font-size="16">
-                <rect x="40" y="120" width="150" height="70" rx="8" fill="#DDE6E4"/><text x="115" y="150" text-anchor="middle" fill="#244A4E" font-weight="600">KKNI / SKKNI</text><text x="115" y="172" text-anchor="middle" fill="#5B6660" font-size="13">national standards</text>
-                <rect x="225" y="120" width="150" height="70" rx="8" fill="#DDE6E4"/><text x="300" y="150" text-anchor="middle" fill="#244A4E" font-weight="600">AI / ML</text><text x="300" y="172" text-anchor="middle" fill="#5B6660" font-size="13">advanced technology</text>
-                <rect x="410" y="120" width="150" height="70" rx="8" fill="#DDE6E4"/><text x="485" y="150" text-anchor="middle" fill="#244A4E" font-weight="600">Risk systems</text><text x="485" y="172" text-anchor="middle" fill="#5B6660" font-size="13">network resilience</text>
-              </g>
-              <path d="M115 210 L250 285 M300 210 L300 285 M485 210 L350 285" stroke="#2F5D62" stroke-width="4"/>
-              <rect x="160" y="285" width="280" height="78" rx="10" fill="#2F5D62"/><text x="300" y="318" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="18" font-weight="600" fill="white">Modern Logistics Pathways</text><text x="300" y="344" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="white">engineering + management tracks</text>
-            </svg>
-          </figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Logistics_X00.jpeg" alt="Logistics Competency Workshop project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Logistics_X01.jpg" alt="Logistics Competency Workshop project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Logistics_X02.jpg" alt="Logistics Competency Workshop project visual 3"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Logistics_X03.jpeg" alt="Logistics Competency Workshop project visual 4"></figure>
         </div>
         <div>
           <div class="project-number">Project 10 · Competency Strategy</div>
@@ -493,7 +476,7 @@
           <div class="meta">Curriculum strategy · Logistics education</div>
           <div class="project-copy"><p>The project developed an integrated blueprint for restructuring higher-education logistics programs around AI-enabled supply-chain networks. The strategy treats competitive advantage as a network problem, requiring coordinated movement of physical goods, capital, and data rather than isolated optimization of individual enterprises.</p><p>The framework bridges higher-education regulation with KKNI and SKKNI standards, distinguishes logistics-engineering and logistics-management pathways, and integrates emerging technologies such as causal reinforcement learning, machine learning, and systems-driven risk management into future-facing academic preparation.</p></div>
           <div class="metrics"><span>KKNI / SKKNI</span><span>AI-enabled supply chains</span><span>ML</span><span>Systems risk</span></div>
-          <div class="resource-box"><a href="https://sites.google.com/view/devissaputra/ld-project-page/workshop-on-logistic" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="Logistics Competency Workshop resources"><a href="assets/report/10_Devis_Logistics_Competency_and_Curriculum_Report.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report</a></div>
         </div>
       </div>
     </article>
@@ -502,8 +485,10 @@
     <article class="project" id="ugrad">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72vtY7Ht_PDxOHwPhQuOcd5JJuHq6IdZJ6kor7hNcNXwc3Plj2k1nbBTU1MBqoRqtwNJ2gPGAju3GzDd5BzFIzM6PMTg0aFdWP-cyusLzeibVySUKLwF4UJdHVqR4xIOlcNupcYtDRo4vVOatV_h90qiI7MyBnaSfq6NEYqcEAWDhxJ31EsKzTjRJ45qVqOTtgX2RyJObhLKgcFJjQmrqCqsJTSrtGRoTNeBulFp=w1280" alt="UGRAD Exchange Program visual 1"></figure>
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72sa75nk3nfzYW25ig1SXt1KUba_s4SEGyc0W5D7tnJZKyPlHC3lUTXGrVCGKzsSqZg4jUDXOj9ztLASZN4ncvWwSUJtlEkyrzad701H_cSPIt_MKSSCKyUZR0fOTch87z5nqx_pakI0xSkOOLa83dz1a7pzLI0slgnm-Kz4hWP72-ii8tdkJ-wbZWL6f9B1X6j05wjPmzEhh41ET0Fmaz4Vi4wW9601TMt8rZG4=w1280" alt="UGRAD Exchange Program visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/UGRAD_X00.jpg" alt="UGRAD Exchange Program project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/UGRAD_X01.jpg" alt="UGRAD Exchange Program project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/UGRAD_X03.jpeg" alt="UGRAD Exchange Program project visual 3"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/UGRAD_X04.jpg" alt="UGRAD Exchange Program project visual 4"></figure>
         </div>
         <div>
           <div class="project-number">Project 11 · Student Development</div>
@@ -511,7 +496,7 @@
           <div class="meta">Global UGRAD · Student mentoring &amp; institutional support</div>
           <div class="project-copy"><p>Global UGRAD offers emerging student leaders a fully funded semester of non-degree undergraduate study in the United States. My faculty-support role focused on strengthening student readiness for the competitive selection process and coordinating the institutional steps required to back candidates.</p><p>The support model included endorsement meetings with university leadership, intensive mock interviews, targeted English-proficiency preparation materials, and formal recommendation letters documenting candidates' academic performance and community leadership potential.</p></div>
           <div class="metrics"><span>Mock interviews</span><span>English preparation</span><span>Leadership endorsement</span><span>Recommendation letters</span></div>
-          <div class="resource-box"><a href="https://drive.google.com/file/d/1L3dD-r53ykIU21gNIuAabMVjrdpsQaAY/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file"></i> Supporting File 1</a><a href="https://drive.google.com/file/d/1WzShqtxYD5K9NbWHVDyRtMZq6Dc3d2I4/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file"></i> Supporting File 2</a><a href="https://sites.google.com/view/devissaputra/ld-project-page/ugrad-exchange" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="UGRAD Exchange Program resources"><a href="assets/report/11_Devis_Global_UGRAD_Mentorship_Report.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report</a><a href="assets/report/11_Devis_My%20Story%20on%20UGRAD.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file" aria-hidden="true"></i> Supporting File</a></div>
         </div>
       </div>
     </article>
@@ -520,8 +505,8 @@
     <article class="project" id="accreditation">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72uw0dT7FCz0XNetRrEHKqY0aZaWclkioASfiyKAUV3zIYnPOaMKZlJvTA-HyNA-v5We_3TedGYJwTMYwP1OQLYq2TJMAGpeaAbwJLgxpv2qf0Nw_8gnNceB4LS8RXSNkY198Ztym0Q1qP30VC01INobJapkgH3yVqgCaFOElEGa7gFbpOu6gq2Voaf7xrK5jVbf41epC5IBjwFC-6OUCRfBtzwpGfqaPSOJ82xSC6I=w1280" alt="Engineering Management accreditation visual 1"></figure>
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72vxpVTv_D0RPFHOgpmRsyDEoYJQR8RjJ_liP4Me42nNdnBrJEJuj7-IxhXF6F7upKBkSMF3LSmr6RyLugdZnH6jBpUum18-Do6Yim8NCQtimJzW85k_lh-7KfoFChYDEtsBamwNs8wRKrHURBgHiIXWL0qlafhUWmbGYdEa2nd2IcjPIae3dNCTw1TGP4w85_XQwRMei0M9OpQgTVYZevoNqzAw7dZa0No5NCjGAR0=w1280" alt="Engineering Management accreditation visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Accreditation_X01.jpg" alt="Engineering Management Accreditation project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Accreditation_X02.jpg" alt="Engineering Management Accreditation project visual 2"></figure>
         </div>
         <div>
           <div class="project-number">Project 12 · Quality Assurance</div>
@@ -529,7 +514,7 @@
           <div class="meta">BAN-PT · Secretary of Study Program &amp; Accreditation Task Force Chair</div>
           <div class="project-copy"><p>Under the Dean's decree, I directed multi-departmental accreditation work across preparation, visitation, and post-evaluation. Responsibilities included coordinating and validating Buku IIIA, Buku IIIB, and the self-evaluation book; authoring Standard 2 on governance and quality assurance; co-authoring Standard 5 on the 144-credit curriculum map; drafting the strategic plan; and serving as the operational liaison during field assessment.</p><p>After the audit, I coordinated refinement across 16 campus entities, embedded Plan-Do-Check-Action monitoring into academic and support workflows, and worked with IT, library, maintenance, and learning-infrastructure teams on continuous quality improvement. The process advanced the program through the SAPTO accreditation pipeline from desk assessment into field assessment.</p></div>
           <div class="metrics"><span>3 core accreditation books</span><span>16 campus entities</span><span>PDCA / CQI</span><span>144-credit map</span></div>
-          <div class="resource-box"><a href="https://sites.google.com/view/devissaputra/ld-project-page/em-accreditation" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="Engineering Management Accreditation resources"><a href="assets/report/12_Devis_BAN-PT_Accreditation_Report_MR.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report</a></div>
         </div>
       </div>
     </article>
@@ -538,8 +523,11 @@
     <article class="project" id="capstone">
       <div class="project-grid">
         <div class="visuals">
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72vPt9DiuSVSYlGl16dDdZJHSVn3Rrmbim7emCDRpMlTfrDaMSTIBcFZUMowg25XojLuTdCPsp--W6grIfnV2aiT1shToxkFD3PoWPys-VouO6p1-EwYJuR5ib8MSiSJpmZeCCYkkndtTr6_kxgK91CEj30FibVOA27bVFNPmrjn8k5y-vy8tnIOIeSYl62eAVUvLM0R9ncdBDfg9Lz5jqdLg7rxErFLL5sQL2pG0Xs=w1280" alt="Engineering Management capstone visual 1"></figure>
-          <figure class="visual-frame"><img loading="lazy" src="https://sites.google.com/sitesv-images-rt/AMxu72tGe1vYOPJTyHw0l5muuiwuukbwZyQ5EKSdOp9Psd_kx33C1690C2We0kCH9g9x0oZilHXkcXH6totCJ3yiCWf9GAtN7SlZ6iAFCuo5_KZP-xeUB1dDaMGN1Eb5_0Z3xQ-FhcovYA4x915SilFOzsR76zVDg4HgmBEecxvWNdqds2n-OkyrKLIUmiunQK6U-2ttOlpgHz2yCwoP_Lw5H5qROHq32F1RNiwwomovEYk=w1280" alt="Engineering Management capstone visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Capstone_X01.jpg" alt="Capstone Project project visual 1"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Capstone_X02.jpg" alt="Capstone Project project visual 2"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Capstone_X03.jpg" alt="Capstone Project project visual 3"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Capstone_X04.jpg" alt="Capstone Project project visual 4"></figure>
+          <figure class="visual-frame"><img loading="lazy" src="assets/ld/Capstone_X05.jpg" alt="Capstone Project project visual 5"></figure>
         </div>
         <div>
           <div class="project-number">Project 13 · Capstone Learning Design</div>
@@ -547,7 +535,7 @@
           <div class="meta">Institut Teknologi Del · Co-author, lecturer &amp; group advisor</div>
           <div class="project-copy"><p>As a co-author of the 2018 capstone handbook, I helped develop a structured 17-week framework integrating technical engineering design with business feasibility and strategic planning. As an instructor, I led Idea Generation through market research, benchmarking, and ideation challenges, and taught functional and quality-attribute design.</p><p>As a group advisor, I supervised student teams across the end-to-end development workflow from early blueprinting and prototyping through techno-economic evaluation and Business Model Canvas formulation, connecting engineering decisions with commercial viability.</p></div>
           <div class="metrics"><span>17-week framework</span><span>Idea generation</span><span>Prototyping</span><span>Techno-economic evaluation</span></div>
-          <div class="resource-box"><a href="https://sites.google.com/view/devissaputra/ld-project-page/capstone" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Original Project Page</a></div>
+          <div class="resource-box" aria-label="Capstone Project resources"><a href="assets/report/13_Devis_Framework_Capstone_Project.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Framework</a><a href="assets/report/13_Devis_Buku_Pedoman_Capstone_FS.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Supporting File</a></div>
         </div>
       </div>
     </article>
