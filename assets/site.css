@@ -1,0 +1,306 @@
+/* Shared design system for Devis Wawan Saputra portfolio */
+:root{
+  --paper:#EEF0EF;
+  --paper-raised:#F5F6F5;
+  --ink:#1B2430;
+  --ink-soft:#5B6660;
+  --line:#C9CDC5;
+  --accent:#2F5D62;
+  --accent-soft:#DDE6E4;
+  --accent-deep:#244A4E;
+  --live:#B5563B;
+  --live-soft:#F1DED7;
+}
+
+.page{
+  max-width:1320px;
+  min-height:100vh;
+}
+
+.sidebar{
+  padding:46px 32px 38px 40px;
+}
+
+.content{
+  padding:48px 48px 80px 34px;
+}
+
+section{
+  max-width:940px;
+  margin-bottom:56px;
+  scroll-margin-top:28px;
+}
+
+.eyebrow-rule{
+  gap:14px;
+  margin-bottom:18px;
+}
+
+.eyebrow-rule h2{
+  font-size:1.45rem;
+}
+
+.eyebrow-rule::after{
+  background:linear-gradient(90deg,var(--accent),var(--line) 42%);
+}
+
+.sidebar-bottom{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:12px;
+  row-gap:9px;
+  font-size:0.84rem;
+  color:var(--ink-soft);
+}
+
+.sidebar-bottom .contact-label{
+  grid-column:1/-1;
+  color:var(--ink);
+  font-size:0.9rem;
+  font-weight:600;
+  margin-bottom:2px;
+}
+
+.sidebar-bottom a{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  min-width:0;
+  color:var(--accent);
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.sidebar-bottom a:hover{color:var(--accent-deep);}
+
+.sidebar-bottom i{
+  width:18px;
+  flex:0 0 18px;
+  text-align:center;
+  font-size:16px;
+}
+
+.sidebar-bottom .scholar{grid-column:1/-1;}
+
+.portfolio-nav{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  width:100%;
+  margin-top:24px;
+  border:1px solid #D7DAD5;
+  border-radius:7px;
+  overflow:hidden;
+}
+
+.portfolio-nav a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:9px 8px;
+  background:#F2F3F2;
+  color:#222B33;
+  text-decoration:none;
+  text-align:center;
+  font-size:0.88rem;
+  font-weight:600;
+  border:0;
+  border-right:1px solid #D7DAD5;
+  border-radius:0;
+}
+
+.portfolio-nav a:last-child{border-right:none;}
+.portfolio-nav a:hover{background:var(--accent-soft);color:var(--accent-deep);}
+.portfolio-nav a.active{background:var(--accent);color:#fff;}
+
+.contact-row{
+  gap:10px;
+  margin-top:12px;
+}
+
+.contact-row a{
+  border-radius:5px;
+  background:var(--paper-raised);
+}
+
+footer{
+  max-width:940px;
+  margin-top:54px;
+}
+
+/* Homepage editorial blocks */
+#summary > p{max-width:780px;}
+
+.research-frame{
+  max-width:780px;
+  margin-top:16px;
+  padding:12px 14px;
+  border-left:3px solid var(--accent);
+  background:var(--accent-soft);
+  color:var(--accent-deep);
+  border-radius:0 6px 6px 0;
+}
+
+.education-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+
+.education-grid .entry{
+  padding:18px 18px 16px;
+  border:1px solid var(--line);
+  border-top:3px solid var(--accent);
+  border-radius:7px;
+  background:var(--paper-raised);
+}
+
+.education-grid .entry::before{display:none;}
+.education-grid .entry p{margin-bottom:7px;}
+
+.pub-intro{
+  max-width:780px;
+  margin-bottom:16px;
+  color:#303B42;
+}
+
+.pub-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.55fr) minmax(280px,.85fr);
+  gap:16px;
+  align-items:start;
+}
+
+.pub-group{
+  padding:18px 20px 16px;
+  border:1px solid var(--line);
+  border-top:3px solid var(--accent);
+  border-radius:7px;
+  background:var(--paper-raised);
+}
+
+.pub-group h3{
+  margin:0 0 10px;
+  font-family:var(--sans);
+  font-size:0.78rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+
+.pub-list{
+  margin:0;
+}
+
+.pub-list li{
+  padding:11px 0;
+}
+
+.pub-list li:last-child{border-bottom:none;}
+
+.pub-list a{
+  display:inline-block;
+  margin-top:5px;
+  padding:3px 7px;
+  border:1px solid var(--line);
+  border-radius:4px;
+  background:#fff;
+  font-size:.78rem;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.pub-list a:hover{
+  border-color:var(--accent);
+  background:var(--accent-soft);
+}
+
+.pub-kind{
+  display:inline-block;
+  margin-top:5px;
+  padding:3px 7px;
+  border-radius:4px;
+  background:var(--accent-soft);
+  color:var(--accent-deep);
+  font-size:.75rem;
+  font-weight:600;
+}
+
+.skill-grid{
+  gap:14px;
+}
+
+.skill-group{
+  padding:15px 16px;
+  border:1px solid var(--line);
+  border-top:3px solid var(--accent);
+  border-radius:7px;
+  background:var(--paper-raised);
+}
+
+.skill-group h3{
+  color:var(--accent-deep);
+  margin-bottom:6px;
+}
+
+/* Research page density + color */
+.research-list{gap:14px;}
+
+.research-card{
+  border-left:3px solid var(--accent);
+  padding:18px 20px 17px;
+}
+
+.system-grid{gap:14px;}
+
+.method-tags{
+  gap:7px;
+  margin-top:18px;
+}
+
+.method-tags span{
+  background:var(--accent-soft);
+  border-color:#C7D7D3;
+  color:var(--accent-deep);
+}
+
+/* L&D page density */
+.project{
+  padding-bottom:34px;
+  margin-bottom:34px;
+}
+
+.project-grid{gap:26px;}
+.visuals{gap:8px;}
+.resource-box{margin-top:14px;}
+.metrics{margin-top:12px;}
+
+@media (max-width:900px){
+  .page{grid-template-columns:1fr;}
+  .sidebar{
+    position:static;
+    height:auto;
+    padding:34px 24px 26px;
+    border-bottom:1px solid var(--line);
+    gap:26px;
+  }
+  nav.toc{display:none;}
+  .sidebar-bottom{max-width:430px;}
+  .content{
+    padding:34px 24px 58px;
+    border-left:none;
+  }
+  section{margin-bottom:48px;}
+}
+
+@media (max-width:700px){
+  .portfolio-nav{grid-template-columns:1fr 1fr;}
+  .portfolio-nav a:nth-child(2){border-right:none;}
+  .portfolio-nav a:nth-child(-n+2){border-bottom:1px solid #D7DAD5;}
+  .education-grid,.pub-grid,.skill-grid{grid-template-columns:1fr;}
+}
+
+@media (max-width:480px){
+  .sidebar-bottom{grid-template-columns:1fr 1fr;}
+}
