@@ -132,7 +132,7 @@
 
   .portfolio-nav{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:0;
     width:100%;
     margin-top:28px;
@@ -234,9 +234,9 @@
     .hero-main{grid-template-columns:86px minmax(0,1fr);gap:18px;}
     .hero h2{max-width:16ch;}
     .hero-portrait{width:82px;}
-    .portfolio-nav{grid-template-columns:1fr 1fr;}
-    .portfolio-nav a:nth-child(2){border-right:none;}
-    .portfolio-nav a:nth-child(-n+2){border-bottom:1px solid #D7DAD5;}
+    .portfolio-nav{grid-template-columns:1fr;}
+    .portfolio-nav a{border-right:none;border-bottom:1px solid #D7DAD5;}
+    .portfolio-nav a:last-child{border-bottom:none;}
     .visuals{grid-template-columns:1fr 1fr;gap:8px;}
     .project{padding-bottom:36px;margin-bottom:36px;}
   }
@@ -304,7 +304,6 @@
         <a href="research.html">Research</a>
         <a class="active" href="learningdevelopment.html" aria-current="page">Learning &amp; Development</a>
         <a href="aieducation.html">AI in Education</a>
-        <a href="ai.html">AI</a>
       </div>
 
       <div class="project-index" aria-label="Project index">
