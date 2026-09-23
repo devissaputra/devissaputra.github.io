@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI in Education portfolio of Devis Wawan Saputra, covering generative AI, learning analytics, human and AI collaboration, responsible AI, explainability, privacy, multimodal analytics, and classroom discourse.">
+<title>Devis Wawan Saputra | AI in Education</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+<style>
+  :root{
+    --paper:#EEF0EF;
+    --paper-raised:#F5F6F5;
+    --ink:#1B2430;
+    --ink-soft:#5B6660;
+    --line:#C9CDC5;
+    --accent:#2F5D62;
+    --accent-soft:#DDE6E4;
+    --accent-deep:#244A4E;
+    --live:#B5563B;
+    --serif:"Source Serif 4", Georgia, serif;
+    --sans:"IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.58;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:var(--accent);}
+  a:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+  }
+
+  h1,h2,h3,h4{
+    font-family:var(--serif);
+    color:var(--ink);
+    line-height:1.18;
+    margin:0;
+  }
+
+  .page{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    max-width:1180px;
+    margin:0 auto;
+    min-height:100vh;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{
+    padding:46px 32px 38px 40px;
+    position:sticky;
+    top:0;
+    align-self:start;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+
+  .sidebar-top h1{
+    font-size:1.72rem;
+    letter-spacing:-0.012em;
+  }
+
+  .tagline{
+    margin:12px 0 0;
+    color:var(--ink-soft);
+    font-size:0.98rem;
+    max-width:22ch;
+  }
+
+  nav.toc{
+    margin-top:26px;
+  }
+
+  nav.toc a{
+    display:block;
+    padding:6px 0 6px 12px;
+    margin-left:-12px;
+    border-left:2px solid transparent;
+    color:var(--ink);
+    text-decoration:none;
+    font-size:0.94rem;
+    font-weight:600;
+    transition:border-color .15s ease, color .15s ease;
+  }
+
+  nav.toc a:hover,
+  nav.toc a:focus-visible{
+    border-left-color:var(--accent);
+    color:var(--accent);
+  }
+
+  .sidebar-bottom{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    column-gap:12px;
+    row-gap:9px;
+    font-size:0.84rem;
+    color:var(--ink-soft);
+  }
+
+  .sidebar-bottom .contact-label{
+    grid-column:1 / -1;
+    color:var(--ink);
+    font-size:0.9rem;
+    font-weight:600;
+    margin-bottom:2px;
+  }
+
+  .sidebar-bottom a{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    min-width:0;
+    color:var(--accent);
+    text-decoration:none;
+    white-space:nowrap;
+  }
+
+  .sidebar-bottom a:hover{color:var(--accent-deep);}
+
+  .sidebar-bottom i{
+    width:18px;
+    flex:0 0 18px;
+    text-align:center;
+    font-size:16px;
+  }
+
+  .sidebar-bottom .scholar{
+    grid-column:1 / -1;
+  }
+
+  /* ---------- Main content ---------- */
+  .content{
+    padding:48px 48px 96px 34px;
+    border-left:1px solid var(--line);
+  }
+
+  section{
+    max-width:760px;
+    margin-bottom:68px;
+    scroll-margin-top:28px;
+  }
+
+  section:last-of-type{margin-bottom:0;}
+
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:25px;
+    font-size:0.9rem;
+    text-decoration:none;
+    color:var(--ink-soft);
+  }
+
+  .back-link:hover{color:var(--accent);}
+
+  .hero{
+    margin-bottom:56px;
+  }
+
+  .kicker{
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.13em;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:12px;
+  }
+
+  .hero h2{
+    font-size:clamp(2.05rem,3.6vw,2.85rem);
+    letter-spacing:-0.025em;
+    max-width:none;
+  }
+
+  .hero .lede{
+    margin:16px 0 0;
+    max-width:760px;
+    font-family:var(--serif);
+    font-size:1.13rem;
+    line-height:1.55;
+    color:#303B42;
+  }
+
+  .method-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:24px;
+  }
+
+  .method-tags span{
+    display:inline-block;
+    padding:6px 10px;
+    border:1px solid var(--line);
+    background:var(--paper-raised);
+    border-radius:5px;
+    color:#39444A;
+    font-size:0.8rem;
+  }
+
+  /* ---------- Portfolio nav ---------- */
+  .portfolio-nav{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    width:100%;
+    margin-top:30px;
+    border:1px solid #D7DAD5;
+    border-radius:7px;
+    overflow:hidden;
+  }
+
+  .portfolio-nav a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    padding:9px 8px;
+    background:#F2F3F2;
+    color:#222B33;
+    text-decoration:none;
+    text-align:center;
+    font-size:0.88rem;
+    font-weight:600;
+    border-right:1px solid #D7DAD5;
+  }
+
+  .portfolio-nav a:last-child{border-right:none;}
+  .portfolio-nav a:hover{background:#E4E8E6;}
+  .portfolio-nav a.active{
+    background:var(--accent);
+    color:white;
+  }
+
+  /* ---------- Section heading ---------- */
+  .eyebrow-rule{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:24px;
+  }
+
+  .eyebrow-rule h2{
+    font-size:1.45rem;
+    white-space:nowrap;
+  }
+
+  .eyebrow-rule::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+
+  p{margin:0 0 14px 0;}
+
+  /* ---------- Research cards ---------- */
+  .research-list{
+    display:grid;
+    gap:18px;
+  }
+
+  .research-card{
+    background:rgba(245,246,245,.72);
+    border:1px solid var(--line);
+    border-radius:7px;
+    padding:21px 22px 20px;
+  }
+
+  .research-card .meta{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:7px 10px;
+    margin-bottom:8px;
+    font-size:0.81rem;
+    color:var(--ink-soft);
+  }
+
+  .research-card .meta .type{
+    padding:3px 7px;
+    background:var(--accent-soft);
+    color:var(--accent-deep);
+    border-radius:4px;
+    font-weight:600;
+  }
+
+  .research-card h3{
+    font-size:1.14rem;
+    margin-bottom:10px;
+  }
+
+  .research-card ul{
+    margin:0;
+    padding-left:19px;
+  }
+
+  .research-card li{
+    margin:6px 0;
+    padding-left:2px;
+    font-size:0.94rem;
+  }
+
+  .output{
+    margin-top:13px;
+    padding-top:12px;
+    border-top:1px solid var(--line);
+    font-size:0.88rem;
+    color:var(--ink-soft);
+  }
+
+  .output strong{color:var(--ink);}
+
+  .doi-link{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    margin-top:8px;
+    padding:5px 9px;
+    border:1px solid var(--line);
+    border-radius:5px;
+    background:#F7F8F7;
+    text-decoration:none;
+    font-size:0.78rem;
+    font-weight:600;
+  }
+
+  .doi-link:hover{
+    border-color:var(--accent);
+    background:var(--accent-soft);
+  }
+
+  /* ---------- Publications ---------- */
+  .pub-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    border-top:1px solid var(--line);
+  }
+
+  .pub-list li{
+    padding:17px 0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .pub-title{
+    display:block;
+    font-family:var(--serif);
+    font-size:1.02rem;
+    line-height:1.42;
+    margin-bottom:5px;
+  }
+
+  .pub-meta{
+    display:block;
+    color:var(--ink-soft);
+    font-size:0.84rem;
+  }
+
+  /* ---------- Systems ---------- */
+  .system-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+
+  .system-card{
+    border-top:3px solid var(--accent);
+    background:var(--paper-raised);
+    padding:18px 18px 17px;
+    min-height:100%;
+  }
+
+  .system-card .year{
+    color:var(--ink-soft);
+    font-size:0.8rem;
+    margin-bottom:5px;
+  }
+
+  .system-card h3{
+    font-size:1.02rem;
+    margin-bottom:7px;
+  }
+
+  .system-card .org{
+    color:var(--accent);
+    font-size:0.84rem;
+    font-weight:600;
+    margin-bottom:10px;
+  }
+
+  .system-card p{
+    font-size:0.9rem;
+    margin:0;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:12px;
+  }
+
+  .contact-row a{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    padding:8px 13px;
+    border:1px solid var(--line);
+    border-radius:5px;
+    background:var(--paper-raised);
+    color:var(--ink);
+    text-decoration:none;
+    font-size:0.9rem;
+  }
+
+  .contact-row a:hover{
+    border-color:var(--accent);
+    color:var(--accent);
+  }
+
+  footer{
+    max-width:760px;
+    margin-top:72px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+    color:var(--ink-soft);
+    font-size:0.78rem;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .page{grid-template-columns:1fr;}
+    .sidebar{
+      position:static;
+      height:auto;
+      padding:34px 24px 26px;
+      border-bottom:1px solid var(--line);
+      gap:26px;
+    }
+    nav.toc{display:none;}
+    .sidebar-bottom{
+      max-width:430px;
+    }
+    .content{
+      padding:34px 24px 64px;
+      border-left:none;
+    }
+  }
+
+  @media (max-width:650px){
+    .portfolio-nav{grid-template-columns:1fr;}
+    .portfolio-nav a{border-right:none;border-bottom:1px solid #D7DAD5;}
+    .portfolio-nav a:last-child{border-bottom:none;}
+    .system-grid{grid-template-columns:1fr;}
+  }
+
+  @media (max-width:440px){
+    .sidebar-bottom{grid-template-columns:1fr 1fr;}
+    .hero h2{font-size:2.15rem;}
+    .research-card{padding:18px 17px;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <h1>Devis Wawan Saputra</h1>
+      <p class="tagline">Learning designer working toward doctoral research on AI adoption in organizations.</p>
+
+      <nav class="toc" aria-label="AI in Education page navigation">
+        <a href="index.html">← Main Portfolio</a>
+        <a href="#overview">Overview</a>
+        <a href="#projects">Research Prototypes</a>
+        <a href="#principles">Research Principles</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom" aria-label="Contact links">
+      <div class="contact-label">Links</div>
+
+      <a href="mailto:devis.saputra@gmail.com">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span>
+      </a>
+
+      <a href="https://linkedin.com/in/devissaputra" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+      </a>
+
+      <a href="https://www.xing.com/profile/Devis_Saputra" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-xing" aria-hidden="true"></i><span>Xing</span>
+      </a>
+
+      <a href="https://github.com/devissaputra/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
+      </a>
+
+      <a href="https://orcid.org/0000-0002-7133-9410" target="_blank" rel="noopener noreferrer">
+        <i class="ai ai-orcid" aria-hidden="true"></i><span>ORCID</span>
+      </a>
+
+      <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">
+        <i class="ai ai-arxiv" aria-hidden="true"></i><span>arXiv</span>
+      </a>
+
+      <a class="scholar" href="https://scholar.google.com/citations?user=EB5_ZRMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">
+        <i class="ai ai-google-scholar" aria-hidden="true"></i><span>Google Scholar</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to main portfolio</a>
+
+    <section class="hero" id="overview">
+      <h2>AI in Education</h2>
+      <p class="lede">This portfolio explores how AI can support learning without hiding uncertainty, weakening learner agency, or replacing professional judgment. The projects focus on observable learning processes, transparent analytics, responsible decision support, and research designs that can be challenged and extended.</p>
+
+      <div class="method-tags" aria-label="AI in Education themes">
+        <span>Generative AI</span>
+        <span>Learning Analytics</span>
+        <span>Human and AI Collaboration</span>
+        <span>Responsible AI</span>
+        <span>Explainable AI</span>
+        <span>Multimodal Analytics</span>
+        <span>Privacy Preserving ML</span>
+        <span>Process Mining</span>
+        <span>Classroom Discourse</span>
+        <span>Collaborative Learning</span>
+      </div>
+
+      <div class="portfolio-nav" aria-label="Portfolio areas">
+        <a href="research.html">Research</a>
+        <a href="learningdevelopment.html">Learning &amp; Development</a>
+        <a class="active" href="aieducation.html" aria-current="page">AI in Education</a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="eyebrow-rule"><h2>Research Prototypes</h2></div>
+
+      <p>These repositories are working research prototypes rather than claims of completed empirical studies. Their demo outputs use synthetic data unless the repository states otherwise. Each project keeps assumptions, metrics, code, tests, and limitations visible so the next step can be real validation rather than a polished black box.</p>
+
+      <div class="research-list">
+        <article class="research-card">
+          <div class="meta"><span class="type">Generative AI</span><span>Learner agency</span></div>
+          <h3>GenAI Learning Observatory</h3>
+          <ul>
+            <li>Analyzes learner interaction with generative AI through verification, revision, reflection, and adoption behavior.</li>
+            <li>Keeps event data, feature extraction, aggregation, and reporting separate so each signal can be traced to the underlying interaction.</li>
+          </ul>
+          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/genai_learning_observatory" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
+        </article>
+
+        <article class="research-card">
+          <div class="meta"><span class="type">Assessment</span><span>Human review</span></div>
+          <h3>Teacher and AI Assessment Studio</h3>
+          <ul>
+            <li>Studies rubric scoring as decision support rather than automatic judgment.</li>
+            <li>Separates AI scores, teacher scores, disagreement, uncertainty, routing, and final resolution for auditable review.</li>
+          </ul>
+          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/teacher_ai_assessment" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
+        </article>
+
+        <article class="research-card">
+          <div class="meta"><span class="type">Privacy</span><span>Learning analytics</span></div>
+          <h3>Privacy Preserving Learning Analytics</h3>
+          <ul>
+            <li>Compares centralized, federated, and noisy training on the same synthetic learner prediction task.</li>
+            <li>Makes privacy and utility tradeoffs visible instead of treating privacy as a footnote to model performance.</li>
+          </ul>
+          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/privacy_preserving_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
+        </article>
+
+        <article class="research-card">
+          <div class="meta"><span class="type">Multimodal Analytics</span><span>Self regulated learning</span></div>
+          <h3>Multimodal Self Regulation Lab</h3>
+          <ul>
+            <li>Explores interaction, attention, self report, missing modalities, ablation, and reliability aware feature fusion.</li>
+            <li>Preserves modality level visibility so researchers can see when a signal helps, hurts, or disappears.</li>
+          </ul>
+          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/multimodal_self_regulation_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
+        </article>
+
+        <article class="research-card">
+          <div class="meta"><span class="type">Process Mining</span><span>Instructional design</span></div>
+          <h3>Learning Design Process Mining</h3>
+          <ul>
+            <li>Treats learning design work as an event log rather than only a finished artifact.</li>
+            <li>Measures trace variants, transitions, entropy, rework, bottlenecks, and human and AI handoffs.</li>
+          </ul>
+          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/learning_design_process_mining" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
+        </article>
+
+        <article class="research-card">
+          <div class="meta"><span class="type">Hybrid Intelligence</span><span>Decision support</span></div>
+          <h3>Hybrid Intelligence Lab</h3>
+          <ul>
+            <li>Tests when a human, an AI system, or a shared process should make or defer a decision.</li>
+            <li>Separates confidence, disagreement, routing, override, and deferral so complementarity can be studied directly.</li>
+          </ul>
+          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/hybrid_intelligence_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
+        </article>
+
+        <article class="research-card">
+          <div class="meta"><span class="type">Explainable AI</span><span>Faithfulness</span></div>
+          <h3>Explanation Faithfulness for AIED</h3>
+          <ul>
+            <li>Tests whether an educational AI explanation follows the model behavior it claims to explain.</li>
+            <li>Implements comprehensiveness, sufficiency, stability, and a combined faithfulness view while keeping plausible explanations separate from faithful ones.</li>
+          </ul>
+          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/explanation_faithfulness_aied" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
+        </article>
+
+        <article class="research-card">
+          <div class="meta"><span class="type">Collaborative Learning</span><span>Discourse analytics</span></div>
+          <h3>Collaborative Reasoning Analytics</h3>
+          <ul>
+            <li>Studies semantic uptake, participation balance, evidence use, questioning, and reasoning moves in group dialogue.</li>
+            <li>Keeps these signals separate so a collaboration summary can be inspected rather than reduced to one opaque score.</li>
+          </ul>
+          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/collaborative_reasoning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
+        </article>
+
+        <article class="research-card">
+          <div class="meta"><span class="type">Generative AI</span><span>Cognitive offloading</span></div>
+          <h3>Cognitive Offloading Analytics</h3>
+          <ul>
+            <li>Turns possible cognitive offloading into transparent behavioral hypotheses using revision, verification, recall, confidence change, and similarity signals.</li>
+            <li>Treats the resulting score as an analytic proxy rather than a diagnosis of what a learner is thinking.</li>
+          </ul>
+          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/cognitive_offloading_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
+        </article>
+
+        <article class="research-card">
+          <div class="meta"><span class="type">Classroom Analytics</span><span>Teacher reflection</span></div>
+          <h3>Classroom Discourse Intelligence</h3>
+          <ul>
+            <li>Extracts interpretable features from classroom dialogue, including pedagogical moves, questioning depth, feedback, learner elaboration, and uptake.</li>
+            <li>Frames the output as support for reflection and research, not as an automatic judgment of teaching quality.</li>
+          </ul>
+          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/classroom_discourse_intelligence" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="principles">
+      <div class="eyebrow-rule"><h2>Research Principles</h2></div>
+      <div class="system-grid">
+        <article class="system-card">
+          <h3>Traceable measures</h3>
+          <p>Metrics should be connected to observable data and assumptions that another researcher can inspect.</p>
+        </article>
+        <article class="system-card">
+          <h3>Human judgment remains visible</h3>
+          <p>AI is treated as a source of evidence or decision support, not as an unquestioned replacement for teachers, learners, or researchers.</p>
+        </article>
+        <article class="system-card">
+          <h3>Synthetic data are labeled</h3>
+          <p>Demonstration outputs are clearly separated from empirical findings. Synthetic results are useful for testing a method, not for claiming an educational effect.</p>
+        </article>
+        <article class="system-card">
+          <h3>Reproducibility before complexity</h3>
+          <p>Small auditable baselines make it easier to test assumptions before moving to larger models, real institutional data, or higher stakes deployment.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="eyebrow-rule"><h2>Contact</h2></div>
+      <p>For AI in Education research collaboration, doctoral discussions, or questions about these prototypes, you can reach me through the channels below.</p>
+      <div class="contact-row">
+        <a href="mailto:devis.saputra@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
+        <a href="https://linkedin.com/in/devissaputra" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        <a href="https://github.com/devissaputra" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      </div>
+    </section>
+
+    <footer>© Devis Wawan Saputra · AI in Education portfolio · Built for GitHub Pages</footer>
+  </main>
+</div>
+</body>
+</html>
