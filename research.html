@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Research experience and scholarly work of Devis Wawan Saputra, spanning information retrieval, organizational research, applied R&D, operations research, learning systems, and AI model evaluation.">
+<meta name="description" content="Research experience and scholarly work of Devis Wawan Saputra, spanning information retrieval, organizational research, applied R&D, operations research, learning systems, AI engineering, and AI model evaluation.">
 <title>Devis Wawan Saputra — Research</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -221,7 +221,7 @@
   /* ---------- Portfolio nav ---------- */
   .portfolio-nav{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:0;
     width:100%;
     margin-top:30px;
@@ -470,11 +470,9 @@
   }
 
   @media (max-width:650px){
-    .portfolio-nav{
-      grid-template-columns:1fr 1fr;
-    }
-    .portfolio-nav a:nth-child(2){border-right:none;}
-    .portfolio-nav a:nth-child(-n+2){border-bottom:1px solid #D7DAD5;}
+    .portfolio-nav{grid-template-columns:1fr;}
+    .portfolio-nav a{border-right:none;border-bottom:1px solid #D7DAD5;}
+    .portfolio-nav a:last-child{border-bottom:none;}
     .system-grid{grid-template-columns:1fr;}
   }
 
@@ -547,9 +545,10 @@
 
     <section class="hero" id="overview">
       <h2>Research</h2>
-      <p class="lede">My research and applied R&amp;D experience spans information retrieval, organizational research, engineering design, operations research, higher-education and tourism studies, digital health systems, learning-system evaluation, and AI model evaluation.</p>
+      <p class="lede">My research and applied R&amp;D experience spans information retrieval, organizational research, engineering design, operations research, higher-education and tourism studies, digital health systems, learning-system evaluation, AI engineering, and AI model evaluation.</p>
 
       <div class="method-tags" aria-label="Methods and research approaches">
+        <span>AI Engineering</span>
         <span>Information Retrieval</span>
         <span>TF-IDF</span>
         <span>Qualitative Case Study</span>
@@ -566,7 +565,6 @@
         <a class="active" href="research.html" aria-current="page">Research</a>
         <a href="learningdevelopment.html">Learning &amp; Development</a>
         <a href="aieducation.html">AI in Education</a>
-        <a href="ai.html">AI</a>
       </div>
     </section>
 
