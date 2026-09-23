@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <style>
   :root{
     --paper:#EEF0EF;
@@ -108,12 +110,43 @@
   }
 
   .sidebar-bottom{
-    font-size:0.85rem;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    column-gap:12px;
+    row-gap:9px;
+    font-size:0.84rem;
     color:var(--ink-soft);
   }
+
+  .sidebar-bottom .contact-label{
+    grid-column:1 / -1;
+    color:var(--ink);
+    font-size:0.9rem;
+    font-weight:600;
+    margin-bottom:2px;
+  }
+
   .sidebar-bottom a{
-    display:inline-block;
-    margin-right:14px;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    min-width:0;
+    color:var(--accent);
+    text-decoration:none;
+    white-space:nowrap;
+  }
+
+  .sidebar-bottom a:hover{color:var(--accent-deep);}
+
+  .sidebar-bottom i{
+    width:18px;
+    flex:0 0 18px;
+    text-align:center;
+    font-size:16px;
+  }
+
+  .sidebar-bottom .scholar{
+    grid-column:1 / -1;
   }
 
   /* ---------- Main content ---------- */
@@ -301,35 +334,7 @@
     font-size:0.93rem;
     margin-bottom:0;
   }
-
-  .sidebar-bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
 /* ---------- Contact ---------- */
-.sidebar-bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.sidebar-bottom a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
-
-.sidebar-bottom img {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-  /* ---------- Contact ---------- */
   .contact-row{
     display:flex;
     flex-wrap:wrap;
@@ -367,6 +372,9 @@
     }
     .sidebar-top{flex:1 1 220px;}
     nav.toc{display:none;}
+    .sidebar-bottom{
+      max-width:430px;
+    }
     .content{
       padding:40px 24px 64px 24px;
       border-left:none;
@@ -399,46 +407,37 @@
         <a href="#contact"><b>Links</b></a>
       </nav>
     </div>
-    <div class="sidebar-bottom">
+    <div class="sidebar-bottom" aria-label="Contact links">
+      <div class="contact-label">Links</div>
 
-  <a href="mailto:devis.saputra@gmail.com">
-    <img src="https://cdn.simpleicons.org/gmail" alt="Email">
-    Email
-  </a>
+      <a href="mailto:devis.saputra@gmail.com">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span>
+      </a>
 
-  <a href="https://linkedin.com/in/devissaputra" target="_blank" rel="noopener noreferrer">
-    <img src="https://cdn.simpleicons.org/linkedin" alt="LinkedIn">
-    LinkedIn
-  </a>
+      <a href="https://linkedin.com/in/devissaputra" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+      </a>
 
-  <a href="https://www.xing.com/profile/Devis_Saputra" target="_blank" rel="noopener noreferrer">
-    <img src="https://cdn.simpleicons.org/xing" alt="Xing">
-    Xing
-  </a>
+      <a href="https://www.xing.com/profile/Devis_Saputra" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-xing" aria-hidden="true"></i><span>Xing</span>
+      </a>
 
-  <a href="https://github.com/devissaputra/" target="_blank" rel="noopener noreferrer">
-    <img src="https://cdn.simpleicons.org/github" alt="GitHub">
-    GitHub
-  </a>
+      <a href="https://github.com/devissaputra/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
+      </a>
 
-  <a href="https://orcid.org/0000-0002-7133-9410" target="_blank" rel="noopener noreferrer">
-    <img src="https://cdn.simpleicons.org/orcid" alt="ORCID">
-    ORCID
-  </a>
+      <a href="https://orcid.org/0000-0002-7133-9410" target="_blank" rel="noopener noreferrer">
+        <i class="ai ai-orcid" aria-hidden="true"></i><span>ORCID</span>
+      </a>
 
-  <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">
-    <img src="https://cdn.simpleicons.org/arxiv" alt="arXiv">
-    arXiv
-  </a>
+      <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">
+        <i class="ai ai-arxiv" aria-hidden="true"></i><span>arXiv</span>
+      </a>
 
-  <a href="https://scholar.google.com/citations?user=EB5_ZRMAAAAJ&hl=en&oi=ao"
-     target="_blank"
-     rel="noopener noreferrer">
-    <img src="https://cdn.simpleicons.org/googlescholar" alt="Google Scholar">
-    Google Scholar
-  </a>
-
-</div>
+      <a class="scholar" href="https://scholar.google.com/citations?user=EB5_ZRMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">
+        <i class="ai ai-google-scholar" aria-hidden="true"></i><span>Google Scholar</span>
+      </a>
+    </div>
   </aside>
 
   <main class="content">
