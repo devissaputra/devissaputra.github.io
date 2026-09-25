@@ -500,6 +500,7 @@
       <nav class="toc" aria-label="Research page navigation">
         <a href="index.html">← Main Portfolio</a>
         <a href="#overview">Research Overview</a>
+        <a href="#system-engineering">System Engineering Bundles</a>
         <a href="#degree-research">Degree Research</a>
         <a href="#projects">Research Projects</a>
         <a href="#systems">Systems &amp; Evaluation</a>
@@ -564,9 +565,137 @@
       <div class="portfolio-nav" aria-label="Portfolio areas">
         <a class="active" href="research.html" aria-current="page">Research</a>
         <a href="learningdevelopment.html">Learning &amp; Development</a>
+        <a href="aiengineering.html">AI Engineering</a>
         <a href="aieducation.html">AI in Education</a>
       </div>
     </section>
+
+    <!-- SYSTEM ENGINEERING RESEARCH BUNDLES START -->
+    <section class="repo-section" id="system-engineering">
+      <div class="eyebrow-rule bundle-heading"><h2>System Engineering · Research Bundles</h2></div>
+      <p class="repo-section-intro">These four empirical repositories sit at the top of the research page because they are the strongest systems-engineering research packages in the portfolio: each has a named external dataset, a reproducible analysis path, explicit limitations, and a paper-facing research structure.</p>
+
+      <article class="repo-project research-bundle" id="empirical_engineering_tradespace">
+        <div class="repo-project-grid">
+          <div class="repo-visuals">
+            <figure class="repo-visual">
+              <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/empirical_engineering_tradespace/main/assets/research_design.svg" alt="Empirical Engineering Design Trade Space: Concrete Slump Experiments: scientific system overview">
+              <figcaption>Scientific system overview</figcaption>
+            </figure>
+            <figure class="repo-visual">
+              <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/empirical_engineering_tradespace/main/assets/method.svg" alt="Empirical Engineering Design Trade Space: Concrete Slump Experiments: data processing pipeline">
+              <figcaption>Data processing and empirical workflow</figcaption>
+            </figure>
+          </div>
+          <div>
+            <div class="repo-kicker">Research Bundle · System Engineering</div>
+            <h3>Empirical Engineering Design Trade Space: Concrete Slump Experiments</h3>
+            <div class="repo-copy">
+              <p>This study turns 103 observed concrete-mixture experiments into a systems-engineering trade-space problem. Instead of inventing candidate designs, it works directly with laboratory alternatives and identifies Pareto-efficient choices across cement use, slump, and 28-day compressive strength.</p>
+              <p>The analysis then changes the decision framing—removing slump as an objective or treating it as an eligibility threshold—to show how sensitive the preferred design set is to the way engineering requirements are operationalized.</p>
+            </div>
+            <div class="repo-data-note"><strong>Data source:</strong> UCI Concrete Slump Test, 103 laboratory mixture experiments, DOI 10.24432/C5FG7D.</div>
+            <div class="repo-links">
+              <a href="https://github.com/devissaputra/empirical_engineering_tradespace" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Repository</a>
+              <a href="https://github.com/devissaputra/empirical_engineering_tradespace/blob/main/QA_REPORT.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report MD</a>
+              <a href="https://github.com/devissaputra/empirical_engineering_tradespace/blob/main/docs/paper_blueprint.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen" aria-hidden="true"></i> Paper</a>
+              <a href="https://github.com/devissaputra/empirical_engineering_tradespace/blob/main/data/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database" aria-hidden="true"></i> Data source</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="repo-project research-bundle" id="requirements_evidence_triage">
+        <div class="repo-project-grid">
+          <div class="repo-visuals">
+            <figure class="repo-visual">
+              <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/requirements_evidence_triage/main/assets/research_design.svg" alt="Requirements Classification Evidence Triage on a Gold-Standard Benchmark: scientific system overview">
+              <figcaption>Scientific system overview</figcaption>
+            </figure>
+            <figure class="repo-visual">
+              <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/requirements_evidence_triage/main/assets/method.svg" alt="Requirements Classification Evidence Triage on a Gold-Standard Benchmark: data processing pipeline">
+              <figcaption>Data processing and empirical workflow</figcaption>
+            </figure>
+          </div>
+          <div>
+            <div class="repo-kicker">Research Bundle · System Engineering</div>
+            <h3>Requirements Classification Evidence Triage on a Gold-Standard Benchmark</h3>
+            <div class="repo-copy">
+              <p>This bundle studies where automated fine-grained requirements classification fails and how those failures could be prioritized for human review. It separates classification performance from review efficiency so the evidence for the model and the evidence for the triage policy remain distinct.</p>
+              <p>A gold-label oracle queue is used only as an upper bound, while the deployable queue is built from prediction-only signals. That makes the project useful as a human-in-the-loop requirements-engineering study rather than a simple classifier demo.</p>
+            </div>
+            <div class="repo-data-note"><strong>Data source:</strong> eTour gold-standard requirements benchmark and pinned NoRBERT/FTLR replication artifacts hosted through Zenodo.</div>
+            <div class="repo-links">
+              <a href="https://github.com/devissaputra/requirements_evidence_triage" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Repository</a>
+              <a href="https://github.com/devissaputra/requirements_evidence_triage/blob/main/QA_REPORT.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report MD</a>
+              <a href="https://github.com/devissaputra/requirements_evidence_triage/blob/main/docs/paper_blueprint.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen" aria-hidden="true"></i> Paper</a>
+              <a href="https://github.com/devissaputra/requirements_evidence_triage/blob/main/data/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database" aria-hidden="true"></i> Data source</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="repo-project research-bundle" id="technical_performance_margin_monitor">
+        <div class="repo-project-grid">
+          <div class="repo-visuals">
+            <figure class="repo-visual">
+              <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/technical_performance_margin_monitor/main/assets/architecture.svg" alt="Forecast Maturity of Technical Performance Margin on NASA Li-ion Battery Aging Data: scientific system overview">
+              <figcaption>Scientific system overview</figcaption>
+            </figure>
+            <figure class="repo-visual">
+              <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/technical_performance_margin_monitor/main/assets/method.svg" alt="Forecast Maturity of Technical Performance Margin on NASA Li-ion Battery Aging Data: data processing pipeline">
+              <figcaption>Data processing and empirical workflow</figcaption>
+            </figure>
+          </div>
+          <div>
+            <div class="repo-kicker">Research Bundle · System Engineering</div>
+            <h3>Forecast Maturity of Technical Performance Margin on NASA Li-ion Battery Aging Data</h3>
+            <div class="repo-copy">
+              <p>This study asks a practical systems-engineering question: how trustworthy is a threshold forecast at the moment a decision has to be made? Battery capacity margin is monitored at fixed 40-, 60-, and 80-cycle checkpoints rather than using a cutoff that depends on knowing each cell’s eventual lifetime.</p>
+              <p>The result is a transparent view of forecast maturity: how predicted end-of-life changes as evidence accumulates, how early forecasts miss, and whether an apparently actionable warning remains inside the observed operating horizon.</p>
+            </div>
+            <div class="repo-data-note"><strong>Data source:</strong> NASA Prognostics Center of Excellence Li-ion Battery Data Set, using cells B0005, B0006, B0007, and B0018.</div>
+            <div class="repo-links">
+              <a href="https://github.com/devissaputra/technical_performance_margin_monitor" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Repository</a>
+              <a href="https://github.com/devissaputra/technical_performance_margin_monitor/blob/main/QA_REPORT.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report MD</a>
+              <a href="https://github.com/devissaputra/technical_performance_margin_monitor/blob/main/docs/paper_blueprint.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen" aria-hidden="true"></i> Paper</a>
+              <a href="https://github.com/devissaputra/technical_performance_margin_monitor/blob/main/data/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database" aria-hidden="true"></i> Data source</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="repo-project research-bundle" id="engineering_change_dynamics">
+        <div class="repo-project-grid">
+          <div class="repo-visuals">
+            <figure class="repo-visual">
+              <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/engineering_change_dynamics/main/assets/architecture.svg" alt="Cross-Project Heterogeneity in Quality-Oriented Engineering Change: scientific system overview">
+              <figcaption>Scientific system overview</figcaption>
+            </figure>
+            <figure class="repo-visual">
+              <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/engineering_change_dynamics/main/assets/method.svg" alt="Cross-Project Heterogeneity in Quality-Oriented Engineering Change: data processing pipeline">
+              <figcaption>Data processing and empirical workflow</figcaption>
+            </figure>
+          </div>
+          <div>
+            <div class="repo-kicker">Research Bundle · System Engineering</div>
+            <h3>Cross-Project Heterogeneity in Quality-Oriented Engineering Change</h3>
+            <div class="repo-copy">
+              <p>This bundle reanalyzes 2,533 manually classified commits across 54 Apache Java projects to study how engineering-change intent differs from one project to another. It follows the source taxonomy directly—perfective, corrective, and other—rather than forcing overlapping quality labels onto the data.</p>
+              <p>The analysis focuses on cross-project heterogeneity, uncertainty, and sensitivity to small project samples. That makes the repository a stronger empirical software-engineering study of maintenance behavior rather than a one-number summary of commit categories.</p>
+            </div>
+            <div class="repo-data-note"><strong>Data source:</strong> Trautsch, Erbel, Herbold & Grabowski replication dataset on Zenodo, DOI 10.5281/zenodo.7078179.</div>
+            <div class="repo-links">
+              <a href="https://github.com/devissaputra/engineering_change_dynamics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Repository</a>
+              <a href="https://github.com/devissaputra/engineering_change_dynamics/blob/main/QA_REPORT.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report MD</a>
+              <a href="https://github.com/devissaputra/engineering_change_dynamics/blob/main/docs/paper_blueprint.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen" aria-hidden="true"></i> Paper</a>
+              <a href="https://github.com/devissaputra/engineering_change_dynamics/blob/main/data/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database" aria-hidden="true"></i> Data source</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- SYSTEM ENGINEERING RESEARCH BUNDLES END -->
 
     <section id="degree-research">
       <div class="eyebrow-rule"><h2>Degree Research</h2></div>
