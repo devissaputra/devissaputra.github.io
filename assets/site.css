@@ -472,3 +472,40 @@ footer{
   .repo-visuals{grid-template-columns:1fr;}
   .repo-project.research-bundle{padding-left:12px;}
 }
+
+/* Compact empirical evidence strip */
+.repo-evidence{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+  margin-top:15px;
+}
+.repo-evidence-item{
+  padding:10px 9px 9px;
+  border:1px solid var(--research-blue-line);
+  border-radius:6px;
+  background:#f7faff;
+  text-align:center;
+}
+.repo-evidence-value{
+  display:block;
+  color:var(--research-blue);
+  font-family:var(--serif);
+  font-size:1.03rem;
+  font-weight:700;
+  line-height:1.1;
+}
+.repo-evidence-label{
+  display:block;
+  margin-top:4px;
+  color:var(--ink-soft);
+  font-size:.68rem;
+  line-height:1.2;
+}
+.repo-data-note code{
+  font-size:.9em;
+  overflow-wrap:anywhere;
+}
+@media(max-width:520px){
+  .repo-evidence{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
