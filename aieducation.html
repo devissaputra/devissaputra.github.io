@@ -3,711 +3,569 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI in Education portfolio of Devis Wawan Saputra, covering generative AI, learning analytics, human and AI collaboration, responsible AI, explainability, privacy, multimodal analytics, and classroom discourse.">
-<title>Devis Wawan Saputra | AI in Education</title>
-
+<meta name="description" content="AI in Education portfolio of Devis Wawan Saputra: four empirical Research Bundles and twenty-six additional AIED research prototypes.">
+<title>Devis Wawan Saputra — AI in Education</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-
 <style>
-  :root{
-    --paper:#EEF0EF;
-    --paper-raised:#F5F6F5;
-    --ink:#1B2430;
-    --ink-soft:#5B6660;
-    --line:#C9CDC5;
-    --accent:#2F5D62;
-    --accent-soft:#DDE6E4;
-    --accent-deep:#244A4E;
-    --live:#B5563B;
-    --serif:"Source Serif 4", Georgia, serif;
-    --sans:"IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--sans);
-    font-size:16px;
-    line-height:1.58;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  a{color:var(--accent);}
-  a:focus-visible{
-    outline:2px solid var(--accent);
-    outline-offset:3px;
-  }
-
-  h1,h2,h3,h4{
-    font-family:var(--serif);
-    color:var(--ink);
-    line-height:1.18;
-    margin:0;
-  }
-
-  .page{
-    display:grid;
-    grid-template-columns:280px 1fr;
-    max-width:1180px;
-    margin:0 auto;
-    min-height:100vh;
-  }
-
-  /* ---------- Sidebar ---------- */
-  .sidebar{
-    padding:46px 32px 38px 40px;
-    position:sticky;
-    top:0;
-    align-self:start;
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-  }
-
-  .sidebar-top h1{
-    font-size:1.72rem;
-    letter-spacing:-0.012em;
-  }
-
-  .tagline{
-    margin:12px 0 0;
-    color:var(--ink-soft);
-    font-size:0.98rem;
-    max-width:22ch;
-  }
-
-  nav.toc{
-    margin-top:26px;
-  }
-
-  nav.toc a{
-    display:block;
-    padding:6px 0 6px 12px;
-    margin-left:-12px;
-    border-left:2px solid transparent;
-    color:var(--ink);
-    text-decoration:none;
-    font-size:0.94rem;
-    font-weight:600;
-    transition:border-color .15s ease, color .15s ease;
-  }
-
-  nav.toc a:hover,
-  nav.toc a:focus-visible{
-    border-left-color:var(--accent);
-    color:var(--accent);
-  }
-
-  .sidebar-bottom{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    column-gap:12px;
-    row-gap:9px;
-    font-size:0.84rem;
-    color:var(--ink-soft);
-  }
-
-  .sidebar-bottom .contact-label{
-    grid-column:1 / -1;
-    color:var(--ink);
-    font-size:0.9rem;
-    font-weight:600;
-    margin-bottom:2px;
-  }
-
-  .sidebar-bottom a{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    min-width:0;
-    color:var(--accent);
-    text-decoration:none;
-    white-space:nowrap;
-  }
-
-  .sidebar-bottom a:hover{color:var(--accent-deep);}
-
-  .sidebar-bottom i{
-    width:18px;
-    flex:0 0 18px;
-    text-align:center;
-    font-size:16px;
-  }
-
-  .sidebar-bottom .scholar{
-    grid-column:1 / -1;
-  }
-
-  /* ---------- Main content ---------- */
-  .content{
-    padding:48px 48px 96px 34px;
-    border-left:1px solid var(--line);
-  }
-
-  section{
-    max-width:760px;
-    margin-bottom:68px;
-    scroll-margin-top:28px;
-  }
-
-  section:last-of-type{margin-bottom:0;}
-
-  .back-link{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    margin-bottom:25px;
-    font-size:0.9rem;
-    text-decoration:none;
-    color:var(--ink-soft);
-  }
-
-  .back-link:hover{color:var(--accent);}
-
-  .hero{
-    margin-bottom:56px;
-  }
-
-  .kicker{
-    font-size:0.78rem;
-    text-transform:uppercase;
-    letter-spacing:0.13em;
-    color:var(--accent);
-    font-weight:600;
-    margin-bottom:12px;
-  }
-
-  .hero h2{
-    font-size:clamp(2.05rem,3.6vw,2.85rem);
-    letter-spacing:-0.025em;
-    max-width:none;
-  }
-
-  .hero .lede{
-    margin:16px 0 0;
-    max-width:760px;
-    font-family:var(--serif);
-    font-size:1.13rem;
-    line-height:1.55;
-    color:#303B42;
-  }
-
-  .method-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:24px;
-  }
-
-  .method-tags span{
-    display:inline-block;
-    padding:6px 10px;
-    border:1px solid var(--line);
-    background:var(--paper-raised);
-    border-radius:5px;
-    color:#39444A;
-    font-size:0.8rem;
-  }
-
-  /* ---------- Portfolio nav ---------- */
-  .portfolio-nav{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:0;
-    width:100%;
-    margin-top:30px;
-    border:1px solid #D7DAD5;
-    border-radius:7px;
-    overflow:hidden;
-  }
-
-  .portfolio-nav a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:48px;
-    padding:9px 8px;
-    background:#F2F3F2;
-    color:#222B33;
-    text-decoration:none;
-    text-align:center;
-    font-size:0.88rem;
-    font-weight:600;
-    border-right:1px solid #D7DAD5;
-  }
-
-  .portfolio-nav a:last-child{border-right:none;}
-  .portfolio-nav a:hover{background:#E4E8E6;}
-  .portfolio-nav a.active{
-    background:var(--accent);
-    color:white;
-  }
-
-  /* ---------- Section heading ---------- */
-  .eyebrow-rule{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin-bottom:24px;
-  }
-
-  .eyebrow-rule h2{
-    font-size:1.45rem;
-    white-space:nowrap;
-  }
-
-  .eyebrow-rule::after{
-    content:"";
-    flex:1;
-    height:1px;
-    background:var(--line);
-  }
-
-  p{margin:0 0 14px 0;}
-
-  /* ---------- Research cards ---------- */
-  .research-list{
-    display:grid;
-    gap:18px;
-  }
-
-  .research-card{
-    background:rgba(245,246,245,.72);
-    border:1px solid var(--line);
-    border-radius:7px;
-    padding:21px 22px 20px;
-  }
-
-  .research-card .meta{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    gap:7px 10px;
-    margin-bottom:8px;
-    font-size:0.81rem;
-    color:var(--ink-soft);
-  }
-
-  .research-card .meta .type{
-    padding:3px 7px;
-    background:var(--accent-soft);
-    color:var(--accent-deep);
-    border-radius:4px;
-    font-weight:600;
-  }
-
-  .research-card h3{
-    font-size:1.14rem;
-    margin-bottom:10px;
-  }
-
-  .research-card ul{
-    margin:0;
-    padding-left:19px;
-  }
-
-  .research-card li{
-    margin:6px 0;
-    padding-left:2px;
-    font-size:0.94rem;
-  }
-
-  .output{
-    margin-top:13px;
-    padding-top:12px;
-    border-top:1px solid var(--line);
-    font-size:0.88rem;
-    color:var(--ink-soft);
-  }
-
-  .output strong{color:var(--ink);}
-
-  .doi-link{
-    display:inline-flex;
-    align-items:center;
-    gap:5px;
-    margin-top:8px;
-    padding:5px 9px;
-    border:1px solid var(--line);
-    border-radius:5px;
-    background:#F7F8F7;
-    text-decoration:none;
-    font-size:0.78rem;
-    font-weight:600;
-  }
-
-  .doi-link:hover{
-    border-color:var(--accent);
-    background:var(--accent-soft);
-  }
-
-  /* ---------- Publications ---------- */
-  .pub-list{
-    list-style:none;
-    margin:0;
-    padding:0;
-    border-top:1px solid var(--line);
-  }
-
-  .pub-list li{
-    padding:17px 0;
-    border-bottom:1px solid var(--line);
-  }
-
-  .pub-title{
-    display:block;
-    font-family:var(--serif);
-    font-size:1.02rem;
-    line-height:1.42;
-    margin-bottom:5px;
-  }
-
-  .pub-meta{
-    display:block;
-    color:var(--ink-soft);
-    font-size:0.84rem;
-  }
-
-  /* ---------- Systems ---------- */
-  .system-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:16px;
-  }
-
-  .system-card{
-    border-top:3px solid var(--accent);
-    background:var(--paper-raised);
-    padding:18px 18px 17px;
-    min-height:100%;
-  }
-
-  .system-card .year{
-    color:var(--ink-soft);
-    font-size:0.8rem;
-    margin-bottom:5px;
-  }
-
-  .system-card h3{
-    font-size:1.02rem;
-    margin-bottom:7px;
-  }
-
-  .system-card .org{
-    color:var(--accent);
-    font-size:0.84rem;
-    font-weight:600;
-    margin-bottom:10px;
-  }
-
-  .system-card p{
-    font-size:0.9rem;
-    margin:0;
-  }
-
-  /* ---------- Contact ---------- */
-  .contact-row{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:12px;
-  }
-
-  .contact-row a{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    padding:8px 13px;
-    border:1px solid var(--line);
-    border-radius:5px;
-    background:var(--paper-raised);
-    color:var(--ink);
-    text-decoration:none;
-    font-size:0.9rem;
-  }
-
-  .contact-row a:hover{
-    border-color:var(--accent);
-    color:var(--accent);
-  }
-
-  footer{
-    max-width:760px;
-    margin-top:72px;
-    padding-top:18px;
-    border-top:1px solid var(--line);
-    color:var(--ink-soft);
-    font-size:0.78rem;
-  }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width:900px){
-    .page{grid-template-columns:1fr;}
-    .sidebar{
-      position:static;
-      height:auto;
-      padding:34px 24px 26px;
-      border-bottom:1px solid var(--line);
-      gap:26px;
-    }
-    nav.toc{display:none;}
-    .sidebar-bottom{
-      max-width:430px;
-    }
-    .content{
-      padding:34px 24px 64px;
-      border-left:none;
-    }
-  }
-
-  @media (max-width:650px){
-    .portfolio-nav{grid-template-columns:1fr;}
-    .portfolio-nav a{border-right:none;border-bottom:1px solid #D7DAD5;}
-    .portfolio-nav a:last-child{border-bottom:none;}
-    .system-grid{grid-template-columns:1fr;}
-  }
-
-  @media (max-width:440px){
-    .sidebar-bottom{grid-template-columns:1fr 1fr;}
-    .hero h2{font-size:2.15rem;}
-    .research-card{padding:18px 17px;}
-  }
-
-  @media (prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto;}
-    *{transition:none !important;}
-  }
+:root{--paper:#EEF0EF;--paper-raised:#F5F6F5;--ink:#1B2430;--ink-soft:#5B6660;--line:#C9CDC5;--accent:#2F5D62;--accent-soft:#DDE6E4;--accent-deep:#244A4E;--serif:"Source Serif 4",Georgia,serif;--sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.58}a{color:var(--accent)}h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.18}
+.page{display:grid;grid-template-columns:280px 1fr;max-width:1320px;margin:0 auto;min-height:100vh}.sidebar{padding:46px 32px 38px 40px;position:sticky;top:0;align-self:start;height:100vh;display:flex;flex-direction:column;justify-content:space-between}.sidebar-top h1{font-size:1.72rem}.tagline{margin:12px 0 0;color:var(--ink-soft);font-size:.98rem;max-width:22ch}nav.toc{margin-top:26px}nav.toc a{display:block;padding:6px 0 6px 12px;margin-left:-12px;border-left:2px solid transparent;color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:600}nav.toc a:hover{border-left-color:var(--accent);color:var(--accent)}
+.sidebar-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px;row-gap:9px;font-size:.84rem;color:var(--ink-soft)}.sidebar-bottom .contact-label{grid-column:1/-1;color:var(--ink);font-weight:600}.sidebar-bottom a{display:flex;align-items:center;gap:7px;color:var(--accent);text-decoration:none;white-space:nowrap}.sidebar-bottom i{width:18px;text-align:center}.sidebar-bottom .scholar{grid-column:1/-1}
+.content{padding:48px 48px 80px 34px;border-left:1px solid var(--line)}section{max-width:940px;margin-bottom:56px}.back-link{display:inline-flex;gap:8px;align-items:center;margin-bottom:25px;color:var(--ink-soft);text-decoration:none;font-size:.9rem}
+.hero{margin-bottom:48px}.kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;color:var(--accent);font-weight:600;margin-bottom:10px}.hero h2{font-size:clamp(2rem,3.6vw,2.8rem)}.hero .lede{margin:16px 0 0;max-width:840px;font-family:var(--serif);font-size:1.13rem;color:#303B42}
+.portfolio-nav{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;border:1px solid #D7DAD5;border-radius:7px;overflow:hidden}.portfolio-nav a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:9px 8px;background:#F2F3F2;color:#222B33;text-decoration:none;text-align:center;font-size:.88rem;font-weight:600;border-right:1px solid #D7DAD5}.portfolio-nav a:last-child{border-right:none}.portfolio-nav a.active{background:var(--accent);color:#fff}
+.eyebrow-rule{display:flex;align-items:center;gap:14px;margin-bottom:18px}.eyebrow-rule h2{font-size:1.45rem}.eyebrow-rule::after{content:"";flex:1;height:1px;background:var(--line)}
+.contact-row{display:flex;flex-wrap:wrap;gap:10px}.contact-row a{padding:8px 13px;border:1px solid var(--line);border-radius:5px;background:var(--paper-raised);color:var(--ink);text-decoration:none}
+footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.78rem}
+@media(max-width:900px){.page{grid-template-columns:1fr}.sidebar{position:static;height:auto;padding:34px 24px 26px;border-bottom:1px solid var(--line);gap:26px}nav.toc{display:none}.content{padding:34px 24px 58px;border-left:none}}
+@media(max-width:700px){.portfolio-nav{grid-template-columns:1fr}.portfolio-nav a{border-right:none;border-bottom:1px solid #D7DAD5}}
 </style>
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <div class="page">
-
-  <aside class="sidebar">
-    <div class="sidebar-top">
-      <h1>Devis Wawan Saputra</h1>
-      <p class="tagline">Learning designer working toward doctoral research on AI adoption in organizations.</p>
-
-      <nav class="toc" aria-label="AI in Education page navigation">
-        <a href="index.html">← Main Portfolio</a>
-        <a href="#overview">Overview</a>
-        <a href="#projects">Research Prototypes</a>
-        <a href="#principles">Research Principles</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-
-    <div class="sidebar-bottom" aria-label="Contact links">
-      <div class="contact-label">Links</div>
-
-      <a href="mailto:devis.saputra@gmail.com">
-        <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span>
-      </a>
-
-      <a href="https://linkedin.com/in/devissaputra" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
-      </a>
-
-      <a href="https://www.xing.com/profile/Devis_Saputra" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-xing" aria-hidden="true"></i><span>Xing</span>
-      </a>
-
-      <a href="https://github.com/devissaputra/" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
-      </a>
-
-      <a href="https://orcid.org/0000-0002-7133-9410" target="_blank" rel="noopener noreferrer">
-        <i class="ai ai-orcid" aria-hidden="true"></i><span>ORCID</span>
-      </a>
-
-      <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">
-        <i class="ai ai-arxiv" aria-hidden="true"></i><span>arXiv</span>
-      </a>
-
-      <a class="scholar" href="https://scholar.google.com/citations?user=EB5_ZRMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">
-        <i class="ai ai-google-scholar" aria-hidden="true"></i><span>Google Scholar</span>
-      </a>
-    </div>
-  </aside>
-
-  <main class="content">
-    <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to main portfolio</a>
-
-    <section class="hero" id="overview">
-      <h2>AI in Education</h2>
-      <p class="lede">This portfolio explores how AI can support learning without hiding uncertainty, weakening learner agency, or replacing professional judgment. The projects focus on observable learning processes, transparent analytics, responsible decision support, and research designs that can be challenged and extended.</p>
-
-      <div class="method-tags" aria-label="AI in Education themes">
-        <span>Generative AI</span>
-        <span>Learning Analytics</span>
-        <span>Human and AI Collaboration</span>
-        <span>Responsible AI</span>
-        <span>Explainable AI</span>
-        <span>Multimodal Analytics</span>
-        <span>Privacy Preserving ML</span>
-        <span>Process Mining</span>
-        <span>Classroom Discourse</span>
-        <span>Collaborative Learning</span>
-      </div>
-
-      <div class="portfolio-nav" aria-label="Portfolio areas">
-        <a href="research.html">Research</a>
-        <a href="learningdevelopment.html">Learning &amp; Development</a>
-        <a class="active" href="aieducation.html" aria-current="page">AI in Education</a>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="eyebrow-rule"><h2>Research Prototypes</h2></div>
-
-      <p>These repositories are working research prototypes rather than claims of completed empirical studies. Their demo outputs use synthetic data unless the repository states otherwise. Each project keeps assumptions, metrics, code, tests, and limitations visible so the next step can be real validation rather than a polished black box.</p>
-
-      <div class="research-list">
-        <article class="research-card">
-          <div class="meta"><span class="type">Generative AI</span><span>Learner agency</span></div>
-          <h3>GenAI Learning Observatory</h3>
-          <ul>
-            <li>Analyzes learner interaction with generative AI through verification, revision, reflection, and adoption behavior.</li>
-            <li>Keeps event data, feature extraction, aggregation, and reporting separate so each signal can be traced to the underlying interaction.</li>
-          </ul>
-          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/genai_learning_observatory" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
-        </article>
-
-        <article class="research-card">
-          <div class="meta"><span class="type">Assessment</span><span>Human review</span></div>
-          <h3>Teacher and AI Assessment Studio</h3>
-          <ul>
-            <li>Studies rubric scoring as decision support rather than automatic judgment.</li>
-            <li>Separates AI scores, teacher scores, disagreement, uncertainty, routing, and final resolution for auditable review.</li>
-          </ul>
-          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/teacher_ai_assessment" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
-        </article>
-
-        <article class="research-card">
-          <div class="meta"><span class="type">Privacy</span><span>Learning analytics</span></div>
-          <h3>Privacy Preserving Learning Analytics</h3>
-          <ul>
-            <li>Compares centralized, federated, and noisy training on the same synthetic learner prediction task.</li>
-            <li>Makes privacy and utility tradeoffs visible instead of treating privacy as a footnote to model performance.</li>
-          </ul>
-          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/privacy_preserving_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
-        </article>
-
-        <article class="research-card">
-          <div class="meta"><span class="type">Multimodal Analytics</span><span>Self regulated learning</span></div>
-          <h3>Multimodal Self Regulation Lab</h3>
-          <ul>
-            <li>Explores interaction, attention, self report, missing modalities, ablation, and reliability aware feature fusion.</li>
-            <li>Preserves modality level visibility so researchers can see when a signal helps, hurts, or disappears.</li>
-          </ul>
-          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/multimodal_self_regulation_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
-        </article>
-
-        <article class="research-card">
-          <div class="meta"><span class="type">Process Mining</span><span>Instructional design</span></div>
-          <h3>Learning Design Process Mining</h3>
-          <ul>
-            <li>Treats learning design work as an event log rather than only a finished artifact.</li>
-            <li>Measures trace variants, transitions, entropy, rework, bottlenecks, and human and AI handoffs.</li>
-          </ul>
-          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/learning_design_process_mining" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
-        </article>
-
-        <article class="research-card">
-          <div class="meta"><span class="type">Hybrid Intelligence</span><span>Decision support</span></div>
-          <h3>Hybrid Intelligence Lab</h3>
-          <ul>
-            <li>Tests when a human, an AI system, or a shared process should make or defer a decision.</li>
-            <li>Separates confidence, disagreement, routing, override, and deferral so complementarity can be studied directly.</li>
-          </ul>
-          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/hybrid_intelligence_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
-        </article>
-
-        <article class="research-card">
-          <div class="meta"><span class="type">Explainable AI</span><span>Faithfulness</span></div>
-          <h3>Explanation Faithfulness for AIED</h3>
-          <ul>
-            <li>Tests whether an educational AI explanation follows the model behavior it claims to explain.</li>
-            <li>Implements comprehensiveness, sufficiency, stability, and a combined faithfulness view while keeping plausible explanations separate from faithful ones.</li>
-          </ul>
-          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/explanation_faithfulness_aied" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
-        </article>
-
-        <article class="research-card">
-          <div class="meta"><span class="type">Collaborative Learning</span><span>Discourse analytics</span></div>
-          <h3>Collaborative Reasoning Analytics</h3>
-          <ul>
-            <li>Studies semantic uptake, participation balance, evidence use, questioning, and reasoning moves in group dialogue.</li>
-            <li>Keeps these signals separate so a collaboration summary can be inspected rather than reduced to one opaque score.</li>
-          </ul>
-          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/collaborative_reasoning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
-        </article>
-
-        <article class="research-card">
-          <div class="meta"><span class="type">Generative AI</span><span>Cognitive offloading</span></div>
-          <h3>Cognitive Offloading Analytics</h3>
-          <ul>
-            <li>Turns possible cognitive offloading into transparent behavioral hypotheses using revision, verification, recall, confidence change, and similarity signals.</li>
-            <li>Treats the resulting score as an analytic proxy rather than a diagnosis of what a learner is thinking.</li>
-          </ul>
-          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/cognitive_offloading_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
-        </article>
-
-        <article class="research-card">
-          <div class="meta"><span class="type">Classroom Analytics</span><span>Teacher reflection</span></div>
-          <h3>Classroom Discourse Intelligence</h3>
-          <ul>
-            <li>Extracts interpretable features from classroom dialogue, including pedagogical moves, questioning depth, feedback, learner elaboration, and uptake.</li>
-            <li>Frames the output as support for reflection and research, not as an automatic judgment of teaching quality.</li>
-          </ul>
-          <div class="output"><a class="doi-link" href="https://github.com/devissaputra/classroom_discourse_intelligence" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> View repository</a></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="principles">
-      <div class="eyebrow-rule"><h2>Research Principles</h2></div>
-      <div class="system-grid">
-        <article class="system-card">
-          <h3>Traceable measures</h3>
-          <p>Metrics should be connected to observable data and assumptions that another researcher can inspect.</p>
-        </article>
-        <article class="system-card">
-          <h3>Human judgment remains visible</h3>
-          <p>AI is treated as a source of evidence or decision support, not as an unquestioned replacement for teachers, learners, or researchers.</p>
-        </article>
-        <article class="system-card">
-          <h3>Synthetic data are labeled</h3>
-          <p>Demonstration outputs are clearly separated from empirical findings. Synthetic results are useful for testing a method, not for claiming an educational effect.</p>
-        </article>
-        <article class="system-card">
-          <h3>Reproducibility before complexity</h3>
-          <p>Small auditable baselines make it easier to test assumptions before moving to larger models, real institutional data, or higher stakes deployment.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="eyebrow-rule"><h2>Contact</h2></div>
-      <p>For AI in Education research collaboration, doctoral discussions, or questions about these prototypes, you can reach me through the channels below.</p>
-      <div class="contact-row">
-        <a href="mailto:devis.saputra@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
-        <a href="https://linkedin.com/in/devissaputra" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-        <a href="https://github.com/devissaputra" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
-      </div>
-    </section>
-
-    <footer>© Devis Wawan Saputra · AI in Education portfolio · Built for GitHub Pages</footer>
-  </main>
+<aside class="sidebar">
+ <div class="sidebar-top">
+  <h1>Devis Wawan Saputra</h1>
+  <p class="tagline">AI in Education portfolio focused on transparent analytics, learner agency, instructional design, and responsible AI.</p>
+  <nav class="toc" aria-label="AI in Education page navigation">
+   <a href="index.html">← Main Portfolio</a>
+   <a href="#overview">Overview</a>
+   <a href="#research-bundles">Research Bundles</a>
+   <a href="#repositories">AI in Education Repositories</a>
+   <a href="#contact">Contact</a>
+  </nav>
+ </div>
+ <div class="sidebar-bottom" aria-label="Contact links">
+  <div class="contact-label">Links</div>
+  <a href="mailto:devis.saputra@gmail.com"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+  <a href="https://linkedin.com/in/devissaputra" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+  <a href="https://www.xing.com/profile/Devis_Saputra" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-xing"></i><span>Xing</span></a>
+  <a href="https://github.com/devissaputra/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+  <a href="https://orcid.org/0000-0002-7133-9410" target="_blank" rel="noopener noreferrer"><i class="ai ai-orcid"></i><span>ORCID</span></a>
+  <a class="scholar" href="https://scholar.google.com/citations?user=EB5_ZRMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i><span>Google Scholar</span></a>
+ </div>
+</aside>
+<main class="content">
+ <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to main portfolio</a>
+ <section class="hero" id="overview">
+  <div class="kicker">Portfolio</div>
+  <h2>AI in Education</h2>
+  <p class="lede">Thirty repositories spanning learner modeling, learning analytics, assessment, instructional design, human–AI collaboration, learner agency, multimodal analytics, workplace learning, and responsible AI. The four empirical Research Bundles are pinned first in blue; the remaining repositories follow underneath using the same scientific two-image format.</p>
+  <div class="portfolio-nav" aria-label="Portfolio areas">
+   <a href="research.html">Research</a>
+   <a href="learningdevelopment.html">Learning &amp; Development</a>
+   <a href="aiengineering.html">AI Engineering</a>
+   <a class="active" href="aieducation.html" aria-current="page">AI in Education</a>
+  </div>
+ </section>
+ <section class="repo-section" id="research-bundles">
+  <div class="eyebrow-rule bundle-heading"><h2>AI in Education · Research Bundles</h2></div>
+  <p class="repo-section-intro">These four repositories are the primary empirical AIED packages for professor review. Each uses real external data, an explicit study design, reproducible evidence, limitations, robustness analysis, and paper-facing artifacts.</p>
+  <article class="repo-project research-bundle" id="knowledge_tracing_benchmark">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/knowledge_tracing_benchmark/main/assets/scientific_system_overview.svg" alt="Knowledge Tracing Benchmark on ASSISTments 2009: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/knowledge_tracing_benchmark/main/assets/scientific_data_pipeline.svg" alt="Knowledge Tracing Benchmark on ASSISTments 2009: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">Research Bundle · AI in Education</div>
+    <h3>Knowledge Tracing Benchmark on ASSISTments 2009</h3>
+    <div class="repo-copy"><p>This learner-disjoint benchmark compares transparent priors, fixed and tuned Bayesian Knowledge Tracing, a PFA-style logistic model, and a compact GRU tracer under one controlled protocol. The repository keeps model selection, uncertainty, calibration, error analysis, and first-versus-repeated skill encounters visible so the recurrent model is judged against strong interpretable baselines rather than presented in isolation.</p></div>
+    <div class="repo-data-note"><strong>Data source:</strong> ASSISTments 2009 learner sequences, retrieved through the pinned Atomi/ASSISTments2009 representation.</div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/knowledge_tracing_benchmark" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+    <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project research-bundle" id="causal_learning_analytics">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/causal_learning_analytics/main/assets/scientific_system_overview.svg" alt="Causal Learning Analytics — OULAD Day-30 Landmark Research Bundle: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/causal_learning_analytics/main/assets/scientific_data_pipeline.svg" alt="Causal Learning Analytics — OULAD Day-30 Landmark Research Bundle: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">Research Bundle · AI in Education</div>
+    <h3>Causal Learning Analytics — OULAD Day-30 Landmark Research Bundle</h3>
+    <div class="repo-copy"><p>This study asks a deliberately narrow observational question: among learners still eligible at day 30, what adjusted contrast in favorable final outcome is associated with submitting at least one non-banked assessment by that landmark? The design separates eligibility, exposure, and later outcome timing so the analysis does not quietly mix early withdrawal with treatment assignment.</p></div>
+    <div class="repo-data-note"><strong>Data source:</strong> Open University Learning Analytics Dataset (OULAD), using a frozen day-30 landmark cohort.</div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/causal_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/causal_learning_analytics/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <a href="https://github.com/devissaputra/causal_learning_analytics/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+    <a href="https://github.com/devissaputra/causal_learning_analytics/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project research-bundle" id="misconception_aware_rag">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/misconception_aware_rag/main/assets/scientific_system_overview.svg" alt="Misconception-Aware RAG Tutor — Empirical Research Bundle: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/misconception_aware_rag/main/assets/scientific_data_pipeline.svg" alt="Misconception-Aware RAG Tutor — Empirical Research Bundle: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">Research Bundle · AI in Education</div>
+    <h3>Misconception-Aware RAG Tutor — Empirical Research Bundle</h3>
+    <div class="repo-copy"><p>This repository separates an empirical retrieval study from the tutoring prototype built around it. The study tests whether conditioning evidence retrieval on an observed wrong answer changes support-passage retrieval on SciQ, while a negative-control condition checks whether any gain is more than the effect of simply appending extra distractor-like text.</p></div>
+    <div class="repo-data-note"><strong>Data source:</strong> SciQ test split from the Allen Institute for AI / Hugging Face dataset repository, pinned to a frozen revision and hash.</div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/misconception_aware_rag" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/misconception_aware_rag/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <a href="https://github.com/devissaputra/misconception_aware_rag/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+    <a href="https://github.com/devissaputra/misconception_aware_rag/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project research-bundle" id="responsible_aied_evaluation">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/responsible_aied_evaluation/main/assets/scientific_system_overview.svg" alt="Responsible AIED Evaluation — UCI 697 Research Bundle: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/responsible_aied_evaluation/main/assets/scientific_data_pipeline.svg" alt="Responsible AIED Evaluation — UCI 697 Research Bundle: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">Research Bundle · AI in Education</div>
+    <h3>Responsible AIED Evaluation — UCI 697 Research Bundle</h3>
+    <div class="repo-copy"><p>This bundle audits an enrollment-time dropout probability model across discrimination, calibration, subgroup error patterns, allocation behavior, target definitions, and split sensitivity. Protected-group fields remain audit-only, semester-performance variables are removed to respect the prediction-time boundary, and the results are framed as measurement evidence rather than a fairness certificate.</p></div>
+    <div class="repo-data-note"><strong>Data source:</strong> UCI Predict Students' Dropout and Academic Success (dataset 697), DOI 10.24432/C5MC89.</div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/responsible_aied_evaluation" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/responsible_aied_evaluation/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <a href="https://github.com/devissaputra/responsible_aied_evaluation/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+    <a href="https://github.com/devissaputra/responsible_aied_evaluation/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
+   </div>
+  </div>
+ </article>
+ </section>
+ <section class="repo-section" id="repositories">
+  <div class="eyebrow-rule"><h2>AI in Education Repositories</h2></div>
+  <p class="repo-section-intro">The remaining twenty-six projects are research prototypes and technical studies. Their summaries intentionally distinguish implemented methods from claims that would still require empirical validation.</p>
+  <article class="repo-project" id="genai_learning_observatory">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/genai_learning_observatory/main/assets/scientific_system_overview.svg" alt="GenAI Learning Observatory: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/genai_learning_observatory/main/assets/scientific_data_pipeline.svg" alt="GenAI Learning Observatory: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 05</div>
+    <h3>GenAI Learning Observatory</h3>
+    <div class="repo-copy"><p>An observability layer for studying how learners use generative AI rather than merely counting usage. It keeps prompting, verification, revision, reflection, and answer adoption as separate signals so learner-agency assumptions can be inspected instead of disappearing inside a single engagement score.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/genai_learning_observatory" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/genai_learning_observatory/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="teacher_ai_assessment">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/teacher_ai_assessment/main/assets/scientific_system_overview.svg" alt="Teacher–AI Assessment Studio: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/teacher_ai_assessment/main/assets/scientific_data_pipeline.svg" alt="Teacher–AI Assessment Studio: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 06</div>
+    <h3>Teacher–AI Assessment Studio</h3>
+    <div class="repo-copy"><p>A human-in-the-loop assessment prototype that separates AI rubric scores, teacher scores, disagreement, uncertainty, routing, and final resolution. The design treats automated scoring as decision support and makes the path to a final judgment reconstructable for audit and research.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/teacher_ai_assessment" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/teacher_ai_assessment/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="privacy_preserving_learning_analytics">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/privacy_preserving_learning_analytics/main/assets/scientific_system_overview.svg" alt="Privacy-Preserving Learning Analytics: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/privacy_preserving_learning_analytics/main/assets/scientific_data_pipeline.svg" alt="Privacy-Preserving Learning Analytics: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 07</div>
+    <h3>Privacy-Preserving Learning Analytics</h3>
+    <div class="repo-copy"><p>A federated-learning research prototype in which synthetic learner records stay in local client shards while gradients are aggregated centrally. Gradient clipping and Gaussian noise can be varied to study utility sensitivity, while the repository is explicit that this is not a formal differential-privacy guarantee without privacy accounting and a threat model.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/privacy_preserving_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/privacy_preserving_learning_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="multimodal_self_regulation_lab">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/multimodal_self_regulation_lab/main/assets/scientific_system_overview.svg" alt="Multimodal Self-Regulation Lab: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/multimodal_self_regulation_lab/main/assets/scientific_data_pipeline.svg" alt="Multimodal Self-Regulation Lab: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 08</div>
+    <h3>Multimodal Self-Regulation Lab</h3>
+    <div class="repo-copy"><p>A multimodal sandbox that keeps interaction, gaze-like attention, self-report, missing modalities, reliability estimation, fusion, and ablation visible. The goal is to study when another modality adds useful information, when it adds noise, and how reliability-aware fusion can remain interpretable.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/multimodal_self_regulation_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/multimodal_self_regulation_lab/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="learning_design_process_mining">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/learning_design_process_mining/main/assets/scientific_system_overview.svg" alt="Learning Design Process Mining: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/learning_design_process_mining/main/assets/scientific_data_pipeline.svg" alt="Learning Design Process Mining: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 09</div>
+    <h3>Learning Design Process Mining</h3>
+    <div class="repo-copy"><p>A process-mining view of instructional design that treats design work as an event log rather than only a finished artifact. It measures trace variants, transitions, rework, iteration, bottlenecks, and human–AI handoffs so the design process itself becomes analyzable.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/learning_design_process_mining" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/learning_design_process_mining/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="hybrid_intelligence_lab">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/hybrid_intelligence_lab/main/assets/scientific_system_overview.svg" alt="Hybrid Intelligence Lab: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/hybrid_intelligence_lab/main/assets/scientific_data_pipeline.svg" alt="Hybrid Intelligence Lab: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 10</div>
+    <h3>Hybrid Intelligence Lab</h3>
+    <div class="repo-copy"><p>An experimental harness for testing when a human, an AI system, or a shared process should decide or defer. Human performance, model confidence, disagreement, routing, override, and deferral remain separate so any gain from hybrid decision-making can be traced to concrete cases.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/hybrid_intelligence_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/hybrid_intelligence_lab/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="explanation_faithfulness_aied">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/explanation_faithfulness_aied/main/assets/scientific_system_overview.svg" alt="Explanation Faithfulness for AIED: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/explanation_faithfulness_aied/main/assets/scientific_data_pipeline.svg" alt="Explanation Faithfulness for AIED: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 11</div>
+    <h3>Explanation Faithfulness for AIED</h3>
+    <div class="repo-copy"><p>A compact lab for testing whether educational AI explanations actually track model behavior. Comprehensiveness, sufficiency, stability, and perturbation-based checks are used to distinguish explanations that sound plausible from explanations that remain faithful to the prediction process.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/explanation_faithfulness_aied" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/explanation_faithfulness_aied/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="collaborative_reasoning_analytics">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/collaborative_reasoning_analytics/main/assets/scientific_system_overview.svg" alt="Collaborative Reasoning Analytics: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/collaborative_reasoning_analytics/main/assets/scientific_data_pipeline.svg" alt="Collaborative Reasoning Analytics: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 12</div>
+    <h3>Collaborative Reasoning Analytics</h3>
+    <div class="repo-copy"><p>A transparent dialogue-analysis prototype that separates adjacent-turn lexical uptake, participation balance, evidence use, questioning, and reasoning-move summaries. The implementation stays descriptive so group interaction is not reduced to one opaque collaboration score.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/collaborative_reasoning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/collaborative_reasoning_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="cognitive_offloading_analytics">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/cognitive_offloading_analytics/main/assets/scientific_system_overview.svg" alt="Cognitive Offloading Analytics: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/cognitive_offloading_analytics/main/assets/scientific_data_pipeline.svg" alt="Cognitive Offloading Analytics: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 13</div>
+    <h3>Cognitive Offloading Analytics</h3>
+    <div class="repo-copy"><p>A behavioral-proxy framework for studying possible cognitive offloading during AI-assisted learning. Copy similarity, revision, verification, recall, and confidence change remain visible, allowing researchers to test how different assumptions influence an offloading signal without presenting the score as a diagnosis of a learner's thinking.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/cognitive_offloading_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/cognitive_offloading_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="classroom_discourse_intelligence">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/classroom_discourse_intelligence/main/assets/scientific_system_overview.svg" alt="Classroom Discourse Intelligence: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/classroom_discourse_intelligence/main/assets/scientific_data_pipeline.svg" alt="Classroom Discourse Intelligence: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 14</div>
+    <h3>Classroom Discourse Intelligence</h3>
+    <div class="repo-copy"><p>A classroom-talk analysis project that extracts interpretable discourse features and teacher talk moves from lesson transcripts. It is designed to support research and teacher reflection, with transcript-level separation and macro-level metrics used to reduce the risk of overclaiming from highly imbalanced utterance labels.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/classroom_discourse_intelligence" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/classroom_discourse_intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="adaptive_socratic_tutor">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/adaptive_socratic_tutor/main/assets/scientific_system_overview.svg" alt="Adaptive Socratic Tutor: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/adaptive_socratic_tutor/main/assets/scientific_data_pipeline.svg" alt="Adaptive Socratic Tutor: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 15</div>
+    <h3>Adaptive Socratic Tutor</h3>
+    <div class="repo-copy"><p>A restrained tutoring-policy baseline that uses attempt history and an explicit mastery estimate to choose whether to monitor, prompt, or offer a guided hint. Its main purpose is to make productive-struggle and help-depth policies inspectable before testing them with real learners.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/adaptive_socratic_tutor" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/adaptive_socratic_tutor/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="instructor_insight_engine">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/instructor_insight_engine/main/assets/scientific_system_overview.svg" alt="Instructor Insight Engine: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/instructor_insight_engine/main/assets/scientific_data_pipeline.svg" alt="Instructor Insight Engine: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 16</div>
+    <h3>Instructor Insight Engine</h3>
+    <div class="repo-copy"><p>A teacher-facing aggregation baseline that turns course events into learner summaries, class-level signals, and review flags. The project focuses on evidence an instructor can act on while keeping alert logic transparent and avoiding the assumption that every click is a meaningful surveillance signal.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/instructor_insight_engine" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/instructor_insight_engine/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="learner_state_sequence_model">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/learner_state_sequence_model/main/assets/scientific_system_overview.svg" alt="Learner State Sequence Model: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/learner_state_sequence_model/main/assets/scientific_data_pipeline.svg" alt="Learner State Sequence Model: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 17</div>
+    <h3>Learner State Sequence Model</h3>
+    <div class="repo-copy"><p>A descriptive sequence-analysis toolkit for learner states such as planning, working, and reflecting. It summarizes first-order transitions, persistence, and transition entropy so researchers can study where learners remain stable, recover, or appear to get stuck without pretending the current baseline is a predictive state model.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/learner_state_sequence_model" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/learner_state_sequence_model/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="multimodal_learning_analytics">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/multimodal_learning_analytics/main/assets/scientific_system_overview.svg" alt="Multimodal Learning Analytics: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/multimodal_learning_analytics/main/assets/scientific_data_pipeline.svg" alt="Multimodal Learning Analytics: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 18</div>
+    <h3>Multimodal Learning Analytics</h3>
+    <div class="repo-copy"><p>A transparent windowed-fusion baseline for timestamped speech, gaze, and interaction features. Learners and sessions stay separated, modalities are aligned into fixed windows, and missing streams are handled explicitly so absence is not confused with an observed zero.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/multimodal_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/multimodal_learning_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="constructive_alignment_auditor">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/constructive_alignment_auditor/main/assets/scientific_system_overview.svg" alt="Constructive Alignment Auditor: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/constructive_alignment_auditor/main/assets/scientific_data_pipeline.svg" alt="Constructive Alignment Auditor: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 19</div>
+    <h3>Constructive Alignment Auditor</h3>
+    <div class="repo-copy"><p>A rule-based curriculum-review tool that keeps learning outcomes, teaching activities, and assessments separate while checking cognitive-demand and lexical relationships between them. The output is designed to surface cases for expert review rather than collapse constructive alignment into one automatic score.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/constructive_alignment_auditor" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/constructive_alignment_auditor/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="assessment_design_lab">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/assessment_design_lab/main/assets/scientific_system_overview.svg" alt="Assessment Design Lab: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/assessment_design_lab/main/assets/scientific_data_pipeline.svg" alt="Assessment Design Lab: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 20</div>
+    <h3>Assessment Design Lab</h3>
+    <div class="repo-copy"><p>A classical assessment-diagnostics baseline covering item difficulty, rest-score discrimination, internal consistency, and review flags. The repository emphasizes that these statistics are evidence for closer inspection, not automatic judgments of item quality.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/assessment_design_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/assessment_design_lab/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="learning_experiment_platform">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/learning_experiment_platform/main/assets/scientific_system_overview.svg" alt="Learning Experiment Platform: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/learning_experiment_platform/main/assets/scientific_data_pipeline.svg" alt="Learning Experiment Platform: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 21</div>
+    <h3>Learning Experiment Platform</h3>
+    <div class="repo-copy"><p>A reproducible two-group pre/post experimentation scaffold with seeded assignment, effect sizes, bootstrap uncertainty, baseline comparison, gain scores, and attrition review. It is meant for small learning-science or L&D pilots where the full chain from assignment to analysis needs to stay inspectable.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/learning_experiment_platform" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/learning_experiment_platform/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="lesson_design_agent">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/lesson_design_agent/main/assets/scientific_system_overview.svg" alt="Lesson Design Agent: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/lesson_design_agent/main/assets/scientific_data_pipeline.svg" alt="Lesson Design Agent: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 22</div>
+    <h3>Lesson Design Agent</h3>
+    <div class="repo-copy"><p>A deterministic lesson-planning scaffold that analyzes objective verbs, adapts sequence and assessment prompts to provisional cognitive demand, preserves the requested time budget, surfaces accessibility prompts, and flags missing design information. It deliberately avoids hiding the planning logic behind fluent generated prose.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/lesson_design_agent" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/lesson_design_agent/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="learner_agency_simulator">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/learner_agency_simulator/main/assets/scientific_system_overview.svg" alt="Learner Agency Simulator: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/learner_agency_simulator/main/assets/scientific_data_pipeline.svg" alt="Learner Agency Simulator: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 23</div>
+    <h3>Learner Agency Simulator</h3>
+    <div class="repo-copy"><p>A synthetic learner–system environment for stress-testing adaptive support policies before live-user studies. Simulated learners can request or refuse help, persist, pause, change strategy, or adjust task challenge, making policy effects on learner choice visible rather than treating agency as a hidden psychological score.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/learner_agency_simulator" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/learner_agency_simulator/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="competency_gap_intelligence">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/competency_gap_intelligence/main/assets/scientific_system_overview.svg" alt="Competency Gap Intelligence: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/competency_gap_intelligence/main/assets/scientific_data_pipeline.svg" alt="Competency Gap Intelligence: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 24</div>
+    <h3>Competency Gap Intelligence</h3>
+    <div class="repo-copy"><p>An evidence-aware competency analysis system that distinguishes confirmed gaps from unknown or insufficient evidence, then uses prerequisites, role importance, recency, and resource fit to support development planning. Its core rule is simple: missing competency evidence is not the same thing as zero proficiency.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/competency_gap_intelligence" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/competency_gap_intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="workplace_learning_recommender">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/workplace_learning_recommender/main/assets/scientific_system_overview.svg" alt="Workplace Learning Recommender: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/workplace_learning_recommender/main/assets/scientific_data_pipeline.svg" alt="Workplace Learning Recommender: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 25</div>
+    <h3>Workplace Learning Recommender</h3>
+    <div class="repo-copy"><p>An explainable learning recommender that separates hard eligibility from ranking. Confirmed needs, prerequisites, availability, current role or task context, learner constraints, recency, and coverage across several needs are handled explicitly so the recommendation list can be inspected rather than treated as a black box.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/workplace_learning_recommender" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/workplace_learning_recommender/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="training_transfer_analytics">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/training_transfer_analytics/main/assets/scientific_system_overview.svg" alt="Training Transfer Analytics: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/training_transfer_analytics/main/assets/scientific_data_pipeline.svg" alt="Training Transfer Analytics: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 26</div>
+    <h3>Training Transfer Analytics</h3>
+    <div class="repo-copy"><p>A longitudinal workplace-transfer prototype that keeps self-report, manager observation, behavior evidence, objective application evidence, persistence, and transfer conditions separate across repeated follow-up. Business outcomes are not automatically treated as proof of training transfer, and the bundled data remain synthetic.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/training_transfer_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/training_transfer_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="engagement_early_warning">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/engagement_early_warning/main/assets/scientific_system_overview.svg" alt="Engagement Early-Warning System: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/engagement_early_warning/main/assets/scientific_data_pipeline.svg" alt="Engagement Early-Warning System: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 27</div>
+    <h3>Engagement Early-Warning System</h3>
+    <div class="repo-copy"><p>A time-safe early-warning prototype built around prediction cutoffs, leakage guards, calibration review, staff review capacity, lead-time analysis, and subgroup diagnostics. Future information cannot become a feature, and the system leaves intervention decisions to a human reviewer.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/engagement_early_warning" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/engagement_early_warning/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="curriculum_knowledge_graph">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/curriculum_knowledge_graph/main/assets/scientific_system_overview.svg" alt="Curriculum Knowledge Graph: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/curriculum_knowledge_graph/main/assets/scientific_data_pipeline.svg" alt="Curriculum Knowledge Graph: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 28</div>
+    <h3>Curriculum Knowledge Graph</h3>
+    <div class="repo-copy"><p>A typed, provenance-aware curriculum graph connecting concepts, prerequisites, courses, learning outcomes, assessments, competencies, and resources. The graph supports prerequisite reasoning, path analysis, alignment diagnostics, cycle detection, and expert review without pretending graph structure replaces curriculum judgment.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/curriculum_knowledge_graph" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/curriculum_knowledge_graph/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="self_regulated_learning_copilot">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/self_regulated_learning_copilot/main/assets/scientific_system_overview.svg" alt="Self-Regulated Learning Copilot: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/self_regulated_learning_copilot/main/assets/scientific_data_pipeline.svg" alt="Self-Regulated Learning Copilot: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 29</div>
+    <h3>Self-Regulated Learning Copilot</h3>
+    <div class="repo-copy"><p>A transparent support-policy laboratory for goals, planning, monitoring, strategy adaptation, requested help, reflection, and prompt-burden control. The copilot works from an explicit learner state and can choose not to intervene, preserving space for productive struggle and learner control.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/self_regulated_learning_copilot" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/self_regulated_learning_copilot/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="feedback_quality_evaluator">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/feedback_quality_evaluator/main/assets/scientific_system_overview.svg" alt="Feedback Quality Evaluator: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/feedback_quality_evaluator/main/assets/scientific_data_pipeline.svg" alt="Feedback Quality Evaluator: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI in Education Repository · 30</div>
+    <h3>Feedback Quality Evaluator</h3>
+    <div class="repo-copy"><p>A context-aware formative-feedback evaluator that keeps correctness, specificity, relevance, actionability, evidence use, error flags, and revision suggestions distinct. The current heuristic baseline is designed for validation and error analysis rather than being presented as an authoritative automated judge of feedback quality.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/feedback_quality_evaluator" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/feedback_quality_evaluator/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+ </section>
+ <section id="contact">
+  <div class="eyebrow-rule"><h2>Contact</h2></div>
+  <p>For AI in Education research collaboration, doctoral discussions, or questions about these repositories, contact me through the links below.</p>
+  <div class="contact-row"><a href="mailto:devis.saputra@gmail.com">Email</a><a href="https://linkedin.com/in/devissaputra">LinkedIn</a><a href="https://github.com/devissaputra">GitHub</a></div>
+ </section>
+ <footer>© Devis Wawan Saputra · AI in Education portfolio · Built for GitHub Pages</footer>
+</main>
 </div>
 </body>
 </html>
