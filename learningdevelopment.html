@@ -522,27 +522,35 @@
       <div class="repo-project-grid">
         <div class="repo-visuals">
           <figure class="repo-visual">
-            <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/technology_skill_renewal_pressure/main/assets/research_design.svg" alt="Technology Skill Renewal Pressure: O*NET 2020–2026: scientific system overview">
-            <figcaption>Scientific problem and system overview</figcaption>
+            <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/technology_skill_renewal_pressure/main/assets/research_design.svg?v=20260926-renewal-upgrade" alt="Scientific summary of O*NET technology skill renewal pressure across 902 occupations, including Jaccard overlap and category sensitivity">
+            <figcaption>Empirical finding: persistence, heterogeneity, and category sensitivity</figcaption>
           </figure>
           <figure class="repo-visual">
-            <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/technology_skill_renewal_pressure/main/assets/method.svg" alt="Technology Skill Renewal Pressure: O*NET 2020–2026: data processing pipeline">
-            <figcaption>Data processing and empirical workflow</figcaption>
+            <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/technology_skill_renewal_pressure/main/assets/method.svg?v=20260926-renewal-upgrade" alt="Scientific workflow from O*NET 2020 and 2026 source files through source verification, normalization, Jaccard analysis, and sensitivity testing">
+            <figcaption>Data processing: verified O*NET releases to bounded L&amp;D evidence</figcaption>
           </figure>
         </div>
         <div>
           <div class="repo-kicker">Empirical Study · Learning &amp; Development</div>
-          <h3>Technology Skill Renewal Pressure: O*NET 2020–2026</h3>
+          <h3>Technology Skill Renewal Pressure: O*NET 2020–2026 on Learning and Development</h3>
           <div class="repo-copy">
-            <p>This study compares versioned O*NET technology/software-skill portfolios to measure how much occupational software demand persists and how much turns over between 2020 and 2026. It treats skill renewal as a longitudinal evidence problem rather than a list of fashionable tools.</p>
-            <p>The analysis also checks schema changes and occupation-title consistency before comparing versions, which makes the resulting renewal measures more defensible for workforce-development and reskilling discussions.</p>
+            <p>Technology requirements do not refresh at the same pace in every occupation. This study compares O*NET 25.1 from November 2020 with the O*NET 31.0 database snapshot from August 2026 to measure how much of each occupation's software-skill portfolio persisted, changed, or expanded. After normalizing software names and restricting the longitudinal comparison to 902 occupation codes present in both skill files, the common-code pair Jaccard is <strong>0.7016</strong>. At the occupation level, the median is <strong>0.6923</strong>: 13.97% of occupations fall below 0.50, while 36.03% are at or above 0.75. The result is therefore not one universal “rate of obsolescence”; renewal pressure varies materially across occupations.</p>
+            <p>The study then repeats the comparison using broader O*NET software categories rather than exact product names. Category-level overlap rises to <strong>0.8169</strong>, showing that part of the apparent turnover happens inside categories that remain comparatively stable. For L&amp;D, that distinction matters: the evidence can help identify where curriculum, reskilling, or workforce-planning attention may be more urgent, but it does not claim that workers' skills depreciated at the same rate as the database changed. Source files are pinned by row count and SHA-256, all 902 occupations are retained in the evidence table, and the complete release can be regenerated and checked through CI.</p>
           </div>
-          <div class="repo-data-note"><strong>Data source:</strong> O*NET 25.1 Technology Skills and O*NET 31.0 Software Skills plus matched Occupation Data files.</div>
+          <div class="metrics" aria-label="Technology skill renewal study headline metrics">
+            <span>902 occupations</span>
+            <span>Jaccard 0.7016</span>
+            <span>Median 0.6923</span>
+            <span>Category sensitivity 0.8169</span>
+          </div>
+          <div class="repo-data-note"><strong>Data source:</strong> O*NET 25.1 Technology Skills and O*NET 31.0 Software Skills, with matching Occupation Data used to verify common-code titles. O*NET documents the Technology Skills → Software Skills schema transition.</div>
           <div class="repo-links">
             <a href="https://github.com/devissaputra/technology_skill_renewal_pressure" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Repository</a>
-            <a href="https://github.com/devissaputra/technology_skill_renewal_pressure/blob/main/QA_REPORT.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report MD</a>
-            <a href="https://github.com/devissaputra/technology_skill_renewal_pressure/blob/main/docs/paper_blueprint.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen" aria-hidden="true"></i> Paper</a>
-            <a href="https://github.com/devissaputra/technology_skill_renewal_pressure/blob/main/THIRD_PARTY_DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database" aria-hidden="true"></i> Data source</a>
+            <a href="https://github.com/devissaputra/technology_skill_renewal_pressure/blob/main/EMPIRICAL_STUDY.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Study Protocol</a>
+            <a href="https://github.com/devissaputra/technology_skill_renewal_pressure/blob/main/docs/paper_blueprint.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen" aria-hidden="true"></i> Paper Blueprint</a>
+            <a href="https://github.com/devissaputra/technology_skill_renewal_pressure/blob/main/data/derived/primary_results.csv" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-table" aria-hidden="true"></i> 902-row Evidence</a>
+            <a href="https://github.com/devissaputra/technology_skill_renewal_pressure/blob/main/data/source_manifest.json" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-fingerprint" aria-hidden="true"></i> Source Manifest</a>
+            <a href="https://www.onetcenter.org/db_releases.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database" aria-hidden="true"></i> O*NET Releases</a>
           </div>
         </div>
       </div>
