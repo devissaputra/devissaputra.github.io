@@ -25,6 +25,58 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
 @media(max-width:700px){.portfolio-nav{grid-template-columns:1fr}.portfolio-nav a{border-right:none;border-bottom:1px solid #D7DAD5}}
 </style>
 <link rel="stylesheet" href="assets/site.css">
+<style id="aied-layout-fix">
+/* AIEd repository presentation: match the two-visual L&D project format. */
+@media (min-width:1041px){
+  .repo-section{max-width:1040px;}
+  .repo-project-grid{
+    grid-template-columns:minmax(430px,1.08fr) minmax(350px,.92fr);
+    gap:30px;
+  }
+  .repo-visuals{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  .repo-visual img{
+    aspect-ratio:4/3;
+  }
+}
+.repo-project{
+  padding-bottom:38px;
+  margin-bottom:38px;
+}
+.repo-project h3{
+  font-size:1.42rem;
+  letter-spacing:-.01em;
+}
+.repo-copy{
+  line-height:1.62;
+}
+.repo-visual figcaption{
+  min-height:39px;
+  display:flex;
+  align-items:center;
+}
+.repo-links a{
+  transition:background-color .15s ease,border-color .15s ease,color .15s ease;
+}
+.repo-project.research-bundle{
+  padding-top:4px;
+  padding-left:20px;
+}
+@media (max-width:1040px){
+  .repo-visuals{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .repo-visual img{
+    aspect-ratio:4/3;
+  }
+}
+@media (max-width:640px){
+  .repo-visuals{grid-template-columns:1fr;}
+  .repo-project.research-bundle{padding-left:12px;}
+}
+</style>
 </head>
 <body>
 <div class="page">
