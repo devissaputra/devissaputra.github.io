@@ -72,18 +72,27 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   <article class="repo-project research-bundle" id="classification_calibration">
   <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/classification_calibration/site_overview.svg" alt="Probability Calibration Research Bundle: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/classification_calibration/site_pipeline.svg" alt="Probability Calibration Research Bundle: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/classification_calibration/site_overview.svg" alt="Probability calibration study overview showing the UCI Bank Marketing dataset, repeated-holdout results, probability-quality metrics and validity checks"><figcaption>Study overview: problem, evidence, measured calibration gains, and validity checks</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/classification_calibration/site_pipeline.svg" alt="Probability calibration experimental workflow from frozen UCI data provenance through preprocessing, calibration, repeated holdouts, sensitivity analysis and generated evidence"><figcaption>Frozen experimental workflow: provenance, split discipline, calibration, robustness checks, and reproducible outputs</figcaption></figure>
    </div>
    <div>
     <div class="repo-kicker">Research Bundle · AI Engineering</div>
     <h3>Probability Calibration Research Bundle</h3>
-    <div class="repo-copy"><p>This empirical study tests whether sigmoid and isotonic calibration improve probability quality for logistic regression under class imbalance, using repeated holdouts, sensitivity checks, feature ablation, bootstrap intervals, and error analysis. The point is not just whether the classifier ranks cases well, but whether the probabilities are trustworthy enough to support decisions.</p></div>
-    <div class="repo-data-note"><strong>Data source:</strong> UCI Bank Marketing (dataset 222), DOI 10.24432/C5K306.</div>
+    <div class="repo-copy">
+     <p>This study asks a more demanding question than whether a classifier is simply accurate: when a model assigns a probability, does that number match what actually happens? Using the UCI Bank Marketing dataset with 45,211 observations, 16 predictors, and an 11.7% positive class, the protocol compares a class-prior baseline with uncalibrated, sigmoid-calibrated, and isotonic-calibrated logistic regression across five fixed stratified holdouts. Discrimination is evaluated separately from probability quality using ROC-AUC and average precision alongside Brier score, log loss, and expected calibration error.</p>
+     <p>Under the frozen protocol, isotonic calibration produces the clearest probability-quality improvement: mean Brier score falls from 0.0720 to 0.0693, log loss from 0.2445 to 0.2269, and ECE-10 from 0.0311 to 0.0074, while ROC-AUC remains essentially unchanged at 0.9057 versus 0.9058. The study also varies calibration folds and ECE bin counts, removes call duration in an operational ablation because that feature is unavailable before contact, audits high-confidence errors, and reports paired bootstrap intervals. The result is a reproducible methodology benchmark rather than a claim that the model is ready for real banking decisions.</p>
+    </div>
+    <div class="repo-evidence" aria-label="Probability calibration evidence snapshot">
+      <div class="repo-evidence-item"><span class="repo-evidence-value">45,211</span><span class="repo-evidence-label">observations</span></div>
+      <div class="repo-evidence-item"><span class="repo-evidence-value">11.7%</span><span class="repo-evidence-label">positive class</span></div>
+      <div class="repo-evidence-item"><span class="repo-evidence-value">5</span><span class="repo-evidence-label">repeated splits</span></div>
+      <div class="repo-evidence-item"><span class="repo-evidence-value">0.0074</span><span class="repo-evidence-label">isotonic ECE-10</span></div>
+    </div>
+    <div class="repo-data-note"><strong>Data and provenance:</strong> UCI Bank Marketing (dataset 222), DOI 10.24432/C5K306. The runner downloads the official archive, validates the exact <code>bank-full.csv</code> SHA-256, and keeps raw source data out of the repository.</div>
     <div class="repo-links"><a href="https://github.com/devissaputra/classification_calibration" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
     <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
-    <a href="https://github.com/devissaputra/classification_calibration/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
+    <a href="https://github.com/devissaputra/classification_calibration/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data &amp; provenance</a></div>
    </div>
   </div>
  </article>
