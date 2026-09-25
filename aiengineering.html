@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI Engineering portfolio of Devis Wawan Saputra: empirical research bundles and reproducible machine-learning engineering studies.">
+<title>Devis Wawan Saputra — AI Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<style>
+:root{--paper:#EEF0EF;--paper-raised:#F5F6F5;--ink:#1B2430;--ink-soft:#5B6660;--line:#C9CDC5;--accent:#2F5D62;--accent-soft:#DDE6E4;--accent-deep:#244A4E;--serif:"Source Serif 4",Georgia,serif;--sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.58}a{color:var(--accent)}h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.18}
+.page{display:grid;grid-template-columns:280px 1fr;max-width:1320px;margin:0 auto;min-height:100vh}
+.sidebar{padding:46px 32px 38px 40px;position:sticky;top:0;align-self:start;height:100vh;display:flex;flex-direction:column;justify-content:space-between}
+.sidebar-top h1{font-size:1.72rem}.tagline{margin:12px 0 0;color:var(--ink-soft);font-size:.98rem;max-width:22ch}
+nav.toc{margin-top:26px}nav.toc a{display:block;padding:6px 0 6px 12px;margin-left:-12px;border-left:2px solid transparent;color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:600}nav.toc a:hover{border-left-color:var(--accent);color:var(--accent)}
+.sidebar-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px;row-gap:9px;font-size:.84rem;color:var(--ink-soft)}.sidebar-bottom .contact-label{grid-column:1/-1;color:var(--ink);font-weight:600}.sidebar-bottom a{display:flex;align-items:center;gap:7px;color:var(--accent);text-decoration:none;white-space:nowrap}.sidebar-bottom i{width:18px;text-align:center}.sidebar-bottom .scholar{grid-column:1/-1}
+.content{padding:48px 48px 80px 34px;border-left:1px solid var(--line)}section{max-width:940px;margin-bottom:56px}.back-link{display:inline-flex;gap:8px;align-items:center;margin-bottom:25px;color:var(--ink-soft);text-decoration:none;font-size:.9rem}
+.hero{margin-bottom:48px}.kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;color:var(--accent);font-weight:600;margin-bottom:10px}.hero h2{font-size:clamp(2rem,3.6vw,2.8rem)}.hero .lede{margin:16px 0 0;max-width:820px;font-family:var(--serif);font-size:1.13rem;color:#303B42}
+.portfolio-nav{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;border:1px solid #D7DAD5;border-radius:7px;overflow:hidden}.portfolio-nav a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:9px 8px;background:#F2F3F2;color:#222B33;text-decoration:none;text-align:center;font-size:.88rem;font-weight:600;border-right:1px solid #D7DAD5}.portfolio-nav a:last-child{border-right:none}.portfolio-nav a.active{background:var(--accent);color:#fff}
+.eyebrow-rule{display:flex;align-items:center;gap:14px;margin-bottom:18px}.eyebrow-rule h2{font-size:1.45rem}.eyebrow-rule::after{content:"";flex:1;height:1px;background:var(--line)}
+.contact-row{display:flex;flex-wrap:wrap;gap:10px}.contact-row a{padding:8px 13px;border:1px solid var(--line);border-radius:5px;background:var(--paper-raised);color:var(--ink);text-decoration:none}
+footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.78rem}
+@media(max-width:900px){.page{grid-template-columns:1fr}.sidebar{position:static;height:auto;padding:34px 24px 26px;border-bottom:1px solid var(--line);gap:26px}nav.toc{display:none}.content{padding:34px 24px 58px;border-left:none}}
+@media(max-width:700px){.portfolio-nav{grid-template-columns:1fr}.portfolio-nav a{border-right:none;border-bottom:1px solid #D7DAD5}}
+</style>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="page">
+<aside class="sidebar">
+ <div class="sidebar-top">
+  <h1>Devis Wawan Saputra</h1>
+  <p class="tagline">AI engineering and research portfolio built around reproducible empirical work and inspectable baselines.</p>
+  <nav class="toc" aria-label="AI Engineering page navigation">
+   <a href="index.html">← Main Portfolio</a>
+   <a href="#overview">Overview</a>
+   <a href="#research-bundles">Research Bundles</a>
+   <a href="#repositories">AI Engineering Repositories</a>
+   <a href="#contact">Contact</a>
+  </nav>
+ </div>
+ <div class="sidebar-bottom" aria-label="Contact links">
+  <div class="contact-label">Links</div>
+  <a href="mailto:devis.saputra@gmail.com"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+  <a href="https://linkedin.com/in/devissaputra" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+  <a href="https://www.xing.com/profile/Devis_Saputra" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-xing"></i><span>Xing</span></a>
+  <a href="https://github.com/devissaputra/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+  <a href="https://orcid.org/0000-0002-7133-9410" target="_blank" rel="noopener noreferrer"><i class="ai ai-orcid"></i><span>ORCID</span></a>
+  <a class="scholar" href="https://scholar.google.com/citations?user=EB5_ZRMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i><span>Google Scholar</span></a>
+ </div>
+</aside>
+<main class="content">
+ <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to main portfolio</a>
+ <section class="hero" id="overview">
+  <div class="kicker">Portfolio</div>
+  <h2>AI Engineering</h2>
+  <p class="lede">Nine repositories focused on reproducible machine-learning engineering. The four empirical Research Bundles are placed first and highlighted in blue; the remaining engineering studies follow underneath with the same two-image scientific presentation.</p>
+  <div class="portfolio-nav" aria-label="Portfolio areas">
+   <a href="research.html">Research</a>
+   <a href="learningdevelopment.html">Learning &amp; Development</a>
+   <a class="active" href="aiengineering.html" aria-current="page">AI Engineering</a>
+   <a href="aieducation.html">AI in Education</a>
+  </div>
+ </section>
+ <section class="repo-section" id="research-bundles">
+  <div class="eyebrow-rule bundle-heading"><h2>AI Engineering · Research Bundles</h2></div>
+  <p class="repo-section-intro">These four repositories are the professor-facing empirical packages: real external data, frozen provenance, explicit baselines, robustness checks, generated research artifacts, and paper-ready evidence chains.</p>
+  <article class="repo-project research-bundle" id="classification_calibration">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/classification_calibration/main/assets/scientific_system_overview.svg" alt="Probability Calibration Research Bundle: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/classification_calibration/main/assets/scientific_data_pipeline.svg" alt="Probability Calibration Research Bundle: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">Research Bundle · AI Engineering</div>
+    <h3>Probability Calibration Research Bundle</h3>
+    <div class="repo-copy"><p>This empirical study tests whether sigmoid and isotonic calibration improve probability quality for logistic regression under class imbalance, using repeated holdouts, sensitivity checks, feature ablation, bootstrap intervals, and error analysis. The point is not just whether the classifier ranks cases well, but whether the probabilities are trustworthy enough to support decisions.</p></div>
+    <div class="repo-data-note"><strong>Data source:</strong> UCI Bank Marketing (dataset 222), DOI 10.24432/C5K306.</div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/classification_calibration" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+    <a href="https://github.com/devissaputra/classification_calibration/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project research-bundle" id="anomaly_detection">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/anomaly_detection/main/assets/scientific_system_overview.svg" alt="Label-Blind Threshold-Aware Anomaly Detection on NAB: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/anomaly_detection/main/assets/scientific_data_pipeline.svg" alt="Label-Blind Threshold-Aware Anomaly Detection on NAB: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">Research Bundle · AI Engineering</div>
+    <h3>Label-Blind Threshold-Aware Anomaly Detection on NAB</h3>
+    <div class="repo-copy"><p>This study compares feature-based Isolation Forest with a transparent robust-history baseline on four real NAB streams. The primary pipeline stays label-blind during fitting and alert-budget calibration, then evaluates event detection separately so threshold tuning does not quietly leak benchmark labels into the detector.</p></div>
+    <div class="repo-data-note"><strong>Data source:</strong> Numenta Anomaly Benchmark (NAB), pinned benchmark revision and frozen selected streams.</div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/anomaly_detection" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/anomaly_detection/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <a href="https://github.com/devissaputra/anomaly_detection/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+    <a href="https://github.com/devissaputra/anomaly_detection/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project research-bundle" id="explainable_ai">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/explainable_ai/main/assets/scientific_system_overview.svg" alt="Explainable AI: Model Dependence and Feature-Governance Study: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/explainable_ai/main/assets/scientific_data_pipeline.svg" alt="Explainable AI: Model Dependence and Feature-Governance Study: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">Research Bundle · AI Engineering</div>
+    <h3>Explainable AI: Model Dependence and Feature-Governance Study</h3>
+    <div class="repo-copy"><p>This bundle studies how global feature explanations change across model families and feature-governance choices on the Adult income benchmark. It combines held-out performance, permutation-importance stability, subgroup behavior, feature exclusion, and error analysis while keeping predictive dependence separate from causal or fairness claims.</p></div>
+    <div class="repo-data-note"><strong>Data source:</strong> UCI Adult / Census Income (dataset 2), DOI 10.24432/C5XW20.</div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/explainable_ai" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/explainable_ai/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <a href="https://github.com/devissaputra/explainable_ai/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+    <a href="https://github.com/devissaputra/explainable_ai/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project research-bundle" id="mini_transformers_sequences">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/mini_transformers_sequences/main/assets/scientific_system_overview.svg" alt="Transformer Forecasting on WDC-SILSO: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/mini_transformers_sequences/main/assets/scientific_data_pipeline.svg" alt="Transformer Forecasting on WDC-SILSO: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">Research Bundle · AI Engineering</div>
+    <h3>Transformer Forecasting on WDC-SILSO</h3>
+    <div class="repo-copy"><p>This multi-horizon forecasting study asks whether a compact Transformer actually earns its complexity over persistence, seasonal-naive, ridge, and gradient-boosted baselines on a long scientific time series. It evaluates several forecast horizons, seed stability, context-length sensitivity, early-versus-late test behavior, and performance during high solar activity.</p></div>
+    <div class="repo-data-note"><strong>Data source:</strong> WDC-SILSO Version 2.0 monthly mean total sunspot number, frozen through March 2026.</div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/mini_transformers_sequences" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+    <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
+   </div>
+  </div>
+ </article>
+ </section>
+ <section class="repo-section" id="repositories">
+  <div class="eyebrow-rule"><h2>AI Engineering Repositories</h2></div>
+  <p class="repo-section-intro">The remaining five repositories are compact engineering studies built around transparent comparisons, reproducible splits, and scientific visuals rather than presentation-only demos.</p>
+  <article class="repo-project" id="imbalanced_learning">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/imbalanced_learning/main/assets/scientific_system_overview.svg" alt="Learning from Imbalanced Data: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/imbalanced_learning/main/assets/scientific_data_pipeline.svg" alt="Learning from Imbalanced Data: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI Engineering Repository · 05</div>
+    <h3>Learning from Imbalanced Data</h3>
+    <div class="repo-copy"><p>A controlled study of how class imbalance changes model behavior. It compares standard logistic regression, class-weighted logistic regression, and a class-weighted Random Forest, emphasizing average precision, recall, F1, and balanced accuracy instead of relying on headline accuracy.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/imbalanced_learning" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/imbalanced_learning/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="pca_clustering">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/pca_clustering/main/assets/scientific_system_overview.svg" alt="PCA and K-Means Clustering: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/pca_clustering/main/assets/scientific_data_pipeline.svg" alt="PCA and K-Means Clustering: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI Engineering Repository · 06</div>
+    <h3>PCA and K-Means Clustering</h3>
+    <div class="repo-copy"><p>An unsupervised-learning experiment that keeps model selection separate from visualization. K-means is selected in the full standardized 13-dimensional wine feature space, while PCA is used only for interpretation, with known class labels reserved for post-hoc ARI comparison.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/pca_clustering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/pca_clustering/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="mlp_neural_network">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/mlp_neural_network/main/assets/scientific_system_overview.svg" alt="Multilayer Perceptron vs Linear Baseline on Handwritten Digits: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/mlp_neural_network/main/assets/scientific_data_pipeline.svg" alt="Multilayer Perceptron vs Linear Baseline on Handwritten Digits: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI Engineering Repository · 07</div>
+    <h3>Multilayer Perceptron vs Linear Baseline on Handwritten Digits</h3>
+    <div class="repo-copy"><p>A compact neural-network experiment built around a strong baseline. The MLP is compared with multinomial logistic regression on the same standardized handwritten-digit split, and the negative result is kept because model complexity should be justified by evidence rather than assumed.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/mlp_neural_network" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/mlp_neural_network/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="cnn_image_classification">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/cnn_image_classification/main/assets/scientific_system_overview.svg" alt="Convolutional Neural Network for Handwritten Digits: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/cnn_image_classification/main/assets/scientific_data_pipeline.svg" alt="Convolutional Neural Network for Handwritten Digits: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI Engineering Repository · 08</div>
+    <h3>Convolutional Neural Network for Handwritten Digits</h3>
+    <div class="repo-copy"><p>A PyTorch image-classification experiment that tests whether preserving 2D spatial structure improves on a flattened logistic-regression baseline. The CNN shows a modest gain on the fixed split, illustrating why architecture should match data structure without overstating the result.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/cnn_image_classification" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/cnn_image_classification/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+<article class="repo-project" id="lstm_time_series">
+  <div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/lstm_time_series/main/assets/scientific_system_overview.svg" alt="LSTM Forecasting for Mauna Loa CO₂: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/lstm_time_series/main/assets/scientific_data_pipeline.svg" alt="LSTM Forecasting for Mauna Loa CO₂: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+   </div>
+   <div>
+    <div class="repo-kicker">AI Engineering Repository · 09</div>
+    <h3>LSTM Forecasting for Mauna Loa CO₂</h3>
+    <div class="repo-copy"><p>A leakage-aware forecasting experiment comparing persistence, ridge autoregression, and an LSTM on a chronological holdout. The LSTM loses to the simpler baselines in this setup, turning the repository into a useful demonstration of why sequence-model complexity is not automatically valuable.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/lstm_time_series" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/lstm_time_series/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+   </div>
+  </div>
+ </article>
+ </section>
+ <section id="contact">
+  <div class="eyebrow-rule"><h2>Contact</h2></div>
+  <p>For research collaboration, doctoral discussions, or questions about these repositories, contact me through the links below.</p>
+  <div class="contact-row"><a href="mailto:devis.saputra@gmail.com">Email</a><a href="https://linkedin.com/in/devissaputra">LinkedIn</a><a href="https://github.com/devissaputra">GitHub</a></div>
+ </section>
+ <footer>© Devis Wawan Saputra · AI Engineering portfolio · Built for GitHub Pages</footer>
+</main>
+</div>
+</body>
+</html>
