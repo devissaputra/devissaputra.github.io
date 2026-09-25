@@ -26,55 +26,80 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
 </style>
 <link rel="stylesheet" href="assets/site.css">
 <style id="aied-layout-fix">
-/* AIEd repository presentation: match the two-visual L&D project format. */
-@media (min-width:1041px){
-  .repo-section{max-width:1040px;}
-  .repo-project-grid{
-    grid-template-columns:minmax(430px,1.08fr) minmax(350px,.92fr);
-    gap:30px;
-  }
-  .repo-visuals{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:10px;
-  }
-  .repo-visual img{
-    aspect-ratio:4/3;
-  }
+/* AIEd repository presentation tuned for 1600×1000 scientific SVGs. */
+.page{
+  max-width:1680px;
+  grid-template-columns:280px minmax(0,1fr);
+}
+.content{
+  padding-right:40px;
+}
+section,.repo-section,footer{
+  max-width:1320px;
+}
+.repo-section-intro{
+  max-width:930px;
 }
 .repo-project{
-  padding-bottom:38px;
-  margin-bottom:38px;
+  padding-bottom:46px;
+  margin-bottom:46px;
 }
-.repo-project h3{
-  font-size:1.42rem;
-  letter-spacing:-.01em;
+.repo-project-grid{
+  grid-template-columns:minmax(620px,1.55fr) minmax(360px,.75fr);
+  gap:34px;
+  align-items:start;
 }
-.repo-copy{
-  line-height:1.62;
+.repo-visuals{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+.repo-visual{
+  border-radius:7px;
+  box-shadow:0 1px 2px rgba(27,36,48,.05);
+}
+.repo-visual img{
+  width:100%;
+  height:auto;
+  aspect-ratio:16/10;
+  object-fit:contain;
+  background:#fff;
 }
 .repo-visual figcaption{
-  min-height:39px;
-  display:flex;
-  align-items:center;
+  min-height:0;
+  display:block;
+  padding:7px 10px 8px;
+  font-size:.74rem;
+}
+.repo-project h3{
+  font-size:1.45rem;
+  letter-spacing:-.012em;
+}
+.repo-copy{
+  line-height:1.64;
+}
+.repo-project.research-bundle{
+  padding-top:6px;
+  padding-left:20px;
 }
 .repo-links a{
   transition:background-color .15s ease,border-color .15s ease,color .15s ease;
 }
-.repo-project.research-bundle{
-  padding-top:4px;
-  padding-left:20px;
-}
-@media (max-width:1040px){
+@media (max-width:1280px){
+  .page{max-width:1320px;}
+  section,.repo-section,footer{max-width:940px;}
+  .repo-project-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
   .repo-visuals{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-  .repo-visual img{
-    aspect-ratio:4/3;
+    grid-template-columns:1fr;
+    max-width:940px;
   }
 }
-@media (max-width:640px){
-  .repo-visuals{grid-template-columns:1fr;}
+@media (max-width:700px){
   .repo-project.research-bundle{padding-left:12px;}
+  .content{padding-right:24px;}
 }
 </style>
 </head>
