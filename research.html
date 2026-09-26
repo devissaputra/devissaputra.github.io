@@ -486,6 +486,11 @@
     html{scroll-behavior:auto;}
     *{transition:none !important;}
   }
+
+.project-index{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
+.project-index a{padding:5px 9px;border:1px solid var(--line);border-radius:5px;background:var(--paper-raised);text-decoration:none;font-size:.78rem;color:#39444A}
+.project-index a:hover,.project-index a:focus-visible{border-color:var(--accent);color:var(--accent)}
+
 </style>
 <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -554,6 +559,12 @@
     <section class="hero" id="overview">
       <h2>Portfolio in Research</h2>
       <p class="lede">My research and applied R&amp;D experience spans information retrieval, organizational research, engineering design, operations research, higher-education and tourism studies, digital health systems, learning-system evaluation, AI engineering, and AI model evaluation.</p>
+  <div class="project-index" aria-label="Page project index">
+   <a href="#system-engineering">Empirical Studies</a>
+   <a href="#degree-research">Degree Research</a>
+   <a href="#projects">Research Projects</a>
+   <a href="#systems">System Experience</a>
+  </div>
 
       <div class="method-tags" aria-label="Methods and research approaches">
         <span>AI Engineering</span>
