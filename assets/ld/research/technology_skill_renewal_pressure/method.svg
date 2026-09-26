@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
 <title id="title">O*NET technology skill renewal analysis pipeline</title>
-<desc id="desc">Scientific workflow from versioned O*NET source files through fingerprint verification, normalization, common occupation matching, Jaccard analyses, category sensitivity, and bounded L&D interpretation.</desc>
+<desc id="desc">Scientific workflow from versioned O*NET source files through fingerprint verification, normalization, common occupation matching, Jaccard analyses, category sensitivity, and bounded L&amp;D interpretation.</desc>
 <defs>
   <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
     <path d="M0,0 L8,4 L0,8 z" fill="#64748B"/>
