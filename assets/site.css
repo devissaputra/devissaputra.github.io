@@ -114,6 +114,17 @@ section{
 .portfolio-nav a:hover{background:var(--accent-soft);color:var(--accent-deep);}
 .portfolio-nav a.active{background:var(--accent);color:#fff;}
 
+/* Top portfolio navigation on the four portfolio pages */
+.content > .back-link{
+  margin-bottom:6px;
+}
+
+.content > .back-link + .portfolio-nav{
+  margin-top:0;
+  margin-bottom:42px;
+}
+
+
 .contact-row{
   gap:10px;
   margin-top:12px;
