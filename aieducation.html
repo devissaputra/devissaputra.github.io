@@ -70,18 +70,30 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   <article class="repo-project research-bundle" id="knowledge_tracing_benchmark">
   <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/site_overview.svg" alt="Knowledge Tracing Benchmark on ASSISTments 2009: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/site_pipeline.svg" alt="Knowledge Tracing Benchmark on ASSISTments 2009: scientific data pipeline"><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/site_overview.svg" alt="Knowledge tracing benchmark on ASSISTments 2009 showing dataset scale, learner-disjoint split, six model conditions, held-out metrics, encounter slices and robustness checks"><figcaption>Study overview: learner-disjoint design, model comparison, held-out results, and validity checks</figcaption></figure>
+    <figure class="repo-visual"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/site_pipeline.svg" alt="Knowledge tracing experimental workflow from pinned ASSISTments 2009 sequences through validation, learner-disjoint testing, slice analysis, bootstrap uncertainty and generated evidence"><figcaption>Reproducible workflow: provenance, learner-level splitting, validation boundaries, test evaluation, and uncertainty</figcaption></figure>
    </div>
    <div>
     <div class="repo-kicker">Empirical Study · AI in Education</div>
     <h3>Knowledge Tracing Benchmark on ASSISTments 2009</h3>
-    <div class="repo-copy"><p>This learner-disjoint benchmark compares transparent priors, fixed and tuned Bayesian Knowledge Tracing, a PFA-style logistic model, and a compact GRU tracer under one controlled protocol. The repository keeps model selection, uncertainty, calibration, error analysis, and first-versus-repeated skill encounters visible so the recurrent model is judged against strong interpretable baselines rather than presented in isolation.</p></div>
-    <div class="repo-data-note"><strong>Data source:</strong> ASSISTments 2009 learner sequences, retrieved through the pinned Atomi/ASSISTments2009 representation.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/knowledge_tracing_benchmark" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
-    <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
-    <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
+    <div class="repo-copy">
+      <p>This study asks how much predictive value different forms of learner history add when the evaluation is kept genuinely learner-disjoint. It uses 4,148 ASSISTments 2009 learners and 274,331 interactions, splitting learners rather than individual attempts into 70% training, 15% validation, and 15% final test partitions. Under one frozen protocol, it compares a global prior, a skill prior, fixed and validation-tuned Bayesian Knowledge Tracing, a PFA-style logistic model based on prior learner-skill successes and failures, and a compact GRU sequence model. Every stateful prediction is generated before the response being predicted is observed, preventing the current answer from leaking into the model state.</p>
+      <p>On the 623-learner final test set, containing 41,228 interactions, the compact GRU produced ROC-AUC 0.7470, Brier 0.1800, log loss 0.5382, and ECE-10 0.0133 at seed 42. Across the prespecified seeds 13, 42, and 73, its ROC-AUC remained 0.7471 ± 0.0008 and Brier score 0.1798 ± 0.0002. The benchmark also separates first-seen from repeated skill encounters, bootstraps Brier-score differences by learner rather than by interaction, and inspects high-error skills. These are predictive results on a historical tutoring dataset, not direct measurements of student knowledge, teaching effectiveness, or readiness for high-stakes educational decisions.</p>
+    </div>
+    <div class="repo-evidence" aria-label="Knowledge tracing evidence snapshot">
+      <div class="repo-evidence-item"><span class="repo-evidence-value">4,148</span><span class="repo-evidence-label">learners</span></div>
+      <div class="repo-evidence-item"><span class="repo-evidence-value">274,331</span><span class="repo-evidence-label">interactions</span></div>
+      <div class="repo-evidence-item"><span class="repo-evidence-value">623</span><span class="repo-evidence-label">test learners</span></div>
+      <div class="repo-evidence-item"><span class="repo-evidence-value">0.7471</span><span class="repo-evidence-label">GRU mean ROC-AUC</span></div>
+    </div>
+    <div class="repo-data-note"><strong>Data and provenance:</strong> ASSISTments 2009 is the scientific source. The executable adapter retrieves the public <code>Atomi/ASSISTments2009</code> sequence representation at pinned revision <code>c72a664…</code>, records the exact parquet SHA-256, verifies one row per learner, and keeps raw learner data out of the repository.</div>
+    <div class="repo-links">
+      <a href="https://github.com/devissaputra/knowledge_tracing_benchmark" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+      <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
+      <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+      <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/docs/research_protocol.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-flask"></i> Protocol</a>
+      <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data &amp; provenance</a>
+    </div>
    </div>
   </div>
  </article>
