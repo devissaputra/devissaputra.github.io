@@ -109,6 +109,16 @@
     color:var(--accent);
   }
 
+  nav.toc a.portfolio-menu{
+    color:#2563EB;
+    transform:translateX(10px);
+  }
+  nav.toc a.portfolio-menu:hover,
+  nav.toc a.portfolio-menu:focus-visible{
+    color:#1D4ED8;
+    border-left-color:#2563EB;
+  }
+
   .sidebar-bottom{
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
@@ -404,7 +414,7 @@
     
       <nav class="toc" aria-label="Section navigation">
         <a href="#summary"><b>Academic Summary</b></a>
-        <a href="#portfolio"><b>Portfolio</b></a>
+        <a class="portfolio-menu" href="#portfolio"><b>Portfolio</b></a>
         <a href="#work"><b>Work Experience</b></a>
         <a href="#education"><b>Education</b></a>
         <a href="#publications"><b>Publications</b></a>
