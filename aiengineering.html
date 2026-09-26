@@ -26,6 +26,11 @@ nav.toc{margin-top:26px}nav.toc a{display:block;padding:6px 0 6px 12px;margin-le
 footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.78rem}
 @media(max-width:900px){.page{grid-template-columns:1fr}.sidebar{position:static;height:auto;padding:34px 24px 26px;border-bottom:1px solid var(--line);gap:26px}nav.toc{display:none}.content{padding:34px 24px 58px;border-left:none}}
 @media(max-width:700px){.portfolio-nav{grid-template-columns:1fr}.portfolio-nav a{border-right:none;border-bottom:1px solid #D7DAD5}}
+
+.project-index{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
+.project-index a{padding:5px 9px;border:1px solid var(--line);border-radius:5px;background:var(--paper-raised);text-decoration:none;font-size:.78rem;color:#39444A}
+.project-index a:hover,.project-index a:focus-visible{border-color:var(--accent);color:var(--accent)}
+
 </style>
 <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -65,6 +70,14 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  <section class="hero" id="overview">
   <h2>Portfolio in AI Engineering</h2>
   <p class="lede">Nine repositories focused on reproducible machine-learning engineering. Four featured empirical studies are placed first and highlighted in blue; the remaining engineering studies follow underneath with the same two-image scientific presentation.</p>
+  <div class="project-index" aria-label="Page project index">
+   <a href="#research-bundles">Empirical Studies</a>
+   <a href="#imbalanced_learning">Learning from Imbalanced Data</a>
+   <a href="#pca_clustering">PCA & K-Means</a>
+   <a href="#mlp_neural_network">MLP vs Linear Baseline</a>
+   <a href="#cnn_image_classification">CNN Image Classification</a>
+   <a href="#lstm_time_series">LSTM Time Series</a>
+  </div>
   
  </section>
  <section class="repo-section" id="research-bundles">
