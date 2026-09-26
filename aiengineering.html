@@ -32,9 +32,9 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
 .project-index a:hover,.project-index a:focus-visible{border-color:var(--accent);color:var(--accent)}
 
 </style>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v=20260926-layout-1">
 </head>
-<body>
+<body class="portfolio-detail">
 <div class="page">
 <aside class="sidebar">
  <div class="sidebar-top">
@@ -84,14 +84,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   <div class="eyebrow-rule bundle-heading"><h2>AI Engineering · Empirical Studies</h2></div>
   <p class="repo-section-intro">These four repositories are the professor-facing empirical packages: real external data, frozen provenance, explicit baselines, robustness checks, generated research artifacts, and paper-ready evidence chains.</p>
   <article class="repo-project research-bundle" id="classification_calibration">
-  <div class="repo-project-grid">
+  <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
+    <h3>Probability Calibration</h3></header>
+<div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/classification_calibration/site_overview.svg" alt="Probability calibration study overview showing the UCI Bank Marketing dataset, repeated-holdout results, probability-quality metrics and validity checks"><figcaption>Study overview: problem, evidence, measured calibration gains, and validity checks</figcaption></figure>
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/classification_calibration/site_pipeline.svg" alt="Probability calibration experimental workflow from frozen UCI data provenance through preprocessing, calibration, repeated holdouts, sensitivity analysis and generated evidence"><figcaption>Frozen experimental workflow: provenance, split discipline, calibration, robustness checks, and reproducible outputs</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/classification_calibration/site_overview.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/classification_calibration/site_overview.svg" alt="Probability calibration study overview showing the UCI Bank Marketing dataset, repeated-holdout results, probability-quality metrics and validity checks"></a><figcaption>Study overview: problem, evidence, measured calibration gains, and validity checks</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/classification_calibration/site_pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/classification_calibration/site_pipeline.svg" alt="Probability calibration experimental workflow from frozen UCI data provenance through preprocessing, calibration, repeated holdouts, sensitivity analysis and generated evidence"></a><figcaption>Frozen experimental workflow: provenance, split discipline, calibration, robustness checks, and reproducible outputs</figcaption></figure>
    </div>
    <div>
-    <div class="repo-kicker">Empirical Study · AI Engineering</div>
-    <h3>Probability Calibration</h3>
+    
     <div class="repo-copy">
      <p>This study asks a more demanding question than whether a classifier is simply accurate: when a model assigns a probability, does that number match what actually happens? Using the UCI Bank Marketing dataset with 45,211 observations, 16 predictors, and an 11.7% positive class, the protocol compares a class-prior baseline with uncalibrated, sigmoid-calibrated, and isotonic-calibrated logistic regression across five fixed stratified holdouts. Discrimination is evaluated separately from probability quality using ROC-AUC and average precision alongside Brier score, log loss, and expected calibration error.</p>
      <p>Under the frozen protocol, isotonic calibration produces the clearest probability-quality improvement: mean Brier score falls from 0.0720 to 0.0693, log loss from 0.2445 to 0.2269, and ECE-10 from 0.0311 to 0.0074, while ROC-AUC remains essentially unchanged at 0.9057 versus 0.9058. The study also varies calibration folds and ECE bin counts, removes call duration in an operational ablation because that feature is unavailable before contact, audits high-confidence errors, and reports paired bootstrap intervals. The result is a reproducible methodology benchmark rather than a claim that the model is ready for real banking decisions.</p>
@@ -111,14 +112,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   </div>
  </article>
 <article class="repo-project research-bundle" id="anomaly_detection">
-  <div class="repo-project-grid">
+  <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
+    <h3>Label-Blind Threshold-Aware Anomaly Detection on NAB</h3></header>
+<div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/anomaly_detection/site_overview.svg" alt="Label-Blind Threshold-Aware Anomaly Detection on NAB: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/anomaly_detection/site_pipeline.svg" alt="Label-Blind Threshold-Aware Anomaly Detection on NAB: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/anomaly_detection/site_overview.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/anomaly_detection/site_overview.svg" alt="Label-Blind Threshold-Aware Anomaly Detection on NAB: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/anomaly_detection/site_pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/anomaly_detection/site_pipeline.svg" alt="Label-Blind Threshold-Aware Anomaly Detection on NAB: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
    </div>
    <div>
-    <div class="repo-kicker">Empirical Study · AI Engineering</div>
-    <h3>Label-Blind Threshold-Aware Anomaly Detection on NAB</h3>
+    
     <div class="repo-copy"><p>This study compares feature-based Isolation Forest with a transparent robust-history baseline on four real NAB streams. The primary pipeline stays label-blind during fitting and alert-budget calibration, then evaluates event detection separately so threshold tuning does not quietly leak benchmark labels into the detector.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> Numenta Anomaly Benchmark (NAB), pinned benchmark revision and frozen selected streams.</div>
     <div class="repo-links"><a href="https://github.com/devissaputra/anomaly_detection" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
@@ -129,14 +131,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   </div>
  </article>
 <article class="repo-project research-bundle" id="explainable_ai">
-  <div class="repo-project-grid">
+  <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
+    <h3>Explainable AI: Model Dependence and Feature-Governance Study</h3></header>
+<div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/explainable_ai/site_overview.svg" alt="Explainable AI: Model Dependence and Feature-Governance Study: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/explainable_ai/site_pipeline.svg" alt="Explainable AI: Model Dependence and Feature-Governance Study: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/explainable_ai/site_overview.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/explainable_ai/site_overview.svg" alt="Explainable AI: Model Dependence and Feature-Governance Study: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/explainable_ai/site_pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/explainable_ai/site_pipeline.svg" alt="Explainable AI: Model Dependence and Feature-Governance Study: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
    </div>
    <div>
-    <div class="repo-kicker">Empirical Study · AI Engineering</div>
-    <h3>Explainable AI: Model Dependence and Feature-Governance Study</h3>
+    
     <div class="repo-copy"><p>This bundle studies how global feature explanations change across model families and feature-governance choices on the Adult income benchmark. It combines held-out performance, permutation-importance stability, subgroup behavior, feature exclusion, and error analysis while keeping predictive dependence separate from causal or fairness claims.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> UCI Adult / Census Income (dataset 2), DOI 10.24432/C5XW20.</div>
     <div class="repo-links"><a href="https://github.com/devissaputra/explainable_ai" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
@@ -147,14 +150,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   </div>
  </article>
 <article class="repo-project research-bundle" id="mini_transformers_sequences">
-  <div class="repo-project-grid">
+  <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
+    <h3>Transformer Forecasting on WDC-SILSO</h3></header>
+<div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/site_overview.svg" alt="Transformer Forecasting on WDC-SILSO: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/site_pipeline.svg" alt="Transformer Forecasting on WDC-SILSO: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/site_overview.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/site_overview.svg" alt="Transformer Forecasting on WDC-SILSO: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/site_pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/site_pipeline.svg" alt="Transformer Forecasting on WDC-SILSO: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
    </div>
    <div>
-    <div class="repo-kicker">Empirical Study · AI Engineering</div>
-    <h3>Transformer Forecasting on WDC-SILSO</h3>
+    
     <div class="repo-copy"><p>This multi-horizon forecasting study asks whether a compact Transformer actually earns its complexity over persistence, seasonal-naive, ridge, and gradient-boosted baselines on a long scientific time series. It evaluates several forecast horizons, seed stability, context-length sensitivity, early-versus-late test behavior, and performance during high solar activity.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> WDC-SILSO Version 2.0 monthly mean total sunspot number, frozen through March 2026.</div>
     <div class="repo-links"><a href="https://github.com/devissaputra/mini_transformers_sequences" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
@@ -166,17 +170,18 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </article>
  </section>
  <section class="repo-section" id="repositories">
-  <div class="eyebrow-rule"><h2>AI Engineering Repositories</h2></div>
+  <div class="eyebrow-rule"><h2>Repositories</h2></div>
   <p class="repo-section-intro">The remaining five repositories are compact engineering studies built around transparent comparisons, reproducible splits, and scientific visuals rather than presentation-only demos.</p>
   <article class="repo-project" id="imbalanced_learning">
-  <div class="repo-project-grid">
+  <header class="repo-project-heading"><div class="repo-kicker">AI Engineering Repository · 05</div>
+    <h3>Learning from Imbalanced Data</h3></header>
+<div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/imbalanced_learning/site_overview.svg" alt="Learning from Imbalanced Data: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/imbalanced_learning/site_pipeline.svg" alt="Learning from Imbalanced Data: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/imbalanced_learning/site_overview.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/imbalanced_learning/site_overview.svg" alt="Learning from Imbalanced Data: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/imbalanced_learning/site_pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/imbalanced_learning/site_pipeline.svg" alt="Learning from Imbalanced Data: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
    </div>
    <div>
-    <div class="repo-kicker">AI Engineering Repository · 05</div>
-    <h3>Learning from Imbalanced Data</h3>
+    
     <div class="repo-copy"><p>A controlled study of how class imbalance changes model behavior. It compares standard logistic regression, class-weighted logistic regression, and a class-weighted Random Forest, emphasizing average precision, recall, F1, and balanced accuracy instead of relying on headline accuracy.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/imbalanced_learning" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
@@ -185,14 +190,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   </div>
  </article>
 <article class="repo-project" id="pca_clustering">
-  <div class="repo-project-grid">
+  <header class="repo-project-heading"><div class="repo-kicker">AI Engineering Repository · 06</div>
+    <h3>PCA and K-Means Clustering</h3></header>
+<div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/pca_clustering/site_overview.svg" alt="PCA and K-Means Clustering: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/pca_clustering/site_pipeline.svg" alt="PCA and K-Means Clustering: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/pca_clustering/site_overview.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/pca_clustering/site_overview.svg" alt="PCA and K-Means Clustering: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/pca_clustering/site_pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/pca_clustering/site_pipeline.svg" alt="PCA and K-Means Clustering: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
    </div>
    <div>
-    <div class="repo-kicker">AI Engineering Repository · 06</div>
-    <h3>PCA and K-Means Clustering</h3>
+    
     <div class="repo-copy"><p>An unsupervised-learning experiment that keeps model selection separate from visualization. K-means is selected in the full standardized 13-dimensional wine feature space, while PCA is used only for interpretation, with known class labels reserved for post-hoc ARI comparison.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/pca_clustering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
@@ -201,14 +207,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   </div>
  </article>
 <article class="repo-project" id="mlp_neural_network">
-  <div class="repo-project-grid">
+  <header class="repo-project-heading"><div class="repo-kicker">AI Engineering Repository · 07</div>
+    <h3>Multilayer Perceptron vs Linear Baseline on Handwritten Digits</h3></header>
+<div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/mlp_neural_network/site_overview.svg" alt="Multilayer Perceptron vs Linear Baseline on Handwritten Digits: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/mlp_neural_network/site_pipeline.svg" alt="Multilayer Perceptron vs Linear Baseline on Handwritten Digits: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mlp_neural_network/site_overview.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mlp_neural_network/site_overview.svg" alt="Multilayer Perceptron vs Linear Baseline on Handwritten Digits: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mlp_neural_network/site_pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mlp_neural_network/site_pipeline.svg" alt="Multilayer Perceptron vs Linear Baseline on Handwritten Digits: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
    </div>
    <div>
-    <div class="repo-kicker">AI Engineering Repository · 07</div>
-    <h3>Multilayer Perceptron vs Linear Baseline on Handwritten Digits</h3>
+    
     <div class="repo-copy"><p>A compact neural-network experiment built around a strong baseline. The MLP is compared with multinomial logistic regression on the same standardized handwritten-digit split, and the negative result is kept because model complexity should be justified by evidence rather than assumed.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/mlp_neural_network" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
@@ -217,14 +224,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   </div>
  </article>
 <article class="repo-project" id="cnn_image_classification">
-  <div class="repo-project-grid">
+  <header class="repo-project-heading"><div class="repo-kicker">AI Engineering Repository · 08</div>
+    <h3>Convolutional Neural Network for Handwritten Digits</h3></header>
+<div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/cnn_image_classification/site_overview.svg" alt="Convolutional Neural Network for Handwritten Digits: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/cnn_image_classification/site_pipeline.svg" alt="Convolutional Neural Network for Handwritten Digits: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/cnn_image_classification/site_overview.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/cnn_image_classification/site_overview.svg" alt="Convolutional Neural Network for Handwritten Digits: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/cnn_image_classification/site_pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/cnn_image_classification/site_pipeline.svg" alt="Convolutional Neural Network for Handwritten Digits: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
    </div>
    <div>
-    <div class="repo-kicker">AI Engineering Repository · 08</div>
-    <h3>Convolutional Neural Network for Handwritten Digits</h3>
+    
     <div class="repo-copy"><p>A PyTorch image-classification experiment that tests whether preserving 2D spatial structure improves on a flattened logistic-regression baseline. The CNN shows a modest gain on the fixed split, illustrating why architecture should match data structure without overstating the result.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/cnn_image_classification" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
@@ -233,14 +241,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   </div>
  </article>
 <article class="repo-project" id="lstm_time_series">
-  <div class="repo-project-grid">
+  <header class="repo-project-heading"><div class="repo-kicker">AI Engineering Repository · 09</div>
+    <h3>LSTM Forecasting for Mauna Loa CO₂</h3></header>
+<div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/lstm_time_series/site_overview.svg" alt="LSTM Forecasting for Mauna Loa CO₂: scientific system overview"><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><img loading="lazy" src="assets/aieng/lstm_time_series/site_pipeline.svg" alt="LSTM Forecasting for Mauna Loa CO₂: scientific data pipeline"><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/lstm_time_series/site_overview.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/lstm_time_series/site_overview.svg" alt="LSTM Forecasting for Mauna Loa CO₂: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/lstm_time_series/site_pipeline.svg" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/lstm_time_series/site_pipeline.svg" alt="LSTM Forecasting for Mauna Loa CO₂: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
    </div>
    <div>
-    <div class="repo-kicker">AI Engineering Repository · 09</div>
-    <h3>LSTM Forecasting for Mauna Loa CO₂</h3>
+    
     <div class="repo-copy"><p>A leakage-aware forecasting experiment comparing persistence, ridge autoregression, and an LSTM on a chronological holdout. The LSTM loses to the simpler baselines in this setup, turning the repository into a useful demonstration of why sequence-model complexity is not automatically valuable.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/lstm_time_series" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
