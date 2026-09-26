@@ -1,4 +1,4 @@
-# Devis Wawan Saputra Portfolio
+# Devis Saputra Portfolio
 
 This repository powers my current personal portfolio on GitHub Pages.
 
