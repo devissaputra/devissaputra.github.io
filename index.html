@@ -128,15 +128,15 @@
     border-left-color:#2563EB;
   }
 
-  nav.toc a.portfolio-menu{
+  nav.toc a.portfolio-menu,
+  nav.toc a.publications-menu{
     display:flex;
     align-items:center;
     gap:8px;
   }
-  nav.toc a.portfolio-menu .menu-icons{
+  nav.toc .menu-icon{
     display:inline-flex;
     align-items:center;
-    gap:6px;
     margin-left:auto;
     font-size:0.9rem;
   }
@@ -441,8 +441,8 @@
     
       <nav class="toc" aria-label="Section navigation">
         <a href="#summary"><b>Academic Summary</b></a>
-        <a class="portfolio-menu" href="#portfolio"><b>Portfolio</b><span class="menu-icons" aria-hidden="true"><i class="fa-brands fa-github"></i><i class="fa-solid fa-pen-to-square"></i></span></a>
-        <a class="publications-menu" href="#publications"><b>Publications</b></a>
+        <a class="portfolio-menu" href="#portfolio"><b>Portfolio</b><span class="menu-icon" aria-hidden="true"><i class="fa-brands fa-github"></i></span></a>
+        <a class="publications-menu" href="#publications"><b>Publications</b><span class="menu-icon" aria-hidden="true"><i class="fa-solid fa-pen-to-square"></i></span></a>
         <a href="#work"><b>Work Experience</b></a>
         <a href="#education"><b>Education</b></a>
         <a href="#competence"><b>Competence</b></a>
