@@ -28,6 +28,8 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
 .project-index a{padding:5px 9px;border:1px solid var(--line);border-radius:5px;background:var(--paper-raised);text-decoration:none;font-size:.78rem;color:#39444A}
 .project-index a:hover,.project-index a:focus-visible{border-color:var(--accent);color:var(--accent)}
 
+
+.portfolio-detail .repo-visual img{aspect-ratio:10/7;height:auto}.repo-copy{line-height:1.65}.repo-links a{min-height:40px}
 </style>
 <link rel="stylesheet" href="assets/site.css?v=20260926-layout-1">
 </head>
@@ -100,21 +102,19 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </section>
  <section class="repo-section" id="research-bundles">
   <div class="eyebrow-rule bundle-heading"><h2>Empirical Studies</h2></div>
-  <p class="repo-section-intro">These four repositories are the primary empirical AIED packages for professor review. Each uses real external data, an explicit study design, reproducible evidence, limitations, robustness analysis, and paper-facing artifacts.</p>
+  <p class="repo-section-intro">These four empirical studies examine predictive, observational, retrieval, and audit questions using external datasets. The linked calculation guides distinguish recorded findings from educational and causal claims.</p>
   <article class="repo-project research-bundle" id="knowledge_tracing_benchmark">
   <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI in Education</div>
     <h3>Knowledge Tracing Benchmark on ASSISTments 2009</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/knowledge_tracing_benchmark/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/site_overview.svg?v=20260926-svg-repair" alt="Knowledge tracing benchmark on ASSISTments 2009 showing dataset scale, learner-disjoint split, six model conditions, held-out metrics, encounter slices and robustness checks"></a><figcaption>Study overview: learner-disjoint design, model comparison, held-out results, and validity checks</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/knowledge_tracing_benchmark/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/site_pipeline.svg?v=20260926-svg-repair" alt="Knowledge tracing experimental workflow from pinned ASSISTments 2009 sequences through validation, learner-disjoint testing, slice analysis, bootstrap uncertainty and generated evidence"></a><figcaption>Reproducible workflow: provenance, learner-level splitting, validation boundaries, test evaluation, and uncertainty</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/knowledge_tracing_benchmark/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/review_overview.svg?v=20260926-evidence-review" alt="How much does learner history improve next-response prediction? ASSISTments 2009 representation: 4,148 learners, 274,331 interactions."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/knowledge_tracing_benchmark/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: BKT prediction = mastery×(1-slip) + (1-mastery)×guess."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy">
-      <p>This study asks how much predictive value different forms of learner history add when the evaluation is kept genuinely learner-disjoint. It uses 4,148 ASSISTments 2009 learners and 274,331 interactions, splitting learners rather than individual attempts into 70% training, 15% validation, and 15% final test partitions. Under one frozen protocol, it compares a global prior, a skill prior, fixed and validation-tuned Bayesian Knowledge Tracing, a PFA-style logistic model based on prior learner-skill successes and failures, and a compact GRU sequence model. Every stateful prediction is generated before the response being predicted is observed, preventing the current answer from leaking into the model state.</p>
-      <p>On the 623-learner final test set, containing 41,228 interactions, the compact GRU produced ROC-AUC 0.7470, Brier 0.1800, log loss 0.5382, and ECE-10 0.0133 at seed 42. Across the prespecified seeds 13, 42, and 73, its ROC-AUC remained 0.7471 ± 0.0008 and Brier score 0.1798 ± 0.0002. The benchmark also separates first-seen from repeated skill encounters, bootstraps Brier-score differences by learner rather than by interaction, and inspects high-error skills. These are predictive results on a historical tutoring dataset, not direct measurements of student knowledge, teaching effectiveness, or readiness for high-stakes educational decisions.</p>
-    </div>
+    <div class="repo-copy"><p>This study asks how much predictive value different forms of learner history add when the evaluation is kept genuinely learner-disjoint. It uses 4,148 ASSISTments 2009 learners and 274,331 interactions, splitting learners rather than individual attempts into 70% training, 15% validation, and 15% final test partitions. Under one frozen protocol, it compares a global prior, a skill prior, fixed and validation-tuned Bayesian Knowledge Tracing, a PFA-style logistic model based on prior learner-skill successes and failures, and a compact GRU sequence model. Every stateful prediction is generated before the response being predicted is observed, preventing the current answer from leaking into the model state.</p>
+<p>On 623 held-out learners, the seed-42 GRU achieves ROC-AUC 0.7470 and Brier score 0.1800, compared with 0.6982 and 0.1976 for PFA. The three GRU seeds average ROC-AUC 0.7471 with sample SD 0.0008. These results support better response prediction under this historical benchmark; they do not establish instructional benefit or justify high-stakes interpretations of a learner’s knowledge.</p></div>
     <div class="repo-evidence" aria-label="Knowledge tracing evidence snapshot">
       <div class="repo-evidence-item"><span class="repo-evidence-value">4,148</span><span class="repo-evidence-label">learners</span></div>
       <div class="repo-evidence-item"><span class="repo-evidence-value">274,331</span><span class="repo-evidence-label">interactions</span></div>
@@ -122,7 +122,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
       <div class="repo-evidence-item"><span class="repo-evidence-value">0.7471</span><span class="repo-evidence-label">GRU mean ROC-AUC</span></div>
     </div>
     <div class="repo-data-note"><strong>Data and provenance:</strong> ASSISTments 2009 is the scientific source. The executable adapter retrieves the public <code>Atomi/ASSISTments2009</code> sequence representation at pinned revision <code>c72a664…</code>, records the exact parquet SHA-256, verifies one row per learner, and keeps raw learner data out of the repository.</div>
-    <div class="repo-links">
+    <div class="repo-links"><a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a>
       <a href="https://github.com/devissaputra/knowledge_tracing_benchmark" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
       <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
       <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
@@ -137,15 +137,16 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Causal Learning Analytics — OULAD Day-30 Landmark Study</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/causal_learning_analytics/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/causal_learning_analytics/site_overview.svg?v=20260926-svg-repair" alt="Causal Learning Analytics — OULAD Day-30 Landmark Study: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/causal_learning_analytics/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/causal_learning_analytics/site_pipeline.svg?v=20260926-svg-repair" alt="Causal Learning Analytics — OULAD Day-30 Landmark Study: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/causal_learning_analytics/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/causal_learning_analytics/review_overview.svg?v=20260926-evidence-review" alt="What outcome contrast accompanies early assessment submission? OULAD CCC 2014J, day-30 landmark; 1,820 complete supported cases."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/causal_learning_analytics/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/causal_learning_analytics/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Weighted contrast = sum(wT·Y)/sum(wT) - sum(wC·Y)/sum(wC)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>This study asks a deliberately narrow observational question: among learners still eligible at day 30, what adjusted contrast in favorable final outcome is associated with submitting at least one non-banked assessment by that landmark? The design separates eligibility, exposure, and later outcome timing so the analysis does not quietly mix early withdrawal with treatment assignment.</p></div>
+    <div class="repo-copy"><p>This study asks a deliberately narrow observational question: among learners still eligible at day 30, what adjusted contrast in favorable final outcome is associated with submitting at least one non-banked assessment by that landmark? The design separates eligibility, exposure, and later outcome timing so the analysis does not quietly mix early withdrawal with treatment assignment.</p>
+<p>The recorded Hájek contrast is 0.3861, with a full-refit bootstrap interval of roughly 0.3242 to 0.4447, but the analysis flags extreme weights, limited effective sample size, and residual imbalance. An overlap-weighted sensitivity analysis yields 0.3261 for a different target population. These are observational contrasts; unmeasured confounding and selection remain barriers to claiming that requiring early submission would improve outcomes.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> Open University Learning Analytics Dataset (OULAD), using a frozen day-30 landmark cohort.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/causal_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/causal_learning_analytics/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <div class="repo-links"><a href="https://github.com/devissaputra/causal_learning_analytics/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/causal_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/causal_learning_analytics/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
     <a href="https://github.com/devissaputra/causal_learning_analytics/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
     <a href="https://github.com/devissaputra/causal_learning_analytics/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
    </div>
@@ -156,15 +157,16 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Misconception-Aware RAG Tutor — Empirical Study</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/misconception_aware_rag/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/misconception_aware_rag/site_overview.svg?v=20260926-svg-repair" alt="Misconception-Aware RAG Tutor — Empirical Study: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/misconception_aware_rag/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/misconception_aware_rag/site_pipeline.svg?v=20260926-svg-repair" alt="Misconception-Aware RAG Tutor — Empirical Study: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/misconception_aware_rag/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/misconception_aware_rag/review_overview.svg?v=20260926-evidence-review" alt="Does adding a wrong answer improve evidence retrieval? SciQ: 884 supported questions, 884 support documents and 2,652 distractor cases."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/misconception_aware_rag/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/misconception_aware_rag/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Reciprocal rank = 1/rank of the relevant support; MRR = mean reciprocal rank."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>This repository separates an empirical retrieval study from the tutoring prototype built around it. The study tests whether conditioning evidence retrieval on an observed wrong answer changes support-passage retrieval on SciQ, while a negative-control condition checks whether any gain is more than the effect of simply appending extra distractor-like text.</p></div>
+    <div class="repo-copy"><p>This repository separates an empirical retrieval study from the tutoring prototype built around it. The study tests whether conditioning evidence retrieval on an observed wrong answer changes support-passage retrieval on SciQ, while a negative-control condition checks whether any gain is more than the effect of simply appending extra distractor-like text.</p>
+<p>Wrong-answer expansion slightly reduces MRR from 0.9472 to 0.9433 in the frozen benchmark. Its contrast with a shuffled distractor control has an interval spanning zero, so the study does not establish a distinct benefit from the semantic relationship of the wrong answer. The repository therefore separates the measured retrieval result from the tutoring prototype and makes no claim of improved learning.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> SciQ test split from the Allen Institute for AI / Hugging Face dataset repository, pinned to a frozen revision and hash.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/misconception_aware_rag" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/misconception_aware_rag/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <div class="repo-links"><a href="https://github.com/devissaputra/misconception_aware_rag/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/misconception_aware_rag" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/misconception_aware_rag/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
     <a href="https://github.com/devissaputra/misconception_aware_rag/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
     <a href="https://github.com/devissaputra/misconception_aware_rag/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
    </div>
@@ -175,15 +177,16 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Responsible AIED Evaluation — UCI 697 Study</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/responsible_aied_evaluation/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/responsible_aied_evaluation/site_overview.svg?v=20260926-svg-repair" alt="Responsible AIED Evaluation — UCI 697 Study: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/responsible_aied_evaluation/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/responsible_aied_evaluation/site_pipeline.svg?v=20260926-svg-repair" alt="Responsible AIED Evaluation — UCI 697 Study: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/responsible_aied_evaluation/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/responsible_aied_evaluation/review_overview.svg?v=20260926-evidence-review" alt="How should a dropout predictor be audited before use? UCI 697: 4,424 historical student records; 20 retained predictors."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/responsible_aied_evaluation/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/responsible_aied_evaluation/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Brier = mean((p-y)^2); selection gap = max(group rates)-min(group rates)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>This bundle audits an enrollment-time dropout probability model across discrimination, calibration, subgroup error patterns, allocation behavior, target definitions, and split sensitivity. Protected-group fields remain audit-only, semester-performance variables are removed to respect the prediction-time boundary, and the results are framed as measurement evidence rather than a fairness certificate.</p></div>
+    <div class="repo-copy"><p>This bundle audits an enrollment-time dropout probability model across discrimination, calibration, subgroup error patterns, allocation behavior, target definitions, and split sensitivity. Protected-group fields remain audit-only, semester-performance variables are removed to respect the prediction-time boundary, and the results are framed as measurement evidence rather than a fairness certificate.</p>
+<p>The primary holdout reports ROC-AUC 0.8316 and Brier score 0.1447. Gender diagnostics can be calculated, while international, intersectional, and special-needs audits remain unevaluable under the support rules. Repeated splits and bootstrap checks describe uncertainty, but incomplete governance evidence and the historical dataset prevent a deployment or fairness certification.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> UCI Predict Students' Dropout and Academic Success (dataset 697), DOI 10.24432/C5MC89.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/responsible_aied_evaluation" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/responsible_aied_evaluation/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <div class="repo-links"><a href="https://github.com/devissaputra/responsible_aied_evaluation/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/responsible_aied_evaluation" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/responsible_aied_evaluation/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
     <a href="https://github.com/devissaputra/responsible_aied_evaluation/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
     <a href="https://github.com/devissaputra/responsible_aied_evaluation/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
    </div>
@@ -198,15 +201,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>GenAI Learning Observatory</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/genai_learning_observatory/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/genai_learning_observatory/site_overview.svg?v=20260926-svg-repair" alt="GenAI Learning Observatory: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/genai_learning_observatory/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/genai_learning_observatory/site_pipeline.svg?v=20260926-svg-repair" alt="GenAI Learning Observatory: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/genai_learning_observatory/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/genai_learning_observatory/review_overview.svg?v=20260926-evidence-review" alt="How do learners check and revise AI assistance? Synthetic prompt-event records grouped by learner and session."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/genai_learning_observatory/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/genai_learning_observatory/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Agency index = .30V + .25R + .25F + .20(1-A)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>An observability layer for studying how learners use generative AI rather than merely counting usage. It keeps prompting, verification, revision, reflection, and answer adoption as separate signals so learner-agency assumptions can be inspected instead of disappearing inside a single engagement score.</p></div>
+    <div class="repo-copy"><p>This synthetic-data observatory turns AI interaction logs into inspectable session summaries of verification, revision, reflection, and answer adoption. Its intent labels use explicit lexical rules, and its agency index is a stated weighted heuristic rather than a psychological measure. The repository is useful for testing instrumentation and analysis workflows before collecting consented learner data.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/genai_learning_observatory" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/genai_learning_observatory/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/genai_learning_observatory/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/genai_learning_observatory" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/genai_learning_observatory/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -215,15 +218,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Teacher–AI Assessment Studio</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/teacher_ai_assessment/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/teacher_ai_assessment/site_overview.svg?v=20260926-svg-repair" alt="Teacher–AI Assessment Studio: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/teacher_ai_assessment/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/teacher_ai_assessment/site_pipeline.svg?v=20260926-svg-repair" alt="Teacher–AI Assessment Studio: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/teacher_ai_assessment/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/teacher_ai_assessment/review_overview.svg?v=20260926-evidence-review" alt="Which human–AI scoring disagreements need review? Synthetic paired human and AI ordinal scores with uncertainty values."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/teacher_ai_assessment/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/teacher_ai_assessment/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Review = |human-AI| &gt; 1 OR uncertainty ≥ .28."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A human-in-the-loop assessment prototype that separates AI rubric scores, teacher scores, disagreement, uncertainty, routing, and final resolution. The design treats automated scoring as decision support and makes the path to a final judgment reconstructable for audit and research.</p></div>
+    <div class="repo-copy"><p>This prototype compares synthetic human and AI assessment scores and produces a transparent review queue. It reports exact agreement, within-one agreement, quadratic kappa, and the proportion sent for review, using explicit disagreement and uncertainty thresholds. These outputs test the routing logic; they do not establish that an AI assessor is correct or that the thresholds are appropriate for real students.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/teacher_ai_assessment" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/teacher_ai_assessment/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/teacher_ai_assessment/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/teacher_ai_assessment" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/teacher_ai_assessment/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -232,15 +235,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Privacy-Preserving Learning Analytics</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/privacy_preserving_learning_analytics/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/privacy_preserving_learning_analytics/site_overview.svg?v=20260926-svg-repair" alt="Privacy-Preserving Learning Analytics: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/privacy_preserving_learning_analytics/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/privacy_preserving_learning_analytics/site_pipeline.svg?v=20260926-svg-repair" alt="Privacy-Preserving Learning Analytics: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/privacy_preserving_learning_analytics/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/privacy_preserving_learning_analytics/review_overview.svg?v=20260926-evidence-review" alt="What changes when training remains within data silos? Synthetic client shards and a separate synthetic test set."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/privacy_preserving_learning_analytics/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/privacy_preserving_learning_analytics/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: g = Xᵀ(sigmoid(Xw)-y)/n; w_next = w - learning_rate×mean(client gradients)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A federated-learning research prototype in which synthetic learner records stay in local client shards while gradients are aggregated centrally. Gradient clipping and Gaussian noise can be varied to study utility sensitivity, while the repository is explicit that this is not a formal differential-privacy guarantee without privacy accounting and a threat model.</p></div>
+    <div class="repo-copy"><p>This federated-learning demonstration keeps synthetic learner records in local shards while sharing clipped, optionally noisy gradients. A separate synthetic test set shows how noise changes predictive utility, with the update rule and client weighting exposed for inspection. The project demonstrates data-local computation, while explicitly leaving formal privacy accounting, secure aggregation, and adversarial evaluation unimplemented.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/privacy_preserving_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/privacy_preserving_learning_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/privacy_preserving_learning_analytics/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/privacy_preserving_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/privacy_preserving_learning_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -249,15 +252,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Multimodal Self-Regulation Lab</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/multimodal_self_regulation_lab/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/multimodal_self_regulation_lab/site_overview.svg?v=20260926-svg-repair" alt="Multimodal Self-Regulation Lab: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/multimodal_self_regulation_lab/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/multimodal_self_regulation_lab/site_pipeline.svg?v=20260926-svg-repair" alt="Multimodal Self-Regulation Lab: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/multimodal_self_regulation_lab/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/multimodal_self_regulation_lab/review_overview.svg?v=20260926-evidence-review" alt="Does combining modalities improve synthetic prediction? Simulated interaction, attention-like and self-report features with missingness and reliability values."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/multimodal_self_regulation_lab/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/multimodal_self_regulation_lab/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Fusion = (interaction_rank + reliabilityA×attention_rank + reliabilityR×report_rank)/(1+reliabilityA+reliabilityR)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A multimodal sandbox that keeps interaction, gaze-like attention, self-report, missing modalities, reliability estimation, fusion, and ablation visible. The goal is to study when another modality adds useful information, when it adds noise, and how reliability-aware fusion can remain interpretable.</p></div>
+    <div class="repo-copy"><p>This synthetic experiment compares interaction, attention-like, and self-report signals using one shared held-out partition. The revised classifier pipeline fits imputation and scaling only on training rows, correcting the earlier in-sample evaluation. A separately labeled rank-fusion comparator explores reliability weighting; neither the simulated features nor the scores validate self-regulation or attention measurement in real learners.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/multimodal_self_regulation_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/multimodal_self_regulation_lab/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/multimodal_self_regulation_lab/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/multimodal_self_regulation_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/multimodal_self_regulation_lab/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -266,15 +269,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Learning Design Process Mining</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learning_design_process_mining/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learning_design_process_mining/site_overview.svg?v=20260926-svg-repair" alt="Learning Design Process Mining: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learning_design_process_mining/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learning_design_process_mining/site_pipeline.svg?v=20260926-svg-repair" alt="Learning Design Process Mining: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learning_design_process_mining/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learning_design_process_mining/review_overview.svg?v=20260926-evidence-review" alt="Where does instructional-design work repeat or branch? Synthetic timestamped design-event logs, grouped into cases."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learning_design_process_mining/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learning_design_process_mining/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: P(next|stage) = transition count / outgoing count; H(stage) = -sum p log2 p."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A process-mining view of instructional design that treats design work as an event log rather than only a finished artifact. It measures trace variants, transitions, rework, iteration, bottlenecks, and human–AI handoffs so the design process itself becomes analyzable.</p></div>
+    <div class="repo-copy"><p>This process-mining prototype reconstructs instructional-design traces from synthetic event logs. It reports common variants, stage-to-stage transition shares, entropy, and a clearly defined repetition rate, making workflow differences visible without calling every revision inefficient. The calculations support process inspection; real conclusions would require authentic logs and a defensible interpretation of stage labels.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/learning_design_process_mining" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/learning_design_process_mining/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/learning_design_process_mining/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/learning_design_process_mining" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/learning_design_process_mining/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -283,15 +286,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Hybrid Intelligence Lab</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/hybrid_intelligence_lab/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/hybrid_intelligence_lab/site_overview.svg?v=20260926-svg-repair" alt="Hybrid Intelligence Lab: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/hybrid_intelligence_lab/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/hybrid_intelligence_lab/site_pipeline.svg?v=20260926-svg-repair" alt="Hybrid Intelligence Lab: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/hybrid_intelligence_lab/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/hybrid_intelligence_lab/review_overview.svg?v=20260926-evidence-review" alt="When does confidence-based routing help? Synthetic human and AI decisions; confidence is generated partly from correctness."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/hybrid_intelligence_lab/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/hybrid_intelligence_lab/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Complementarity = mean(human_correct XOR AI_correct)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>An experimental harness for testing when a human, an AI system, or a shared process should decide or defer. Human performance, model confidence, disagreement, routing, override, and deferral remain separate so any gain from hybrid decision-making can be traced to concrete cases.</p></div>
+    <div class="repo-copy"><p>This simulator compares human-only, AI-only, and confidence-routed decisions, retaining each routing reason for error inspection. The synthetic generator deliberately links confidence to correctness, so strong hybrid performance reflects that assumption and must not be presented as evidence from a human study. Threshold sweeps reveal how often the policy defaults to the human and when complementary errors can be used.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/hybrid_intelligence_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/hybrid_intelligence_lab/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/hybrid_intelligence_lab/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/hybrid_intelligence_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/hybrid_intelligence_lab/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -300,15 +303,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Explanation Faithfulness for AIED</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/explanation_faithfulness_aied/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/explanation_faithfulness_aied/site_overview.svg?v=20260926-svg-repair" alt="Explanation Faithfulness for AIED: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/explanation_faithfulness_aied/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/explanation_faithfulness_aied/site_pipeline.svg?v=20260926-svg-repair" alt="Explanation Faithfulness for AIED: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/explanation_faithfulness_aied/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/explanation_faithfulness_aied/review_overview.svg?v=20260926-evidence-review" alt="Do chosen features retain and explain a prediction? Synthetic original, feature-removed and feature-only probabilities plus feature sets."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/explanation_faithfulness_aied/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/explanation_faithfulness_aied/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Comprehensiveness = max(0,p-p_without); sufficiency gap = max(0,p-p_only)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A compact lab for testing whether educational AI explanations actually track model behavior. Comprehensiveness, sufficiency, stability, and perturbation-based checks are used to distinguish explanations that sound plausible from explanations that remain faithful to the prediction process.</p></div>
+    <div class="repo-copy"><p>This prototype makes explanation diagnostics explicit through probability-drop and feature-overlap calculations on synthetic cases. It distinguishes comprehensiveness, sufficiency gap, and stability, while labeling the combined index as a hand-weighted heuristic. The current software accepts supplied perturbation outputs; a substantive empirical study would need actual model interventions and suitable random-feature controls.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/explanation_faithfulness_aied" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/explanation_faithfulness_aied/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/explanation_faithfulness_aied/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/explanation_faithfulness_aied" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/explanation_faithfulness_aied/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -317,15 +320,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Collaborative Reasoning Analytics</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/collaborative_reasoning_analytics/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/collaborative_reasoning_analytics/site_overview.svg?v=20260926-svg-repair" alt="Collaborative Reasoning Analytics: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/collaborative_reasoning_analytics/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/collaborative_reasoning_analytics/site_pipeline.svg?v=20260926-svg-repair" alt="Collaborative Reasoning Analytics: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/collaborative_reasoning_analytics/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/collaborative_reasoning_analytics/review_overview.svg?v=20260926-evidence-review" alt="How can dialogue participation and uptake be inspected? Synthetic ordered dialogue turns and speaker identities."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/collaborative_reasoning_analytics/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/collaborative_reasoning_analytics/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Uptake proxy = |tokens(previous) ∩ tokens(current)| / |union|."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A transparent dialogue-analysis prototype that separates adjacent-turn lexical uptake, participation balance, evidence use, questioning, and reasoning-move summaries. The implementation stays descriptive so group interaction is not reduced to one opaque collaboration score.</p></div>
+    <div class="repo-copy"><p>This dialogue-analysis prototype combines transparent move labels, adjacent-turn lexical overlap, and speaker-participation balance on synthetic conversations. Its measures help inspect a coding workflow, but shared words do not prove conceptual uptake and balanced turn counts do not prove equitable reasoning. The repository presents these quantities as descriptive proxies awaiting human annotation and validation.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/collaborative_reasoning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/collaborative_reasoning_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/collaborative_reasoning_analytics/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/collaborative_reasoning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/collaborative_reasoning_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -334,15 +337,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Cognitive Offloading Analytics</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/cognitive_offloading_analytics/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/cognitive_offloading_analytics/site_overview.svg?v=20260926-svg-repair" alt="Cognitive Offloading Analytics: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/cognitive_offloading_analytics/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/cognitive_offloading_analytics/site_pipeline.svg?v=20260926-svg-repair" alt="Cognitive Offloading Analytics: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/cognitive_offloading_analytics/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/cognitive_offloading_analytics/review_overview.svg?v=20260926-evidence-review" alt="How sensitive is an offloading proxy to its weights? Synthetic learner summaries of copying, revision, verification, recall and confidence change."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/cognitive_offloading_analytics/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/cognitive_offloading_analytics/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Normalized score = (weighted score - cohort min)/(cohort max - cohort min + 1e-9)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A behavioral-proxy framework for studying possible cognitive offloading during AI-assisted learning. Copy similarity, revision, verification, recall, and confidence change remain visible, allowing researchers to test how different assumptions influence an offloading signal without presenting the score as a diagnosis of a learner's thinking.</p></div>
+    <div class="repo-copy"><p>This synthetic analytics exercise combines copying similarity, revision, verification, delayed recall, and confidence change into an inspectable offloading proxy. It exposes the chosen weights and tests alternative weighting scenarios. Because scores are normalized within each cohort and the bands are heuristic, the results support sensitivity analysis rather than diagnosing individual dependence on AI.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/cognitive_offloading_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/cognitive_offloading_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/cognitive_offloading_analytics/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/cognitive_offloading_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/cognitive_offloading_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -351,15 +354,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Classroom Discourse Intelligence</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/classroom_discourse_intelligence/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/classroom_discourse_intelligence/site_overview.svg?v=20260926-svg-repair" alt="Classroom Discourse Intelligence: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/classroom_discourse_intelligence/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/classroom_discourse_intelligence/site_pipeline.svg?v=20260926-svg-repair" alt="Classroom Discourse Intelligence: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/classroom_discourse_intelligence/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/classroom_discourse_intelligence/review_overview.svg?v=20260926-evidence-review" alt="Can teacher talk moves be classified across transcripts? TalkMoves adapter and protocol; committed empirical metrics currently require regeneration."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/classroom_discourse_intelligence/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/classroom_discourse_intelligence/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Macro-F1 = mean(classwise 2×precision×recall/(precision+recall))."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A classroom-talk analysis project that extracts interpretable discourse features and teacher talk moves from lesson transcripts. It is designed to support research and teacher reflection, with transcript-level separation and macro-level metrics used to reduce the risk of overclaiming from highly imbalanced utterance labels.</p></div>
+    <div class="repo-copy"><p>This TalkMoves study compares a majority baseline with TF-IDF logistic regression for teacher talk-move classification. The completed run removes duplicate transcript copies and groups matching transcript text before splitting, yielding 565 content-defined transcript groups and 175,129 labeled teacher utterances. On 113 held-out groups, logistic regression achieves macro-F1 0.5198 versus 0.1152 for the majority baseline, while accuracy remains similar. These results concern coded discourse moves, not teaching quality.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/classroom_discourse_intelligence" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/classroom_discourse_intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/classroom_discourse_intelligence/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/classroom_discourse_intelligence" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/classroom_discourse_intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -368,15 +371,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Adaptive Socratic Tutor</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/adaptive_socratic_tutor/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/adaptive_socratic_tutor/site_overview.svg?v=20260926-svg-repair" alt="Adaptive Socratic Tutor: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/adaptive_socratic_tutor/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/adaptive_socratic_tutor/site_pipeline.svg?v=20260926-svg-repair" alt="Adaptive Socratic Tutor: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/adaptive_socratic_tutor/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/adaptive_socratic_tutor/review_overview.svg?v=20260926-evidence-review" alt="How much help should a transparent tutoring policy offer? Supplied mastery and attempt counts; small synthetic examples."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/adaptive_socratic_tutor/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/adaptive_socratic_tutor/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Hint level ∈ {0,1,2,3}; lower mastery or more attempts can increase support."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A restrained tutoring-policy baseline that uses attempt history and an explicit mastery estimate to choose whether to monitor, prompt, or offer a guided hint. Its main purpose is to make productive-struggle and help-depth policies inspectable before testing them with real learners.</p></div>
+    <div class="repo-copy"><p>This compact tutoring policy selects a level of support from supplied mastery and attempt counts. Its rules escalate from a focused question to a worked sub-step while keeping the full answer outside the main response policy. The synthetic examples make the decision boundaries easy to inspect, but the package neither estimates mastery nor demonstrates improved learning.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/adaptive_socratic_tutor" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/adaptive_socratic_tutor/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/adaptive_socratic_tutor/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/adaptive_socratic_tutor" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/adaptive_socratic_tutor/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -385,15 +388,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Instructor Insight Engine</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/instructor_insight_engine/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/instructor_insight_engine/site_overview.svg?v=20260926-svg-repair" alt="Instructor Insight Engine: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/instructor_insight_engine/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/instructor_insight_engine/site_pipeline.svg?v=20260926-svg-repair" alt="Instructor Insight Engine: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/instructor_insight_engine/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/instructor_insight_engine/review_overview.svg?v=20260926-evidence-review" alt="Which learner summaries deserve a closer look? Synthetic events containing learner IDs, minutes, attempts and correct counts."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/instructor_insight_engine/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/instructor_insight_engine/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Learner accuracy = total correct / total attempts; flag if accuracy &lt; .5 and attempts ≥ 3."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A teacher-facing aggregation baseline that turns course events into learner summaries, class-level signals, and review flags. The project focuses on evidence an instructor can act on while keeping alert logic transparent and avoiding the assumption that every click is a meaningful surveillance signal.</p></div>
+    <div class="repo-copy"><p>This prototype converts synthetic activity events into learner-level summaries and simple instructor review flags. Accuracy is calculated from aggregated correct and attempted responses, and a low-accuracy flag requires at least three attempts. It also exposes class-level summaries, with clear limits: the thresholds are unvalidated, time spent is not learning, and sparse records need human interpretation.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/instructor_insight_engine" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/instructor_insight_engine/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/instructor_insight_engine/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/instructor_insight_engine" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/instructor_insight_engine/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -402,15 +405,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Learner State Sequence Model</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learner_state_sequence_model/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learner_state_sequence_model/site_overview.svg?v=20260926-svg-repair" alt="Learner State Sequence Model: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learner_state_sequence_model/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learner_state_sequence_model/site_pipeline.svg?v=20260926-svg-repair" alt="Learner State Sequence Model: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learner_state_sequence_model/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learner_state_sequence_model/review_overview.svg?v=20260926-evidence-review" alt="How often do observed learner states persist or change? A supplied sequence of state labels, not inferred psychological states."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learner_state_sequence_model/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learner_state_sequence_model/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: P(j|i) = count(i→j)/sum_j count(i→j); persistence = self-transitions/(n-1)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A descriptive sequence-analysis toolkit for learner states such as planning, working, and reflecting. It summarizes first-order transitions, persistence, and transition entropy so researchers can study where learners remain stable, recover, or appear to get stuck without pretending the current baseline is a predictive state model.</p></div>
+    <div class="repo-copy"><p>This repository summarizes supplied learner-state sequences through transition probabilities, outgoing-state entropy, and persistence. Counts are normalized only where transitions are observed, and insufficient sequences return an undefined persistence value rather than a fabricated estimate. It is a descriptive baseline for sequence analysis; the labels must be justified separately and should not be treated as inferred mental states.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/learner_state_sequence_model" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/learner_state_sequence_model/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/learner_state_sequence_model/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/learner_state_sequence_model" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/learner_state_sequence_model/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -419,15 +422,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Multimodal Learning Analytics</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/multimodal_learning_analytics/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/multimodal_learning_analytics/site_overview.svg?v=20260926-svg-repair" alt="Multimodal Learning Analytics: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/multimodal_learning_analytics/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/multimodal_learning_analytics/site_pipeline.svg?v=20260926-svg-repair" alt="Multimodal Learning Analytics: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/multimodal_learning_analytics/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/multimodal_learning_analytics/review_overview.svg?v=20260926-evidence-review" alt="How can asynchronous modalities be aligned without mixing learners? Synthetic timestamped speech, gaze and click events with learner/session identifiers."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/multimodal_learning_analytics/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/multimodal_learning_analytics/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Window index = floor(timestamp/window width); speech/gaze = observed means; clicks = sum."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A transparent windowed-fusion baseline for timestamped speech, gaze, and interaction features. Learners and sessions stay separated, modalities are aligned into fixed windows, and missing streams are handled explicitly so absence is not confused with an observed zero.</p></div>
+    <div class="repo-copy"><p>This event-alignment prototype groups multimodal observations by learner, session, and fixed time window before summarizing available speech, gaze, and click fields. Missing modalities remain explicit, and the API prevents accidental mixing of identified learner sessions. The result is a testable data-processing baseline, not an inference engine for attention, emotion, or learning.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/multimodal_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/multimodal_learning_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/multimodal_learning_analytics/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/multimodal_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/multimodal_learning_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -436,15 +439,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Constructive Alignment Auditor</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/constructive_alignment_auditor/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/constructive_alignment_auditor/site_overview.svg?v=20260926-svg-repair" alt="Constructive Alignment Auditor: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/constructive_alignment_auditor/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/constructive_alignment_auditor/site_pipeline.svg?v=20260926-svg-repair" alt="Constructive Alignment Auditor: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/constructive_alignment_auditor/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/constructive_alignment_auditor/review_overview.svg?v=20260926-evidence-review" alt="Where might objectives, activities and assessments be misaligned? Supplied instructional statements and a transparent Bloom-verb lexicon."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/constructive_alignment_auditor/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/constructive_alignment_auditor/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Content overlap = shared content tokens / union of content tokens."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A rule-based curriculum-review tool that keeps learning outcomes, teaching activities, and assessments separate while checking cognitive-demand and lexical relationships between them. The output is designed to surface cases for expert review rather than collapse constructive alignment into one automatic score.</p></div>
+    <div class="repo-copy"><p>This auditor compares learning objectives, activities, and assessments using an explicit Bloom-verb lexicon and content-token overlap. It reports the evidence behind each inferred level and flags uncertain or mismatched components for review. Its strength is inspectability: the lexical rules are easy to challenge, and the output is framed as a prompt for instructional-design judgment rather than a validated alignment score.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/constructive_alignment_auditor" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/constructive_alignment_auditor/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/constructive_alignment_auditor/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/constructive_alignment_auditor" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/constructive_alignment_auditor/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -453,15 +456,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Assessment Design Lab</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/assessment_design_lab/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/assessment_design_lab/site_overview.svg?v=20260926-svg-repair" alt="Assessment Design Lab: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/assessment_design_lab/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/assessment_design_lab/site_pipeline.svg?v=20260926-svg-repair" alt="Assessment Design Lab: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/assessment_design_lab/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/assessment_design_lab/review_overview.svg?v=20260926-evidence-review" alt="Which assessment items warrant review? Synthetic binary response matrices; optional criterion scores."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/assessment_design_lab/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/assessment_design_lab/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Alpha = k/(k-1) × (1 - sum(item variances)/variance(total score))."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A classical assessment-diagnostics baseline covering item difficulty, rest-score discrimination, internal consistency, and review flags. The repository emphasizes that these statistics are evidence for closer inspection, not automatic judgments of item quality.</p></div>
+    <div class="repo-copy"><p>This assessment-analysis toolkit computes item difficulty, tie-safe extreme-group discrimination, and internal-consistency diagnostics from synthetic response matrices. Rest scores exclude the focal item when forming comparison groups, and undefined quantities remain explicit when the data cannot support an estimate. The repository explains how to inspect flagged items without treating alpha or a cutoff as proof of assessment validity.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/assessment_design_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/assessment_design_lab/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/assessment_design_lab/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/assessment_design_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/assessment_design_lab/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -470,15 +473,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Learning Experiment Platform</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learning_experiment_platform/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learning_experiment_platform/site_overview.svg?v=20260926-svg-repair" alt="Learning Experiment Platform: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learning_experiment_platform/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learning_experiment_platform/site_pipeline.svg?v=20260926-svg-repair" alt="Learning Experiment Platform: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learning_experiment_platform/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learning_experiment_platform/review_overview.svg?v=20260926-evidence-review" alt="How should a small learning experiment report its outcomes? Synthetic assignment records with baseline, follow-up and missing-outcome indicators."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learning_experiment_platform/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learning_experiment_platform/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Cohen d = (mean treatment - mean control)/pooled sample SD."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A reproducible two-group pre/post experimentation scaffold with seeded assignment, effect sizes, bootstrap uncertainty, baseline comparison, gain scores, and attrition review. It is meant for small learning-science or L&D pilots where the full chain from assignment to analysis needs to stay inspectable.</p></div>
+    <div class="repo-copy"><p>This experiment-analysis prototype keeps assignment, baseline measures, follow-up outcomes, and attrition in one inspectable record. It reports group differences, pooled-SD effect sizes, and bootstrap intervals while flagging sparse groups and baseline imbalance. Missing outcomes are handled as complete cases grouped by assignment, so the documentation explicitly limits causal interpretation and avoids calling the analysis a complete intention-to-treat estimate.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/learning_experiment_platform" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/learning_experiment_platform/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/learning_experiment_platform/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/learning_experiment_platform" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/learning_experiment_platform/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -487,15 +490,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Lesson Design Agent</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/lesson_design_agent/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/lesson_design_agent/site_overview.svg?v=20260926-svg-repair" alt="Lesson Design Agent: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/lesson_design_agent/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/lesson_design_agent/site_pipeline.svg?v=20260926-svg-repair" alt="Lesson Design Agent: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/lesson_design_agent/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/lesson_design_agent/review_overview.svg?v=20260926-evidence-review" alt="How can lesson-planning assumptions be made explicit? Supplied objective, duration, delivery mode and accessibility needs."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/lesson_design_agent/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/lesson_design_agent/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Allocated phase minutes sum to the requested lesson duration."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A deterministic lesson-planning scaffold that analyzes objective verbs, adapts sequence and assessment prompts to provisional cognitive demand, preserves the requested time budget, surfaces accessibility prompts, and flags missing design information. It deliberately avoids hiding the planning logic behind fluent generated prose.</p></div>
+    <div class="repo-copy"><p>This rule-based lesson planner converts a supplied objective and teaching constraints into a structured lesson blueprint. It allocates time across phases, proposes assessment and accessibility prompts, and flags missing or ambiguous planning inputs. The implementation is transparent and testable, while the resulting activities remain proposals that require contextual instructional review.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/lesson_design_agent" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/lesson_design_agent/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/lesson_design_agent/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/lesson_design_agent" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/lesson_design_agent/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -504,15 +507,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Learner Agency Simulator</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learner_agency_simulator/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learner_agency_simulator/site_overview.svg?v=20260926-svg-repair" alt="Learner Agency Simulator: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learner_agency_simulator/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learner_agency_simulator/site_pipeline.svg?v=20260926-svg-repair" alt="Learner Agency Simulator: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learner_agency_simulator/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learner_agency_simulator/review_overview.svg?v=20260926-evidence-review" alt="What do support policies imply under stated transition assumptions? Synthetic state-transition matrices, learner preferences and support policies."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/learner_agency_simulator/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/learner_agency_simulator/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: State occupancy = observations in state / all recorded states."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A synthetic learner–system environment for stress-testing adaptive support policies before live-user studies. Simulated learners can request or refuse help, persist, pause, change strategy, or adjust task challenge, making policy effects on learner choice visible rather than treating agency as a hidden psychological score.</p></div>
+    <div class="repo-copy"><p>This simulator compares support policies while allowing synthetic learners to request, accept, or decline help. It tracks state occupancy, intervention burden, recovery, and time to first mastery across seeded trajectories and sensitivity scenarios. The outcomes reveal what the chosen transition assumptions imply; they do not establish that a policy improves agency or learning outside the simulation.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/learner_agency_simulator" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/learner_agency_simulator/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/learner_agency_simulator/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/learner_agency_simulator" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/learner_agency_simulator/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -521,15 +524,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Competency Gap Intelligence</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/competency_gap_intelligence/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/competency_gap_intelligence/site_overview.svg?v=20260926-svg-repair" alt="Competency Gap Intelligence: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/competency_gap_intelligence/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/competency_gap_intelligence/site_pipeline.svg?v=20260926-svg-repair" alt="Competency Gap Intelligence: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/competency_gap_intelligence/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/competency_gap_intelligence/review_overview.svg?v=20260926-evidence-review" alt="Which evidenced skill gaps should be addressed first? Supplied role targets, dated competency evidence, prerequisites and resource metadata."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/competency_gap_intelligence/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/competency_gap_intelligence/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Observed level = sum(confidence×level)/sum(confidence); priority = positive gap×importance."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>An evidence-aware competency analysis system that distinguishes confirmed gaps from unknown or insufficient evidence, then uses prerequisites, role importance, recency, and resource fit to support development planning. Its core rule is simple: missing competency evidence is not the same thing as zero proficiency.</p></div>
+    <div class="repo-copy"><p>This competency-planning prototype compares role requirements with dated, confidence-labeled evidence and keeps missing or stale evidence visible. Only sufficiently supported gaps are ranked, after which prerequisite constraints shape development sequences and resource matches. The calculations are auditable decision support; they do not turn subjective competency ratings into validated measures.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/competency_gap_intelligence" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/competency_gap_intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/competency_gap_intelligence/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/competency_gap_intelligence" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/competency_gap_intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -538,15 +541,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Workplace Learning Recommender</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/workplace_learning_recommender/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/workplace_learning_recommender/site_overview.svg?v=20260926-svg-repair" alt="Workplace Learning Recommender: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/workplace_learning_recommender/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/workplace_learning_recommender/site_pipeline.svg?v=20260926-svg-repair" alt="Workplace Learning Recommender: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/workplace_learning_recommender/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/workplace_learning_recommender/review_overview.svg?v=20260926-evidence-review" alt="Which feasible resource best addresses a confirmed gap? Supplied competency needs, work context and resource metadata."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/workplace_learning_recommender/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/workplace_learning_recommender/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Resource score = sum(normalized weight × component score)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>An explainable learning recommender that separates hard eligibility from ranking. Confirmed needs, prerequisites, availability, current role or task context, learner constraints, recency, and coverage across several needs are handled explicitly so the recommendation list can be inspected rather than treated as a black box.</p></div>
+    <div class="repo-copy"><p>This workplace-learning recommender filters resources for feasibility before ranking them against confirmed competency gaps and work context. It exposes contributions from need priority, gap coverage, task fit, quality, effort, and other declared factors, then checks coverage and sensitivity to weights. The output is a reasoned recommendation based on supplied metadata, not a validated estimate of learning impact.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/workplace_learning_recommender" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/workplace_learning_recommender/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/workplace_learning_recommender/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/workplace_learning_recommender" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/workplace_learning_recommender/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -555,15 +558,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Training Transfer Analytics</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/training_transfer_analytics/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/training_transfer_analytics/site_overview.svg?v=20260926-svg-repair" alt="Training Transfer Analytics: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/training_transfer_analytics/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/training_transfer_analytics/site_pipeline.svg?v=20260926-svg-repair" alt="Training Transfer Analytics: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/training_transfer_analytics/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/training_transfer_analytics/review_overview.svg?v=20260926-evidence-review" alt="Does observed workplace application persist after training? Synthetic baseline and follow-up trajectories with self, manager, behavior and objective evidence."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/training_transfer_analytics/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/training_transfer_analytics/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Persistence ratio = final follow-up application / first follow-up application."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A longitudinal workplace-transfer prototype that keeps self-report, manager observation, behavior evidence, objective application evidence, persistence, and transfer conditions separate across repeated follow-up. Business outcomes are not automatically treated as proof of training transfer, and the bundled data remain synthetic.</p></div>
+    <div class="repo-copy"><p>This longitudinal prototype separates workplace application from transfer conditions and business outcomes. It combines multiple evidence sources with explicit weights, tracks baseline and follow-up changes, and reports disagreement and weight sensitivity instead of hiding them in a single score. The bundled trajectories are synthetic, and observed persistence is described without claiming that training caused the change.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/training_transfer_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/training_transfer_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/training_transfer_analytics/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/training_transfer_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/training_transfer_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -572,15 +575,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Engagement Early-Warning System</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/engagement_early_warning/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/engagement_early_warning/site_overview.svg?v=20260926-svg-repair" alt="Engagement Early-Warning System: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/engagement_early_warning/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/engagement_early_warning/site_pipeline.svg?v=20260926-svg-repair" alt="Engagement Early-Warning System: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/engagement_early_warning/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/engagement_early_warning/review_overview.svg?v=20260926-evidence-review" alt="What support signal was available at the prediction date? Synthetic dated activity, task and assessment histories with future outcome windows."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/engagement_early_warning/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/engagement_early_warning/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Risk = 1/(1+exp(-z)); z = intercept + sum(coefficient×available feature)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A time-safe early-warning prototype built around prediction cutoffs, leakage guards, calibration review, staff review capacity, lead-time analysis, and subgroup diagnostics. Future information cannot become a feature, and the system leaves intervention decisions to a human reviewer.</p></div>
+    <div class="repo-copy"><p>This early-warning prototype enforces a time boundary between evidence available at prediction and outcomes observed later. It exposes synthetic risk coefficients and evaluates a capacity-limited review queue alongside calibration and subgroup diagnostics. The code demonstrates leakage guards and support-oriented reporting, while explicitly withholding claims of predictive validity for real learners.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/engagement_early_warning" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/engagement_early_warning/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/engagement_early_warning/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/engagement_early_warning" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/engagement_early_warning/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -589,15 +592,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Curriculum Knowledge Graph</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/curriculum_knowledge_graph/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/curriculum_knowledge_graph/site_overview.svg?v=20260926-svg-repair" alt="Curriculum Knowledge Graph: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/curriculum_knowledge_graph/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/curriculum_knowledge_graph/site_pipeline.svg?v=20260926-svg-repair" alt="Curriculum Knowledge Graph: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/curriculum_knowledge_graph/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/curriculum_knowledge_graph/review_overview.svg?v=20260926-evidence-review" alt="Where are curriculum prerequisites and assessment gaps? Supplied typed entities and provenance-labeled relationships."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/curriculum_knowledge_graph/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/curriculum_knowledge_graph/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Coverage = eligible entities with a required relation / all eligible entities."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A typed, provenance-aware curriculum graph connecting concepts, prerequisites, courses, learning outcomes, assessments, competencies, and resources. The graph supports prerequisite reasoning, path analysis, alignment diagnostics, cycle detection, and expert review without pretending graph structure replaces curriculum judgment.</p></div>
+    <div class="repo-copy"><p>This curriculum graph represents courses, concepts, outcomes, assessments, and resources through typed, provenance-aware relationships. It validates relation semantics and exposes prerequisite paths, cycles, disconnected entities, and assessment-coverage gaps. These structural diagnostics help experts inspect a curriculum; the graph does not independently verify the pedagogical truth of its edges.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/curriculum_knowledge_graph" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/curriculum_knowledge_graph/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/curriculum_knowledge_graph/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/curriculum_knowledge_graph" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/curriculum_knowledge_graph/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -606,32 +609,32 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Self-Regulated Learning Copilot</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/self_regulated_learning_copilot/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/self_regulated_learning_copilot/site_overview.svg?v=20260926-svg-repair" alt="Self-Regulated Learning Copilot: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/self_regulated_learning_copilot/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/self_regulated_learning_copilot/site_pipeline.svg?v=20260926-svg-repair" alt="Self-Regulated Learning Copilot: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/self_regulated_learning_copilot/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/self_regulated_learning_copilot/review_overview.svg?v=20260926-evidence-review" alt="When should support be offered, delayed or declined? Supplied learning state, explicit plans, preferences, reflection and prompt history."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/self_regulated_learning_copilot/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/self_regulated_learning_copilot/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Plan completeness = present planning fields / 4."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A transparent support-policy laboratory for goals, planning, monitoring, strategy adaptation, requested help, reflection, and prompt-burden control. The copilot works from an explicit learner state and can choose not to intervene, preserving space for productive struggle and learner control.</p></div>
+    <div class="repo-copy"><p>This transparent support policy uses supplied plans, progress, preferences, and interaction history to decide whether to offer help or remain silent. It preserves refusal and help requests, limits prompt burden, and links reflection to later strategy choices. The synthetic examples test policy behavior; structural plan completeness and struggle labels are operational rules rather than validated psychological assessments.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/self_regulated_learning_copilot" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/self_regulated_learning_copilot/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/self_regulated_learning_copilot/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/self_regulated_learning_copilot" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/self_regulated_learning_copilot/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
 <article class="repo-project" id="feedback_quality_evaluator">
-  <header class="repo-project-heading"><div class="repo-kicker">AI in Education Repository · 30</div>
+  <header class="repo-project-heading"><div class="repo-kicker">AI in Education Repository · 30 · Final entry reviewed</div>
     <h3>Feedback Quality Evaluator</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/feedback_quality_evaluator/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/feedback_quality_evaluator/site_overview.svg?v=20260926-svg-repair" alt="Feedback Quality Evaluator: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aied/feedback_quality_evaluator/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/feedback_quality_evaluator/site_pipeline.svg?v=20260926-svg-repair" alt="Feedback Quality Evaluator: scientific data pipeline"></a><figcaption>Data processing and analytical workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/feedback_quality_evaluator/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/feedback_quality_evaluator/review_overview.svg?v=20260926-evidence-review" alt="Is feedback grounded and actionable in its supplied context? Feedback text, goal, learner work, evidence and an optional external reference verdict."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/feedback_quality_evaluator/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aied/feedback_quality_evaluator/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Kappa = (observed agreement - chance agreement)/(1 - chance agreement)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A context-aware formative-feedback evaluator that keeps correctness, specificity, relevance, actionability, evidence use, error flags, and revision suggestions distinct. The current heuristic baseline is designed for validation and error analysis rather than being presented as an authoritative automated judge of feedback quality.</p></div>
+    <div class="repo-copy"><p>This evaluator examines feedback against supplied task context using separate, transparent rubric dimensions. It preserves missing evidence as unevaluable, exposes lexical triggers, and provides rater-agreement tools whose degenerate cases are handled explicitly. The project is a baseline for validation and error analysis, not an automated authority on disciplinary correctness or feedback quality.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/feedback_quality_evaluator" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/feedback_quality_evaluator/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/feedback_quality_evaluator/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/feedback_quality_evaluator" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/feedback_quality_evaluator/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -641,7 +644,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   <p>For AI in Education research collaboration, doctoral discussions, or questions about these repositories, contact me through the links below.</p>
   <div class="contact-row"><a href="mailto:devis.saputra@gmail.com">Email</a><a href="https://linkedin.com/in/devissaputra">LinkedIn</a><a href="https://github.com/devissaputra">GitHub</a></div>
  </section>
- <footer>© Devis Saputra · AI in Education portfolio · Built for GitHub Pages</footer>
+ <footer><a href="https://github.com/devissaputra/devissaputra.github.io/blob/main/REPOSITORY_REVIEW.md">Repository review: 39/39 completed</a><br>© Devis Saputra · AI in Education portfolio · Built for GitHub Pages</footer>
 </main>
 </div>
 </body>

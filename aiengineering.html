@@ -31,6 +31,8 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
 .project-index a{padding:5px 9px;border:1px solid var(--line);border-radius:5px;background:var(--paper-raised);text-decoration:none;font-size:.78rem;color:#39444A}
 .project-index a:hover,.project-index a:focus-visible{border-color:var(--accent);color:var(--accent)}
 
+
+.portfolio-detail .repo-visual img{aspect-ratio:10/7;height:auto}.repo-copy{line-height:1.65}.repo-links a{min-height:40px}
 </style>
 <link rel="stylesheet" href="assets/site.css?v=20260926-layout-1">
 </head>
@@ -82,21 +84,19 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </section>
  <section class="repo-section" id="research-bundles">
   <div class="eyebrow-rule bundle-heading"><h2>Empirical Studies</h2></div>
-  <p class="repo-section-intro">These four repositories are the professor-facing empirical packages: real external data, frozen provenance, explicit baselines, robustness checks, generated research artifacts, and paper-ready evidence chains.</p>
+  <p class="repo-section-intro">These four studies connect external data, explicit comparisons, recorded results, and working papers. Each entry links to its calculations and states what the evidence can support.</p>
   <article class="repo-project research-bundle" id="classification_calibration">
   <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
     <h3>Probability Calibration</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/classification_calibration/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/classification_calibration/site_overview.svg?v=20260926-svg-repair" alt="Probability calibration study overview showing the UCI Bank Marketing dataset, repeated-holdout results, probability-quality metrics and validity checks"></a><figcaption>Study overview: problem, evidence, measured calibration gains, and validity checks</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/classification_calibration/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/classification_calibration/site_pipeline.svg?v=20260926-svg-repair" alt="Probability calibration experimental workflow from frozen UCI data provenance through preprocessing, calibration, repeated holdouts, sensitivity analysis and generated evidence"></a><figcaption>Frozen experimental workflow: provenance, split discipline, calibration, robustness checks, and reproducible outputs</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/classification_calibration/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/classification_calibration/review_overview.svg?v=20260926-evidence-review" alt="Can predicted probabilities be trusted? UCI Bank Marketing: 45,211 records and 16 predictors; subscription is the positive class."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/classification_calibration/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/classification_calibration/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Brier = mean((p - y)^2); ECE = sum(bin share × |mean p - mean y|)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy">
-     <p>This study asks a more demanding question than whether a classifier is simply accurate: when a model assigns a probability, does that number match what actually happens? Using the UCI Bank Marketing dataset with 45,211 observations, 16 predictors, and an 11.7% positive class, the protocol compares a class-prior baseline with uncalibrated, sigmoid-calibrated, and isotonic-calibrated logistic regression across five fixed stratified holdouts. Discrimination is evaluated separately from probability quality using ROC-AUC and average precision alongside Brier score, log loss, and expected calibration error.</p>
-     <p>Under the frozen protocol, isotonic calibration produces the clearest probability-quality improvement: mean Brier score falls from 0.0720 to 0.0693, log loss from 0.2445 to 0.2269, and ECE-10 from 0.0311 to 0.0074, while ROC-AUC remains essentially unchanged at 0.9057 versus 0.9058. The study also varies calibration folds and ECE bin counts, removes call duration in an operational ablation because that feature is unavailable before contact, audits high-confidence errors, and reports paired bootstrap intervals. The result is a reproducible methodology benchmark rather than a claim that the model is ready for real banking decisions.</p>
-    </div>
+    <div class="repo-copy"><p>This study asks a more demanding question than whether a classifier is simply accurate: when a model assigns a probability, does that number match what actually happens? Using the UCI Bank Marketing dataset with 45,211 observations, 16 predictors, and an 11.7% positive class, the protocol compares a class-prior baseline with uncalibrated, sigmoid-calibrated, and isotonic-calibrated logistic regression across five fixed stratified holdouts. Discrimination is evaluated separately from probability quality using ROC-AUC and average precision alongside Brier score, log loss, and expected calibration error.</p>
+<p>Isotonic calibration reduces mean Brier score from 0.0720 to 0.0693 across five holdouts, while ROC-AUC stays near 0.906. This supports a probability-quality improvement under the frozen protocol, rather than a substantial change in ranking. The call-duration ablation matters operationally because duration is unavailable before a call; results using it describe a retrospective task.</p></div>
     <div class="repo-evidence" aria-label="Probability calibration evidence snapshot">
       <div class="repo-evidence-item"><span class="repo-evidence-value">45,211</span><span class="repo-evidence-label">observations</span></div>
       <div class="repo-evidence-item"><span class="repo-evidence-value">11.7%</span><span class="repo-evidence-label">positive class</span></div>
@@ -104,7 +104,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
       <div class="repo-evidence-item"><span class="repo-evidence-value">0.0074</span><span class="repo-evidence-label">isotonic ECE-10</span></div>
     </div>
     <div class="repo-data-note"><strong>Data and provenance:</strong> UCI Bank Marketing (dataset 222), DOI 10.24432/C5K306. The runner downloads the official archive, validates the exact <code>bank-full.csv</code> SHA-256, and keeps raw source data out of the repository.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/classification_calibration" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <div class="repo-links"><a href="https://github.com/devissaputra/classification_calibration/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/classification_calibration" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
     <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
     <a href="https://github.com/devissaputra/classification_calibration/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data &amp; provenance</a></div>
@@ -116,15 +116,16 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Label-Blind Threshold-Aware Anomaly Detection on NAB</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/anomaly_detection/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/anomaly_detection/site_overview.svg?v=20260926-svg-repair" alt="Label-Blind Threshold-Aware Anomaly Detection on NAB: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/anomaly_detection/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/anomaly_detection/site_pipeline.svg?v=20260926-svg-repair" alt="Label-Blind Threshold-Aware Anomaly Detection on NAB: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/anomaly_detection/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/anomaly_detection/review_overview.svg?v=20260926-evidence-review" alt="When do label-blind detectors produce useful alerts? Four realKnownCause NAB streams; pinned data and annotation hashes."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/anomaly_detection/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/anomaly_detection/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Threshold = quantile(validation scores, 1 - budget); FPR = FP / (FP + TN)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>This study compares feature-based Isolation Forest with a transparent robust-history baseline on four real NAB streams. The primary pipeline stays label-blind during fitting and alert-budget calibration, then evaluates event detection separately so threshold tuning does not quietly leak benchmark labels into the detector.</p></div>
+    <div class="repo-copy"><p>This study compares feature-based Isolation Forest with a transparent robust-history baseline on four real NAB streams. The primary pipeline stays label-blind during fitting and alert-budget calibration, then evaluates event detection separately so threshold tuning does not quietly leak benchmark labels into the detector.</p>
+<p>At the 5% validation alert budget, the primary Isolation Forest test false-positive rate ranges from 0.0300 to 0.2338 across the four streams. This variation is central to the finding: a fixed calibration budget does not guarantee a stable operating point after temporal change. Repeated seeds and history-window checks describe robustness on these streams, not independent replications.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> Numenta Anomaly Benchmark (NAB), pinned benchmark revision and frozen selected streams.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/anomaly_detection" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/anomaly_detection/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <div class="repo-links"><a href="https://github.com/devissaputra/anomaly_detection/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/anomaly_detection" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/anomaly_detection/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
     <a href="https://github.com/devissaputra/anomaly_detection/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
     <a href="https://github.com/devissaputra/anomaly_detection/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
    </div>
@@ -135,15 +136,16 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Explainable AI: Model Dependence and Feature-Governance Study</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/explainable_ai/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/explainable_ai/site_overview.svg?v=20260926-svg-repair" alt="Explainable AI: Model Dependence and Feature-Governance Study: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/explainable_ai/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/explainable_ai/site_pipeline.svg?v=20260926-svg-repair" alt="Explainable AI: Model Dependence and Feature-Governance Study: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/explainable_ai/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/explainable_ai/review_overview.svg?v=20260926-evidence-review" alt="Do explanations change with the model and feature policy? UCI Adult: 48,842 records; exact duplicate predictor profiles remain within the same partition."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/explainable_ai/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/explainable_ai/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Importance(j) = AUC(original) - mean AUC(permuted feature j)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>This bundle studies how global feature explanations change across model families and feature-governance choices on the Adult income benchmark. It combines held-out performance, permutation-importance stability, subgroup behavior, feature exclusion, and error analysis while keeping predictive dependence separate from causal or fairness claims.</p></div>
+    <div class="repo-copy"><p>This study examines how global feature explanations change across model families and feature-governance choices on the Adult income benchmark. It combines held-out performance, permutation-importance stability, subgroup behavior, feature exclusion, and error analysis while keeping predictive dependence separate from causal or fairness claims.</p>
+<p>On the primary grouped holdout, random-forest ROC-AUC is 0.9174 with all features and 0.9167 after excluding race and sex; logistic regression scores 0.9063 and 0.9052. Marital status leads the permutation rankings, but its importance differs markedly between models. Subgroup diagnostics remain necessary after exclusion, so the study supports inspection of model dependence rather than causal attribution or a fairness verdict.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> UCI Adult / Census Income (dataset 2), DOI 10.24432/C5XW20.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/explainable_ai" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/explainable_ai/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <div class="repo-links"><a href="https://github.com/devissaputra/explainable_ai/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/explainable_ai" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/explainable_ai/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
     <a href="https://github.com/devissaputra/explainable_ai/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
     <a href="https://github.com/devissaputra/explainable_ai/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
    </div>
@@ -154,15 +156,16 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Transformer Forecasting on WDC-SILSO</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/site_overview.svg?v=20260926-svg-repair" alt="Transformer Forecasting on WDC-SILSO: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/site_pipeline.svg?v=20260926-svg-repair" alt="Transformer Forecasting on WDC-SILSO: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/review_overview.svg?v=20260926-evidence-review" alt="Does a small Transformer justify its complexity? WDC-SILSO monthly sunspots, January 1749 to March 2026: 3,327 definitive observations."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: MAE = mean(|forecast - observed|); delta = Transformer MAE - baseline MAE."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>This multi-horizon forecasting study asks whether a compact Transformer actually earns its complexity over persistence, seasonal-naive, ridge, and gradient-boosted baselines on a long scientific time series. It evaluates several forecast horizons, seed stability, context-length sensitivity, early-versus-late test behavior, and performance during high solar activity.</p></div>
+    <div class="repo-copy"><p>This multi-horizon forecasting study asks whether a compact Transformer actually earns its complexity over persistence, seasonal-naive, ridge, and gradient-boosted baselines on a long scientific time series. It evaluates several forecast horizons, seed stability, context-length sensitivity, early-versus-late test behavior, and performance during high solar activity.</p>
+<p>The Transformer has lower mean error than the simpler baselines at the 1- and 6-month horizons under the recorded protocol. The 12-month result is less stable: its three-seed mean MAE is 24.206, versus 23.973 for histogram gradient boosting, despite seed 42 favoring the Transformer. The seed-42 intervals against that baseline also cross zero at 6 and 12 months. This qualifies any broad claim that the Transformer is consistently superior.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> WDC-SILSO Version 2.0 monthly mean total sunspot number, frozen through March 2026.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/mini_transformers_sequences" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a>
+    <div class="repo-links"><a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/mini_transformers_sequences" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
     <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
     <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
    </div>
@@ -177,15 +180,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Learning from Imbalanced Data</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/imbalanced_learning/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/imbalanced_learning/site_overview.svg?v=20260926-svg-repair" alt="Learning from Imbalanced Data: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/imbalanced_learning/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/imbalanced_learning/site_pipeline.svg?v=20260926-svg-repair" alt="Learning from Imbalanced Data: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/imbalanced_learning/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/imbalanced_learning/review_overview.svg?v=20260926-evidence-review" alt="How does class weighting change minority-class recovery? Wisconsin Diagnostic Breast Cancer observations; retain 212 malignant cases and sample 35 benign cases."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/imbalanced_learning/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/imbalanced_learning/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Precision = TP/(TP+FP); recall = TP/(TP+FN); F1 = 2PR/(P+R)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A controlled study of how class imbalance changes model behavior. It compares standard logistic regression, class-weighted logistic regression, and a class-weighted Random Forest, emphasizing average precision, recall, F1, and balanced accuracy instead of relying on headline accuracy.</p></div>
+    <div class="repo-copy"><p>This controlled experiment uses real Wisconsin Diagnostic Breast Cancer observations to compare ordinary logistic regression, class-weighted logistic regression, and a weighted random forest. It deliberately makes benign cases the minority class, then reports average precision, recall, F1, and balanced accuracy on one stratified split. The recorded perfect forest score is retained alongside the small-sample limitation: it demonstrates the behavior of this setup, not clinical reliability.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/imbalanced_learning" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/imbalanced_learning/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/imbalanced_learning/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/imbalanced_learning" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/imbalanced_learning/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -194,15 +197,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>PCA and K-Means Clustering</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/pca_clustering/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/pca_clustering/site_overview.svg?v=20260926-svg-repair" alt="PCA and K-Means Clustering: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/pca_clustering/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/pca_clustering/site_pipeline.svg?v=20260926-svg-repair" alt="PCA and K-Means Clustering: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/pca_clustering/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/pca_clustering/review_overview.svg?v=20260926-evidence-review" alt="Can unlabeled chemical measurements reveal wine groups? 178 wine observations and 13 standardized chemical features."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/pca_clustering/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/pca_clustering/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Silhouette(i) = (b(i)-a(i))/max(a(i),b(i)); PCA variance share = eigenvalue / total."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>An unsupervised-learning experiment that keeps model selection separate from visualization. K-means is selected in the full standardized 13-dimensional wine feature space, while PCA is used only for interpretation, with known class labels reserved for post-hoc ARI comparison.</p></div>
+    <div class="repo-copy"><p>This unsupervised study separates clustering from visualization. K-means is selected using silhouette scores in all 13 standardized wine features, while a two-component PCA projection provides an interpretable view. The selected three-cluster solution has full-space silhouette 0.2849 and post-hoc adjusted Rand index 0.8975 against known labels; the much larger projected silhouette is explicitly not used as evidence that the full-space clusters are equally well separated.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/pca_clustering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/pca_clustering/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/pca_clustering/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/pca_clustering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/pca_clustering/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -211,15 +214,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Multilayer Perceptron vs Linear Baseline on Handwritten Digits</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mlp_neural_network/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mlp_neural_network/site_overview.svg?v=20260926-svg-repair" alt="Multilayer Perceptron vs Linear Baseline on Handwritten Digits: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mlp_neural_network/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mlp_neural_network/site_pipeline.svg?v=20260926-svg-repair" alt="Multilayer Perceptron vs Linear Baseline on Handwritten Digits: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mlp_neural_network/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mlp_neural_network/review_overview.svg?v=20260926-evidence-review" alt="Does a nonlinear network beat a linear digit classifier? scikit-learn handwritten digits; 1,347 training and 450 test observations."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mlp_neural_network/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mlp_neural_network/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Accuracy = correct / n; macro-F1 = mean(F1 for each digit class)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A compact neural-network experiment built around a strong baseline. The MLP is compared with multinomial logistic regression on the same standardized handwritten-digit split, and the negative result is kept because model complexity should be justified by evidence rather than assumed.</p></div>
+    <div class="repo-copy"><p>This experiment compares a multilayer perceptron with multinomial logistic regression on the same standardized handwritten-digit split. The recorded linear baseline reaches 0.9778 accuracy, compared with 0.9578 for the MLP, with macro-F1 showing the same ordering. Keeping this negative result makes the engineering question clear: additional nonlinear capacity must justify its complexity under an explicit evaluation protocol.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/mlp_neural_network" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/mlp_neural_network/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/mlp_neural_network/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/mlp_neural_network" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/mlp_neural_network/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -228,15 +231,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>Convolutional Neural Network for Handwritten Digits</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/cnn_image_classification/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/cnn_image_classification/site_overview.svg?v=20260926-svg-repair" alt="Convolutional Neural Network for Handwritten Digits: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/cnn_image_classification/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/cnn_image_classification/site_pipeline.svg?v=20260926-svg-repair" alt="Convolutional Neural Network for Handwritten Digits: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/cnn_image_classification/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/cnn_image_classification/review_overview.svg?v=20260926-evidence-review" alt="Does preserving image structure help digit classification? Handwritten digits represented as small 2D images; a shared held-out split."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/cnn_image_classification/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/cnn_image_classification/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Accuracy difference = CNN accuracy - logistic accuracy."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A PyTorch image-classification experiment that tests whether preserving 2D spatial structure improves on a flattened logistic-regression baseline. The CNN shows a modest gain on the fixed split, illustrating why architecture should match data structure without overstating the result.</p></div>
+    <div class="repo-copy"><p>This PyTorch experiment compares a compact convolutional network with a flattened logistic-regression baseline on handwritten digits. The committed run reports 0.9733 accuracy for the CNN and 0.9622 for logistic regression after 14 epochs. The small gain illustrates a possible benefit from preserving spatial structure, while the single-split design and lack of an uncertainty estimate limit the strength of the architectural conclusion.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/cnn_image_classification" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/cnn_image_classification/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/cnn_image_classification/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/cnn_image_classification" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/cnn_image_classification/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -245,15 +248,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <h3>LSTM Forecasting for Mauna Loa CO₂</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/lstm_time_series/site_overview.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/lstm_time_series/site_overview.svg?v=20260926-svg-repair" alt="LSTM Forecasting for Mauna Loa CO₂: scientific system overview"></a><figcaption>Scientific problem and system overview</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/lstm_time_series/site_pipeline.svg?v=20260926-svg-repair" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/lstm_time_series/site_pipeline.svg?v=20260926-svg-repair" alt="LSTM Forecasting for Mauna Loa CO₂: scientific data pipeline"></a><figcaption>Data processing and experimental workflow</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/lstm_time_series/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/lstm_time_series/review_overview.svg?v=20260926-evidence-review" alt="Can a recurrent model improve weekly CO₂ forecasts? Mauna Loa weekly CO₂ from statsmodels; 24-week input windows."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/lstm_time_series/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/lstm_time_series/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: RMSE = sqrt(mean((forecast-observed)^2)); MAE = mean(|forecast-observed|)."></a><figcaption>Calculation definition and source-linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
-    <div class="repo-copy"><p>A leakage-aware forecasting experiment comparing persistence, ridge autoregression, and an LSTM on a chronological holdout. The LSTM loses to the simpler baselines in this setup, turning the repository into a useful demonstration of why sequence-model complexity is not automatically valuable.</p></div>
+    <div class="repo-copy"><p>This experiment compares persistence, ridge autoregression, and a compact LSTM for next-week Mauna Loa CO₂ forecasting. Missing weeks now use past-only forward filling, and the corrected 20-epoch experiment has been rerun successfully in GitHub Actions. On the 452-week chronological holdout, ridge achieves RMSE 0.4639 ppm, persistence 0.5135 ppm, and the LSTM 1.0751 ppm. The recurrent model therefore does not justify its added complexity in this fixed-seed setup.</p></div>
     
-    <div class="repo-links"><a href="https://github.com/devissaputra/lstm_time_series" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/lstm_time_series/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Report MD</a></div>
+    <div class="repo-links"><a href="https://github.com/devissaputra/lstm_time_series/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/lstm_time_series" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+    <a href="https://github.com/devissaputra/lstm_time_series/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
    </div>
   </div>
  </article>
@@ -263,7 +266,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   <p>For research collaboration, doctoral discussions, or questions about these repositories, contact me through the links below.</p>
   <div class="contact-row"><a href="mailto:devis.saputra@gmail.com">Email</a><a href="https://linkedin.com/in/devissaputra">LinkedIn</a><a href="https://github.com/devissaputra">GitHub</a></div>
  </section>
- <footer>© Devis Saputra · AI Engineering portfolio · Built for GitHub Pages</footer>
+ <footer><a href="https://github.com/devissaputra/devissaputra.github.io/blob/main/REPOSITORY_REVIEW.md">Repository review: 39/39 completed</a><br>© Devis Saputra · AI Engineering portfolio · Built for GitHub Pages</footer>
 </main>
 </div>
 </body>
