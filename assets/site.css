@@ -372,7 +372,8 @@ footer{
 }
 
 .repo-kicker{
-  margin-bottom:7px;
+  margin-bottom:3px;
+  transform:translateY(-3px);
   color:var(--ink-soft);
   font-size:.75rem;
   font-weight:600;
@@ -381,7 +382,7 @@ footer{
 }
 
 .repo-project h3{
-  margin:0 0 10px;
+  margin:-3px 0 18px;
   font-family:var(--serif);
   font-size:1.38rem;
   line-height:1.2;
@@ -508,4 +509,9 @@ footer{
 }
 @media(max-width:520px){
   .repo-evidence{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+
+@media(max-width:520px){
+  .repo-kicker{transform:translateY(-1px);}
+  .repo-project h3{margin-top:-1px;margin-bottom:16px;}
 }
