@@ -561,27 +561,35 @@
       <div class="repo-project-grid">
         <div class="repo-visuals">
           <figure class="repo-visual">
-            <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/training_evidence_decision_value/main/assets/research_design.svg" alt="Decision Value of Training Evidence: Reanalysis of the National Supported Work Experiment: scientific system overview">
-            <figcaption>Scientific problem and system overview</figcaption>
+            <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/training_evidence_decision_value/main/assets/research_design.svg?v=20260926-decision-upgrade" alt="Scientific summary of National Supported Work randomized training evidence showing the treated-control earnings effect, uncertainty intervals, and bootstrap threshold frontier">
+            <figcaption>Empirical finding: randomized effect, uncertainty, and threshold frontier</figcaption>
           </figure>
           <figure class="repo-visual">
-            <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/training_evidence_decision_value/main/assets/method.svg" alt="Decision Value of Training Evidence: Reanalysis of the National Supported Work Experiment: data processing pipeline">
-            <figcaption>Data processing and empirical workflow</figcaption>
+            <img loading="lazy" src="https://raw.githubusercontent.com/devissaputra/training_evidence_decision_value/main/assets/method.svg?v=20260926-decision-upgrade" alt="Scientific workflow from pinned National Supported Work experimental records through validation, treatment-effect estimation, resampling, and decision-threshold sensitivity analysis">
+            <figcaption>Data processing: pinned experiment to bounded L&amp;D decision evidence</figcaption>
           </figure>
         </div>
         <div>
           <div class="repo-kicker">Empirical Study · Learning &amp; Development</div>
           <h3>Decision Value of Training Evidence: Reanalysis of the National Supported Work Experiment</h3>
           <div class="repo-copy">
-            <p>This bundle revisits randomized National Supported Work evidence and asks a decision question that training evaluations often skip: how does the interpretation of an estimated effect change when a decision maker requires progressively larger minimum benefits before acting?</p>
-            <p>The project keeps the historical context explicit, including the meaning of the earnings variables and their price year. That prevents an old experimental result from being presented as if it were a current corporate ROI estimate.</p>
+            <p>Training evaluation can show that an intervention had a positive effect without answering a harder management question: how large would the benefit need to be before the evidence is strong enough for a decision? This study reanalyzes the Dehejia–Wahba RE74 subset of the randomized National Supported Work experiment, with <strong>185 treated participants</strong> and <strong>260 randomized controls</strong>. Mean RE78 is 6,349.14 for the treated group and 4,554.80 for controls, producing a treated-minus-control difference of <strong>1,794.34 historical 1982 U.S. dollars</strong>. The large-sample 95% interval is 479.19–3,109.50 and the seeded bootstrap interval is 519.04–3,117.80, while a treatment-label permutation diagnostic gives <strong>p = 0.005899</strong>.</p>
+            <p>The project then separates statistical evidence from the decision rule by evaluating a 41-point illustrative minimum-benefit frontier from $0 to $4,000. At least 95% of bootstrap resamples clear thresholds through $700, at least 50% clear through $1,700, and <strong>38.18%</strong> clear a $2,000 threshold. That decline is the central L&amp;D lesson: a positive historical experimental effect is not the same thing as evidence that clears every business requirement. The frontier is therefore a sensitivity tool, not a modern ROI estimate, current-dollar valuation, or universal training-investment rule.</p>
           </div>
-          <div class="repo-data-note"><strong>Data source:</strong> Dehejia–Wahba RE74 subset of the randomized National Supported Work experiment.</div>
+          <div class="metrics" aria-label="Training evidence decision-value study headline metrics">
+            <span>445 participants</span>
+            <span>Effect +$1,794.34</span>
+            <span>Bootstrap 95% $519–$3,118</span>
+            <span>$2,000 exceedance 38.18%</span>
+          </div>
+          <div class="repo-data-note"><strong>Data source:</strong> Dehejia–Wahba RE74 subset of the randomized National Supported Work experiment. RE78 is documented as real 1978 earnings expressed in 1982 U.S. dollars; raw participant files are not redistributed and are pinned by source fingerprint for reproducibility.</div>
           <div class="repo-links">
             <a href="https://github.com/devissaputra/training_evidence_decision_value" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Repository</a>
-            <a href="https://github.com/devissaputra/training_evidence_decision_value/blob/main/QA_REPORT.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Report MD</a>
-            <a href="https://github.com/devissaputra/training_evidence_decision_value/blob/main/docs/paper_blueprint.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen" aria-hidden="true"></i> Paper</a>
-            <a href="https://github.com/devissaputra/training_evidence_decision_value/blob/main/THIRD_PARTY_DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database" aria-hidden="true"></i> Data source</a>
+            <a href="https://github.com/devissaputra/training_evidence_decision_value/blob/main/EMPIRICAL_STUDY.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Study Protocol</a>
+            <a href="https://github.com/devissaputra/training_evidence_decision_value/blob/main/docs/paper_blueprint.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen" aria-hidden="true"></i> Paper Blueprint</a>
+            <a href="https://github.com/devissaputra/training_evidence_decision_value/blob/main/data/derived/primary_results.csv" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-table" aria-hidden="true"></i> 41-point Frontier</a>
+            <a href="https://github.com/devissaputra/training_evidence_decision_value/blob/main/data/source_manifest.json" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-fingerprint" aria-hidden="true"></i> Source Manifest</a>
+            <a href="https://users.nber.org/~rdehejia/nswdata2.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database" aria-hidden="true"></i> NSW Source</a>
           </div>
         </div>
       </div>
