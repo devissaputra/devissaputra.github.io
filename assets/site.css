@@ -879,3 +879,86 @@ footer{
   #research-bundles .repo-visuals{grid-template-columns:1fr;}
   #research-bundles .repo-project-heading h3{font-size:1.28rem;}
 }
+
+
+/* AIEd normal repositories — professor-review layout v2 */
+#repositories .repo-section-intro{
+  max-width:800px;
+  margin-bottom:30px;
+  font-size:.97rem;
+  line-height:1.68;
+}
+#repositories .repo-project{
+  padding:22px 22px 25px;
+  margin-bottom:28px;
+  border:1px solid #CDD6DD;
+  border-left:3px solid #456A86;
+  border-radius:7px;
+  background:#F8FAFB;
+}
+#repositories .repo-project:last-child{margin-bottom:0;}
+#repositories .repo-project-heading{margin-bottom:17px;}
+#repositories .repo-project-heading h3{
+  max-width:760px;
+  color:#173A63;
+  font-size:1.34rem;
+  line-height:1.24;
+}
+#repositories .repo-kicker{
+  color:#526675;
+  font-size:.72rem;
+  letter-spacing:.095em;
+}
+#repositories .repo-project-grid{
+  grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);
+  gap:27px;
+}
+#repositories .repo-visuals{gap:13px;}
+#repositories .repo-visual{
+  border-color:#C8D3DC;
+  background:#fff;
+  box-shadow:0 1px 2px rgba(23,58,99,.045);
+}
+#repositories .repo-visual img{
+  aspect-ratio:16/9;
+  object-fit:contain;
+  background:#F8FAFC;
+}
+#repositories .repo-visual figcaption{
+  padding:8px 10px 9px;
+  background:#fff;
+  color:#435663;
+  font-size:.72rem;
+  font-weight:600;
+  line-height:1.35;
+}
+#repositories .repo-copy{
+  color:#2D3B45;
+  font-size:.95rem;
+  line-height:1.72;
+}
+#repositories .repo-copy p{margin:0 0 14px;}
+#repositories .repo-copy p:last-child{margin-bottom:0;}
+#repositories .repo-links{
+  gap:7px;
+  margin-top:16px;
+}
+#repositories .repo-links a{
+  min-height:38px;
+  background:#fff;
+  border-color:#C4CED6;
+}
+#repositories .repo-links a:hover{
+  border-color:#456A86;
+  background:#EDF3F7;
+  color:#244A63;
+}
+@media(max-width:1050px){
+  #repositories .repo-project-grid{grid-template-columns:1fr;}
+  #repositories .repo-visuals{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:700px){
+  #repositories .repo-project{padding:17px 13px 20px;}
+  #repositories .repo-visuals{grid-template-columns:1fr;}
+  #repositories .repo-project-heading h3{font-size:1.24rem;}
+}
