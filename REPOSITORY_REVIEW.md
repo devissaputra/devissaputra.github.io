@@ -1,3 +1,21 @@
+# Portfolio repository review
+
+**Site-wide linked project repositories rechecked: 47/47 — 27 September 2026.**
+
+This pass rebuilt the repository list directly from the portfolio pages, covering the 39 AI repositories plus eight Research / Learning & Development empirical repositories. It rechecked documented formulas, machine-readable result values, headline arithmetic, and portfolio text against the current committed evidence.
+
+## Corrections from the 27 September recheck
+
+- **mini_transformers_sequences** — corrected stale documentation from an earlier Transformer run. The current 6-month three-seed Transformer mean MAE is **19.691348204741605** (displayed as **19.691**) versus HGB **20.537293415179263**, giving a mean delta of **-0.8459452104376588** (displayed as **-0.846**). The calculation guide, paper, review figure, and portfolio page were synchronized.
+- **knowledge_tracing_benchmark** — synchronized the exact seed-42 GRU Brier value in the calculation guide and paper to the current machine-readable result: **0.1799516879180387**. Rounded public text remains **0.1800**.
+- The eight Research / L&D empirical repositories were independently spot-recomputed from their released headline quantities (frontier fractions, Cramér's V, network gaps, triage enrichment, Jaccard overlap, forecast-error summaries, treatment-effect arithmetic, and training-investment percentage changes). No additional headline arithmetic error was found.
+
+## Verification boundary
+
+This site-wide pass verifies internal numerical consistency between committed result files, formulas, calculation guides, papers, and portfolio text. It does **not** claim that every one of the 47 projects was retrained or rebuilt from raw external data during this pass. Existing project-level reproducibility workflows and tests remain the stronger check for full source-to-result reproduction.
+
+---
+
 # AI portfolio repository review
 
 **Repository completion: 39/39.**
