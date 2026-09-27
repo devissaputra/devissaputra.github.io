@@ -1,43 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
-<title id="title">Knowledge Tracing Benchmark on ASSISTments 2009</title><desc id="desc">Data processing and evaluation pipeline</desc>
-<rect width="1400" height="788" fill="#F7F9FB"/>
+<title id="title">Knowledge Tracing Benchmark on ASSISTments 2009 — data processing pipeline</title>
+<desc id="desc">Step-by-step data preparation, modelling and evaluation workflow.</desc>
+<rect width="1400" height="788" fill="#F8FAFC"/>
 <style>
-.title{font-family:Georgia,serif;font-weight:700;fill:#173A63;font-size:38px}
-.subtitle{font-family:Arial,sans-serif;fill:#173A63;font-size:15px;letter-spacing:4px}
-.h{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:18px}
-.h2{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:15px}
-.txt{font-family:Arial,sans-serif;fill:#172533;font-size:14px}
-.sm{font-family:Arial,sans-serif;fill:#5C6B78;font-size:12px}
-.metric{font-family:Georgia,serif;font-weight:700;fill:#173A63;font-size:24px}
-.card{fill:#FFFFFF;stroke:#C8D5E1;stroke-width:1.2}
-.soft{fill:#EAF2F8;stroke:#D9E6F0;stroke-width:1}
-.flow{stroke:#173A63;stroke-width:2;fill:none;marker-end:url(#arrow)}
+.title{font:700 38px Georgia,serif;fill:#173A63}.sub{font:600 14px Arial,sans-serif;fill:#5B6B7A;letter-spacing:3px}.step{fill:#FFF;stroke:#CBD6E0;stroke-width:1.4}.num{fill:#197A7A}.h{font:700 15px Arial,sans-serif;fill:#173A63}.body{font:13px Arial,sans-serif;fill:#263846}.small{font:12px Arial,sans-serif;fill:#61717E}.note{fill:#E7F5F4;stroke:#197A7A;stroke-width:1.2}.arrow{stroke:#197A7A;stroke-width:2.4;fill:none;marker-end:url(#arrow)}
 </style>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#173A63"/></marker></defs>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#197A7A"/></marker></defs>
 <text x="700" y="50" text-anchor="middle" class="title">Knowledge Tracing Benchmark on ASSISTments 2009</text>
-<line x1="240" y1="78" x2="545" y2="78" stroke="#9DB5CB"/><line x1="855" y1="78" x2="1160" y2="78" stroke="#9DB5CB"/>
-<text x="700" y="84" text-anchor="middle" class="subtitle">DATA PROCESSING AND EVALUATION PIPELINE</text>
-<rect x="20" y="125" width="210" height="420" rx="10" class="card"/><circle cx="48" cy="155" r="19" fill="#173A63"/><text x="48" y="161" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">1</text><text x="75" y="161" class="h2">RAW SEQUENCES</text>
-<rect x="245" y="125" width="210" height="420" rx="10" class="card"/><circle cx="273" cy="155" r="19" fill="#173A63"/><text x="273" y="161" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">2</text><text x="300" y="161" class="h2">LEARNER SPLIT</text>
-<rect x="470" y="125" width="210" height="420" rx="10" class="card"/><circle cx="498" cy="155" r="19" fill="#173A63"/><text x="498" y="161" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">3</text><text x="525" y="161" class="h2">ORDERED HISTORY</text>
-<rect x="695" y="125" width="210" height="420" rx="10" class="card"/><circle cx="723" cy="155" r="19" fill="#173A63"/><text x="723" y="161" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">4</text><text x="750" y="161" class="h2">MODEL INPUTS</text>
-<rect x="920" y="125" width="210" height="420" rx="10" class="card"/><circle cx="948" cy="155" r="19" fill="#173A63"/><text x="948" y="161" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">5</text><text x="975" y="161" class="h2">MODEL FITTING</text>
-<rect x="1145" y="125" width="210" height="420" rx="10" class="card"/><circle cx="1173" cy="155" r="19" fill="#173A63"/><text x="1173" y="161" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">6</text><text x="1200" y="161" class="h2">HELD-OUT EVALUATION</text>
-<ellipse cx="125" cy="225" rx="28" ry="10" fill="#6EA4D7"/><rect x="97" y="225" width="56" height="36" fill="#6EA4D7"/><ellipse cx="125" cy="261" rx="28" ry="10" fill="#2F6EAA"/><ellipse cx="125" cy="225" rx="28" ry="10" fill="#BFD4E6"/>
-<text x="45" y="285" class="txt"><tspan x="45">ASSISTments 2009 sequence</tspan><tspan x="45" dy="19">representation</tspan><tspan x="45" dy="19">4,148 learner rows</tspan><tspan x="45" dy="19">274,331 aligned</tspan><tspan x="45" dy="19">interactions</tspan></text>
-<rect x="270" y="210" width="160" height="92" rx="8" class="soft"/><text x="350" y="244" class="metric" text-anchor="middle">70%</text><text x="350" y="268" class="h2" text-anchor="middle">train</text>
-<rect x="270" y="312" width="160" height="92" rx="8" class="soft"/><text x="350" y="346" class="metric" text-anchor="middle">15%</text><text x="350" y="370" class="h2" text-anchor="middle">validation</text>
-<rect x="270" y="414" width="160" height="92" rx="8" class="soft"/><text x="350" y="448" class="metric" text-anchor="middle">15%</text><text x="350" y="472" class="h2" text-anchor="middle">test</text>
-<text x="495" y="210" class="txt"><tspan x="495">Sort each learner</tspan><tspan x="495" dy="19">sequence by recorded</tspan><tspan x="495" dy="19">order.</tspan><tspan x="495" dy="38">Use skill IDs and binary</tspan><tspan x="495" dy="19">response history.</tspan><tspan x="495" dy="38">Reject misaligned</tspan><tspan x="495" dy="19">sequences.</tspan></text>
-<text x="720" y="210" class="txt"><tspan x="720">BKT: mastery state</tspan><tspan x="720" dy="19">PFA: prior success/failure</tspan><tspan x="720" dy="19">counts</tspan><tspan x="720" dy="19">GRU: padded skill-response</tspan><tspan x="720" dy="19">sequence</tspan><tspan x="720" dy="38">Current target response is</tspan><tspan x="720" dy="19">withheld.</tspan></text>
-<text x="945" y="210" class="txt"><tspan x="945">Fit priors, BKT and PFA</tspan><tspan x="945" dy="19">on training learners.</tspan><tspan x="945" dy="38">Tune on validation</tspan><tspan x="945" dy="19">learners.</tspan><tspan x="945" dy="38">Train compact GRU with</tspan><tspan x="945" dy="19">fixed seeds.</tspan></text>
-<text x="1170" y="210" class="txt"><tspan x="1170">Evaluate only on 623</tspan><tspan x="1170" dy="19">held-out learners.</tspan><tspan x="1170" dy="38">Report ROC-AUC, average</tspan><tspan x="1170" dy="19">precision, Brier, log</tspan><tspan x="1170" dy="19">loss and ECE.</tspan></text>
-<path d="M 230 335 L 242 335" class="flow"/><path d="M 455 335 L 467 335" class="flow"/><path d="M 680 335 L 692 335" class="flow"/><path d="M 905 335 L 917 335" class="flow"/><path d="M 1130 335 L 1142 335" class="flow"/>
-<rect x="20" y="575" width="1360" height="150" rx="10" class="card"/><text x="45" y="610" class="h">LEAKAGE CONTROL</text>
-<line x1="60" y1="665" x2="760" y2="665" stroke="#173A63" stroke-width="2" marker-end="url(#arrow)"/>
-<circle cx="108" cy="665" r="9" fill="#2F6EAA" stroke="white" stroke-width="2"/><text x="108" y="645" class="sm" text-anchor="middle">history t-3</text>
-<circle cx="267" cy="665" r="9" fill="#2F6EAA" stroke="white" stroke-width="2"/><text x="267" y="645" class="sm" text-anchor="middle">history t-2</text>
-<circle cx="426" cy="665" r="9" fill="#2F6EAA" stroke="white" stroke-width="2"/><text x="426" y="645" class="sm" text-anchor="middle">history t-1</text>
-<circle cx="585" cy="665" r="9" fill="#FFFFFF" stroke="#173A63" stroke-width="2"/><text x="585" y="645" class="sm" text-anchor="middle">predict t</text>
-<text x="820" y="625" class="txt"><tspan x="820">Every stateful prediction is produced before the current</tspan><tspan x="820" dy="20">response is observed. The split unit is the learner,</tspan><tspan x="820" dy="20">preventing one learner from appearing in more than one</tspan><tspan x="820" dy="20">partition.</tspan></text>
+<text x="700" y="82" text-anchor="middle" class="sub">DATA PROCESSING + ANALYSIS WORKFLOW</text>
+
+<rect x="28" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="58" cy="174" r="18" class="num"/><text x="58" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">1</text>
+<text x="48" y="217" class="h"><tspan x="48">1. INGEST</tspan></text>
+<text x="48" y="286" class="body"><tspan x="48">Pinned learner sequences</tspan><tspan x="48" dy="21">Verify learner-row integrity</tspan><tspan x="48" dy="21">Record source fingerprint</tspan></text>
+<path d="M228 335 H246" class="arrow"/>
+<rect x="252" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="282" cy="174" r="18" class="num"/><text x="282" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">2</text>
+<text x="272" y="217" class="h"><tspan x="272">2. SPLIT</tspan></text>
+<text x="272" y="286" class="body"><tspan x="272">Split by learner</tspan><tspan x="272" dy="21">70% train · 15% validation</tspan><tspan x="272" dy="21">15% final test</tspan><tspan x="272" dy="21">No learner crosses partitions</tspan></text>
+<path d="M452 335 H470" class="arrow"/>
+<rect x="476" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="506" cy="174" r="18" class="num"/><text x="506" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">3</text>
+<text x="496" y="217" class="h"><tspan x="496">3. FEATURES</tspan></text>
+<text x="496" y="286" class="body"><tspan x="496">Build prior skill history</tspan><tspan x="496" dy="21">Success/failure counts</tspan><tspan x="496" dy="21">Sequence skill vocabulary</tspan><tspan x="496" dy="21">No current-answer leakage</tspan></text>
+<path d="M676 335 H694" class="arrow"/>
+<rect x="700" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="730" cy="174" r="18" class="num"/><text x="730" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">4</text>
+<text x="720" y="217" class="h"><tspan x="720">4. FIT</tspan></text>
+<text x="720" y="286" class="body"><tspan x="720">Global + skill priors</tspan><tspan x="720" dy="21">Fixed and tuned BKT</tspan><tspan x="720" dy="21">PFA-style logistic model</tspan><tspan x="720" dy="21">Compact GRU · 3 seeds</tspan></text>
+<path d="M900 335 H918" class="arrow"/>
+<rect x="924" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="954" cy="174" r="18" class="num"/><text x="954" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">5</text>
+<text x="944" y="217" class="h"><tspan x="944">5. EVALUATE</tspan></text>
+<text x="944" y="286" class="body"><tspan x="944">ROC-AUC · AP</tspan><tspan x="944" dy="21">Brier · log loss · ECE</tspan><tspan x="944" dy="21">First/repeated skill slices</tspan><tspan x="944" dy="21">Learner-block bootstrap</tspan></text>
+<path d="M1124 335 H1142" class="arrow"/>
+<rect x="1148" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="1178" cy="174" r="18" class="num"/><text x="1178" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">6</text>
+<text x="1168" y="217" class="h"><tspan x="1168">6. REPORT</tspan></text>
+<text x="1168" y="286" class="body"><tspan x="1168">Machine-readable metrics</tspan><tspan x="1168" dy="21">Generated result tables</tspan><tspan x="1168" dy="21">Calibration diagnostics</tspan><tspan x="1168" dy="21">Paper + model card + ethics</tspan></text>
+
+<rect x="28" y="568" width="1344" height="112" rx="10" class="note"/>
+<text x="50" y="603" class="h">Critical processing rule</text>
+<text x="50" y="632" class="body"><tspan x="50">Every stateful prediction is emitted before the response being predicted is observed; test learners are never used for model selection.</tspan></text>
+<text x="28" y="732" class="small">Pipeline purpose: make the benchmark reproducible, leakage-resistant and easy to audit.</text>
 </svg>
