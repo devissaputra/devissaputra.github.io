@@ -89,10 +89,12 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  <section class="hero" id="overview">
   <h2>Portfolio in AI Engineering</h2>
   <p class="lede">This portfolio documents applied AI engineering work in classification, calibration, anomaly detection, explainability, forecasting, clustering and neural networks. Empirical studies use external datasets and explicit evaluation protocols, while the repository section presents focused engineering experiments with defined baselines, reproducible data splits and documented limitations.</p>
-  <div class="content-type-nav" aria-label="AI Engineering content types">
-   <a href="#research-bundles"><strong>Empirical Studies</strong><span>Four empirical machine-learning studies with explicit evaluation protocols and evidence limits.</span></a>
-   <a href="#repositories"><strong>Repositories</strong><span>Five focused AI Engineering benchmarks and reproducible technical experiments.</span></a>
-  </div>
+  <div class="item-index empirical-index" aria-label="Empirical studies">
+        <a href="#classification_calibration">Probability Calibration</a>
+        <a href="#anomaly_detection">Anomaly Detection</a>
+        <a href="#explainable_ai">Explainable AI</a>
+        <a href="#mini_transformers_sequences">Transformer Forecasting</a>
+      </div>
  </section>
  <section class="repo-section" id="research-bundles">
   <div class="eyebrow-rule bundle-heading"><h2>Empirical Studies</h2></div>
@@ -221,6 +223,14 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  <section class="repo-section" id="repositories">
   <div class="eyebrow-rule"><h2>Repositories</h2></div>
   <p class="repo-section-intro">These five repositories are recorded engineering benchmarks on real datasets. Each one is organized around a concrete comparison, a reproducible data boundary and an explicit interpretation limit. The section keeps negative results when they are informative, separates model selection from visualization or post-hoc interpretation where necessary, and treats added model complexity as something that must be justified by held-out evidence.</p>
+      <div class="item-index repo-index" aria-label="Repositories">
+        <a href="#imbalanced_learning">Imbalanced Learning</a>
+        <a href="#pca_clustering">PCA & Clustering</a>
+        <a href="#mlp_neural_network">MLP Benchmark</a>
+        <a href="#cnn_image_classification">CNN Benchmark</a>
+        <a href="#lstm_time_series">LSTM Forecasting</a>
+      </div>
+
   <article class="repo-project" id="imbalanced_learning">
   <header class="repo-project-heading"><div class="repo-kicker">AI Engineering · Recorded Benchmark · 05</div>
     <h3>Learning from Imbalanced Data</h3></header>
