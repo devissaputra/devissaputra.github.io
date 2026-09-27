@@ -71,11 +71,11 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   </div>
  <section class="hero" id="overview">
   <h2>Portfolio in AI Engineering</h2>
-  <p class="lede">This portfolio documents my growing AI engineering practice, grounded in an Informatics degree and experience translating operational problems into software. The projects develop Python and machine-learning competence through explicit baselines, probability calibration, error analysis and reproducible evaluation. They provide evidence of project-based development rather than a claim of long-standing production AI experience.</p>
+  <p class="lede">This portfolio documents my growing AI engineering practice, grounded in an Informatics degree and experience translating operational problems into software. The projects develop Python and machine learning competence through explicit baselines, probability calibration, error analysis and reproducible evaluation. They provide evidence of project based development rather than a claim of long term production AI experience.</p>
   <div class="project-index" aria-label="Page project index">
    <a href="#research-bundles">Empirical Studies</a>
    <a href="#imbalanced_learning">Learning from Imbalanced Data</a>
-   <a href="#pca_clustering">PCA & K-Means</a>
+   <a href="#pca_clustering">PCA & K Means</a>
    <a href="#mlp_neural_network">MLP vs Linear Baseline</a>
    <a href="#cnn_image_classification">CNN Image Classification</a>
    <a href="#lstm_time_series">LSTM Time Series</a>
@@ -95,15 +95,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>This study asks a more demanding question than whether a classifier is simply accurate: when a model assigns a probability, does that number match what actually happens? Using the UCI Bank Marketing dataset with 45,211 observations, 16 predictors, and an 11.7% positive class, the protocol compares a class-prior baseline with uncalibrated, sigmoid-calibrated, and isotonic-calibrated logistic regression across five fixed stratified holdouts. Discrimination is evaluated separately from probability quality using ROC-AUC and average precision alongside Brier score, log loss, and expected calibration error.</p>
-<p>Isotonic calibration reduces mean Brier score from 0.0720 to 0.0693 across five holdouts, while ROC-AUC stays near 0.906. This supports a probability-quality improvement under the frozen protocol, rather than a substantial change in ranking. The call-duration ablation matters operationally because duration is unavailable before a call; results using it describe a retrospective task.</p></div>
+    <div class="repo-copy"><p>Probability calibration is evaluated on the UCI Bank Marketing dataset with 45,211 observations, 16 predictors and an 11.7% positive class. Five fixed stratified holdouts compare a class prior baseline with uncalibrated logistic regression and logistic regression calibrated by sigmoid and isotonic methods. Discrimination is reported separately from probability quality using ROC AUC, average precision, Brier score, log loss and expected calibration error.</p>
+<p>Across the five holdouts, isotonic calibration reduces mean Brier score from 0.0720 to 0.0693 while ROC AUC remains close to 0.906. The result supports improved probability calibration under the fixed protocol rather than a material change in ranking performance. Call duration is also removed in an ablation because that variable is unavailable before a call; models that include it describe a retrospective prediction task.</p></div>
     <div class="repo-evidence" aria-label="Probability calibration evidence snapshot">
       <div class="repo-evidence-item"><span class="repo-evidence-value">45,211</span><span class="repo-evidence-label">observations</span></div>
       <div class="repo-evidence-item"><span class="repo-evidence-value">11.7%</span><span class="repo-evidence-label">positive class</span></div>
       <div class="repo-evidence-item"><span class="repo-evidence-value">5</span><span class="repo-evidence-label">repeated splits</span></div>
       <div class="repo-evidence-item"><span class="repo-evidence-value">0.0074</span><span class="repo-evidence-label">isotonic ECE-10</span></div>
     </div>
-    <div class="repo-data-note"><strong>Data and provenance:</strong> UCI Bank Marketing (dataset 222), DOI 10.24432/C5K306. The runner downloads the official archive, validates the exact <code>bank-full.csv</code> SHA-256, and keeps raw source data out of the repository.</div>
+    <div class="repo-data-note"><strong>Data and provenance:</strong> UCI Bank Marketing (dataset 222), DOI 10.24432/C5K306. The runner downloads the official archive, validates the exact <code>bank full.csv</code> SHA-256, and keeps raw source data out of the repository.</div>
     <div class="repo-links"><a href="https://github.com/devissaputra/classification_calibration/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/classification_calibration" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
     <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
@@ -113,7 +113,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </article>
 <article class="repo-project research-bundle" id="anomaly_detection">
   <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
-    <h3>Label-Blind Threshold-Aware Anomaly Detection on NAB</h3></header>
+    <h3>Label Blind Threshold Aware Anomaly Detection on NAB</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
     <figure class="repo-visual"><a class="figure-link" href="assets/aieng/anomaly_detection/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/anomaly_detection/review_overview.svg?v=20260926-evidence-review" alt="When do label-blind detectors produce useful alerts? Four realKnownCause NAB streams; pinned data and annotation hashes."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
@@ -121,8 +121,8 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>This study compares feature-based Isolation Forest with a transparent robust-history baseline on four real NAB streams. The primary pipeline stays label-blind during fitting and alert-budget calibration, then evaluates event detection separately so threshold tuning does not quietly leak benchmark labels into the detector.</p>
-<p>At the 5% validation alert budget, the primary Isolation Forest test false-positive rate ranges from 0.0300 to 0.2338 across the four streams. This variation is central to the finding: a fixed calibration budget does not guarantee a stable operating point after temporal change. Repeated seeds and history-window checks describe robustness on these streams, not independent replications.</p></div>
+    <div class="repo-copy"><p>An Isolation Forest based on engineered features is compared with a transparent baseline derived from robust historical statistics on four NAB data streams. Model fitting and alert budget calibration do not use benchmark labels. Event detection is evaluated only after the operating threshold is fixed, which prevents label information from entering threshold selection.</p>
+<p>With a 5% validation alert budget, the primary Isolation Forest test false positive rate ranges from 0.0300 to 0.2338 across the four streams. The variation is the main empirical result: a fixed calibration budget does not produce a stable operating point after temporal change. Repeated random seeds and changes in history length are reported as robustness checks on these streams rather than as independent replications.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> Numenta Anomaly Benchmark (NAB), pinned benchmark revision and frozen selected streams.</div>
     <div class="repo-links"><a href="https://github.com/devissaputra/anomaly_detection/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/anomaly_detection" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/anomaly_detection/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
@@ -133,7 +133,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </article>
 <article class="repo-project research-bundle" id="explainable_ai">
   <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
-    <h3>Explainable AI: Model Dependence and Feature-Governance Study</h3></header>
+    <h3>Explainable AI: Model Dependence and Feature Governance Study</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
     <figure class="repo-visual"><a class="figure-link" href="assets/aieng/explainable_ai/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/explainable_ai/review_overview.svg?v=20260926-evidence-review" alt="Do explanations change with the model and feature policy? UCI Adult: 48,842 records; exact duplicate predictor profiles remain within the same partition."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
@@ -141,8 +141,8 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>This study examines how global feature explanations change across model families and feature-governance choices on the Adult income benchmark. It combines held-out performance, permutation-importance stability, subgroup behavior, feature exclusion, and error analysis while keeping predictive dependence separate from causal or fairness claims.</p>
-<p>On the primary grouped holdout, random-forest ROC-AUC is 0.9174 with all features and 0.9167 after excluding race and sex; logistic regression scores 0.9063 and 0.9052. Marital status leads the permutation rankings, but its importance differs markedly between models. Subgroup diagnostics remain necessary after exclusion, so the study supports inspection of model dependence rather than causal attribution or a fairness verdict.</p></div>
+    <div class="repo-copy"><p>Global feature explanations are compared across model families and feature governance choices on the Adult income benchmark. The evaluation combines held out predictive performance, stability of permutation importance, subgroup error patterns, feature exclusion and error analysis. Predictive dependence is kept separate from causal interpretation and from claims about fairness.</p>
+<p>On the primary grouped holdout, random forest ROC AUC is 0.9174 with all features and 0.9167 after excluding race and sex. Logistic regression scores 0.9063 and 0.9052 respectively. Marital status ranks highly under permutation importance, but its measured importance changes substantially across model families. Subgroup diagnostics remain necessary after feature exclusion, so the evidence supports model dependence analysis rather than causal attribution or a fairness conclusion.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> UCI Adult / Census Income (dataset 2), DOI 10.24432/C5XW20.</div>
     <div class="repo-links"><a href="https://github.com/devissaputra/explainable_ai/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/explainable_ai" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/explainable_ai/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
@@ -161,8 +161,8 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>This multi-horizon forecasting study asks whether a compact Transformer actually earns its complexity over persistence, seasonal-naive, ridge, and gradient-boosted baselines on a long scientific time series. It evaluates several forecast horizons, seed stability, context-length sensitivity, early-versus-late test behavior, and performance during high solar activity.</p>
-<p>The Transformer has lower mean error than the simpler baselines at the 1- and 6-month horizons under the recorded protocol. The 12-month result is less stable: its three-seed mean MAE is 24.206, versus 23.973 for histogram gradient boosting, despite seed 42 favoring the Transformer. The seed-42 intervals against that baseline also cross zero at 6 and 12 months. This qualifies any broad claim that the Transformer is consistently superior.</p></div>
+    <div class="repo-copy"><p>A compact Transformer is compared with persistence, seasonal naive, ridge regression and histogram gradient boosting on a long solar activity time series. The protocol evaluates several forecast horizons, random seed stability, sensitivity to context length, performance in early and late test periods, and behavior during periods of high solar activity.</p>
+<p>The Transformer has lower mean error than the simpler baselines at the 1 month and 6 month horizons under the recorded protocol. At 12 months, the result is less stable: mean MAE across three seeds is 24.206, compared with 23.973 for histogram gradient boosting, even though seed 42 favors the Transformer. Confidence intervals for seed 42 also cross zero against that baseline at 6 and 12 months. The evidence therefore does not support a general claim that the Transformer is consistently superior.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> WDC-SILSO Version 2.0 monthly mean total sunspot number, frozen through March 2026.</div>
     <div class="repo-links"><a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/mini_transformers_sequences" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
@@ -174,7 +174,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </section>
  <section class="repo-section" id="repositories">
   <div class="eyebrow-rule"><h2>Repositories</h2></div>
-  <p class="repo-section-intro">The remaining five repositories are compact engineering studies built around transparent comparisons, reproducible splits, and scientific visuals rather than presentation-only demos.</p>
+  <p class="repo-section-intro">The remaining five repositories are compact engineering studies built around transparent comparisons, reproducible splits, and scientific visuals rather than presentation only demos.</p>
   <article class="repo-project" id="imbalanced_learning">
   <header class="repo-project-heading"><div class="repo-kicker">AI Engineering Repository · 05</div>
     <h3>Learning from Imbalanced Data</h3></header>
@@ -185,7 +185,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>This controlled experiment uses real Wisconsin Diagnostic Breast Cancer observations to compare ordinary logistic regression, class-weighted logistic regression, and a weighted random forest. It deliberately makes benign cases the minority class, then reports average precision, recall, F1, and balanced accuracy on one stratified split. The recorded perfect forest score is retained alongside the small-sample limitation: it demonstrates the behavior of this setup, not clinical reliability.</p></div>
+    <div class="repo-copy"><p>Wisconsin Diagnostic Breast Cancer observations are used to compare ordinary logistic regression, class weighted logistic regression and a weighted random forest. Benign cases are deliberately made the minority class, after which average precision, recall, F1 and balanced accuracy are reported on one stratified split. The perfect forest score from the recorded run is retained together with the small sample limitation; it describes this experimental setup and is not evidence of clinical reliability.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/imbalanced_learning/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/imbalanced_learning" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/imbalanced_learning/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
@@ -194,7 +194,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </article>
 <article class="repo-project" id="pca_clustering">
   <header class="repo-project-heading"><div class="repo-kicker">AI Engineering Repository · 06</div>
-    <h3>PCA and K-Means Clustering</h3></header>
+    <h3>PCA and K Means Clustering</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
     <figure class="repo-visual"><a class="figure-link" href="assets/aieng/pca_clustering/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/pca_clustering/review_overview.svg?v=20260926-evidence-review" alt="Can unlabeled chemical measurements reveal wine groups? 178 wine observations and 13 standardized chemical features."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
@@ -202,7 +202,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>This unsupervised study separates clustering from visualization. K-means is selected using silhouette scores in all 13 standardized wine features, while a two-component PCA projection provides an interpretable view. The selected three-cluster solution has full-space silhouette 0.2849 and post-hoc adjusted Rand index 0.8975 against known labels; the much larger projected silhouette is explicitly not used as evidence that the full-space clusters are equally well separated.</p></div>
+    <div class="repo-copy"><p>Clustering and visualization are evaluated separately on the Wine dataset. K means is selected using silhouette scores in all 13 standardized features, while a two component PCA projection is used only for visualization. The selected three cluster solution has a full space silhouette of 0.2849 and a post hoc adjusted Rand index of 0.8975 against known labels. The much larger silhouette in the two dimensional projection is not used as evidence that the full feature space is equally well separated.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/pca_clustering/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/pca_clustering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/pca_clustering/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
@@ -219,7 +219,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>This experiment compares a multilayer perceptron with multinomial logistic regression on the same standardized handwritten-digit split. The recorded linear baseline reaches 0.9778 accuracy, compared with 0.9578 for the MLP, with macro-F1 showing the same ordering. Keeping this negative result makes the engineering question clear: additional nonlinear capacity must justify its complexity under an explicit evaluation protocol.</p></div>
+    <div class="repo-copy"><p>A multilayer perceptron is compared with multinomial logistic regression on the same standardized handwritten digit split. Logistic regression reaches 0.9778 accuracy while the multilayer perceptron reaches 0.9578, and macro F1 shows the same ordering. Retaining the negative result makes the engineering conclusion explicit: additional nonlinear capacity should justify its complexity under a defined evaluation protocol.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/mlp_neural_network/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/mlp_neural_network" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/mlp_neural_network/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
@@ -236,7 +236,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>This PyTorch experiment compares a compact convolutional network with a flattened logistic-regression baseline on handwritten digits. The committed run reports 0.9733 accuracy for the CNN and 0.9622 for logistic regression after 14 epochs. The small gain illustrates a possible benefit from preserving spatial structure, while the single-split design and lack of an uncertainty estimate limit the strength of the architectural conclusion.</p></div>
+    <div class="repo-copy"><p>A compact PyTorch convolutional network is compared with a flattened logistic regression baseline on handwritten digits. The recorded run gives 0.9733 accuracy for the convolutional network and 0.9622 for logistic regression after 14 epochs. The difference is consistent with a modest benefit from preserving spatial structure, but the single split design and absence of an uncertainty estimate limit the strength of that conclusion.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/cnn_image_classification/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/cnn_image_classification" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/cnn_image_classification/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
@@ -253,7 +253,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>This experiment compares persistence, ridge autoregression, and a compact LSTM for next-week Mauna Loa CO₂ forecasting. Missing weeks now use past-only forward filling, and the corrected 20-epoch experiment has been rerun successfully in GitHub Actions. On the 452-week chronological holdout, ridge achieves RMSE 0.4639 ppm, persistence 0.5135 ppm, and the LSTM 1.0751 ppm. The recurrent model therefore does not justify its added complexity in this fixed-seed setup.</p></div>
+    <div class="repo-copy"><p>Persistence, ridge autoregression and a compact LSTM are compared for one week ahead Mauna Loa carbon dioxide forecasting. Missing observations use forward filling based only on earlier values, and the corrected 20 epoch run is reproduced in GitHub Actions. On the 452 week chronological holdout, ridge achieves RMSE 0.4639 ppm, persistence 0.5135 ppm and the LSTM 1.0751 ppm. Under this fixed seed protocol, the recurrent model does not justify its additional complexity.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/lstm_time_series/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/lstm_time_series" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/lstm_time_series/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
