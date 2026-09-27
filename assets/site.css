@@ -574,3 +574,221 @@ footer{
  html:has(.portfolio-detail){scroll-behavior:auto;}
  .portfolio-detail *{transition:none!important;}
 }
+
+/* Scientific editorial normalization 2026-09-27 */
+:root{
+  --paper:#F3F5F4;
+  --paper-raised:#FAFBFA;
+  --ink:#18232D;
+  --ink-soft:#5A6670;
+  --line:#CBD2D8;
+  --accent:#1E3A5F;
+  --accent-soft:#E8EDF3;
+  --accent-deep:#142B47;
+  --research-blue:#1E3A5F;
+  --research-blue-soft:#EAF0F6;
+  --research-blue-line:#B9C8D8;
+}
+
+body{
+  line-height:1.60;
+}
+
+.page{
+  max-width:1188px;
+}
+
+.content{
+  padding:48px 42px 88px 32px;
+}
+
+section,
+.repo-section{
+  max-width:846px;
+  margin-bottom:64px;
+}
+
+.hero{
+  margin-bottom:64px;
+}
+
+.content > .back-link{
+  margin-bottom:8px;
+}
+
+.content > .back-link + .portfolio-nav{
+  margin-top:0;
+  margin-bottom:36px;
+}
+
+.portfolio-nav{
+  margin-top:24px;
+  border-radius:4px;
+}
+
+.portfolio-nav a{
+  min-height:46px;
+  background:var(--paper-raised);
+  border-color:var(--line);
+}
+
+.eyebrow-rule{
+  margin-bottom:18px;
+}
+
+.eyebrow-rule::after{
+  background:var(--line);
+}
+
+.hero .lede{
+  max-width:720px;
+  margin-top:16px;
+  font-size:1.08rem;
+  line-height:1.60;
+  color:#2F3C47;
+}
+
+.repo-section-intro,
+.section-intro{
+  max-width:720px;
+  margin:0 0 24px;
+  color:#46535E;
+  font-size:.94rem;
+  line-height:1.60;
+}
+
+#summary > p,
+.pub-intro{
+  max-width:720px;
+}
+
+.project-index{
+  margin-top:22px;
+  gap:8px;
+}
+
+.project-index a{
+  padding:6px 10px;
+  border-radius:3px;
+  background:var(--paper-raised);
+}
+
+.project,
+.repo-project{
+  padding-bottom:36px;
+  margin-bottom:36px;
+}
+
+.project-grid,
+.repo-project-grid{
+  gap:24px;
+}
+
+.repo-project-heading{
+  margin-bottom:16px;
+}
+
+.repo-project-heading h3,
+.portfolio-detail .repo-project-heading h3{
+  font-size:1.34rem;
+  line-height:1.24;
+}
+
+.repo-kicker,
+.project-number{
+  letter-spacing:.09em;
+}
+
+.repo-copy,
+.project-copy{
+  line-height:1.62;
+}
+
+.repo-visual,
+.visual-frame,
+.research-card,
+.system-card,
+.education-grid .entry,
+.pub-group,
+.skill-group,
+.repo-evidence-item{
+  border-radius:4px;
+}
+
+.repo-visual figcaption{
+  padding:7px 9px 8px;
+  font-size:.72rem;
+  line-height:1.35;
+}
+
+.repo-data-note,
+.research-frame{
+  border-radius:0 3px 3px 0;
+}
+
+.repo-links,
+.resource-box,
+.metrics,
+.repo-evidence{
+  margin-top:14px;
+}
+
+.repo-links a,
+.resource-box a,
+.contact-row a{
+  border-radius:3px;
+}
+
+.repo-evidence-value,
+.metrics,
+.entry .years{
+  font-variant-numeric:tabular-nums;
+}
+
+.skill-grid,
+.education-grid{
+  gap:16px;
+}
+
+.skill-group,
+.education-grid .entry,
+.pub-group{
+  padding:16px 17px;
+}
+
+footer{
+  max-width:846px;
+  margin-top:64px;
+}
+
+@media (max-width:900px){
+  .page{
+    max-width:none;
+    margin:0;
+  }
+  .content{
+    padding:34px 24px 60px;
+  }
+  section,
+  .repo-section{
+    max-width:none;
+    margin-bottom:52px;
+  }
+  .hero{
+    margin-bottom:52px;
+  }
+  .content > .back-link + .portfolio-nav{
+    margin-bottom:30px;
+  }
+}
+
+@media (max-width:700px){
+  .hero .lede{
+    font-size:1.03rem;
+  }
+  .project,
+  .repo-project{
+    padding-bottom:30px;
+    margin-bottom:30px;
+  }
+}
