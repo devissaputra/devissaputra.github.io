@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devissaputra.github.io/sitemap.xml
