@@ -90,15 +90,15 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>Probability calibration is evaluated on the UCI Bank Marketing dataset with 45,211 observations, 16 predictors and an 11.7% positive class. Five fixed stratified holdouts compare a class prior baseline with uncalibrated logistic regression and logistic regression calibrated by sigmoid and isotonic methods. Discrimination is reported separately from probability quality using ROC AUC, average precision, Brier score, log loss and expected calibration error.</p>
-<p>Across the five holdouts, isotonic calibration reduces mean Brier score from 0.0720 to 0.0693 while ROC AUC remains close to 0.906. The result supports improved probability calibration under the fixed protocol rather than a material change in ranking performance. Call duration is also removed in an ablation because that variable is unavailable before a call; models that include it describe a retrospective prediction task.</p></div>
+    <div class="repo-copy"><p>Probability calibration is evaluated on the UCI Bank Marketing dataset with 45,211 observations, 16 predictors and an 11.7% positive class. Five fixed stratified holdouts compare a class prior baseline with uncalibrated logistic regression and logistic regression calibrated by sigmoid and isotonic methods. Discrimination is reported separately from probability quality using ROC-AUC, average precision, Brier score, log loss and expected calibration error.</p>
+<p>Across the five holdouts, isotonic calibration reduces mean Brier score from 0.0720 to 0.0693 while ROC-AUC remains close to 0.906. The result supports improved probability calibration under the fixed protocol rather than a material change in ranking performance. Call duration is also removed in an ablation because that variable is unavailable before a call; models that include it describe a retrospective prediction task.</p></div>
     <div class="repo-evidence" aria-label="Probability calibration evidence snapshot">
       <div class="repo-evidence-item"><span class="repo-evidence-value">45,211</span><span class="repo-evidence-label">observations</span></div>
       <div class="repo-evidence-item"><span class="repo-evidence-value">11.7%</span><span class="repo-evidence-label">positive class</span></div>
       <div class="repo-evidence-item"><span class="repo-evidence-value">5</span><span class="repo-evidence-label">repeated splits</span></div>
       <div class="repo-evidence-item"><span class="repo-evidence-value">0.0074</span><span class="repo-evidence-label">isotonic ECE 10</span></div>
     </div>
-    <div class="repo-data-note"><strong>Data and provenance:</strong> UCI Bank Marketing (dataset 222), DOI 10.24432/C5K306. The runner downloads the official archive, validates the exact <code>bank full.csv</code> SHA 256, and keeps raw source data out of the repository.</div>
+    <div class="repo-data-note"><strong>Data and provenance:</strong> UCI Bank Marketing (dataset 222), DOI 10.24432/C5K306. The runner downloads the official archive, validates the exact <code>bank full.csv</code> SHA-256, and keeps raw source data out of the repository.</div>
     <div class="repo-links"><a href="https://github.com/devissaputra/classification_calibration/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/classification_calibration" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
     <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
@@ -137,7 +137,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    <div>
     
     <div class="repo-copy"><p>Global feature explanations are compared across model families and feature governance choices on the Adult income benchmark. The evaluation combines held out predictive performance, stability of permutation importance, subgroup error patterns, feature exclusion and error analysis. Predictive dependence is kept separate from causal interpretation and from claims about fairness.</p>
-<p>On the primary grouped holdout, random forest ROC AUC is 0.9174 with all features and 0.9167 after excluding race and sex. Logistic regression scores 0.9063 and 0.9052 respectively. Marital status ranks highly under permutation importance, but its measured importance changes substantially across model families. Subgroup diagnostics remain necessary after feature exclusion, so the evidence supports model dependence analysis rather than causal attribution or a fairness conclusion.</p></div>
+<p>On the primary grouped holdout, random forest ROC-AUC is 0.9174 with all features and 0.9167 after excluding race and sex. Logistic regression scores 0.9063 and 0.9052 respectively. Marital status ranks highly under permutation importance, but its measured importance changes substantially across model families. Subgroup diagnostics remain necessary after feature exclusion, so the evidence supports model dependence analysis rather than causal attribution or a fairness conclusion.</p></div>
     <div class="repo-data-note"><strong>Data source:</strong> UCI Adult / Census Income (dataset 2), DOI 10.24432/C5XW20.</div>
     <div class="repo-links"><a href="https://github.com/devissaputra/explainable_ai/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/explainable_ai" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/explainable_ai/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
@@ -148,17 +148,17 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </article>
 <article class="repo-project research-bundle" id="mini_transformers_sequences">
   <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
-    <h3>Transformer Forecasting on WDC SILSO</h3></header>
+    <h3>Transformer Forecasting on WDC-SILSO</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/review_overview.svg?v=20260926-evidence-review" alt="Does a small Transformer justify its complexity? WDC SILSO monthly sunspots, January 1749 to March 2026: 3,327 definitive observations."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/review_overview.svg?v=20260926-evidence-review" alt="Does a small Transformer justify its complexity? WDC-SILSO monthly sunspots, January 1749 to March 2026: 3,327 definitive observations."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
     <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: MAE = mean(|forecast - observed|); delta = Transformer MAE - baseline MAE."></a><figcaption>Calculation definition and source linked evidence; open for full size</figcaption></figure>
    </div>
    <div>
     
     <div class="repo-copy"><p>A compact Transformer is compared with persistence, seasonal naive, ridge regression and histogram gradient boosting on a long solar activity time series. The protocol evaluates several forecast horizons, random seed stability, sensitivity to context length, performance in early and late test periods, and behavior during periods of high solar activity.</p>
 <p>The Transformer has lower mean error than the simpler baselines at the 1 month and 6 month horizons under the recorded protocol. At 12 months, the result is less stable: mean MAE across three seeds is 24.206, compared with 23.973 for histogram gradient boosting, even though seed 42 favors the Transformer. Confidence intervals for seed 42 also cross zero against that baseline at 6 and 12 months. The evidence therefore does not support a general claim that the Transformer is consistently superior.</p></div>
-    <div class="repo-data-note"><strong>Data source:</strong> WDC SILSO Version 2.0 monthly mean total sunspot number, frozen through March 2026.</div>
+    <div class="repo-data-note"><strong>Data source:</strong> WDC-SILSO Version 2.0 monthly mean total sunspot number, frozen through March 2026.</div>
     <div class="repo-links"><a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/mini_transformers_sequences" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
     <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
@@ -189,7 +189,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </article>
 <article class="repo-project" id="pca_clustering">
   <header class="repo-project-heading"><div class="repo-kicker">AI Engineering Repository · 06</div>
-    <h3>PCA and K Means Clustering</h3></header>
+    <h3>PCA and k-means Clustering</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
     <figure class="repo-visual"><a class="figure-link" href="assets/aieng/pca_clustering/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/pca_clustering/review_overview.svg?v=20260926-evidence-review" alt="Can unlabeled chemical measurements reveal wine groups? 178 wine observations and 13 standardized chemical features."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
@@ -197,7 +197,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>Clustering and visualization are evaluated separately on the Wine dataset. K means is selected using silhouette scores in all 13 standardized features, while a two component PCA projection is used only for visualization. The selected three cluster solution has a full space silhouette of 0.2849 and a post hoc adjusted Rand index of 0.8975 against known labels. The much larger silhouette in the two dimensional projection is not used as evidence that the full feature space is equally well separated.</p></div>
+    <div class="repo-copy"><p>Clustering and visualization are evaluated separately on the Wine dataset. k-means is selected using silhouette scores in all 13 standardized features, while a two component PCA projection is used only for visualization. The selected three cluster solution has a full space silhouette of 0.2849 and a post hoc adjusted Rand index of 0.8975 against known labels. The much larger silhouette in the two dimensional projection is not used as evidence that the full feature space is equally well separated.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/pca_clustering/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/pca_clustering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/pca_clustering/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
@@ -214,7 +214,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>A multilayer perceptron is compared with multinomial logistic regression on the same standardized handwritten digit split. Logistic regression reaches 0.9778 accuracy while the multilayer perceptron reaches 0.9578, and macro F1 shows the same ordering. Retaining the negative result makes the engineering conclusion explicit: additional nonlinear capacity should justify its complexity under a defined evaluation protocol.</p></div>
+    <div class="repo-copy"><p>A multilayer perceptron is compared with multinomial logistic regression on the same standardized handwritten digit split. Logistic regression reaches 0.9778 accuracy while the multilayer perceptron reaches 0.9578, and macro-F1 shows the same ordering. Retaining the negative result makes the engineering conclusion explicit: additional nonlinear capacity should justify its complexity under a defined evaluation protocol.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/mlp_neural_network/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/mlp_neural_network" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/mlp_neural_network/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
