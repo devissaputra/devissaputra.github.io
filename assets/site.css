@@ -962,3 +962,45 @@ footer{
   #repositories .repo-visuals{grid-template-columns:1fr;}
   #repositories .repo-project-heading h3{font-size:1.24rem;}
 }
+
+
+/* Primary content split at the top of portfolio pages */
+.content-type-nav{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-top:24px;
+}
+.content-type-nav a{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:84px;
+  padding:16px 18px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--paper-raised);
+  color:var(--ink);
+  text-decoration:none;
+}
+.content-type-nav a:hover,
+.content-type-nav a:focus-visible{
+  border-color:var(--accent);
+  background:var(--accent-soft);
+  color:var(--accent-deep);
+}
+.content-type-nav strong{
+  display:block;
+  font-size:.98rem;
+  line-height:1.2;
+}
+.content-type-nav span{
+  display:block;
+  margin-top:5px;
+  color:var(--ink-soft);
+  font-size:.78rem;
+  line-height:1.35;
+}
+@media(max-width:700px){
+  .content-type-nav{grid-template-columns:1fr;}
+}
