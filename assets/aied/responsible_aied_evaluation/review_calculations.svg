@@ -1,1 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img"><title>02 / Calculation and evidence</title><desc>RECORDED EXTERNAL-DATA STUDY | full experiment not rerun in this review</desc><rect width="1200" height="840" fill="#f6f8fc"/><text x="48" y="60" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#133b65" font-weight="700">02 / Calculation and evidence</text><text x="48" y="111" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#526278" font-weight="400">RECORDED EXTERNAL-DATA STUDY | full experiment not rerun in this review</text><rect x="42" y="145" width="1116" height="142" rx="10" fill="white" stroke="#d2dce7"/><rect x="42" y="145" width="7" height="142" fill="#2365a0"/><text x="65" y="177" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#2365a0" font-weight="700">DEFINED CALCULATION</text><text x="65" y="213" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">Brier = mean((p-y)^2); selection gap = max(group rates)-min(group rates).</text><text x="60" y="328" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#128075" font-weight="700">Selected recorded values (units and context shown)</text><rect x="48" y="345" width="1104" height="51" fill="#eaf0f7"/><text x="63" y="371" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#23354b" font-weight="400">roc auc</text><text x="797" y="371" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#133b65" font-weight="700">0.8316</text><text x="950" y="371" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#23354b" font-weight="400">unitless</text><rect x="48" y="401" width="1104" height="51" fill="#ffffff"/><text x="63" y="427" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#23354b" font-weight="400">brier</text><text x="797" y="427" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#133b65" font-weight="700">0.1447</text><text x="950" y="427" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#23354b" font-weight="400">unitless</text><rect x="48" y="457" width="1104" height="51" fill="#eaf0f7"/><text x="63" y="483" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#23354b" font-weight="400">log loss</text><text x="797" y="483" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#133b65" font-weight="700">0.4501</text><text x="950" y="483" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#23354b" font-weight="400">unitless</text><rect x="48" y="513" width="1104" height="51" fill="#ffffff"/><text x="63" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#23354b" font-weight="400">ece 10</text><text x="797" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#133b65" font-weight="700">0.0413</text><text x="950" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#23354b" font-weight="400">unitless</text><text x="48" y="746" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#23354b" font-weight="400">Source: results/uci697_audit.json | SHA-256 prefix: 0259791836d078c8</text><text x="48" y="780" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#23354b" font-weight="400">Selected committed results; source values were not independently retrained in this review.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+<title id="title">Responsible AIED Evaluation, UCI 697 Study</title><desc id="desc">Data processing and audit pipeline</desc>
+<rect width="1400" height="788" fill="#F7F9FB"/>
+<style>
+.title{font-family:Georgia,serif;font-weight:700;fill:#173A63;font-size:38px}
+.subtitle{font-family:Arial,sans-serif;fill:#173A63;font-size:15px;letter-spacing:4px}
+.h{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:18px}
+.h2{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:15px}
+.txt{font-family:Arial,sans-serif;fill:#172533;font-size:14px}
+.sm{font-family:Arial,sans-serif;fill:#5C6B78;font-size:12px}
+.metric{font-family:Georgia,serif;font-weight:700;fill:#173A63;font-size:23px}
+.card{fill:#FFFFFF;stroke:#C8D5E1;stroke-width:1.2}
+.soft{fill:#EAF2F8;stroke:#D9E6F0;stroke-width:1}
+.warn{fill:#FFF0EF;stroke:#E7C2BE;stroke-width:1}
+.flow{stroke:#173A63;stroke-width:2;fill:none;marker-end:url(#arrow)}
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#173A63"/></marker></defs>
+<text x="700" y="50" text-anchor="middle" class="title">Responsible AIED Evaluation, UCI 697 Study</text>
+<line x1="250" y1="78" x2="525" y2="78" stroke="#9DB5CB"/><line x1="875" y1="78" x2="1150" y2="78" stroke="#9DB5CB"/>
+<text x="700" y="84" text-anchor="middle" class="subtitle">DATA PROCESSING AND AUDIT PIPELINE</text>
+
+<rect x="18" y="122" width="208" height="390" rx="10" class="card"/>
+<circle cx="46" cy="151" r="19" fill="#173A63"/><text x="46" y="157" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">1</text>
+<text x="74" y="157" class="h2">UCI 697 SOURCE</text>
+<ellipse cx="122" cy="220" rx="31" ry="10" fill="#BFD4E6"/><rect x="91" y="220" width="62" height="39" fill="#6EA4D7"/><ellipse cx="122" cy="259" rx="31" ry="10" fill="#2F6EAA"/>
+<text x="42" y="305" class="txt"><tspan x="42">4,424 historical</tspan><tspan x="42" dy="20">student records</tspan><tspan x="42" dy="20">36 source predictors</tspan><tspan x="42" dy="20">three-state endpoint</tspan></text>
+
+<rect x="242" y="122" width="208" height="390" rx="10" class="card"/>
+<circle cx="270" cy="151" r="19" fill="#173A63"/><text x="270" y="157" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">2</text>
+<text x="298" y="157" class="h2">TIME BOUNDARY</text>
+<line x1="282" y1="245" x2="408" y2="245" stroke="#173A63" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="312" cy="245" r="9" fill="#173A63"/><text x="312" y="225" class="sm" text-anchor="middle">enrollment</text>
+<circle cx="382" cy="245" r="9" fill="#F0A6A1"/><text x="382" y="225" class="sm" text-anchor="middle">later</text>
+<text x="265" y="300" class="txt"><tspan x="265">Remove first- and</tspan><tspan x="265" dy="20">second-semester</tspan><tspan x="265" dy="20">performance fields.</tspan><tspan x="265" dy="34">Retain 20 predictors</tspan><tspan x="265" dy="20">available at enrollment.</tspan></text>
+
+<rect x="466" y="122" width="208" height="390" rx="10" class="card"/>
+<circle cx="494" cy="151" r="19" fill="#173A63"/><text x="494" y="157" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">3</text>
+<text x="522" y="157" class="h2">AUDIT-ONLY FIELDS</text>
+<text x="490" y="220" class="txt"><tspan x="490">Gender</tspan><tspan x="490" dy="25">Nationality</tspan><tspan x="490" dy="25">International status</tspan><tspan x="490" dy="25">Educational special needs</tspan></text>
+<rect x="490" y="345" width="160" height="72" rx="8" class="soft"/><text x="570" y="373" text-anchor="middle" class="h2">Used for audit</text><text x="570" y="397" text-anchor="middle" class="h2">not model input</text>
+
+<rect x="690" y="122" width="208" height="390" rx="10" class="card"/>
+<circle cx="718" cy="151" r="19" fill="#173A63"/><text x="718" y="157" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">4</text>
+<text x="746" y="157" class="h2">MODEL SPLIT</text>
+<rect x="717" y="210" width="154" height="82" rx="8" class="soft"/><text x="794" y="240" class="metric" text-anchor="middle">3,539</text><text x="794" y="265" class="h2" text-anchor="middle">training</text>
+<rect x="717" y="310" width="154" height="82" rx="8" class="soft"/><text x="794" y="340" class="metric" text-anchor="middle">885</text><text x="794" y="365" class="h2" text-anchor="middle">holdout</text>
+<text x="717" y="435" class="txt"><tspan x="717">Fit dropout probability</tspan><tspan x="717" dy="20">model on training set.</tspan></text>
+
+<rect x="914" y="122" width="208" height="390" rx="10" class="card"/>
+<circle cx="942" cy="151" r="19" fill="#173A63"/><text x="942" y="157" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">5</text>
+<text x="970" y="157" class="h2">MODEL AUDIT</text>
+<text x="938" y="215" class="txt"><tspan x="938">Discrimination</tspan><tspan x="938" dy="24">Calibration</tspan><tspan x="938" dy="24">Subgroup errors</tspan><tspan x="938" dy="24">Allocation thresholds</tspan><tspan x="938" dy="24">Target sensitivity</tspan><tspan x="938" dy="24">Split sensitivity</tspan></text>
+<rect x="938" y="383" width="160" height="76" rx="8" class="soft"/><text x="1018" y="411" class="metric" text-anchor="middle">0.8316</text><text x="1018" y="437" class="h2" text-anchor="middle">ROC-AUC</text>
+
+<rect x="1138" y="122" width="244" height="390" rx="10" class="card"/>
+<circle cx="1166" cy="151" r="19" fill="#173A63"/><text x="1166" y="157" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">6</text>
+<text x="1194" y="157" class="h2">SUPPORT AND UNCERTAINTY</text>
+<text x="1160" y="215" class="txt"><tspan x="1160">10 repeated stratified splits</tspan><tspan x="1160" dy="22">200 training-refit bootstrap runs</tspan><tspan x="1160" dy="22">1,000 conditional holdout</tspan><tspan x="1160" dy="22">bootstrap iterations</tspan></text>
+<rect x="1160" y="333" width="198" height="117" rx="8" class="warn"/><text x="1178" y="362" class="h2" style="fill:#9F3D45">Audit support</text><text x="1178" y="389" class="txt"><tspan x="1178">Gender: evaluable</tspan><tspan x="1178" dy="20">International: not evaluable</tspan><tspan x="1178" dy="20">Intersectional: not evaluable</tspan></text>
+
+<path d="M226 320 L239 320" class="flow"/><path d="M450 320 L463 320" class="flow"/><path d="M674 320 L687 320" class="flow"/><path d="M898 320 L911 320" class="flow"/><path d="M1122 320 L1135 320" class="flow"/>
+
+<rect x="18" y="550" width="1364" height="177" rx="10" class="card"/>
+<text x="42" y="586" class="h">INTERPRETATION AND GOVERNANCE BOUNDARY</text>
+<rect x="42" y="610" width="210" height="82" rx="8" class="soft"/><text x="147" y="638" class="metric" text-anchor="middle">0.1447</text><text x="147" y="664" class="h2" text-anchor="middle">Brier score</text>
+<text x="290" y="625" class="txt"><tspan x="290">These results describe one historical Portuguese higher-education dataset and one modeling protocol.</tspan><tspan x="290" dy="22">Incomplete evidence for privacy, accessibility, oversight, appeal, rollback, monitoring and external validation</tspan><tspan x="290" dy="22">means the study is not a fairness certification, legal determination or deployment approval.</tspan></text>
+</svg>
