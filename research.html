@@ -572,9 +572,11 @@
     <section class="hero" id="overview">
       <h2>Portfolio in Research</h2>
       <p class="lede">This portfolio brings together empirical studies, degree research, applied research projects and system implementation experience. The work spans engineering, information systems, operations and education, with a growing focus on Artificial Intelligence in Education. Data sources, methods, results and limitations are stated explicitly to distinguish empirical findings from applied implementation and ongoing research development.</p>
-      <div class="content-type-nav" aria-label="Research content types">
-        <a href="#system-engineering"><strong>Empirical Studies</strong><span>Four reproducible System Engineering studies with external datasets and explicit evidence limits.</span></a>
-        <a href="#degree-research"><strong>Research Projects &amp; Experience</strong><span>Degree research, applied research projects and system implementation experience.</span></a>
+      <div class="item-index empirical-index" aria-label="Empirical studies">
+        <a href="#empirical_engineering_tradespace">Trade Space</a>
+        <a href="#requirements_evidence_triage">Requirements Triage</a>
+        <a href="#technical_performance_margin_monitor">Battery Prognostics</a>
+        <a href="#engineering_change_dynamics">Engineering Change</a>
       </div>
     </section>
 
@@ -705,14 +707,24 @@
     </section>
     <!-- SYSTEM ENGINEERING EMPIRICAL STUDIES END -->
 
+    <div class="item-index repo-index" aria-label="Research projects and experience">
+      <a href="#mba_flat_organizations">Flat Organizations</a>
+      <a href="#geotagged_image_retrieval">Image Retrieval</a>
+      <a href="#andaliman_dryer">Andaliman Dryer</a>
+      <a href="#geothermal_exergy">Geothermal Exergy</a>
+      <a href="#supply_chain_optimization">Supply Chain Optimization</a>
+      <a href="#independent_learning_consulting">Independent Consulting</a>
+      <a href="#rocketversity_system">Rocketversity</a>
+      <a href="#astra_lean_lab">Astra Lean Lab</a>
+      <a href="#opensrp_performance">OpenSRP</a>
+    </div>
+
     <section id="degree-research">
       <div class="eyebrow-rule"><h2>Degree Research</h2></div>
       <p class="repo-section-intro">Degree research covers my MBA study of leadership in flat organizations and my Informatics thesis on image retrieval using geographic metadata. These projects show the academic foundations behind my later work in organizational systems, information retrieval and data driven analysis.</p>
 
       <div class="research-list">
-        <article class="research-card">
-          <div class="meta">
-            <span class="type">MBA Thesis</span>
+        <article class="research-card" id="mba_flat_organizations">\n          <div class="meta">\n            <span class="type">MBA Thesis</span>
             <span>Würzburg University of Applied Sciences, now THWS</span>
             <span>2013 thesis; degree completed 2014</span>
           </div>
@@ -723,9 +735,7 @@
           </ul>
         </article>
 
-        <article class="research-card">
-          <div class="meta">
-            <span class="type">B.Eng. Thesis</span>
+        <article class="research-card" id="geotagged_image_retrieval">\n          <div class="meta">\n            <span class="type">B.Eng. Thesis</span>
             <span>Institut Teknologi Bandung (ITB)</span>
             <span>2010</span>
           </div>
@@ -744,9 +754,7 @@
       <p class="repo-section-intro">These projects document applied and published research in tourism, product development and energy systems. Each entry identifies my role, the research problem and the resulting scholarly or practical output.</p>
 
       <div class="research-list">
-        <article class="research-card">
-          <div class="meta">
-            <span class="type">Applied Research &amp; Product Development</span>
+        <article class="research-card" id="andaliman_dryer">\n          <div class="meta">\n            <span class="type">Applied Research &amp; Product Development</span>
             <span>2019</span>
           </div>
           <h3>Design and Development of an Andaliman Dryer Using Quality Function Deployment</h3>
@@ -759,9 +767,7 @@
           </div>
         </article>
 
-        <article class="research-card">
-          <div class="meta">
-            <span class="type">Nationally Competitive Research</span>
+        <article class="research-card" id="geothermal_exergy">\n          <div class="meta">\n            <span class="type">Nationally Competitive Research</span>
             <span>2019</span>
           </div>
           <h3>Performance Investigation of Geothermal Power Plant Based on Exergy and Exergoeconomic Analyses</h3>
@@ -773,9 +779,7 @@
           </div>
         </article>
 
-        <article class="research-card">
-          <div class="meta">
-            <span class="type">R&amp;D Engineering</span>
+        <article class="research-card" id="supply_chain_optimization">\n          <div class="meta">\n            <span class="type">R&amp;D Engineering</span>
             <span>PT Cipta Srigati Lestari</span>
             <span>2011</span>
           </div>
@@ -793,29 +797,25 @@
       <p class="repo-section-intro">System experience documents implementation work in learning systems, teaching laboratories, digital health workflows and AI evaluation. These cases show how analytical and technical methods were translated into operational settings.</p>
 
       <div class="system-grid">
-        <article class="system-card">
-          <div class="year">2025 to present</div>
+        <article class="system-card" id="independent_learning_consulting">\n          <div class="year">2025 to present</div>
           <h3>Independent Learning Consultant &amp; AI Evaluation</h3>
           <div class="org">Independent consulting</div>
           <p>Since January 2025, my independent work has combined learning design, research synthesis and evaluation of AI outputs for response quality, domain accuracy and safety. The research portfolio extends this work into Python, learner modeling, retrieval evaluation and responsible AI evaluation.</p>
         </article>
 
-        <article class="system-card">
-          <div class="year">2023 to 2024</div>
+        <article class="system-card" id="rocketversity_system">\n          <div class="year">2023 to 2024</div>
           <h3>Rocketversity Learning System Implementation &amp; Evaluation</h3>
           <div class="org">Suitmedia</div>
           <p>Led Rocketversity with a team of four and established 120 SCORM compliant courses in a customized Moodle learning system. The work included auditing departmental material, structuring reusable courses and coordinating manager approval and trainer ownership. Around 100 employees were onboarded, and the project case study reported a 30% reduction in onboarding time.</p>
         </article>
 
-        <article class="system-card">
-          <div class="year">2018</div>
+        <article class="system-card" id="astra_lean_lab">\n          <div class="year">2018</div>
           <h3>Astra Lean Production System Teaching Laboratory</h3>
           <div class="org">Institut Teknologi Del</div>
           <p>Contributed to a teaching laboratory for production systems and helped translate lean production concepts into structured practical activities covering 5S and 5R, waste identification, flow improvement, kanban, just in time production, standardized work and continuous improvement.</p>
         </article>
 
-        <article class="system-card">
-          <div class="year">2015</div>
+        <article class="system-card" id="opensrp_performance">\n          <div class="year">2015</div>
           <h3>OpenSRP Implementation &amp; Field Performance Analysis</h3>
           <div class="org">Summit Institute for Development</div>
           <p>Supported implementation of an Android maternal and child health workflow system across 16 districts while directing four developers and six field workers. A field timing analysis identified an XLSForm performance bottleneck. I then coordinated an interim form restructuring approach that reduced loading time from as much as 20 minutes to under 10 seconds for most forms.</p>
