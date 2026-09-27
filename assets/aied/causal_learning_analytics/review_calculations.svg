@@ -1,23 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
-<title id="title">Causal Learning Analytics, OULAD Day 30 Landmark Study</title><desc id="desc">Data processing and analysis pipeline</desc><rect width="1400" height="788" fill="#F7F9FB"/>
-<style>.title{font-family:Georgia,serif;font-weight:700;fill:#173A63;font-size:38px}.subtitle{font-family:Arial,sans-serif;fill:#173A63;font-size:15px;letter-spacing:4px}.h{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:18px}.h2{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:15px}.txt{font-family:Arial,sans-serif;fill:#172533;font-size:14px}.card{fill:#FFFFFF;stroke:#C8D5E1;stroke-width:1.2}.flow{stroke:#173A63;stroke-width:2;fill:none;marker-end:url(#arrow)}</style>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#173A63"/></marker></defs>
-<text x="700" y="50" text-anchor="middle" class="title">Causal Learning Analytics, OULAD Day 30 Landmark Study</text><line x1="240" y1="78" x2="545" y2="78" stroke="#9DB5CB"/><line x1="855" y1="78" x2="1160" y2="78" stroke="#9DB5CB"/><text x="700" y="84" text-anchor="middle" class="subtitle">DATA PROCESSING AND ANALYSIS PIPELINE</text>
-<rect x="16" y="125" width="180" height="390" rx="10" class="card"/><circle cx="42" cy="154" r="19" fill="#173A63"/><text x="42" y="160" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">1</text><text x="66" y="160" class="h2">OULAD SOURCE</text><text x="36" y="205" class="txt">CCC 2014J records</text>
-<rect x="210" y="125" width="180" height="390" rx="10" class="card"/><circle cx="236" cy="154" r="19" fill="#173A63"/><text x="236" y="160" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">2</text><text x="260" y="160" class="h2">LANDMARK</text><text x="230" y="205" class="txt">keep day-30 eligible</text>
-<rect x="404" y="125" width="180" height="390" rx="10" class="card"/><circle cx="430" cy="154" r="19" fill="#173A63"/><text x="430" y="160" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">3</text><text x="454" y="160" class="h2">EXPOSURE</text><text x="424" y="205" class="txt">submission by day 30</text>
-<rect x="598" y="125" width="180" height="390" rx="10" class="card"/><circle cx="624" cy="154" r="19" fill="#173A63"/><text x="624" y="160" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">4</text><text x="648" y="160" class="h2">COVARIATES</text><text x="618" y="205" class="txt">pre-exposure only</text>
-<rect x="792" y="125" width="180" height="390" rx="10" class="card"/><circle cx="818" cy="154" r="19" fill="#173A63"/><text x="818" y="160" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">5</text><text x="842" y="160" class="h2">WEIGHTS</text><text x="812" y="205" class="txt">logistic propensity</text>
-<rect x="986" y="125" width="180" height="390" rx="10" class="card"/><circle cx="1012" cy="154" r="19" fill="#173A63"/><text x="1012" y="160" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">6</text><text x="1036" y="160" class="h2">DIAGNOSTICS</text><text x="1006" y="205" class="txt">overlap and balance</text>
-<rect x="1180" y="125" width="180" height="390" rx="10" class="card"/><circle cx="1206" cy="154" r="19" fill="#173A63"/><text x="1206" y="160" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">7</text><text x="1230" y="160" class="h2">CONTRAST</text><text x="1200" y="205" class="txt">Hájek + bootstrap</text>
-<path d="M 196 330 L 208 330" class="flow"/><path d="M 390 330 L 402 330" class="flow"/><path d="M 584 330 L 596 330" class="flow"/><path d="M 778 330 L 790 330" class="flow"/><path d="M 972 330 L 984 330" class="flow"/><path d="M 1166 330 L 1178 330" class="flow"/>
-<ellipse cx="106" cy="285" rx="28" ry="10" fill="#6EA4D7"/><rect x="78" y="285" width="56" height="36" fill="#6EA4D7"/><ellipse cx="106" cy="321" rx="28" ry="10" fill="#2F6EAA"/><ellipse cx="106" cy="285" rx="28" ry="10" fill="#BFD4E6"/>
-<text x="35" y="350" class="txt"><tspan x="35">Cohort: CCC 2014J</tspan><tspan x="35" dy="20">Day 30 landmark</tspan><tspan x="35" dy="20">Source: OULAD / UCI</tspan><tspan x="35" dy="20">349</tspan></text>
-<text x="228" y="270" class="txt"><tspan x="228">1,983 eligible before</tspan><tspan x="228" dy="20">complete-case filtering</tspan><tspan x="228" dy="20">1,820 complete</tspan><tspan x="228" dy="20">supported cases</tspan></text>
-<text x="422" y="270" class="txt"><tspan x="422">1,624 exposed</tspan><tspan x="422" dy="20">196 control</tspan><tspan x="422" dy="20">Outcome observed</tspan><tspan x="422" dy="20">after day 30</tspan></text>
-<text x="616" y="270" class="txt"><tspan x="616">Use observed</tspan><tspan x="616" dy="20">pre-exposure</tspan><tspan x="616" dy="20">characteristics only.</tspan><tspan x="616" dy="20">No post-landmark</tspan><tspan x="616" dy="20">outcome information.</tspan></text>
-<text x="810" y="270" class="txt"><tspan x="810">ATE-style inverse</tspan><tspan x="810" dy="20">probability weights</tspan><tspan x="810" dy="20">Treated: 1/e</tspan><tspan x="810" dy="20">Control: 1/(1-e)</tspan></text>
-<text x="1004" y="270" class="txt"><tspan x="1004">Check common support</tspan><tspan x="1004" dy="20">standardized mean</tspan><tspan x="1004" dy="20">differences</tspan><tspan x="1004" dy="20">weight magnitude</tspan><tspan x="1004" dy="20">effective sample size</tspan></text>
-<text x="1198" y="270" class="txt"><tspan x="1198">Hájek contrast 0.3861</tspan><tspan x="1198" dy="20">Bootstrap 95% CI</tspan><tspan x="1198" dy="20">0.3242–0.4447</tspan><tspan x="1198" dy="20">Overlap sensitivity</tspan><tspan x="1198" dy="20">0.3261</tspan></text>
-<rect x="16" y="555" width="1344" height="170" rx="10" class="card"/><text x="40" y="590" class="h">INTERPRETATION BOUNDARY</text><text x="40" y="625" class="txt"><tspan x="40">Weighting can reduce measured imbalance but does not remove unmeasured confounding or selection. The reported values are</tspan><tspan x="40" dy="21">observational contrasts. The analysis does not establish that requiring early submission would improve learner outcomes.</tspan></text>
+<title id="title">Early Assessment Submission and Later Outcomes in OULAD — data processing pipeline</title>
+<desc id="desc">Step-by-step data preparation, modelling and evaluation workflow.</desc>
+<rect width="1400" height="788" fill="#F8FAFC"/>
+<style>
+.title{font:700 38px Georgia,serif;fill:#173A63}.sub{font:600 14px Arial,sans-serif;fill:#5B6B7A;letter-spacing:3px}.step{fill:#FFF;stroke:#CBD6E0;stroke-width:1.4}.num{fill:#C96B2C}.h{font:700 15px Arial,sans-serif;fill:#173A63}.body{font:13px Arial,sans-serif;fill:#263846}.small{font:12px Arial,sans-serif;fill:#61717E}.note{fill:#FFF1E6;stroke:#C96B2C;stroke-width:1.2}.arrow{stroke:#C96B2C;stroke-width:2.4;fill:none;marker-end:url(#arrow)}
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#C96B2C"/></marker></defs>
+<text x="700" y="50" text-anchor="middle" class="title">Early Assessment Submission and Later Outcomes in OULAD</text>
+<text x="700" y="82" text-anchor="middle" class="sub">DATA PROCESSING + ANALYSIS WORKFLOW</text>
+
+<rect x="28" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="58" cy="174" r="18" class="num"/><text x="58" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">1</text>
+<text x="48" y="217" class="h"><tspan x="48">1. DEFINE COHORT</tspan></text>
+<text x="48" y="286" class="body"><tspan x="48">Load OULAD tables</tspan><tspan x="48" dy="21">Select CCC 2014J</tspan><tspan x="48" dy="21">Apply day-30 eligibility</tspan><tspan x="48" dy="21">Freeze analysis population</tspan></text>
+<path d="M228 335 H246" class="arrow"/>
+<rect x="252" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="282" cy="174" r="18" class="num"/><text x="282" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">2</text>
+<text x="272" y="217" class="h"><tspan x="272">2. DEFINE EXPOSURE</tspan></text>
+<text x="272" y="286" class="body"><tspan x="272">Find non-banked assessments</tspan><tspan x="272" dy="21">Classify submission by day 30</tspan><tspan x="272" dy="21">Keep timing explicit</tspan><tspan x="272" dy="21">No post-landmark leakage</tspan></text>
+<path d="M452 335 H470" class="arrow"/>
+<rect x="476" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="506" cy="174" r="18" class="num"/><text x="506" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">3</text>
+<text x="496" y="217" class="h"><tspan x="496">3. BUILD COVARIATES</tspan></text>
+<text x="496" y="286" class="body"><tspan x="496">Use pre-exposure information</tspan><tspan x="496" dy="21">Encode supported complete cases</tspan><tspan x="496" dy="21">Track missingness rules</tspan><tspan x="496" dy="21">Separate later outcome</tspan></text>
+<path d="M676 335 H694" class="arrow"/>
+<rect x="700" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="730" cy="174" r="18" class="num"/><text x="730" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">4</text>
+<text x="720" y="217" class="h"><tspan x="720">4. WEIGHT</tspan></text>
+<text x="720" y="286" class="body"><tspan x="720">Fit propensity model</tspan><tspan x="720" dy="21">Compute inverse weights</tspan><tspan x="720" dy="21">Normalize with Hájek form</tspan><tspan x="720" dy="21">Inspect extreme weights</tspan></text>
+<path d="M900 335 H918" class="arrow"/>
+<rect x="924" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="954" cy="174" r="18" class="num"/><text x="954" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">5</text>
+<text x="944" y="217" class="h"><tspan x="944">5. DIAGNOSE</tspan></text>
+<text x="944" y="286" class="body"><tspan x="944">Balance before/after</tspan><tspan x="944" dy="21">Overlap and ESS</tspan><tspan x="944" dy="21">Full-refit bootstrap</tspan><tspan x="944" dy="21">Overlap-weight sensitivity</tspan></text>
+<path d="M1124 335 H1142" class="arrow"/>
+<rect x="1148" y="142" width="200" height="388" rx="11" class="step"/>
+<circle cx="1178" cy="174" r="18" class="num"/><text x="1178" y="180" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">6</text>
+<text x="1168" y="217" class="h"><tspan x="1168">6. INTERPRET</tspan></text>
+<text x="1168" y="286" class="body"><tspan x="1168">Adjusted favorable-outcome contrast</tspan><tspan x="1168" dy="21">Report uncertainty</tspan><tspan x="1168" dy="21">Surface residual imbalance</tspan><tspan x="1168" dy="21">State non-causal boundary</tspan></text>
+
+<rect x="28" y="568" width="1344" height="112" rx="10" class="note"/>
+<text x="50" y="603" class="h">Landmark logic</text>
+<text x="50" y="632" class="body"><tspan x="50">Eligibility, exposure and later outcome are separated in time so early withdrawal is not quietly mixed with exposure assignment.</tspan></text>
+<text x="28" y="732" class="small">Workflow purpose: make an observational learning-analytics comparison explicit about timing, overlap and causal limits.</text>
 </svg>
