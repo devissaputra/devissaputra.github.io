@@ -1000,15 +1000,15 @@ footer{
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:72px;
-  padding:14px 16px;
+  min-height:66px;
+  padding:12px 14px;
   border:1px solid var(--line);
   border-radius:7px;
   background:var(--paper-raised);
   color:var(--ink);
   text-align:center;
   text-decoration:none;
-  font-size:.86rem;
+  font-size:.83rem;
   font-weight:600;
   line-height:1.3;
 }
