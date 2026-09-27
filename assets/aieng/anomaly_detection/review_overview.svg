@@ -1,1 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img"><title>01 / When do label-blind detectors produce useful alerts?</title><desc>RECORDED EXTERNAL-DATA STUDY | full experiment not rerun in this review</desc><rect width="1200" height="840" fill="#f6f8fc"/><text x="48" y="60" font-family="DejaVu Sans,Arial,sans-serif" font-size="28" fill="#133b65" font-weight="700">01 / When do label-blind detectors produce useful alerts?</text><text x="48" y="111" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#526278" font-weight="400">RECORDED EXTERNAL-DATA STUDY | full experiment not rerun in this review</text><rect x="42" y="145" width="1116" height="134" rx="10" fill="white" stroke="#d2dce7"/><rect x="42" y="145" width="7" height="134" fill="#2365a0"/><text x="65" y="177" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#2365a0" font-weight="700">DATA / OBSERVATION UNIT</text><text x="65" y="213" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">Four realKnownCause NAB streams; pinned data and annotation hashes.</text><rect x="42" y="295" width="1116" height="166" rx="10" fill="white" stroke="#d2dce7"/><rect x="42" y="295" width="7" height="166" fill="#128075"/><text x="65" y="327" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#128075" font-weight="700">DESIGN / COMPARISON</text><text x="65" y="363" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">Fit on first 50%; calibrate on next 20%; evaluate on final 30%. Compare Isolation Forest</text><text x="65" y="394" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">with prior-history median/MAD deviations.</text><rect x="42" y="477" width="1116" height="270" rx="10" fill="white" stroke="#d2dce7"/><rect x="42" y="477" width="7" height="270" fill="#8b4d27"/><text x="65" y="509" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#8b4d27" font-weight="700">FINDING / INTERPRETATION</text><text x="65" y="545" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">At the 5% validation alert budget, the primary Isolation Forest test false-positive rate</text><text x="65" y="576" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">ranges from 0.0300 to 0.2338 across the four streams. This variation is central to the</text><text x="65" y="607" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">finding: a fixed calibration budget does not guarantee a stable operating point after</text><text x="65" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">temporal change. Repeated seeds and history-window checks describe robustness on these</text><text x="65" y="669" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">streams, not independent replications.</text><text x="48" y="796" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#23354b" font-weight="400">Read the calculation guide for source paths, assumptions and reproduction status.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+<title id="title">Label-Blind Threshold-Aware Anomaly Detection on NAB</title><desc id="desc">STUDY OVERVIEW</desc>
+<rect width="1400" height="788" fill="#F7F9FB"/>
+
+<style>
+.title{font-family:Georgia,serif;font-weight:700;fill:#173A63;font-size:38px}
+.subtitle{font-family:Arial,sans-serif;fill:#173A63;font-size:15px;letter-spacing:4px}
+.h{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:18px}
+.h2{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:15px}
+.txt{font-family:Arial,sans-serif;fill:#172533;font-size:14px}
+.sm{font-family:Arial,sans-serif;fill:#5C6B78;font-size:12px}
+.metric{font-family:Georgia,serif;font-weight:700;fill:#173A63;font-size:24px}
+.card{fill:#FFFFFF;stroke:#C8D5E1;stroke-width:1.2}
+.soft{fill:#EAF2F8;stroke:#D9E6F0;stroke-width:1}
+.warn{fill:#FFF0EF;stroke:#E7C2BE;stroke-width:1}
+.good{fill:#EAF6F1;stroke:#C2DED3;stroke-width:1}
+.flow{stroke:#173A63;stroke-width:2;fill:none;marker-end:url(#arrow)}
+.axis{stroke:#8094A7;stroke-width:1.2}
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#173A63"/></marker></defs>
+<text x="700" y="50" text-anchor="middle" class="title">Label-Blind Threshold-Aware Anomaly Detection on NAB</text>
+<line x1="230" y1="78" x2="540" y2="78" stroke="#9DB5CB"/><line x1="860" y1="78" x2="1170" y2="78" stroke="#9DB5CB"/>
+<text x="700" y="84" text-anchor="middle" class="subtitle">STUDY OVERVIEW</text>
+
+<rect x="18" y="110" width="445" height="250" rx="10" class="card"/><circle cx="48" cy="140" r="19" fill="#173A63"/><text x="48" y="146" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">1</text><text x="82" y="146" class="h">QUESTION AND DATA</text>
+<text x="45" y="190" class="h"><tspan x="45">When does a label-blind detector produce</tspan><tspan x="45" dy="23">useful alerts after temporal change?</tspan></text>
+<rect x="45" y="255" width="390" height="80" rx="8" class="soft"/><text x="240" y="285" class="metric" text-anchor="middle">4</text><text x="240" y="310" class="h2" text-anchor="middle">NAB realKnownCause streams, frozen revision and hashes</text>
+
+<rect x="480" y="110" width="900" height="250" rx="10" class="card"/><circle cx="510" cy="140" r="19" fill="#173A63"/><text x="510" y="146" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">2</text><text x="544" y="146" class="h">LABEL-BLIND OPERATING POINT</text>
+<line x1="550" y1="230" x2="1260" y2="230" class="flow"/>
+<circle cx="620" cy="230" r="9" fill="#173A63"/><text x="620" y="205" class="sm" text-anchor="middle">fit 50%</text>
+<circle cx="850" cy="230" r="9" fill="#2F6EAA"/><text x="850" y="205" class="sm" text-anchor="middle">validate 20%</text>
+<circle cx="1080" cy="230" r="9" fill="#6EA4D7"/><text x="1080" y="205" class="sm" text-anchor="middle">test 30%</text>
+<text x="550" y="285" class="txt"><tspan x="550">Isolation Forest and a robust prior-history baseline are fitted without benchmark labels.</tspan><tspan x="550" dy="20">The threshold is fixed from validation scores before labels are used for evaluation.</tspan></text>
+
+<rect x="18" y="385" width="850" height="360" rx="10" class="card"/><circle cx="48" cy="415" r="19" fill="#173A63"/><text x="48" y="421" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">3</text><text x="82" y="421" class="h">TEST FALSE-POSITIVE RATE AT 5% VALIDATION ALERT BUDGET</text>
+<line x1="80" y1="660" x2="790" y2="660" class="axis"/>
+<rect x="120" y="470" width="95" height="190" rx="3" fill="#173A63"/><text x="168" y="462" class="sm" text-anchor="middle">0.2338</text><text x="168" y="680" class="sm" text-anchor="middle">Ambient</text>
+<rect x="285" y="573" width="95" height="87" rx="3" fill="#2F6EAA"/><text x="333" y="565" class="sm" text-anchor="middle">0.1070</text><text x="333" y="680" class="sm" text-anchor="middle">CPU</text>
+<rect x="450" y="636" width="95" height="24" rx="3" fill="#7EA7CF"/><text x="498" y="628" class="sm" text-anchor="middle">0.0300</text><text x="498" y="680" class="sm" text-anchor="middle">Latency</text>
+<rect x="615" y="583" width="95" height="77" rx="3" fill="#5489BE"/><text x="663" y="575" class="sm" text-anchor="middle">0.0948</text><text x="663" y="680" class="sm" text-anchor="middle">Machine temp.</text>
+<text x="80" y="712" class="h2">The same 5% validation budget produces very different test operating points.</text>
+
+<rect x="890" y="385" width="490" height="360" rx="10" class="card"/><circle cx="920" cy="415" r="19" fill="#173A63"/><text x="920" y="421" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">4</text><text x="954" y="421" class="h">INTERPRETATION</text>
+<rect x="920" y="478" width="420" height="85" rx="8" class="warn"/><text x="942" y="505" class="h2">Budget ≠ future false-alarm probability</text><text x="942" y="532" class="txt">Temporal shift can move the operating point substantially.</text>
+<rect x="920" y="578" width="420" height="85" rx="8" class="soft"/><text x="942" y="605" class="h2">Robustness checks</text><text x="942" y="632" class="txt">Repeated seeds and history windows test sensitivity on the same streams.</text>
+<text x="942" y="700" class="sm">These are not official NAB leaderboard scores.</text>
+
+</svg>
