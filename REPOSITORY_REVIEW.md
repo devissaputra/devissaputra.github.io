@@ -16,7 +16,7 @@ This site-wide pass verifies internal numerical consistency between committed re
 
 ---
 
-# AI portfolio repository review
+## Previous AI repository review
 
 **Repository completion: 39/39.**
 
