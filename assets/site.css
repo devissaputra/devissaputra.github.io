@@ -792,3 +792,90 @@ footer{
     margin-bottom:30px;
   }
 }
+
+
+/* AIEd empirical studies — professor-review layout v3 */
+#research-bundles .repo-section-intro{
+  max-width:790px;
+  margin-bottom:28px;
+  font-size:.97rem;
+  line-height:1.68;
+}
+#research-bundles .research-bundle{
+  padding:24px 24px 26px;
+  margin-bottom:30px;
+  border:1px solid #C8D6E3;
+  border-left:4px solid var(--research-blue);
+  border-radius:8px;
+  background:#F8FAFC;
+}
+#research-bundles .repo-project-heading{
+  margin-bottom:18px;
+}
+#research-bundles .repo-project-heading h3{
+  max-width:760px;
+  font-size:1.42rem;
+  line-height:1.22;
+}
+#research-bundles .repo-project-grid{
+  grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);
+  gap:28px;
+}
+#research-bundles .repo-visuals{
+  gap:14px;
+}
+#research-bundles .repo-visual{
+  border-color:#C8D6E3;
+  background:#fff;
+  box-shadow:0 1px 2px rgba(23,58,99,.05);
+}
+#research-bundles .repo-visual img{
+  background:#F8FAFC;
+}
+#research-bundles .repo-visual figcaption{
+  padding:8px 10px 9px;
+  background:#fff;
+  color:#40515F;
+  font-size:.73rem;
+  font-weight:600;
+  letter-spacing:.01em;
+}
+#research-bundles .repo-copy{
+  font-size:.95rem;
+  line-height:1.72;
+}
+#research-bundles .repo-copy p{
+  margin-bottom:14px;
+}
+#research-bundles .repo-evidence{
+  gap:7px;
+  margin-top:16px;
+}
+#research-bundles .repo-evidence-item{
+  min-height:68px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:#fff;
+}
+#research-bundles .repo-data-note{
+  margin-top:14px;
+  padding:11px 12px;
+  line-height:1.55;
+}
+#research-bundles .repo-links{
+  gap:7px;
+  margin-top:15px;
+}
+#research-bundles .repo-links a{
+  background:#fff;
+}
+@media(max-width:1050px){
+  #research-bundles .repo-project-grid{grid-template-columns:1fr;}
+  #research-bundles .repo-visuals{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:700px){
+  #research-bundles .research-bundle{padding:18px 14px 20px;}
+  #research-bundles .repo-visuals{grid-template-columns:1fr;}
+  #research-bundles .repo-project-heading h3{font-size:1.28rem;}
+}
