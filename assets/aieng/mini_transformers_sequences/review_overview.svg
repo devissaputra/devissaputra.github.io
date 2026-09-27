@@ -1,1 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img"><title>01 / Does a small Transformer justify its complexity?</title><desc>RECORDED EXTERNAL-DATA STUDY | full experiment not rerun in this review</desc><rect width="1200" height="840" fill="#f6f8fc"/><text x="48" y="60" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#133b65" font-weight="700">01 / Does a small Transformer justify its complexity?</text><text x="48" y="111" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#526278" font-weight="400">RECORDED EXTERNAL-DATA STUDY | full experiment not rerun in this review</text><rect x="42" y="145" width="1116" height="134" rx="10" fill="white" stroke="#d2dce7"/><rect x="42" y="145" width="7" height="134" fill="#2365a0"/><text x="65" y="177" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#2365a0" font-weight="700">DATA / OBSERVATION UNIT</text><text x="65" y="213" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">WDC-SILSO monthly sunspots, January 1749 to March 2026: 3,327 definitive observations.</text><rect x="42" y="295" width="1116" height="166" rx="10" fill="white" stroke="#d2dce7"/><rect x="42" y="295" width="7" height="166" fill="#128075"/><text x="65" y="327" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#128075" font-weight="700">DESIGN / COMPARISON</text><text x="65" y="363" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">Common chronological target dates; validation-selected baselines; 1-, 6- and 12-month</text><text x="65" y="394" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">direct forecasts; three Transformer seeds.</text><rect x="42" y="477" width="1116" height="270" rx="10" fill="white" stroke="#d2dce7"/><rect x="42" y="477" width="7" height="270" fill="#8b4d27"/><text x="65" y="509" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#8b4d27" font-weight="700">FINDING / INTERPRETATION</text><text x="65" y="545" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">The Transformer has lower mean error than the simpler baselines at the 1- and 6-month</text><text x="65" y="576" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">horizons under the recorded protocol. The 12-month result is less stable: its three-seed</text><text x="65" y="607" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">mean MAE is 24.206, versus 23.973 for histogram gradient boosting, despite seed 42</text><text x="65" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">favoring the Transformer. The seed-42 intervals against that baseline also cross zero at</text><text x="65" y="669" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">6 and 12 months. This qualifies any broad claim that the Transformer is consistently</text><text x="65" y="700" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">superior.</text><text x="48" y="796" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#23354b" font-weight="400">Read the calculation guide for source paths, assumptions and reproduction status.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+<title id="title">Transformer Forecasting on WDC-SILSO</title><desc id="desc">STUDY OVERVIEW</desc>
+<rect width="1400" height="788" fill="#F7F9FB"/>
+
+<style>
+.title{font-family:Georgia,serif;font-weight:700;fill:#173A63;font-size:38px}
+.subtitle{font-family:Arial,sans-serif;fill:#173A63;font-size:15px;letter-spacing:4px}
+.h{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:18px}
+.h2{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:15px}
+.txt{font-family:Arial,sans-serif;fill:#172533;font-size:14px}
+.sm{font-family:Arial,sans-serif;fill:#5C6B78;font-size:12px}
+.metric{font-family:Georgia,serif;font-weight:700;fill:#173A63;font-size:24px}
+.card{fill:#FFFFFF;stroke:#C8D5E1;stroke-width:1.2}
+.soft{fill:#EAF2F8;stroke:#D9E6F0;stroke-width:1}
+.warn{fill:#FFF0EF;stroke:#E7C2BE;stroke-width:1}
+.good{fill:#EAF6F1;stroke:#C2DED3;stroke-width:1}
+.flow{stroke:#173A63;stroke-width:2;fill:none;marker-end:url(#arrow)}
+.axis{stroke:#8094A7;stroke-width:1.2}
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#173A63"/></marker></defs>
+<text x="700" y="50" text-anchor="middle" class="title">Transformer Forecasting on WDC-SILSO</text>
+<line x1="230" y1="78" x2="540" y2="78" stroke="#9DB5CB"/><line x1="860" y1="78" x2="1170" y2="78" stroke="#9DB5CB"/>
+<text x="700" y="84" text-anchor="middle" class="subtitle">STUDY OVERVIEW</text>
+
+<rect x="18" y="110" width="445" height="250" rx="10" class="card"/><circle cx="48" cy="140" r="19" fill="#173A63"/><text x="48" y="146" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">1</text><text x="82" y="146" class="h">QUESTION AND DATA</text>
+<text x="45" y="190" class="h"><tspan x="45">Does a compact Transformer justify its</tspan><tspan x="45" dy="23">complexity on a long solar time series?</tspan></text>
+<rect x="45" y="250" width="180" height="88" rx="8" class="soft"/><text x="135" y="282" class="metric" text-anchor="middle">3,327</text><text x="135" y="307" class="h2" text-anchor="middle">monthly observations</text>
+<rect x="240" y="250" width="195" height="88" rx="8" class="soft"/><text x="338" y="282" class="metric" text-anchor="middle">1749–2026</text><text x="338" y="307" class="h2" text-anchor="middle">frozen study era</text>
+
+<rect x="480" y="110" width="900" height="250" rx="10" class="card"/><circle cx="510" cy="140" r="19" fill="#173A63"/><text x="510" y="146" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">2</text><text x="544" y="146" class="h">COMMON CHRONOLOGY, MULTIPLE HORIZONS</text>
+<text x="540" y="200" class="txt"><tspan x="540">Direct forecasts at 1, 6 and 12 months. Same validation and test target dates across models.</tspan><tspan x="540" dy="20">Comparators: persistence, seasonal naive, ridge regression, histogram gradient boosting and a compact Transformer.</tspan></text>
+<line x1="560" y1="300" x2="1270" y2="300" class="flow"/><circle cx="640" cy="300" r="9" fill="#6EA4D7"/><text x="640" y="277" class="sm" text-anchor="middle">train</text><circle cx="900" cy="300" r="9" fill="#2F6EAA"/><text x="900" y="277" class="sm" text-anchor="middle">validation</text><circle cx="1160" cy="300" r="9" fill="#173A63"/><text x="1160" y="277" class="sm" text-anchor="middle">test</text>
+
+<rect x="18" y="385" width="850" height="360" rx="10" class="card"/><circle cx="48" cy="415" r="19" fill="#173A63"/><text x="48" y="421" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">3</text><text x="82" y="421" class="h">MEAN ABSOLUTE ERROR: TRANSFORMER VS HGB</text>
+<text x="90" y="500" class="h2">1 month</text><rect x="220" y="477" width="290" height="22" fill="#D5E3EF"/><rect x="220" y="507" width="273" height="22" fill="#173A63"/><text x="525" y="495" class="sm">HGB 16.905</text><text x="508" y="525" class="sm">Transformer 15.914</text>
+<text x="90" y="585" class="h2">6 month</text><rect x="220" y="562" width="352" height="22" fill="#D5E3EF"/><rect x="220" y="592" width="337" height="22" fill="#173A63"/><text x="588" y="580" class="sm">HGB 20.537</text><text x="573" y="610" class="sm">Transformer 19.699</text>
+<text x="90" y="670" class="h2">12 month</text><rect x="220" y="647" width="411" height="22" fill="#D5E3EF"/><rect x="220" y="677" width="415" height="22" fill="#B94B55"/><text x="647" y="665" class="sm">HGB 23.973</text><text x="651" y="695" class="sm">Transformer 24.206</text>
+
+<rect x="890" y="385" width="490" height="360" rx="10" class="card"/><circle cx="920" cy="415" r="19" fill="#173A63"/><text x="920" y="421" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">4</text><text x="954" y="421" class="h">INTERPRETATION</text>
+<rect x="920" y="478" width="420" height="82" rx="8" class="good"/><text x="942" y="505" class="h2">Lower mean error at 1 and 6 months</text><text x="942" y="532" class="txt">Across three Transformer seeds.</text>
+<rect x="920" y="576" width="420" height="82" rx="8" class="warn"/><text x="942" y="603" class="h2">12-month result is less stable</text><text x="942" y="630" class="txt">Mean Transformer MAE is slightly higher than HGB.</text>
+<text x="942" y="692" class="txt">Seed-42 intervals versus HGB cross zero at 6 and 12 months.</text>
+
+</svg>
