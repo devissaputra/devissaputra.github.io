@@ -32,7 +32,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
 .project-index a:hover,.project-index a:focus-visible{border-color:var(--accent);color:var(--accent)}
 
 
-.portfolio-detail .repo-visual img{aspect-ratio:10/7;height:auto}.repo-copy{line-height:1.65}.repo-links a{min-height:40px}
+.portfolio-detail .repo-visual img{aspect-ratio:16/9;height:auto}.repo-copy{line-height:1.65}.repo-links a{min-height:40px}
 </style>
 <link rel="stylesheet" href="assets/site.css?v=20260927-scientific-1">
 </head>
@@ -79,93 +79,127 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </section>
  <section class="repo-section" id="research-bundles">
   <div class="eyebrow-rule bundle-heading"><h2>Empirical Studies</h2></div>
-  <p class="repo-section-intro">These four studies use external datasets, predefined comparisons, recorded results and working papers. Each entry links to its calculations and states the limits of the evidence.</p>
+  <p class="repo-section-intro">These four empirical studies use external datasets to examine probability calibration, anomaly detection, explanation stability and time-series forecasting. Each study separates the research question, data-processing pipeline, recorded results and interpretation limits so that the engineering evidence can be inspected without overstating what the experiment establishes.</p>
   <article class="repo-project research-bundle" id="classification_calibration">
   <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
-    <h3>Probability Calibration</h3></header>
-<div class="repo-project-grid">
-   <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/classification_calibration/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/classification_calibration/review_overview.svg?v=20260926-evidence-review" alt="Can predicted probabilities be trusted? UCI Bank Marketing: 45,211 records and 16 predictors; subscription is the positive class."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/classification_calibration/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/classification_calibration/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Brier = mean((p - y)^2); ECE = sum(bin share × |mean p - mean y|)."></a><figcaption>Calculation definition and source linked evidence; open for full size</figcaption></figure>
-   </div>
-   <div>
-    
-    <div class="repo-copy"><p>Probability calibration is evaluated on the UCI Bank Marketing dataset with 45,211 observations, 16 predictors and an 11.7% positive class. Five fixed stratified holdouts compare a class prior baseline with uncalibrated logistic regression and logistic regression calibrated by sigmoid and isotonic methods. Discrimination is reported separately from probability quality using ROC-AUC, average precision, Brier score, log loss and expected calibration error.</p>
-<p>Across the five holdouts, isotonic calibration reduces mean Brier score from 0.0720 to 0.0693 while ROC-AUC remains close to 0.906. The result supports improved probability calibration under the fixed protocol rather than a material change in ranking performance. Call duration is also removed in an ablation because that variable is unavailable before a call; models that include it describe a retrospective prediction task.</p></div>
-    <div class="repo-evidence" aria-label="Probability calibration evidence snapshot">
-      <div class="repo-evidence-item"><span class="repo-evidence-value">45,211</span><span class="repo-evidence-label">observations</span></div>
-      <div class="repo-evidence-item"><span class="repo-evidence-value">11.7%</span><span class="repo-evidence-label">positive class</span></div>
-      <div class="repo-evidence-item"><span class="repo-evidence-value">5</span><span class="repo-evidence-label">repeated splits</span></div>
-      <div class="repo-evidence-item"><span class="repo-evidence-value">0.0074</span><span class="repo-evidence-label">isotonic ECE 10</span></div>
+    <h3>Probability Calibration on UCI Bank Marketing</h3></header>
+  <div class="repo-project-grid">
+    <div class="repo-visuals">
+      <figure class="repo-visual"><a class="figure-link" href="assets/aieng/classification_calibration/review_overview.svg?v=20260927-aieng-empirical-2" target="_blank" rel="noopener noreferrer" aria-label="Open probability calibration study overview at full size"><img loading="lazy" src="assets/aieng/classification_calibration/review_overview.svg?v=20260927-aieng-empirical-2" alt="Scientific overview of probability calibration on the UCI Bank Marketing dataset, including the study question, repeated holdout design, Brier score comparison and interpretation limits."></a><figcaption>Study overview: question, data, design, results and interpretation</figcaption></figure>
+      <figure class="repo-visual"><a class="figure-link" href="assets/aieng/classification_calibration/review_calculations.svg?v=20260927-aieng-empirical-2" target="_blank" rel="noopener noreferrer" aria-label="Open probability calibration processing pipeline at full size"><img loading="lazy" src="assets/aieng/classification_calibration/review_calculations.svg?v=20260927-aieng-empirical-2" alt="Scientific data processing and evaluation pipeline for UCI Bank Marketing, from source validation and preprocessing through repeated holdouts, probability calibration, metrics and sensitivity checks."></a><figcaption>Data processing and evaluation pipeline</figcaption></figure>
     </div>
-    <div class="repo-data-note"><strong>Data and provenance:</strong> UCI Bank Marketing (dataset 222), DOI 10.24432/C5K306. The runner downloads the official archive, validates the exact <code>bank full.csv</code> SHA-256, and keeps raw source data out of the repository.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/classification_calibration/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/classification_calibration" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
-    <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
-    <a href="https://github.com/devissaputra/classification_calibration/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data &amp; provenance</a></div>
-   </div>
+    <div>
+      <div class="repo-copy">
+        <p>This study asks whether a classifier's predicted probabilities are trustworthy, not only whether it ranks positive cases above negative ones. It uses 45,211 observations from UCI Bank Marketing, with 16 predictors and an 11.7% positive class. Five fixed stratified 80/20 holdouts compare a prevalence baseline with uncalibrated logistic regression and logistic regression calibrated by sigmoid and isotonic methods. Preprocessing and calibration are fitted inside the training data for each split.</p>
+        <p>Across the five holdouts, isotonic calibration reduces mean Brier score from 0.0720 to 0.0693 and mean ECE-10 to 0.0074, while ROC-AUC remains close to 0.906. The result is therefore a probability-quality improvement rather than a meaningful change in ranking performance. The study also removes call duration in an operational ablation because duration is unavailable before a call; models that include it describe a retrospective prediction task rather than a pre-contact decision setting.</p>
+      </div>
+      <div class="repo-evidence" aria-label="Probability calibration evidence snapshot">
+        <div class="repo-evidence-item"><span class="repo-evidence-value">45,211</span><span class="repo-evidence-label">observations</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">5</span><span class="repo-evidence-label">fixed holdouts</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">0.0693</span><span class="repo-evidence-label">isotonic Brier</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">0.0074</span><span class="repo-evidence-label">isotonic ECE-10</span></div>
+      </div>
+      <div class="repo-data-note"><strong>Data and provenance:</strong> UCI Bank Marketing, dataset 222, DOI 10.24432/C5K306. The runner retrieves the official archive, validates the exact <code>bank-full.csv</code> SHA-256 and keeps the raw source data outside the repository.</div>
+      <div class="repo-links">
+        <a href="https://github.com/devissaputra/classification_calibration/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a>
+        <a href="https://github.com/devissaputra/classification_calibration" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+        <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
+        <a href="https://github.com/devissaputra/classification_calibration/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+        <a href="https://github.com/devissaputra/classification_calibration/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data &amp; provenance</a>
+      </div>
+    </div>
   </div>
- </article>
+</article>
 <article class="repo-project research-bundle" id="anomaly_detection">
   <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
-    <h3>Label Blind Threshold Aware Anomaly Detection on NAB</h3></header>
-<div class="repo-project-grid">
-   <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/anomaly_detection/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/anomaly_detection/review_overview.svg?v=20260926-evidence-review" alt="When do label-blind detectors produce useful alerts? Four realKnownCause NAB streams; pinned data and annotation hashes."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/anomaly_detection/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/anomaly_detection/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Threshold = quantile(validation scores, 1 - budget); FPR = FP / (FP + TN)."></a><figcaption>Calculation definition and source linked evidence; open for full size</figcaption></figure>
-   </div>
-   <div>
-    
-    <div class="repo-copy"><p>An Isolation Forest based on engineered features is compared with a transparent baseline derived from robust historical statistics on four NAB data streams. Model fitting and alert budget calibration do not use benchmark labels. Event detection is evaluated only after the operating threshold is fixed, which prevents label information from entering threshold selection.</p>
-<p>With a 5% validation alert budget, the primary Isolation Forest test false positive rate ranges from 0.0300 to 0.2338 across the four streams. The variation is the main empirical result: a fixed calibration budget does not produce a stable operating point after temporal change. Repeated random seeds and changes in history length are reported as robustness checks on these streams rather than as independent replications.</p></div>
-    <div class="repo-data-note"><strong>Data source:</strong> Numenta Anomaly Benchmark (NAB), pinned benchmark revision and frozen selected streams.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/anomaly_detection/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/anomaly_detection" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/anomaly_detection/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
-    <a href="https://github.com/devissaputra/anomaly_detection/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
-    <a href="https://github.com/devissaputra/anomaly_detection/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
-   </div>
+    <h3>Label-Blind Threshold-Aware Anomaly Detection on NAB</h3></header>
+  <div class="repo-project-grid">
+    <div class="repo-visuals">
+      <figure class="repo-visual"><a class="figure-link" href="assets/aieng/anomaly_detection/review_overview.svg?v=20260927-aieng-empirical-2" target="_blank" rel="noopener noreferrer" aria-label="Open anomaly detection study overview at full size"><img loading="lazy" src="assets/aieng/anomaly_detection/review_overview.svg?v=20260927-aieng-empirical-2" alt="Scientific overview of label-blind anomaly detection on four NAB streams, including chronological calibration and the variation in test false-positive rates under a fixed alert budget."></a><figcaption>Study overview: question, data, design, results and interpretation</figcaption></figure>
+      <figure class="repo-visual"><a class="figure-link" href="assets/aieng/anomaly_detection/review_calculations.svg?v=20260927-aieng-empirical-2" target="_blank" rel="noopener noreferrer" aria-label="Open anomaly detection processing pipeline at full size"><img loading="lazy" src="assets/aieng/anomaly_detection/review_calculations.svg?v=20260927-aieng-empirical-2" alt="Scientific chronological processing pipeline for anomaly detection on NAB, from causal feature construction and label-blind model fitting through threshold calibration, evaluation and robustness checks."></a><figcaption>Data processing and evaluation pipeline</figcaption></figure>
+    </div>
+    <div>
+      <div class="repo-copy">
+        <p>This study tests whether a label-blind anomaly detector can maintain a useful operating point after time moves forward. Four frozen NAB realKnownCause streams are divided chronologically: the first 50% is used for model fitting, the next 20% for threshold calibration and the final 30% for testing. An Isolation Forest using prior-history features is compared with a transparent median and MAD baseline. Benchmark labels are deliberately excluded from model fitting and from selection of the primary operating threshold.</p>
+        <p>At a 5% validation alert budget, the Isolation Forest test false-positive rate varies from 0.0300 on request latency to 0.2338 on ambient temperature, with CPU utilization at 0.1070 and machine temperature at 0.0948. That spread is the central result: a fixed validation budget does not guarantee a stable future false-alarm rate after temporal change. Repeated seeds and history-window checks measure sensitivity on the same four streams and should not be read as independent replications or official NAB leaderboard results.</p>
+      </div>
+      <div class="repo-evidence" aria-label="Anomaly detection evidence snapshot">
+        <div class="repo-evidence-item"><span class="repo-evidence-value">4</span><span class="repo-evidence-label">NAB streams</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">5%</span><span class="repo-evidence-label">validation alert budget</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">0.0300</span><span class="repo-evidence-label">lowest test FPR</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">0.2338</span><span class="repo-evidence-label">highest test FPR</span></div>
+      </div>
+      <div class="repo-data-note"><strong>Data and provenance:</strong> Numenta Anomaly Benchmark, frozen at revision <code>ea702d75…</code>. The selected streams and annotation file are pinned by SHA-256 so the empirical source cannot change silently.</div>
+      <div class="repo-links">
+        <a href="https://github.com/devissaputra/anomaly_detection/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a>
+        <a href="https://github.com/devissaputra/anomaly_detection" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+        <a href="https://github.com/devissaputra/anomaly_detection/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
+        <a href="https://github.com/devissaputra/anomaly_detection/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+        <a href="https://github.com/devissaputra/anomaly_detection/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data &amp; provenance</a>
+      </div>
+    </div>
   </div>
- </article>
+</article>
 <article class="repo-project research-bundle" id="explainable_ai">
   <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
-    <h3>Explainable AI: Model Dependence and Feature Governance Study</h3></header>
-<div class="repo-project-grid">
-   <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/explainable_ai/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/explainable_ai/review_overview.svg?v=20260926-evidence-review" alt="Do explanations change with the model and feature policy? UCI Adult: 48,842 records; exact duplicate predictor profiles remain within the same partition."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/explainable_ai/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/explainable_ai/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: Importance(j) = AUC(original) - mean AUC(permuted feature j)."></a><figcaption>Calculation definition and source linked evidence; open for full size</figcaption></figure>
-   </div>
-   <div>
-    
-    <div class="repo-copy"><p>Global feature explanations are compared across model families and feature governance choices on the Adult income benchmark. The evaluation combines held out predictive performance, stability of permutation importance, subgroup error patterns, feature exclusion and error analysis. Predictive dependence is kept separate from causal interpretation and from claims about fairness.</p>
-<p>On the primary grouped holdout, random forest ROC-AUC is 0.9174 with all features and 0.9167 after excluding race and sex. Logistic regression scores 0.9063 and 0.9052 respectively. Marital status ranks highly under permutation importance, but its measured importance changes substantially across model families. Subgroup diagnostics remain necessary after feature exclusion, so the evidence supports model dependence analysis rather than causal attribution or a fairness conclusion.</p></div>
-    <div class="repo-data-note"><strong>Data source:</strong> UCI Adult / Census Income (dataset 2), DOI 10.24432/C5XW20.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/explainable_ai/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/explainable_ai" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/explainable_ai/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
-    <a href="https://github.com/devissaputra/explainable_ai/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
-    <a href="https://github.com/devissaputra/explainable_ai/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
-   </div>
+    <h3>Explainable AI: Model Dependence and Feature Governance</h3></header>
+  <div class="repo-project-grid">
+    <div class="repo-visuals">
+      <figure class="repo-visual"><a class="figure-link" href="assets/aieng/explainable_ai/review_overview.svg?v=20260927-aieng-empirical-2" target="_blank" rel="noopener noreferrer" aria-label="Open explainable AI study overview at full size"><img loading="lazy" src="assets/aieng/explainable_ai/review_overview.svg?v=20260927-aieng-empirical-2" alt="Scientific overview of explainability on the UCI Adult benchmark, comparing model families and protected-feature exclusion while separating predictive dependence from fairness and causality claims."></a><figcaption>Study overview: question, data, design, results and interpretation</figcaption></figure>
+      <figure class="repo-visual"><a class="figure-link" href="assets/aieng/explainable_ai/review_calculations.svg?v=20260927-aieng-empirical-2" target="_blank" rel="noopener noreferrer" aria-label="Open explainable AI processing and audit pipeline at full size"><img loading="lazy" src="assets/aieng/explainable_ai/review_calculations.svg?v=20260927-aieng-empirical-2" alt="Scientific processing and audit pipeline for the UCI Adult explainability study, including duplicate-aware grouped splitting, model comparison, permutation importance and subgroup diagnostics."></a><figcaption>Data processing and audit pipeline</figcaption></figure>
+    </div>
+    <div>
+      <div class="repo-copy">
+        <p>This study examines whether a global feature explanation is stable when either the model family or the feature policy changes. It uses 48,842 records from the UCI Adult benchmark and keeps exact duplicate predictor profiles on only one side of the train-test split. Logistic regression and random forest are each evaluated twice: once with all predictors and once with race and sex excluded from the model inputs. Those attributes remain available only for descriptive subgroup auditing.</p>
+        <p>On the primary grouped holdout, random forest ROC-AUC is 0.9174 with all features and 0.9167 after protected-feature exclusion; logistic regression scores 0.9063 and 0.9052. Marital status is the leading held-out permutation feature in both model families, but its measured AUC drop is about 0.1174 for logistic regression and 0.0460 for random forest. That difference is itself useful evidence: permutation importance depends on the fitted model. It is not causal attribution, and excluding protected variables does not remove proxies or establish fairness.</p>
+      </div>
+      <div class="repo-evidence" aria-label="Explainable AI evidence snapshot">
+        <div class="repo-evidence-item"><span class="repo-evidence-value">48,842</span><span class="repo-evidence-label">records</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">0.9174</span><span class="repo-evidence-label">RF ROC-AUC, all</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">0.9167</span><span class="repo-evidence-label">RF ROC-AUC, excluded</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">0</span><span class="repo-evidence-label">duplicate-group overlap</span></div>
+      </div>
+      <div class="repo-data-note"><strong>Data and provenance:</strong> UCI Adult / Census Income, dataset 2, DOI 10.24432/C5XW20. The source archive is hash-validated, and exact predictor vectors are grouped before splitting to prevent duplicate profiles from crossing the train-test boundary.</div>
+      <div class="repo-links">
+        <a href="https://github.com/devissaputra/explainable_ai/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a>
+        <a href="https://github.com/devissaputra/explainable_ai" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+        <a href="https://github.com/devissaputra/explainable_ai/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
+        <a href="https://github.com/devissaputra/explainable_ai/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+        <a href="https://github.com/devissaputra/explainable_ai/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data &amp; provenance</a>
+      </div>
+    </div>
   </div>
- </article>
+</article>
 <article class="repo-project research-bundle" id="mini_transformers_sequences">
   <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI Engineering</div>
     <h3>Transformer Forecasting on WDC-SILSO</h3></header>
-<div class="repo-project-grid">
-   <div class="repo-visuals">
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/review_overview.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/review_overview.svg?v=20260926-evidence-review" alt="Does a small Transformer justify its complexity? WDC-SILSO monthly sunspots, January 1749 to March 2026: 3,327 definitive observations."></a><figcaption>Study question, data, design and interpretation limits</figcaption></figure>
-    <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/review_calculations.svg?v=20260926-evidence-review" target="_blank" rel="noopener noreferrer" aria-label="Open figure at full size in a new tab"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/review_calculations.svg?v=20260926-evidence-review" alt="Calculation: MAE = mean(|forecast - observed|); delta = Transformer MAE - baseline MAE."></a><figcaption>Calculation definition and source linked evidence; open for full size</figcaption></figure>
-   </div>
-   <div>
-    
-    <div class="repo-copy"><p>A compact Transformer is compared with persistence, seasonal naive, ridge regression and histogram gradient boosting on a long solar activity time series. The protocol evaluates several forecast horizons, random seed stability, sensitivity to context length, performance in early and late test periods, and behavior during periods of high solar activity.</p>
-<p>The Transformer has lower mean error than the simpler baselines at the 1 month and 6 month horizons under the recorded protocol. At 12 months, the result is less stable: mean MAE across three seeds is 24.206, compared with 23.973 for histogram gradient boosting, even though seed 42 favors the Transformer. Confidence intervals for seed 42 also cross zero against that baseline at 6 and 12 months. The evidence therefore does not support a general claim that the Transformer is consistently superior.</p></div>
-    <div class="repo-data-note"><strong>Data source:</strong> WDC-SILSO Version 2.0 monthly mean total sunspot number, frozen through March 2026.</div>
-    <div class="repo-links"><a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/mini_transformers_sequences" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-    <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Results</a>
-    <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
-    <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data source</a></div>
-   </div>
+  <div class="repo-project-grid">
+    <div class="repo-visuals">
+      <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/review_overview.svg?v=20260927-aieng-empirical-2" target="_blank" rel="noopener noreferrer" aria-label="Open Transformer forecasting study overview at full size"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/review_overview.svg?v=20260927-aieng-empirical-2" alt="Scientific overview of Transformer forecasting on the frozen WDC-SILSO monthly sunspot series, comparing model error across one, six and twelve month horizons."></a><figcaption>Study overview: question, data, design, results and interpretation</figcaption></figure>
+      <figure class="repo-visual"><a class="figure-link" href="assets/aieng/mini_transformers_sequences/review_calculations.svg?v=20260927-aieng-empirical-2" target="_blank" rel="noopener noreferrer" aria-label="Open Transformer forecasting processing pipeline at full size"><img loading="lazy" src="assets/aieng/mini_transformers_sequences/review_calculations.svg?v=20260927-aieng-empirical-2" alt="Scientific chronological processing and forecasting pipeline for WDC-SILSO, including frozen source data, supervised windows, baseline selection, Transformer training and moving-block uncertainty analysis."></a><figcaption>Data processing and forecasting pipeline</figcaption></figure>
+    </div>
+    <div>
+      <div class="repo-copy">
+        <p>This forecasting study asks whether a compact Transformer earns its additional complexity on a long, structured time series. The frozen WDC-SILSO input contains 3,327 monthly sunspot observations from January 1749 through March 2026. Persistence, seasonal naive, ridge regression and histogram gradient boosting are compared with direct Transformer forecasts at one, six and twelve months. All methods use common chronological target dates, and the Transformer is repeated across three random seeds.</p>
+        <p>The Transformer has lower mean absolute error than histogram gradient boosting at one month, 15.914 versus 16.905, and at six months, 19.699 versus 20.537. At twelve months, its three-seed mean is 24.206 compared with 23.973 for gradient boosting, and variation across Transformer seeds is much larger. Seed-42 paired intervals against gradient boosting also cross zero at six and twelve months. The evidence therefore supports a horizon-dependent comparison, not a general claim that the Transformer is consistently superior.</p>
+      </div>
+      <div class="repo-evidence" aria-label="Transformer forecasting evidence snapshot">
+        <div class="repo-evidence-item"><span class="repo-evidence-value">3,327</span><span class="repo-evidence-label">monthly observations</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">15.914</span><span class="repo-evidence-label">1 month Transformer MAE</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">19.699</span><span class="repo-evidence-label">6 month Transformer MAE</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">24.206</span><span class="repo-evidence-label">12 month Transformer MAE</span></div>
+      </div>
+      <div class="repo-data-note"><strong>Data and provenance:</strong> WDC-SILSO Version 2.0 monthly mean total Sunspot Number, frozen from January 1749 through March 2026. The ordered model input is fingerprinted by SHA-256 so later SILSO updates cannot silently alter the study.</div>
+      <div class="repo-links">
+        <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a>
+        <a href="https://github.com/devissaputra/mini_transformers_sequences" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
+        <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
+        <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
+        <a href="https://github.com/devissaputra/mini_transformers_sequences/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data &amp; provenance</a>
+      </div>
+    </div>
   </div>
- </article>
+</article>
  </section>
  <section class="repo-section" id="repositories">
   <div class="eyebrow-rule"><h2>Repositories</h2></div>
