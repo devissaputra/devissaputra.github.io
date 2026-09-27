@@ -1,1 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img"><title>01 / Do explanations change with the model and feature policy?</title><desc>RECORDED EXTERNAL-DATA STUDY | full experiment not rerun in this review</desc><rect width="1200" height="840" fill="#f6f8fc"/><text x="48" y="60" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" fill="#133b65" font-weight="700">01 / Do explanations change with the model and feature policy?</text><text x="48" y="111" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#526278" font-weight="400">RECORDED EXTERNAL-DATA STUDY | full experiment not rerun in this review</text><rect x="42" y="145" width="1116" height="134" rx="10" fill="white" stroke="#d2dce7"/><rect x="42" y="145" width="7" height="134" fill="#2365a0"/><text x="65" y="177" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#2365a0" font-weight="700">DATA / OBSERVATION UNIT</text><text x="65" y="213" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">UCI Adult: 48,842 records; exact duplicate predictor profiles remain within the same</text><text x="65" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">partition.</text><rect x="42" y="295" width="1116" height="166" rx="10" fill="white" stroke="#d2dce7"/><rect x="42" y="295" width="7" height="166" fill="#128075"/><text x="65" y="327" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#128075" font-weight="700">DESIGN / COMPARISON</text><text x="65" y="363" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">Compare logistic regression and random forest, with and without race and sex; permute raw</text><text x="65" y="394" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">features on held-out observations.</text><rect x="42" y="477" width="1116" height="270" rx="10" fill="white" stroke="#d2dce7"/><rect x="42" y="477" width="7" height="270" fill="#8b4d27"/><text x="65" y="509" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#8b4d27" font-weight="700">FINDING / INTERPRETATION</text><text x="65" y="545" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">On the primary grouped holdout, random-forest ROC-AUC is 0.9174 with all features and</text><text x="65" y="576" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">0.9167 after excluding race and sex; logistic regression scores 0.9063 and 0.9052.</text><text x="65" y="607" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">Marital status leads the permutation rankings, but its importance differs markedly</text><text x="65" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">between models. Subgroup diagnostics remain necessary after exclusion, so the study</text><text x="65" y="669" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">supports inspection of model dependence rather than causal attribution or a fairness</text><text x="65" y="700" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#23354b" font-weight="400">verdict.</text><text x="48" y="796" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#23354b" font-weight="400">Read the calculation guide for source paths, assumptions and reproduction status.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+<title id="title">Explainable AI: Model Dependence and Feature Governance</title><desc id="desc">STUDY OVERVIEW</desc>
+<rect width="1400" height="788" fill="#F7F9FB"/>
+
+<style>
+.title{font-family:Georgia,serif;font-weight:700;fill:#173A63;font-size:38px}
+.subtitle{font-family:Arial,sans-serif;fill:#173A63;font-size:15px;letter-spacing:4px}
+.h{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:18px}
+.h2{font-family:Arial,sans-serif;font-weight:700;fill:#173A63;font-size:15px}
+.txt{font-family:Arial,sans-serif;fill:#172533;font-size:14px}
+.sm{font-family:Arial,sans-serif;fill:#5C6B78;font-size:12px}
+.metric{font-family:Georgia,serif;font-weight:700;fill:#173A63;font-size:24px}
+.card{fill:#FFFFFF;stroke:#C8D5E1;stroke-width:1.2}
+.soft{fill:#EAF2F8;stroke:#D9E6F0;stroke-width:1}
+.warn{fill:#FFF0EF;stroke:#E7C2BE;stroke-width:1}
+.good{fill:#EAF6F1;stroke:#C2DED3;stroke-width:1}
+.flow{stroke:#173A63;stroke-width:2;fill:none;marker-end:url(#arrow)}
+.axis{stroke:#8094A7;stroke-width:1.2}
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#173A63"/></marker></defs>
+<text x="700" y="50" text-anchor="middle" class="title">Explainable AI: Model Dependence and Feature Governance</text>
+<line x1="230" y1="78" x2="540" y2="78" stroke="#9DB5CB"/><line x1="860" y1="78" x2="1170" y2="78" stroke="#9DB5CB"/>
+<text x="700" y="84" text-anchor="middle" class="subtitle">STUDY OVERVIEW</text>
+
+<rect x="18" y="110" width="445" height="250" rx="10" class="card"/><circle cx="48" cy="140" r="19" fill="#173A63"/><text x="48" y="146" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">1</text><text x="82" y="146" class="h">QUESTION AND DATA</text>
+<text x="45" y="190" class="h"><tspan x="45">Do global feature explanations change with the</tspan><tspan x="45" dy="23">model family and feature policy?</tspan></text>
+<rect x="45" y="250" width="180" height="88" rx="8" class="soft"/><text x="135" y="282" class="metric" text-anchor="middle">48,842</text><text x="135" y="307" class="h2" text-anchor="middle">UCI Adult records</text>
+<rect x="240" y="250" width="195" height="88" rx="8" class="soft"/><text x="338" y="282" class="metric" text-anchor="middle">0.2393</text><text x="338" y="307" class="h2" text-anchor="middle">positive rate</text>
+
+<rect x="480" y="110" width="900" height="250" rx="10" class="card"/><circle cx="510" cy="140" r="19" fill="#173A63"/><text x="510" y="146" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">2</text><text x="544" y="146" class="h">MODEL × FEATURE-GOVERNANCE COMPARISON</text>
+<rect x="540" y="195" width="180" height="90" rx="8" class="soft"/><text x="630" y="228" class="h2" text-anchor="middle">Logistic regression</text><text x="630" y="255" class="sm" text-anchor="middle">all / protected excluded</text>
+<rect x="750" y="195" width="180" height="90" rx="8" class="soft"/><text x="840" y="228" class="h2" text-anchor="middle">Random forest</text><text x="840" y="255" class="sm" text-anchor="middle">all / protected excluded</text>
+<rect x="960" y="195" width="360" height="90" rx="8" class="soft"/><text x="1140" y="225" class="h2" text-anchor="middle">Duplicate-aware grouped holdout</text><text x="1140" y="252" class="sm" text-anchor="middle">exact predictor-group overlap = 0</text>
+<text x="540" y="320" class="txt">Race and sex are retained for descriptive subgroup auditing but excluded from model inputs in the governance condition.</text>
+
+<rect x="18" y="385" width="850" height="360" rx="10" class="card"/><circle cx="48" cy="415" r="19" fill="#173A63"/><text x="48" y="421" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">3</text><text x="82" y="421" class="h">HELD-OUT ROC-AUC</text>
+<text x="110" y="490" class="h2">Logistic</text><rect x="230" y="468" width="470" height="26" rx="3" fill="#D6E3EF"/><rect x="230" y="468" width="426" height="26" rx="3" fill="#2F6EAA"/><text x="715" y="487" class="sm">0.9063 all | 0.9052 excluded</text>
+<text x="110" y="570" class="h2">Random forest</text><rect x="230" y="548" width="470" height="26" rx="3" fill="#D6E3EF"/><rect x="230" y="548" width="431" height="26" rx="3" fill="#173A63"/><text x="715" y="567" class="sm">0.9174 all | 0.9167 excluded</text>
+<text x="110" y="640" class="h2">Top permutation feature: marital-status</text>
+<text x="110" y="670" class="txt">AUC drop ≈ 0.1174 in logistic vs 0.0460 in random forest, showing model dependence of measured importance.</text>
+
+<rect x="890" y="385" width="490" height="360" rx="10" class="card"/><circle cx="920" cy="415" r="19" fill="#173A63"/><text x="920" y="421" text-anchor="middle" fill="white" font-family="Arial" font-weight="700" font-size="17">4</text><text x="954" y="421" class="h">INTERPRETATION</text>
+<rect x="920" y="478" width="420" height="76" rx="8" class="soft"/><text x="942" y="505" class="h2">Importance is predictive dependence</text><text x="942" y="530" class="txt">It is not causal attribution.</text>
+<rect x="920" y="570" width="420" height="76" rx="8" class="warn"/><text x="942" y="597" class="h2">Feature exclusion is not fairness</text><text x="942" y="622" class="txt">Proxies and structural effects remain.</text>
+<text x="942" y="690" class="txt">Subgroup diagnostics remain necessary after protected-feature exclusion.</text>
+
+</svg>
