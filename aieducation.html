@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="AI in Education portfolio of Devis Saputra: four featured empirical studies and twenty-six additional AIED research prototypes.">
-<title>Devis Saputra — AI in Education</title>
+<title>Devis Saputra | AI in Education</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -68,7 +68,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   </div>
  <section class="hero" id="overview">
   <h2>Portfolio in AI in Education</h2>
-  <p class="lede">This portfolio connects learning design with machine learning, learning analytics and responsible AI. Empirical studies evaluate questions in knowledge tracing, causal learning analytics, retrieval and model auditing using external datasets, while the repository section contains research prototypes for assessment, learner support, curriculum analysis and educational decision support.</p>
+  <p class="lede">This portfolio connects learning design with machine learning, learning analytics and responsible AI. Empirical studies examine knowledge tracing, observational learning analytics, retrieval and model auditing using external datasets, while the repository section presents research prototypes for assessment, learner support, curriculum analysis and educational decision support.</p>
   <div class="project-index" aria-label="Page content">
    <a href="#research-bundles">Empirical Studies</a>
    <a href="#repositories">Repositories</a>
@@ -76,7 +76,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </section>
  <section class="repo-section" id="research-bundles">
   <div class="eyebrow-rule bundle-heading"><h2>Empirical Studies</h2></div>
-  <p class="repo-section-intro">These four empirical studies examine predictive, observational, retrieval, and audit questions using external datasets. The linked calculation guides distinguish recorded findings from educational and causal claims.</p>
+  <p class="repo-section-intro">These four empirical studies examine predictive, observational, retrieval and audit questions using external datasets. Linked calculation guides separate measured findings from educational interpretation and causal claims.</p>
   <article class="repo-project research-bundle" id="knowledge_tracing_benchmark">
   <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI in Education</div>
     <h3>Knowledge Tracing Benchmark on ASSISTments 2009</h3></header>
@@ -88,7 +88,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    <div>
     
     <div class="repo-copy"><p>The knowledge tracing benchmark measures how much predictive value is added by different representations of learner history. It contains 4,148 ASSISTments 2009 learners and 274,331 interactions, with learners separated into 70% training, 15% validation and 15% final test partitions. One fixed protocol compares a global prior, a skill prior, fixed and validation tuned Bayesian Knowledge Tracing, a PFA style logistic model based on earlier learner skill successes and failures, and a compact GRU sequence model. Every stateful prediction is produced before the current response is observed, preventing leakage of the target response into the model state.</p>
-<p>On 623 held out learners, the seed 42 GRU reaches ROC AUC 0.7470 and Brier score 0.1800, compared with 0.6982 and 0.1976 for PFA. Across three GRU seeds, mean ROC AUC is 0.7471 with a sample standard deviation of 0.0008. The result supports improved response prediction on this historical benchmark. It does not establish instructional benefit or justify high stakes interpretation of an individual learner's knowledge.</p></div>
+<p>On 623 held out learners, the seed 42 GRU reaches ROC AUC 0.7470 and Brier score 0.1800, compared with 0.6982 and 0.1976 for PFA. Across three GRU seeds, mean ROC AUC is 0.7471 with a sample standard deviation of 0.0008. The result supports improved response prediction on this historical benchmark. It does not establish instructional benefit or justify high stakes use for individual learner decisions.</p></div>
     <div class="repo-evidence" aria-label="Knowledge tracing evidence snapshot">
       <div class="repo-evidence-item"><span class="repo-evidence-value">4,148</span><span class="repo-evidence-label">learners</span></div>
       <div class="repo-evidence-item"><span class="repo-evidence-value">274,331</span><span class="repo-evidence-label">interactions</span></div>
@@ -169,7 +169,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </section>
  <section class="repo-section" id="repositories">
   <div class="eyebrow-rule"><h2>Repositories</h2></div>
-  <p class="repo-section-intro">The remaining twenty six projects are research prototypes and technical studies. Their summaries intentionally distinguish implemented methods from claims that would still require empirical validation.</p>
+  <p class="repo-section-intro">The remaining 26 projects are research prototypes and technical studies. Their summaries distinguish implemented methods from claims that still require empirical validation.</p>
   <article class="repo-project" id="genai_learning_observatory">
   <header class="repo-project-heading"><div class="repo-kicker">AI in Education Repository · 05</div>
     <h3>GenAI Learning Observatory</h3></header>
@@ -265,7 +265,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>Hybrid Intelligence Lab compares human decisions, AI decisions and confidence routed combinations while retaining the routing reason for every case. The synthetic generator deliberately links confidence with correctness, so strong combined performance partly reflects that assumption. Threshold sweeps show how often the policy defaults to human judgment and under which simulated conditions complementary errors can be exploited.</p></div>
+    <div class="repo-copy"><p>Hybrid Intelligence Lab compares human decisions, AI decisions and confidence routed combinations while retaining the routing reason for every case. The synthetic generator deliberately links confidence with correctness, so strong combined performance partly reflects that assumption. Threshold sweeps show how often the policy defaults to human judgment and under which simulated conditions complementary errors improve combined performance.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/hybrid_intelligence_lab/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/hybrid_intelligence_lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/hybrid_intelligence_lab/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
@@ -384,7 +384,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>Learner State Sequence Model summarizes supplied learner state sequences through transition probabilities, entropy of outgoing states and persistence. Probabilities are normalized only where transitions are observed, and insufficient sequences return an undefined persistence value rather than an invented estimate. The method is a descriptive sequence baseline; the state labels require independent justification and are not treated as inferred mental states.</p></div>
+    <div class="repo-copy"><p>Learner State Sequence Model summarizes supplied learner state sequences through transition probabilities, entropy of outgoing states and persistence. Probabilities are normalized only where transitions are observed, and insufficient sequences return an undefined persistence value rather than an invented estimate. The method is a descriptive sequence baseline; the state labels require independent justification and are not interpreted as inferred mental states.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/learner_state_sequence_model/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/learner_state_sequence_model" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/learner_state_sequence_model/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
@@ -452,7 +452,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>Learning Experiment Platform stores assignment, baseline measures, follow up outcomes and attrition in one record. It reports group differences, effect sizes based on pooled standard deviation and bootstrap intervals while flagging sparse groups and baseline imbalance. Missing outcomes are handled as complete cases grouped by assignment, so the documentation limits causal interpretation and does not describe the analysis as a complete intention to treat estimate.</p></div>
+    <div class="repo-copy"><p>Learning Experiment Platform stores assignment, baseline measures, follow up outcomes and attrition in one record. It reports group differences, effect sizes based on pooled standard deviation and bootstrap intervals while flagging sparse groups and baseline imbalance. Missing outcomes are handled as complete cases grouped by assignment, so the documentation limits causal interpretation and does not describe the analysis as a complete intention to treat analysis.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/learning_experiment_platform/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/learning_experiment_platform" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/learning_experiment_platform/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
@@ -571,7 +571,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>Curriculum Knowledge Graph represents courses, concepts, outcomes, assessments and resources through typed relationships with recorded provenance. It checks relation semantics and identifies prerequisite paths, cycles, disconnected entities and gaps in assessment coverage. These structural diagnostics support expert review of a curriculum; the graph does not independently verify the pedagogical correctness of its relationships.</p></div>
+    <div class="repo-copy"><p>Curriculum Knowledge Graph represents courses, concepts, outcomes, assessments and resources through typed relationships with recorded provenance. It checks relation semantics and identifies prerequisite paths, cycles, disconnected entities and gaps in assessment coverage. These structural diagnostics support expert review of a curriculum; the graph does not independently establish the pedagogical validity of its relationships.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/curriculum_knowledge_graph/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/curriculum_knowledge_graph" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/curriculum_knowledge_graph/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
@@ -605,7 +605,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
    <div>
     
-    <div class="repo-copy"><p>Feedback Quality Evaluator assesses feedback against supplied task context using separate rubric dimensions. Missing evidence remains unevaluable, lexical triggers are exposed and rater agreement tools handle degenerate cases explicitly. The implementation is a baseline for validation and error analysis rather than an automated authority on disciplinary correctness or feedback quality.</p></div>
+    <div class="repo-copy"><p>Feedback Quality Evaluator assesses feedback against supplied task context using separate rubric dimensions. Missing evidence remains unevaluable, lexical triggers are exposed and rater agreement tools handle degenerate cases explicitly. The implementation is a baseline for validation and error analysis rather than an automated authority on disciplinary accuracy or feedback quality.</p></div>
     
     <div class="repo-links"><a href="https://github.com/devissaputra/feedback_quality_evaluator/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a><a href="https://github.com/devissaputra/feedback_quality_evaluator" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
     <a href="https://github.com/devissaputra/feedback_quality_evaluator/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a></div>
