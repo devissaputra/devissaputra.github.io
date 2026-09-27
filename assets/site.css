@@ -1101,3 +1101,36 @@ footer{
     max-width:100%;
   }
 }
+
+
+/* Final QA polish — 2026-09-28 */
+/* Keep degree-research metadata clearly separated without adding visual weight. */
+.research-card .meta .meta-separator{
+  color:var(--line);
+  font-weight:600;
+}
+
+/* Slightly tighter homepage rhythm; portfolio/detail pages retain their established density. */
+.home-page .content{
+  padding-top:44px;
+}
+.home-page section{
+  margin-bottom:56px;
+}
+
+/* Small-screen touch targets without enlarging desktop navigation. */
+@media(max-width:900px){
+  .sidebar-bottom a{
+    min-height:40px;
+    padding:5px 0;
+  }
+  .sidebar-bottom i{
+    font-size:17px;
+  }
+  .home-page .content{
+    padding-top:32px;
+  }
+  .home-page section{
+    margin-bottom:48px;
+  }
+}
