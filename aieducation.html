@@ -97,32 +97,32 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
   <div class="eyebrow-rule bundle-heading"><h2>Empirical Studies</h2></div>
   <p class="repo-section-intro">These four studies use external educational datasets to answer four different questions: how learner history improves next-response prediction, how early assessment submission relates to later outcomes, whether a wrong answer helps evidence retrieval, and how an enrollment-time dropout model behaves under a responsible audit. Each case is presented in the same order: research question, data, analytical design, result and interpretation boundary.</p>
   <article class="repo-project research-bundle" id="knowledge_tracing_benchmark">
-  <header class="repo-project-heading"><div class="repo-kicker">Empirical Study · AI in Education</div>
-    <h3>Knowledge Tracing Benchmark on ASSISTments 2009</h3></header>
+  <header class="repo-project-heading"><div class="repo-kicker">Research preprint · AI in Education</div>
+    <h3>When Knowledge-Tracing Rankings Depend on Available History</h3></header>
   <div class="repo-project-grid">
     <div class="repo-visuals">
-      <figure class="repo-visual"><a class="figure-link" href="assets/aied/knowledge_tracing_benchmark/review_overview.svg?v=20260927-aied-empirical-3" target="_blank" rel="noopener noreferrer" aria-label="Open knowledge tracing study overview at full size"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/review_overview.svg?v=20260927-aied-empirical-3" alt="Scientific overview of the ASSISTments 2009 knowledge tracing benchmark, including study question, learner history models, held-out results and interpretation limits."></a><figcaption>Full study story: question, data, design, result and interpretation limit</figcaption></figure>
-      <figure class="repo-visual"><a class="figure-link" href="assets/aied/knowledge_tracing_benchmark/review_calculations.svg?v=20260927-aied-empirical-3" target="_blank" rel="noopener noreferrer" aria-label="Open knowledge tracing data processing pipeline at full size"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/review_calculations.svg?v=20260927-aied-empirical-3" alt="Scientific data processing and evaluation pipeline for the ASSISTments 2009 knowledge tracing benchmark, from learner sequences and data splits through model fitting and held-out evaluation."></a><figcaption>Data processing and analysis workflow</figcaption></figure>
+      <figure class="repo-visual"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/review_overview.svg?v=20260927-aied-empirical-3" alt="Diagram from the earlier ASSISTments 2009 benchmark, retained for historical context"><figcaption>Earlier ASSISTments 2009 benchmark overview; not the matched-history experiment</figcaption></figure>
+      <figure class="repo-visual"><img loading="lazy" src="assets/aied/knowledge_tracing_benchmark/review_calculations.svg?v=20260927-aied-empirical-3" alt="Data processing diagram from the earlier ASSISTments 2009 benchmark"><figcaption>Earlier benchmark calculation pipeline</figcaption></figure>
     </div>
     <div>
       <div class="repo-copy">
-        <p>This study asks a straightforward learner-modeling question: when a model can use a learner's previous attempts, how much better can it predict the learner's next response? The benchmark uses 4,148 ASSISTments 2009 learners and 274,331 interactions, with a 70/15/15 split made by learner rather than by attempt. It compares simple population and skill priors with Bayesian Knowledge Tracing, a PFA-style logistic model and a compact GRU. For every stateful model, the prediction is produced before the current answer is revealed, preventing target leakage.</p>
-        <p>On 623 held-out learners, the seed-42 GRU reaches ROC-AUC 0.7470 and Brier score 0.1800, while PFA reaches 0.6982 and 0.1976. Across three GRU seeds, mean ROC-AUC is 0.7471 with a sample standard deviation of 0.0008. The result is therefore about predictive performance on this historical benchmark: it shows that sequence information adds useful signal here, but it does not turn the model probability into a direct measure of knowledge or show that using the model would improve teaching or learning.</p>
+        <p>This 2026 methodological study examines whether knowledge-tracing rankings depend on dataset provenance and the amount and representation of learners' previous responses. In an ASSISTments 2009 source audit, 817 of 4,148 shared learners had different normalized ordered skill-response sequences between a corrected official release and a pinned processed mirror.</p>
+        <p>In a separate ASSISTments 2015 experiment, a nonoverlapping cohort of 4,000 learners provided 20,592 common evaluation responses from 582 evaluable test learners. With 20 prior events, Brier scores were 0.176674 for count-based logistic regression, 0.173885 for order-aware logistic regression and 0.175140 for a GRU. The GRU minus order-aware difference was +0.001255 (95% learner-cluster bootstrap interval [0.000075, 0.002426]). Lower Brier is better. The relative ranking depends on the comparator, not evidence of a causal effect of model architecture.</p>
+        <p>The earlier 2009-only benchmark found a GRU advantage over its PFA comparator. That remains a separate historical experiment using different model information. The current paper does not claim generalization to modern classrooms, other institutions or teaching effectiveness. Preprint research is not peer review.</p>
       </div>
-      <div class="repo-evidence" aria-label="Knowledge tracing evidence snapshot">
-        <div class="repo-evidence-item"><span class="repo-evidence-value">4,148</span><span class="repo-evidence-label">learners</span></div>
-        <div class="repo-evidence-item"><span class="repo-evidence-value">274,331</span><span class="repo-evidence-label">interactions</span></div>
-        <div class="repo-evidence-item"><span class="repo-evidence-value">623</span><span class="repo-evidence-label">test learners</span></div>
-        <div class="repo-evidence-item"><span class="repo-evidence-value">0.7471</span><span class="repo-evidence-label">GRU mean ROC-AUC</span></div>
+      <div class="repo-evidence" aria-label="Matched-history research evidence snapshot">
+        <div class="repo-evidence-item"><span class="repo-evidence-value">817 / 4,148</span><span class="repo-evidence-label">2009 sequences differ</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">20,592</span><span class="repo-evidence-label">common 2015 targets</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">0.173885</span><span class="repo-evidence-label">order-aware Brier</span></div>
+        <div class="repo-evidence-item"><span class="repo-evidence-value">0.175140</span><span class="repo-evidence-label">GRU Brier</span></div>
       </div>
-      <div class="repo-data-note"><strong>Data and provenance:</strong> ASSISTments 2009 is the scientific source. The executable adapter uses the public Atomi sequence representation at pinned revision <code>c72a664…</code>, verifies its SHA-256 and learner-row integrity, and keeps the raw learner data outside the repository.</div>
+      <div class="repo-data-note"><strong>Evidence:</strong> Official ASSISTments source provenance and frozen computational protocols are documented in the repository. No student-level raw records are hosted here. The arXiv identifier will be linked once verified.</div>
       <div class="repo-links">
-        <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer">Calculations &amp; evidence</a>
         <a href="https://github.com/devissaputra/knowledge_tracing_benchmark" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a>
-        <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/paper/results.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line"></i> Results</a>
-        <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/paper/paper.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Paper</a>
-        <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/DATA.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-database"></i> Data &amp; provenance</a>
-        <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/docs/research_protocol.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-flask"></i> Protocol</a>
+        <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/paper/main_methodological_2026.tex" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pen"></i> Manuscript source</a>
+        <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/results/matched_history_budget_2026.json" target="_blank" rel="noopener noreferrer">Executed results</a>
+        <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/scripts/matched_history_budget_2026.py" target="_blank" rel="noopener noreferrer">Reproduction code</a>
+        <a href="https://github.com/devissaputra/knowledge_tracing_benchmark/blob/main/METHODOLOGICAL_2026_PROTOCOL.md" target="_blank" rel="noopener noreferrer">Frozen protocol</a>
       </div>
     </div>
   </div>
