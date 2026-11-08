@@ -458,6 +458,14 @@
   .books-list li{border-bottom:none;}
   /* Keep publication DOI links immediately after their citation text. */
   #publications .pub-list .inline-doi{display:inline; margin:0 0 0 6px; vertical-align:baseline;}
+/* Research profile: accessible, compact academic summary. */
+#summary .research-profile-lead{max-width:67ch;margin:0 0 13px;font-family:var(--serif);font-size:1.17rem;font-weight:600;line-height:1.48;color:#183B60;}
+#summary .research-profile-body{max-width:71ch;margin:0 0 12px;font-size:1rem;line-height:1.63;color:#263342;}
+#summary .research-profile-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:19px;}
+#summary .research-profile-links a{display:inline-flex;align-items:center;gap:5px;padding:9px 12px;border:1px solid #BFCBD7;border-radius:4px;background:#FAFBFC;color:#1E3A5F;font-size:.91rem;font-weight:600;line-height:1.35;text-decoration:none;}
+#summary .research-profile-links a:hover,#summary .research-profile-links a:focus-visible{background:#EAF0F6;border-color:#1E3A5F;text-decoration:underline;text-underline-offset:3px;}
+#summary .research-profile-link-detail{font-size:.87em;font-weight:400;}
+@media(max-width:560px){#summary .research-profile-lead{font-size:1.11rem;}#summary .research-profile-links a{width:100%;justify-content:center;}}
 </style>
 <link rel="stylesheet" href="assets/site.css?v=20261108-featured-compact-v11">
 <link rel="stylesheet" href="assets/typography.css?v=20261108-academic-readable-v2">
@@ -513,10 +521,16 @@
 
   <main class="content" id="main-content">
 
-    <section id="summary">
-<div class="eyebrow-rule"><h2>Research Profile</h2></div>
-<p>My work combines university program leadership, workplace learning design and research in Artificial Intelligence in Education. I have led curriculum development, taught engineering management and built a Moodle-based onboarding program. My current research examines learner modeling, knowledge tracing and learning analytics, with attention to reproducibility and the limits of observational findings.</p>
-<p><a href="assets/cv/Devis_Wawan_Saputra_Academic_CV.pdf">Academic CV (PDF)</a> &nbsp; | &nbsp; <a href="assets/cv/Devis_Wawan_Saputra_Working_CV.pdf">Working CV (PDF)</a> &nbsp; | &nbsp; <a href="lebenslauf.html" lang="de" hreflang="de">Deutscher Lebenslauf (Online)</a></p>
+    <section id="summary" aria-labelledby="research-profile-heading">
+      <div class="eyebrow-rule"><h2 id="research-profile-heading">Research Profile</h2></div>
+      <p class="research-profile-lead">I work at the intersection of Artificial Intelligence in Education, learning analytics, and the design of learning systems.</p>
+      <p class="research-profile-body">My research interests include learner modeling, knowledge tracing, educational data analysis, and the evaluation of AI-supported learning. My current studies examine data provenance, model comparisons, and observational evidence, with particular attention to reproducibility, methodological limitations, and responsible interpretation.</p>
+      <p class="research-profile-body">This direction builds on my experience in university teaching, engineering management curriculum leadership, and the development of a Moodle-based workplace learning program. I am interested in doctoral research that connects rigorous empirical methods with practical questions about how people learn.</p>
+      <div class="research-profile-links" aria-label="Curriculum vitae">
+        <a href="assets/cv/Devis_Wawan_Saputra_Academic_CV.pdf">Academic CV <span class="research-profile-link-detail">(PDF)</span></a>
+        <a href="assets/cv/Devis_Wawan_Saputra_Working_CV.pdf">Professional CV <span class="research-profile-link-detail">(PDF)</span></a>
+        <a href="lebenslauf.html" lang="de" hreflang="de">Lebenslauf <span class="research-profile-link-detail">(Deutsch)</span></a>
+      </div>
     </section>
 
 
