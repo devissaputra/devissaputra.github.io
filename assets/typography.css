@@ -297,3 +297,9 @@ h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,caption,
   color:#4B5563;
   font-weight:700;
 }
+
+/* Work Experience: reduce job-description bullet text by exactly 1pt only. */
+.home-page #work .timeline .entry > ul,
+.home-page #work .timeline .entry > ul li{
+  font-size:calc(1rem - 1pt);
+}
