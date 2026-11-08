@@ -3,7 +3,7 @@
   Scientific portfolio typography system — 8 November 2026.
   Based on MIT Brand Guide typography principles and MIT Communication Lab
   readability guidance, without using MIT brand fonts, marks or identity.
-  Roboto: text, navigation and headings. Roboto Mono: quantitative labels.
+  Source Sans 3: readable body text. Source Serif 4: scholarly headings. IBM Plex Mono: quantitative labels.
 */
 :root{
   --sans:"Source Sans 3",Arial,Helvetica,sans-serif;
@@ -214,3 +214,15 @@ nav.toc a,.portfolio-nav a,.repo-links a,.project-index a,.item-index a{font-fam
 .repo-kicker,.pub-kind,.featured-research-domain,.featured-research-status{letter-spacing:.035em;}
 .repo-evidence-value,.metrics strong{font-variant-numeric:tabular-nums;}
 @media(max-width:560px){#featured-research .featured-research-card h3{font-size:1.1rem;}body{line-height:1.58;}}
+
+/* Professor-first readability: generous text size and restrained hierarchy. */
+body{font-size:17px;line-height:1.65;}
+#summary > p,.hero .lede,.portfolio-detail .hero .lede{font-size:1.05rem;line-height:1.68;max-width:68ch;}
+.repo-copy,.project-copy,.research-card li,.system-card p,.entry p{font-size:1rem;line-height:1.65;}
+#publications .pub-list li,.pub-title{font-size:1rem;line-height:1.65;}
+.repo-section-intro,.section-intro{font-size:1rem;line-height:1.65;}
+#featured-research .featured-research-summary{font-size:.94rem;line-height:1.58;}
+#featured-research .featured-research-subtitle{font-size:.9rem;line-height:1.52;}
+#featured-research .featured-research-domain,#featured-research .featured-research-status{font-size:.8rem;}
+nav.toc a{font-size:.94rem;line-height:1.55;}
+@media(max-width:560px){body{font-size:16px;line-height:1.62;}#summary > p,.hero .lede,.portfolio-detail .hero .lede{font-size:1rem;} }
