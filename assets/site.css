@@ -1134,3 +1134,10 @@ footer{
     margin-bottom:48px;
   }
 }
+
+/* Five portfolio links in a single desktop row, responsive on smaller screens. */
+.portfolio-nav{grid-template-columns:repeat(5,minmax(0,1fr));}
+.portfolio-nav a:nth-child(5){grid-column:auto;}
+.portfolio-nav a{min-width:0;overflow-wrap:anywhere;}
+@media(max-width:900px){.portfolio-nav{grid-template-columns:repeat(2,minmax(0,1fr));}.portfolio-nav a:nth-child(5){grid-column:1 / -1;}}
+@media(max-width:560px){.portfolio-nav{grid-template-columns:1fr;}.portfolio-nav a:nth-child(5){grid-column:auto;}}
