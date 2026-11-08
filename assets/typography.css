@@ -226,3 +226,43 @@ body{font-size:17px;line-height:1.65;}
 #featured-research .featured-research-domain,#featured-research .featured-research-status{font-size:.8rem;}
 nav.toc a{font-size:.94rem;line-height:1.55;}
 @media(max-width:560px){body{font-size:16px;line-height:1.62;}#summary > p,.hero .lede,.portfolio-detail .hero .lede{font-size:1rem;} }
+
+/* Homepage density: compact research introduction and featured work (Nov 2026). */
+.home-page #summary{margin-bottom:24px;}
+.home-page #summary .eyebrow-rule{margin-bottom:9px;}
+.home-page #summary .research-profile-lead{
+  font-size:.96rem;line-height:1.43;font-weight:600;margin-bottom:7px;
+}
+.home-page #summary .research-profile-body{
+  font-size:.86rem;line-height:1.48;margin-bottom:7px;max-width:79ch;
+}
+.home-page #summary .research-profile-links{margin-top:11px;gap:7px;}
+.home-page #summary .research-profile-links a{
+  font-size:.8rem;line-height:1.3;padding:7px 10px;
+}
+.home-page #portfolio{margin-bottom:24px;}
+.home-page #portfolio .eyebrow-rule{margin-bottom:9px;}
+.home-page #portfolio .portfolio-nav{margin-top:10px;gap:0;}
+.home-page #portfolio .portfolio-nav a{min-height:40px;padding:7px 6px;font-size:.79rem;}
+.home-page #featured-research{margin-bottom:37px;}
+.home-page #featured-research .eyebrow-rule{margin-bottom:7px;}
+.home-page #featured-research .featured-research-intro{margin-bottom:9px;font-size:.8rem;line-height:1.4;}
+.home-page #featured-research .featured-research-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;
+}
+.home-page #featured-research .featured-research-card{padding:10px 10px 9px;}
+.home-page #featured-research .featured-research-top{margin-bottom:6px;gap:4px 6px;}
+.home-page #featured-research .featured-research-domain,
+.home-page #featured-research .featured-research-status{font-size:.65rem;line-height:1.3;}
+.home-page #featured-research .featured-research-card h3{font-size:1rem;line-height:1.23;margin-bottom:3px;}
+.home-page #featured-research .featured-research-subtitle{font-size:.75rem;line-height:1.32;margin-bottom:6px;}
+.home-page #featured-research .featured-research-summary{font-size:.79rem;line-height:1.42;margin-bottom:8px;}
+.home-page #featured-research .featured-research-evidence{padding-top:7px;gap:2px;}
+.home-page #featured-research .featured-research-evidence strong{font-size:1rem;line-height:1.2;}
+.home-page #featured-research .featured-research-evidence span{font-size:.73rem;line-height:1.34;}
+.home-page #featured-research .featured-research-links{font-size:.75rem;margin-top:8px;gap:7px;}
+@media(max-width:750px){
+  .home-page #featured-research .featured-research-grid{grid-template-columns:1fr;}
+  .home-page #summary .research-profile-body{font-size:.89rem;line-height:1.53;}
+  .home-page #featured-research .featured-research-card{padding:12px 13px;}
+}
