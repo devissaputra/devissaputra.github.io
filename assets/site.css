@@ -1314,3 +1314,45 @@ footer{max-width:100%;margin-top:23px;font-size:.76rem;color:var(--ink-soft);}
   .hero h2,.portfolio-detail .hero h2{font-size:1.37rem;}
 }
 
+
+/* Dense research layouts: match the narrow shared reading measure.
+   ID-scoped selectors also supersede earlier page-specific grid rules. */
+#research-bundles .repo-project-grid,
+#repositories .repo-project-grid,
+#system-engineering .repo-project-grid{grid-template-columns:minmax(0,1fr);gap:14px;}
+#research-bundles .repo-visuals,
+#repositories .repo-visuals,
+#system-engineering .repo-visuals{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+#research-bundles .repo-section-intro,
+#repositories .repo-section-intro{max-width:100%;margin:0 0 14px;font-size:.89rem;line-height:1.54;}
+#research-bundles .research-bundle,
+#repositories .repo-project,
+#system-engineering .research-bundle{padding:14px 15px 16px;margin-bottom:20px;border-left-color:var(--accent);}
+#research-bundles .repo-project-heading,
+#repositories .repo-project-heading{margin-bottom:10px;}
+#research-bundles .repo-project-heading h3,
+#repositories .repo-project-heading h3{font-size:1.14rem;line-height:1.27;color:var(--ink);margin-bottom:0;}
+#research-bundles .repo-copy,
+#repositories .repo-copy{font-size:.89rem;line-height:1.55;}
+#research-bundles .repo-copy p,
+#repositories .repo-copy p{margin-bottom:9px;}
+#research-bundles .repo-evidence{margin-top:9px;}
+#research-bundles .repo-evidence-item{min-height:54px;}
+#research-bundles .repo-visual figcaption,
+#repositories .repo-visual figcaption{font-size:.69rem;padding:5px 7px;}
+.repo-links{margin-top:10px;gap:6px;}
+.repo-links a,
+#repositories .repo-links a{
+  min-height:32px;padding:5px 8px;font-size:.76rem;
+  color:var(--accent);border-color:var(--line);background:var(--paper-raised);
+}
+.repo-links a:hover,
+#repositories .repo-links a:hover{color:var(--accent-deep);border-color:var(--accent);background:var(--accent-soft);}
+@media(max-width:560px){
+ #research-bundles .repo-visuals,
+ #repositories .repo-visuals,
+ #system-engineering .repo-visuals{grid-template-columns:1fr;}
+ #research-bundles .research-bundle,
+ #repositories .repo-project,
+ #system-engineering .research-bundle{padding:12px 11px;}
+}
