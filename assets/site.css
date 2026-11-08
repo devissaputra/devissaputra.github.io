@@ -1387,7 +1387,7 @@ footer{max-width:100%;margin-top:23px;font-size:.76rem;color:var(--ink-soft);}
 /* Shared Overview typography across the five portfolio pages. */
 section.hero#overview > p.lede{
   font-family:var(--serif);
-  font-size:.96rem;
+  font-size:calc(.96rem - 1pt);
   font-weight:400;
   line-height:1.54;
   letter-spacing:normal;
@@ -1572,4 +1572,58 @@ section.hero#overview > p.lede{
   .featured-research-grid{grid-template-columns:1fr;gap:10px;}
   .featured-research-card{padding:16px 17px;}
   #featured-research .featured-research-summary{margin-bottom:15px;}
+}
+
+/* Compact Featured Research after Portfolio; the whole card opens its study. */
+#summary > p{
+  font-size:calc(15px - 1pt);
+  line-height:1.5;
+}
+#featured-research .eyebrow-rule{margin-bottom:7px;}
+#featured-research .featured-research-intro{
+  margin-bottom:10px;
+  font-size:.82rem;
+  line-height:1.43;
+}
+#featured-research .featured-research-grid{gap:8px;}
+#featured-research .featured-research-card{
+  position:relative;
+  padding:11px 11px 10px;
+  border-top-width:3px;
+  border-radius:7px;
+}
+#featured-research .featured-research-top{margin-bottom:8px;}
+#featured-research .featured-research-card h3{
+  font-size:1.06rem;
+  margin-bottom:3px;
+}
+#featured-research .featured-research-subtitle{margin-bottom:7px;}
+#featured-research .featured-research-summary{
+  margin-bottom:9px;
+  line-height:1.42;
+}
+#featured-research .featured-research-evidence{padding-top:8px;}
+#featured-research .featured-research-evidence strong{font-size:1.14rem;}
+#featured-research .featured-research-links{margin-top:9px;}
+/* A stretched study-details link keeps each card clickable without nesting anchors. */
+#featured-research .featured-research-links a:first-child::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  cursor:pointer;
+}
+#featured-research .featured-research-links a:last-child{
+  position:relative;
+  z-index:2;
+}
+#featured-research .featured-research-links a:first-child:focus-visible{outline:none;}
+#featured-research .featured-research-card:focus-within{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+}
+@media(max-width:750px){
+  #featured-research .featured-research-grid{gap:8px;}
+  #featured-research .featured-research-card{padding:12px 13px;}
+  #featured-research .featured-research-summary{margin-bottom:9px;}
 }
