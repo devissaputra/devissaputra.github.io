@@ -1356,3 +1356,11 @@ footer{max-width:100%;margin-top:23px;font-size:.76rem;color:var(--ink-soft);}
  #repositories .repo-project,
  #system-engineering .research-bundle{padding:12px 11px;}
 }
+
+/* Homepage-specific selectors previously forced two headings to navy.
+   Keep every section heading on the same muted-red system. */
+#portfolio .eyebrow-rule h2,
+#publications .eyebrow-rule h2,
+#research-bundles .eyebrow-rule h2,
+#repositories .eyebrow-rule h2,
+#system-engineering .eyebrow-rule h2{color:var(--editorial-red);}
