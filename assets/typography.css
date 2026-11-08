@@ -289,3 +289,11 @@ h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,caption,
   color:#4B5563;font-weight:400;
 }
 .home-page #publications .pub-list.books-list em{font-weight:400;}
+
+/* English translations in all published research, books and IP: bold dark grey. */
+.home-page #publications .pub-list .translation,
+.home-page #publications .pub-list .pub-title .translation,
+.home-page #publications .pub-list.books-list .translation {
+  color:#4B5563;
+  font-weight:700;
+}
