@@ -266,3 +266,12 @@ nav.toc a{font-size:.94rem;line-height:1.55;}
   .home-page #summary .research-profile-body{font-size:.89rem;line-height:1.53;}
   .home-page #featured-research .featured-research-card{padding:12px 13px;}
 }
+
+/* Unified website font: Source Sans 3 across body, headings, cards and navigation. */
+:root{--sans:"Source Sans 3",Arial,Helvetica,sans-serif;--serif:"Source Sans 3",Arial,Helvetica,sans-serif;}
+body,button,input,select,textarea,
+h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,caption,
+.sidebar-top h1,.hero h2,.repo-project h3,.research-card h3,.project h3,
+.pub-title,.featured-research-card h3,.research-profile-lead{
+  font-family:"Source Sans 3",Arial,Helvetica,sans-serif;
+}
