@@ -1395,3 +1395,27 @@ section.hero#overview > p.lede{
   margin:8px 0 0;
   color:#344355;
 }
+
+/* Publications: distinguish category headings from article and book titles. */
+#publications h3{
+  font-family:var(--sans);
+  font-size:.89rem;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:.025em;
+  text-transform:none;
+  color:var(--accent-deep);
+  background:#EAF1FC;
+  border-left:3px solid var(--editorial-red);
+  border-radius:0 5px 5px 0;
+  padding:9px 12px;
+  margin:23px 0 11px;
+}
+#publications h3:first-of-type{margin-top:13px;}
+@media(max-width:560px){
+  #publications h3{
+    font-size:.86rem;
+    padding:8px 10px;
+    margin:19px 0 9px;
+  }
+}
