@@ -275,3 +275,17 @@ h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,caption,
 .pub-title,.featured-research-card h3,.research-profile-lead{
   font-family:"Source Sans 3",Arial,Helvetica,sans-serif;
 }
+
+/* Publication audit: only English title text and translations receive grey styling.
+   Indonesian titles inherit normal font weight; author names stay bold. */
+.home-page #publications .pub-list .pub-title{font-weight:400;color:inherit;}
+.home-page #publications .pub-list .pub-title b,
+.home-page #publications .pub-list .pub-title > strong:not(.english-title){font-weight:700;}
+.home-page #publications .pub-list .pub-title .english-title{
+  color:#4B5563;font-weight:600;
+}
+.home-page #publications .pub-list .pub-title .translation,
+.home-page #publications .pub-list.books-list .translation{
+  color:#4B5563;font-weight:400;
+}
+.home-page #publications .pub-list.books-list em{font-weight:400;}
