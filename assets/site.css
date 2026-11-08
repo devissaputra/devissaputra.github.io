@@ -1419,3 +1419,6 @@ section.hero#overview > p.lede{
     margin:19px 8px 9px;
   }
 }
+
+/* English-language research titles: muted dark gray without changing weight. */
+#publications .english-title{color:#4B5563;}
