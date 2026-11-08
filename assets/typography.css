@@ -1,0 +1,195 @@
+/*
+  Scientific portfolio typography system — 8 November 2026.
+  Based on MIT Brand Guide typography principles and MIT Communication Lab
+  readability guidance, without using MIT brand fonts, marks or identity.
+  Roboto: text, navigation and headings. Roboto Mono: quantitative labels.
+*/
+:root{
+  --sans:"Roboto",Arial,Helvetica,sans-serif;
+  --serif:"Roboto",Arial,Helvetica,sans-serif;
+  --scientific-mono:"Roboto Mono",ui-monospace,Consolas,monospace;
+}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+body{
+  font-family:var(--sans);
+  font-size:16px;
+  font-weight:400;
+  line-height:1.56;
+  letter-spacing:0;
+  color:#263342;
+}
+h1,h2,h3,h4,
+.sidebar-top h1,
+.hero h2,
+.repo-project h3,
+.research-card h3,
+.project h3{
+  font-family:var(--sans);
+  font-weight:700;
+  letter-spacing:-.018em;
+  text-wrap:balance;
+}
+h1,h2{line-height:1.24;}
+h3,h4{line-height:1.34;}
+p,li,dd{overflow-wrap:break-word;}
+p{line-height:1.56;}
+strong,b{font-weight:700;}
+a{ text-underline-offset:3px; }
+a:focus-visible,button:focus-visible{outline:2px solid #2456A4;outline-offset:3px;}
+
+/* Heading hierarchy: compact but distinct from research content. */
+.sidebar-top h1{
+  font-size:1.72rem;
+  line-height:1.16;
+  letter-spacing:-.025em;
+}
+.sidebar .tagline,.tagline{
+  font-size:.93rem;
+  line-height:1.45;
+}
+.sidebar .meta-block{font-size:.86rem;line-height:1.5;}
+.sidebar-bottom,.sidebar-bottom a{font-size:.84rem;line-height:1.42;}
+.sidebar-bottom .contact-label{font-size:.88rem;}
+nav.toc a{font-size:.88rem;line-height:1.4;}
+.eyebrow-rule h2,
+.portfolio-detail .eyebrow-rule h2{
+  font-size:1.31rem;
+  font-weight:700;
+  letter-spacing:-.02em;
+  line-height:1.25;
+}
+.hero h2,.portfolio-detail .hero h2{
+  font-size:clamp(1.85rem,3vw,2.3rem);
+  line-height:1.16;
+  letter-spacing:-.025em;
+}
+h3{font-size:1.13rem;}
+.repo-project h3,.portfolio-detail .repo-project-heading h3,
+#research-bundles .repo-project-heading h3,
+#repositories .repo-project-heading h3{
+  font-family:var(--sans);
+  font-size:1.2rem;
+  line-height:1.3;
+}
+.research-card h3,.project h3{font-size:1.14rem;line-height:1.31;}
+
+/* The first impression and technical paragraphs must remain readable. */
+#summary > p{
+  font-family:var(--sans);
+  font-size:1rem;
+  line-height:1.61;
+  max-width:67ch;
+}
+section.hero#overview > p.lede,
+.hero .lede,.portfolio-detail .hero .lede{
+  font-family:var(--sans);
+  font-size:1rem;
+  font-weight:400;
+  line-height:1.60;
+  color:#344355;
+  letter-spacing:0;
+  max-width:67ch;
+}
+#summary > p + p{margin-top:10px;}
+.repo-section-intro,.section-intro,
+#research-bundles .repo-section-intro,
+#repositories .repo-section-intro,
+.repo-section .repo-section-intro{
+  font-size:.97rem;
+  line-height:1.6;
+  max-width:74ch;
+}
+.repo-copy,
+#research-bundles .repo-copy,
+#repositories .repo-copy,
+.project-copy,
+.research-card li,
+.system-card p{
+  font-family:var(--sans);
+  font-size:.97rem;
+  font-weight:400;
+  line-height:1.6;
+}
+.repo-copy p{line-height:inherit;}
+.entry p,.skill-group p,.training-list{font-size:.95rem;line-height:1.57;}
+.entry h3{font-size:1.1rem;line-height:1.34;}
+.entry .years,.entry .org{font-size:.86rem;}
+/* Readable publication citations in the typeface of the rest of the site. */
+.pub-title,.pub-list li,#publications .pub-list li{
+  font-family:var(--sans);
+  font-size:.96rem;
+  line-height:1.6;
+}
+.pub-meta,.pub-note,#publications .pub-note{
+  font-size:.85rem;
+  line-height:1.5;
+}
+#publications h3{
+  font-family:var(--sans);
+  font-size:.96rem;
+  line-height:1.36;
+  font-weight:700;
+  letter-spacing:0;
+}
+#publications .translation,#publications .english-title{color:#4B5563;}
+/* Project metadata, captions and controls: no tiny unreadable microtype. */
+.portfolio-nav a{font-family:var(--sans);font-size:.84rem;font-weight:600;line-height:1.35;}
+.project-index a,.item-index a{font-size:.8rem;line-height:1.36;}
+.repo-kicker,#repositories .repo-kicker{font-size:.78rem;line-height:1.45;font-weight:700;}
+.repo-visual figcaption,
+#research-bundles .repo-visual figcaption,
+#repositories .repo-visual figcaption{
+  font-family:var(--sans);
+  font-size:.79rem;
+  font-weight:400;
+  line-height:1.46;
+}
+.repo-data-note,.research-card .meta,.project .meta,.pub-kind{font-size:.84rem;line-height:1.5;}
+.repo-links a,.resource-box a,.doi-link{font-size:.83rem;line-height:1.4;}
+.repo-evidence-label{font-size:.79rem;line-height:1.4;}
+.repo-evidence-value,.metrics strong{
+  font-family:var(--scientific-mono);
+  font-size:1.02rem;
+  font-weight:600;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:-.024em;
+}
+#featured-research .featured-research-intro{
+  font-size:.9rem;
+  line-height:1.5;
+}
+#featured-research .featured-research-card h3{
+  font-family:var(--sans);
+  font-size:1.07rem;
+  line-height:1.3;
+  font-weight:700;
+}
+#featured-research .featured-research-domain,
+#featured-research .featured-research-status{font-size:.73rem;line-height:1.38;}
+#featured-research .featured-research-subtitle{font-size:.82rem;line-height:1.45;}
+#featured-research .featured-research-summary{font-size:.85rem;line-height:1.48;}
+#featured-research .featured-research-evidence strong{
+  font-family:var(--scientific-mono);
+  font-size:1.08rem;
+  font-weight:600;
+  line-height:1.25;
+  letter-spacing:-.028em;
+}
+#featured-research .featured-research-evidence span{font-size:.78rem;line-height:1.43;}
+#featured-research .featured-research-links{font-size:.81rem;line-height:1.4;}
+footer,.visitor-country-note{font-size:.82rem;line-height:1.52;}
+/* Preserve the established clean responsive layout and interactive card links. */
+@media(max-width:900px){
+  .sidebar-top h1{font-size:1.65rem;}
+}
+@media(max-width:560px){
+  body{font-size:16px;}
+  .eyebrow-rule h2,.portfolio-detail .eyebrow-rule h2{font-size:1.22rem;}
+  .hero h2,.portfolio-detail .hero h2{font-size:1.75rem;}
+  #featured-research .featured-research-summary{font-size:.91rem;}
+  #featured-research .featured-research-card h3{font-size:1.11rem;}
+  nav.toc a,.portfolio-nav a{line-height:1.5;}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+}
