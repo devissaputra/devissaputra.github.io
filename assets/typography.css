@@ -193,3 +193,10 @@ footer,.visitor-country-note{font-size:.82rem;line-height:1.52;}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
 }
+
+/* Secondary labels retain readable scale without crowding the research cards. */
+.project-number,.system-card .year,.method-tags span{font-size:.83rem;line-height:1.44;}
+.skill-group h3{font-size:.88rem;line-height:1.35;font-weight:700;}
+#repositories .repo-links a,#research-bundles .repo-links a{font-size:.84rem;line-height:1.43;}
+#publications > p{font-size:.96rem;line-height:1.56;}
+.kicker,.pub-kind,.output{font-size:.86rem;line-height:1.48;}
