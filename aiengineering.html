@@ -49,6 +49,12 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
 
 
 .portfolio-detail .repo-visual img{aspect-ratio:16/9;height:auto}.repo-copy{line-height:1.65}.repo-links a{min-height:40px}
+
+/* Four original portfolio links on top; fifth centered below. */
+.portfolio-nav{grid-template-columns:repeat(4,minmax(0,1fr));}
+.portfolio-nav a{min-width:0;overflow-wrap:anywhere;}
+.portfolio-nav a:nth-child(5){grid-column:2 / span 2;}
+@media(max-width:650px){.portfolio-nav{grid-template-columns:1fr;}.portfolio-nav a:nth-child(5){grid-column:auto;}}
 </style>
 <link rel="stylesheet" href="assets/site.css?v=20260928-final-qa-1">
 </head>
@@ -81,11 +87,12 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to main portfolio</a>
 
     <div class="portfolio-nav" aria-label="Portfolio areas">
-   <a href="research.html">Research</a>
-   <a href="learningdevelopment.html">Learning &amp; Development</a>
-   <a class="active" href="aiengineering.html" aria-current="page">AI Engineering</a>
-   <a href="aieducation.html">AI in Education</a>
-  </div>
+        <a href="research.html">Research</a>
+        <a href="learningdevelopment.html">Learning &amp; Development</a>
+        <a href="aiengineering.html" class="active" aria-current="page">AI Engineering</a>
+        <a href="aieducation.html">AI in Education</a>
+        <a href="systemsengineering.html">Systems Engineering</a>
+      </div>
  <section class="hero" id="overview">
   <h2>Portfolio in AI Engineering</h2>
   <p class="lede">This portfolio documents applied AI engineering work in classification, calibration, anomaly detection, explainability, forecasting, clustering and neural networks. Empirical studies use external datasets and explicit evaluation protocols, while the repository section presents focused engineering experiments with defined baselines, reproducible data splits and documented limitations.</p>
