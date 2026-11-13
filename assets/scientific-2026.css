@@ -1223,3 +1223,320 @@ a:hover{color:#0C3C59}
   #publications.publication-archive .citation-title{font-size:.91rem!important}
   #publications.publication-archive h3{margin-top:17px!important}
 }
+
+/* Shared compact typography and preserved textboxes | 13 November 2026 */
+:root{
+  --sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --serif:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --scientific-mono:"IBM Plex Mono",Consolas,monospace;
+  --compact-body:.84rem;
+  --compact-title:.94rem;
+  --compact-meta:.76rem;
+  --compact-section:1.02rem;
+  --compact-hero:1.42rem;
+  --compact-ink:#1D3346;
+  --compact-muted:#4B6070;
+  --compact-line:#D9E3E9;
+}
+body,
+body p,body li,body dd,body dt,body button,
+body blockquote,body figcaption,body caption,
+body input,body select,body textarea,
+body .repo-copy,body .project-copy,body .pub-title,
+body .portfolio-category,body .study-label,
+body .item-index,body .portfolio-nav{
+  font-family:var(--sans)!important;
+}
+body{font-size:14px!important;line-height:1.46!important;color:var(--compact-ink)}
+body p,body li,body dd,body dt{font-size:var(--compact-body);line-height:1.48}
+h1,h2,h3,h4,h5,h6,
+.sidebar-top h1,.sidebar h1,.hero h2,.portfolio-detail .hero h2,
+.eyebrow-rule h2,.portfolio-detail .eyebrow-rule h2,
+.repo-project h3,.research-card h3,.system-card h3,.project h3,
+.featured-research-card h3,.repo-project-heading h3,
+#publications.publication-archive .citation-title{
+  font-family:var(--sans)!important;
+  font-weight:600!important;
+  letter-spacing:-.009em;
+}
+.sidebar-top h1,.sidebar h1{font-size:1.32rem!important;line-height:1.2!important}
+.sidebar .tagline{font-size:.78rem!important;line-height:1.35!important}
+.sidebar nav.toc a,.sidebar .toc a{font-size:.79rem!important;line-height:1.32!important}
+.sidebar-bottom,.sidebar-bottom a{font-family:var(--sans)!important;font-size:.75rem!important}
+.eyebrow-rule h2,.portfolio-detail .eyebrow-rule h2,
+#portfolio .eyebrow-rule h2,#publications .eyebrow-rule h2,
+#research-bundles .eyebrow-rule h2,#repositories .eyebrow-rule h2,
+#lnd-research-bundles .eyebrow-rule h2,#system-engineering .eyebrow-rule h2{
+  font-size:var(--compact-section)!important;
+  line-height:1.3!important;
+  text-transform:none!important;
+}
+.hero h2,.portfolio-detail .hero h2{
+  font-size:var(--compact-hero)!important;
+  line-height:1.2!important;
+  margin:0 0 5px!important;
+}
+.hero,.portfolio-detail .hero{
+  padding:13px 15px!important;
+  margin-bottom:13px!important;
+  border:1px solid #CADCE3;
+  border-left:3px solid #4D8998;
+  border-radius:4px;
+  background:#F4F9FA;
+}
+.hero .lede,.portfolio-detail .hero .lede{
+  font-family:var(--sans)!important;
+  font-size:var(--compact-body)!important;
+  line-height:1.46!important;
+  margin:4px 0 0!important;
+  max-width:75ch;
+}
+section,.repo-section,.home-page section,.portfolio-detail section,
+.portfolio-detail .repo-section{
+  margin-bottom:20px;
+}
+.eyebrow-rule,.home-page .eyebrow-rule,.portfolio-detail .eyebrow-rule{
+  margin-bottom:8px;
+  gap:7px;
+}
+.repo-section-intro,.section-intro,
+#research-bundles .repo-section-intro,
+#repositories .repo-section-intro,
+#lnd-research-bundles .repo-section-intro{
+  font-family:var(--sans)!important;
+  font-size:var(--compact-body)!important;
+  line-height:1.46!important;
+  margin:0 0 10px!important;
+}
+.content > .back-link{font-size:.76rem!important;margin-bottom:8px!important}
+/* Portfolio navigation MUST remain a row of clickable, bordered boxes. */
+.content > .portfolio-nav,
+.home-page #portfolio .portfolio-nav{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:0!important;
+  overflow:hidden;
+  margin-top:0!important;
+  margin-bottom:11px!important;
+  border:1px solid #CEDFE6!important;
+  border-radius:4px!important;
+  background:#fff!important;
+}
+.content > .portfolio-nav a.portfolio-category,
+.content > .portfolio-nav a.portfolio-category:visited,
+.home-page #portfolio .portfolio-nav a,
+.home-page #portfolio .portfolio-nav a:visited{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:39px!important;
+  padding:6px 5px!important;
+  border-right:1px solid #CEDFE6!important;
+  border-bottom:0!important;
+  border-top-width:3px!important;
+  border-radius:0!important;
+  font-family:var(--sans)!important;
+  font-size:.74rem!important;
+  font-weight:600!important;
+  line-height:1.25!important;
+  color:#135778!important;
+  text-decoration:none!important;
+  cursor:pointer;
+}
+.content > .portfolio-nav a:last-child,
+.home-page #portfolio .portfolio-nav a:last-child{border-right:0!important}
+.content > .portfolio-nav a.portfolio-category:hover,
+.home-page #portfolio .portfolio-nav a:hover{
+  background:#DDEEF2!important;
+  text-decoration:underline!important;
+}
+.content > .portfolio-nav a.portfolio-category.active,
+.content > .portfolio-nav a.portfolio-category[aria-current="page"]{
+  color:#103F59!important;
+  font-weight:700!important;
+  box-shadow:inset 0 -3px 0 #164F6D;
+}
+/* Study/topic labels stay literal text boxes, not fake links. */
+.item-index,.item-index.repo-index,.item-index.repo-index.grid-cols-3{
+  gap:5px!important;
+  margin:7px 0 11px!important;
+}
+.hero .item-index{margin:8px 0 0!important}
+.item-index .study-label{
+  display:flex!important;
+  justify-content:center;
+  align-items:center;
+  min-height:33px!important;
+  padding:5px 7px!important;
+  border:1px solid #D0DFE5!important;
+  border-left:3px solid #6D9AAB!important;
+  border-radius:3px!important;
+  background:#F8FBFC!important;
+  color:#23445A!important;
+  font-family:var(--sans)!important;
+  font-size:.74rem!important;
+  line-height:1.25!important;
+  text-align:center;
+  box-shadow:none!important;
+}
+.item-index .study-label:nth-child(4n+2){border-left-color:#83A88D!important;background:#F3F8F4!important}
+.item-index .study-label:nth-child(4n+3){border-left-color:#8C85B3!important;background:#F6F4FA!important}
+.item-index .study-label:nth-child(4n+4){border-left-color:#B99D69!important;background:#FBF8F0!important}
+/* Scientific project cards remain recognizable text boxes. */
+.repo-project,.project,.research-card,.system-card,
+#research-bundles .research-bundle,
+#lnd-research-bundles .research-bundle,
+#system-engineering .research-bundle,
+#repositories .repo-project{
+  border:1px solid var(--compact-line)!important;
+  border-left:3px solid #4D8998!important;
+  border-radius:4px!important;
+  background:#FFF!important;
+  padding:11px 13px!important;
+  margin:0 0 11px!important;
+  box-shadow:0 1px 4px rgba(20,56,79,.028)!important;
+}
+.repo-project:nth-of-type(3n+2),.research-card:nth-of-type(3n+2),
+.system-card:nth-of-type(3n+2),.project:nth-of-type(3n+2){border-left-color:#739B88!important}
+.repo-project:nth-of-type(3n+3),.research-card:nth-of-type(3n+3),
+.system-card:nth-of-type(3n+3),.project:nth-of-type(3n+3){border-left-color:#8F89B2!important}
+.repo-project-heading,.portfolio-detail .repo-project-heading{
+  margin:0 0 7px!important;
+  padding:0 0 6px!important;
+  border-bottom:1px solid #E1E8ED;
+}
+.repo-project h3,.repo-project-heading h3,
+#research-bundles .repo-project-heading h3,#repositories .repo-project-heading h3,
+#lnd-research-bundles .repo-project-heading h3,
+.research-card h3,.system-card h3,.project h3{
+  font-size:var(--compact-title)!important;
+  line-height:1.34!important;
+  margin:0 0 4px!important;
+  color:#1D3346!important;
+  text-transform:none!important;
+}
+.repo-kicker,.project-number,.research-card .meta,.system-card .meta,
+.repo-project .repo-kicker{
+  font-family:var(--sans)!important;
+  font-size:var(--compact-meta)!important;
+  line-height:1.32!important;
+  letter-spacing:0!important;
+  margin:0 0 4px!important;
+  color:#506777!important;
+}
+.repo-project-grid,.portfolio-detail .repo-project-grid,.project-grid,
+#research-bundles .repo-project-grid,
+#lnd-research-bundles .repo-project-grid,
+#repositories .repo-project-grid,#system-engineering .repo-project-grid{
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:10px!important;
+}
+.repo-visuals,.portfolio-detail .repo-visuals,
+#research-bundles .repo-visuals,
+#lnd-research-bundles .repo-visuals,
+#repositories .repo-visuals,#system-engineering .repo-visuals{
+  gap:6px!important;
+}
+.repo-visual,.visual-frame{
+  border:1px solid #D4E0E7!important;
+  background:#F8FAFB!important;
+  border-radius:3px!important;
+}
+.repo-visual figcaption,.visual-frame figcaption,
+#research-bundles .repo-visual figcaption,
+#repositories .repo-visual figcaption{
+  background:#F3F7F9;
+  color:#536675;
+  font-family:var(--sans)!important;
+  font-size:.71rem!important;
+  line-height:1.35!important;
+  padding:5px 7px!important;
+}
+.repo-copy,.project-copy,.research-card p,.research-card li,
+.system-card p,.system-card li,.project p,.project li,
+#research-bundles .repo-copy,#repositories .repo-copy,
+#lnd-research-bundles .repo-copy,#system-engineering .repo-copy{
+  font-family:var(--sans)!important;
+  font-size:var(--compact-body)!important;
+  line-height:1.47!important;
+  color:#263E50;
+}
+.repo-copy p,.project-copy p,.research-card p,.system-card p{
+  font-size:inherit!important;
+  line-height:inherit!important;
+  margin:0 0 6px!important;
+}
+.repo-copy p:last-child,.project-copy p:last-child{margin-bottom:0!important}
+.repo-copy ul,.project-copy ul,.research-card ul,.system-card ul{
+  margin:4px 0 6px!important;
+  padding-left:18px!important;
+}
+.repo-copy li,.project-copy li,.research-card li,.system-card li{
+  margin:0 0 3px!important;
+}
+.research-list,.system-grid,.project-grid{gap:8px!important}
+.repo-evidence,.repo-data-note,.metrics,.resource-box,
+.research-frame,.method-tags,.contact-row{
+  margin-top:7px!important;
+}
+/* Evidence and resource areas remain filled text boxes, not unframed prose. */
+.repo-evidence,.repo-data-note,.resource-box,.metrics{
+  border:1px solid #D1E1E5!important;
+  border-left:3px solid #88AEB6!important;
+  border-radius:3px!important;
+  background:#F0F7F8!important;
+  padding:7px 9px!important;
+}
+.repo-evidence-item{min-height:0!important;padding:5px 7px!important}
+.repo-evidence-value,.metrics strong{font-size:.88rem!important}
+.repo-evidence-label{font-size:.71rem!important;line-height:1.31!important}
+.repo-data-note{font-family:var(--sans)!important;font-size:.76rem!important;line-height:1.4!important}
+.repo-links{display:flex;flex-wrap:wrap;gap:5px!important;margin-top:7px!important}
+.repo-links a,.resource-box a,.project-index a,.item-index a{
+  display:inline-flex;
+  align-items:center;
+  min-height:27px!important;
+  padding:4px 7px!important;
+  border:1px solid #C8DDE5!important;
+  background:#F3F9FA!important;
+  color:#135778!important;
+  border-radius:3px!important;
+  font-family:var(--sans)!important;
+  font-size:.74rem!important;
+  line-height:1.31!important;
+  text-decoration:none!important;
+}
+.repo-links a:hover,.resource-box a:hover,.project-index a:hover{
+  background:#E3F0F4!important;
+  text-decoration:underline!important;
+}
+@media(max-width:900px){
+  .content > .portfolio-nav,.home-page #portfolio .portfolio-nav{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .content > .portfolio-nav a.portfolio-category,
+  .home-page #portfolio .portfolio-nav a{
+    border-bottom:1px solid #CEDFE6!important;
+    min-height:36px!important;
+  }
+  .content > .portfolio-nav a:nth-child(even),
+  .home-page #portfolio .portfolio-nav a:nth-child(even){border-right:0!important}
+}
+@media(max-width:540px){
+  .hero,.portfolio-detail .hero{padding:11px 12px!important}
+  .content > .portfolio-nav,.home-page #portfolio .portfolio-nav{
+    grid-template-columns:1fr!important;
+  }
+  .content > .portfolio-nav a.portfolio-category,
+  .home-page #portfolio .portfolio-nav a{
+    border-right:0!important;
+    padding:7px!important;
+  }
+  .repo-project,.project,.research-card,.system-card,
+  #research-bundles .research-bundle,
+  #lnd-research-bundles .research-bundle,
+  #system-engineering .research-bundle{padding:10px 11px!important}
+  .repo-visuals,.portfolio-detail .repo-visuals{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+}
