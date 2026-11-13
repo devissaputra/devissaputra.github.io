@@ -275,3 +275,230 @@ footer{border-top:1px solid var(--line);padding-top:17px;color:var(--ink-soft)}
   .portfolio-nav .portfolio-category{border-right:0;border-bottom:1px solid var(--line);min-height:46px}
   .portfolio-nav .portfolio-category:last-child{border-bottom:0}
 }
+
+/* Academic colour-block refresh | 13 November 2026
+   Uniform on each portfolio page; top boxes remain labels, not links. */
+:root{
+  --paper:#F6F8FA;
+  --paper-raised:#FFFFFF;
+  --ink:#172B40;
+  --ink-soft:#4E6275;
+  --line:#D6E0E7;
+  --accent:#135778;
+  --accent-deep:#103F59;
+  --accent-soft:#E7F2F5;
+  --live:#91553B;
+  --live-soft:#F8EEE6;
+  --research-blue:#315B83;
+  --research-blue-soft:#EDF3F8;
+  --research-blue-line:#D3DFE9;
+  --scientific-sand:#F8F0E2;
+  --scientific-sage:#E9F2EC;
+  --scientific-violet:#F0EDF7;
+  --scientific-teal:#E4F2F1;
+}
+body{background:var(--paper);color:var(--ink)}
+.sidebar{
+  background:#EDF3F5;
+  border-right:1px solid #CFDBE2;
+  box-shadow:inset 4px 0 0 #275D73;
+}
+.sidebar-top h1,.sidebar h1{color:#152F43}
+.sidebar .tagline,.tagline{color:#1A5B6B}
+.content{background:transparent}
+.eyebrow-rule h2,.portfolio-detail .eyebrow-rule h2,
+.hero h2,.repo-project-heading h3{color:#173B55}
+.eyebrow-rule::after{
+  background:linear-gradient(90deg,#6A9BA9 0,#CEDCE2 38%,transparent 100%);
+  height:1px;
+}
+.hero{
+  background:linear-gradient(115deg,#EFF5F7 0%,#FAFBFC 72%);
+  border:1px solid #D5E1E7;
+  border-left:4px solid #2B7082;
+  border-radius:7px;
+  padding:clamp(20px,3vw,30px);
+  box-shadow:0 3px 15px rgba(25,53,72,.025);
+}
+.hero h2{margin-bottom:10px}
+.hero .lede{color:#435A6B}
+.hero .item-index{margin-top:18px}
+.content > .portfolio-nav{
+  border:1px solid #CEDAE3;
+  border-radius:7px;
+  background:#FFFFFF;
+  box-shadow:0 4px 15px rgba(26,56,76,.04);
+}
+.content > .portfolio-nav .portfolio-category{
+  font-family:var(--sans)!important;
+  color:#234356;
+  font-size:.89rem;
+  font-weight:700;
+  letter-spacing:.008em;
+  min-height:66px;
+  border-right:1px solid #D6E0E7;
+  border-bottom:0;
+  border-top:4px solid transparent;
+  box-shadow:none;
+  transition:none;
+}
+.content > .portfolio-nav .portfolio-category:nth-child(1){
+  background:#EDF3F8;border-top-color:#6C8FAC;
+}
+.content > .portfolio-nav .portfolio-category:nth-child(2){
+  background:#E9F2EC;border-top-color:#739E82;
+}
+.content > .portfolio-nav .portfolio-category:nth-child(3){
+  background:#E5F2F1;border-top-color:#5E9A99;
+}
+.content > .portfolio-nav .portfolio-category:nth-child(4){
+  background:#F0EDF7;border-top-color:#9A8BBE;
+}
+.content > .portfolio-nav .portfolio-category:nth-child(5){
+  background:#F8F0E2;border-top-color:#B79B66;
+}
+.content > .portfolio-nav .portfolio-category.active{
+  color:#102E44;
+  font-weight:700;
+  border-top-color:#164F6D;
+  box-shadow:inset 0 -4px 0 #164F6D;
+  filter:saturate(1.12);
+}
+.item-index{
+  gap:9px;
+}
+.item-index .study-label{
+  border:1px solid #CDDBE3;
+  border-left:3px solid #6D9AAB;
+  border-radius:5px;
+  background:#FFFFFF;
+  color:#23445A;
+  padding:11px 13px;
+  min-height:48px;
+  font-family:var(--sans)!important;
+  font-weight:600;
+  font-size:.9rem;
+  box-shadow:0 1px 3px rgba(20,56,79,.025);
+}
+.item-index .study-label:nth-child(4n+2){
+  border-left-color:#83A88D;background:#F3F8F4;
+}
+.item-index .study-label:nth-child(4n+3){
+  border-left-color:#8C85B3;background:#F6F4FA;
+}
+.item-index .study-label:nth-child(4n+4){
+  border-left-color:#B99D69;background:#FBF8F0;
+}
+.repo-project{
+  border:1px solid #D6E0E7;
+  border-left:4px solid #518B9A;
+  background:#FFFFFF;
+  border-radius:7px;
+  padding:clamp(16px,2.5vw,25px);
+  margin:0 0 24px;
+  box-shadow:0 3px 16px rgba(28,57,77,.034);
+}
+.repo-project:nth-of-type(4n+2){border-left-color:#769B86}
+.repo-project:nth-of-type(4n+3){border-left-color:#9085B3}
+.repo-project:nth-of-type(4n+4){border-left-color:#B6A075}
+.repo-project-heading{border-bottom:1px solid #E2E9ED;padding-bottom:14px;margin-bottom:20px}
+.repo-kicker,.repo-project .repo-kicker{color:#315E77}
+.repo-visual{background:#F8FAFB;border-color:#D6E0E7}
+.repo-visual figcaption{background:#F2F6F8;color:#4B6172}
+.repo-evidence{
+  background:#EAF4F5!important;
+  border:1px solid #CFDFE2!important;
+  border-radius:6px;
+  padding:12px;
+}
+.repo-evidence-item{
+  border-color:#D1E0E3;
+}
+.repo-evidence-value,.metrics strong,
+#featured-research .featured-research-evidence strong{
+  font-family:var(--scientific-mono)!important;
+  color:#174C64;
+  font-variant-numeric:tabular-nums;
+}
+.repo-data-note{
+  background:#F5F8FA;
+  border:1px solid #E1E9EF;
+  border-left:3px solid #83A5B1;
+  border-radius:4px;
+  padding:12px 14px;
+}
+.research-card,.system-card,.project,
+.education-grid .entry,.pub-group,.skill-group{
+  border-color:#D6E0E7;
+  border-radius:6px;
+}
+.research-card,.system-card{border-left-color:#618A9C}
+.project{background:#FFFFFF}
+.research-card:nth-of-type(3n+2),.system-card:nth-of-type(3n+2){
+  border-left-color:#7F9E89;
+}
+.research-card:nth-of-type(3n+3),.system-card:nth-of-type(3n+3){
+  border-left-color:#968DB5;
+}
+#featured-research .featured-research-card{
+  background:#FFFFFF;
+  border:1px solid #D5DFE5;
+  border-top:4px solid #397B8D;
+  border-radius:7px;
+  padding:18px;
+  box-shadow:0 4px 15px rgba(25,53,72,.045);
+}
+#featured-research .featured-research-card:nth-child(2){border-top-color:#789E89}
+#featured-research .featured-research-card:nth-child(3){border-top-color:#9788B5}
+#featured-research .featured-research-summary{color:#45596C}
+#publications .pub-list a{border-color:#CFDDE6;background:#F3F8FA;color:#175779}
+#publications .pub-list a:hover{background:#E7F2F5}
+.pub-group,.skill-group,.education-grid .entry{
+  background:#FFFFFF;
+  border-top-color:#6B99A7;
+}
+.pub-group:nth-child(even),.skill-group:nth-child(even){border-top-color:#8C9F8C}
+.resource-box a,.repo-links a,.research-profile-links a{
+  color:#135778;
+}
+.resource-box a:focus-visible,.repo-links a:focus-visible{
+  outline:3px solid #1A668E;
+  outline-offset:3px;
+}
+/* Final typography precedence: serif for scholarly titles only. */
+body,button,input,select,textarea,
+p,li,dd,dt,blockquote,figcaption,caption,
+.repo-copy,.project-copy,.pub-title,
+.portfolio-category,.study-label,.item-index,.portfolio-nav{
+  font-family:"Source Sans 3",Arial,Helvetica,sans-serif!important;
+}
+h1,h2,h3,h4,h5,h6,
+.sidebar-top h1,.hero h2,.repo-project h3,.research-card h3,
+.project h3,.featured-research-card h3,
+.eyebrow-rule h2,.repo-project-heading h3{
+  font-family:"Source Serif 4",Georgia,serif!important;
+}
+.repo-evidence-value,.metrics strong,
+#featured-research .featured-research-evidence strong{
+  font-family:"IBM Plex Mono",Consolas,monospace!important;
+}
+@media(max-width:1000px){
+  .repo-project{padding:19px}
+}
+@media(max-width:800px){
+  .content > .portfolio-nav .portfolio-category{
+    border-bottom:1px solid #D6E0E7;
+    border-top-width:3px;
+  }
+  .content > .portfolio-nav .portfolio-category:nth-child(2n){border-right:0}
+  .hero{padding:21px}
+}
+@media(max-width:480px){
+  .content > .portfolio-nav .portfolio-category{
+    min-height:50px;
+    border-right:0;
+    border-bottom:1px solid #D6E0E7;
+  }
+  .hero{padding:17px}
+  .repo-project{padding:15px}
+}
