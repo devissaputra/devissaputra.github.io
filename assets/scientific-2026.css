@@ -1,0 +1,219 @@
+/* Scientific editorial system | 13 November 2026
+   Source Serif 4: research headings; Source Sans 3: reading text;
+   IBM Plex Mono: evidence and numerical labels.
+   Kept independent of content and research claims. */
+:root{
+  --paper:#F7F9FB;
+  --paper-raised:#FFFFFF;
+  --ink:#17263B;
+  --ink-soft:#53647A;
+  --line:#D5DFE9;
+  --accent:#164E80;
+  --accent-deep:#103B61;
+  --accent-soft:#E8F1F8;
+  --live:#8D4C38;
+  --live-soft:#F6EBE6;
+  --research-blue:#245A92;
+  --research-blue-soft:#EEF4FB;
+  --research-blue-line:#CBDCED;
+  --sans:"Source Sans 3",Arial,Helvetica,sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --scientific-mono:"IBM Plex Mono",Consolas,monospace;
+}
+html{scroll-behavior:smooth;scroll-padding-top:1.5rem}
+body,button,input,select,textarea,
+p,li,dd,dt,blockquote,figcaption,caption,
+.pub-title,.research-profile-lead,.repo-copy,.project-copy{
+  font-family:var(--sans)!important;
+}
+body{background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5,h6,.sidebar-top h1,.hero h2,
+.repo-project h3,.research-card h3,.project h3,
+.featured-research-card h3,.eyebrow-rule h2,
+.portfolio-detail .repo-project-heading h3{
+  font-family:var(--serif)!important;
+  font-weight:600;
+  letter-spacing:-.018em;
+  color:var(--ink);
+  text-wrap:balance;
+}
+h1,h2{line-height:1.19}
+h3,h4{line-height:1.3}
+h1{font-size:clamp(1.8rem,2.7vw,2.35rem)}
+a{color:var(--accent);text-underline-offset:.19em;text-decoration-thickness:1px}
+a:hover{color:var(--accent-deep)}
+a:focus-visible,button:focus-visible{
+  outline:3px solid #1F6CA9!important;outline-offset:3px
+}
+::selection{background:#CCE3F4;color:#122A44}
+.page{max-width:1300px;grid-template-columns:265px minmax(0,1fr)}
+.sidebar{padding:43px 26px 32px 34px;background:#F1F5F9;border-right:1px solid var(--line)}
+.sidebar-top h1{font-size:1.65rem!important;line-height:1.17;letter-spacing:-.03em}
+.sidebar .tagline,.tagline{font-family:var(--sans)!important;font-weight:600;font-size:.9rem;line-height:1.45;color:var(--accent-deep)}
+.sidebar .toc a,.sidebar nav a{transition:color .15s ease,background .15s ease}
+.sidebar-bottom{border-top:1px solid var(--line);padding-top:18px}
+.content{padding:48px clamp(22px,4vw,58px) 84px;min-width:0}
+.content > .back-link{display:inline-block;margin-bottom:15px;font-weight:600}
+section{max-width:970px;margin-bottom:52px;scroll-margin-top:32px}
+section.hero{margin-bottom:34px}
+.eyebrow-rule{gap:14px;margin-bottom:17px}
+.eyebrow-rule h2,.portfolio-detail .eyebrow-rule h2{font-size:clamp(1.35rem,1.75vw,1.55rem)!important}
+.eyebrow-rule::after{background:var(--line)}
+.hero h2,.portfolio-detail .hero h2{font-size:clamp(2rem,3vw,2.55rem)!important}
+.hero .lede,.portfolio-detail .hero .lede,
+#summary > p,.research-profile-body{
+  max-width:74ch;font-size:1rem!important;line-height:1.72!important;color:#34465B
+}
+#summary .research-profile-body{font-size:1rem!important}
+p{line-height:1.65}
+.portfolio-nav{
+  border:1px solid var(--line);
+  border-radius:5px;
+  background:white;
+  box-shadow:0 1px 3px rgba(18,39,61,.03);
+}
+.portfolio-nav a{
+  background:#fff;
+  border-color:var(--line);
+  color:var(--accent-deep);
+  font-family:var(--sans)!important;
+  font-size:.9rem!important;
+  font-weight:600;
+  line-height:1.35;
+  padding:12px 10px;
+  min-height:54px;
+}
+.portfolio-nav a:hover{background:var(--accent-soft);color:var(--accent-deep)}
+.portfolio-nav a.active{background:var(--accent);color:#fff}
+.item-index a,.project-index a{
+  font-family:var(--sans)!important;
+  font-size:.88rem!important;
+  font-weight:600;
+  border-radius:4px;
+}
+.research-navigation,.research-evolution{
+  background:#F0F5FA!important;
+  border:1px solid #D0DEEB!important;
+  border-left:3px solid var(--accent)!important;
+  border-radius:4px;
+  padding:16px 19px!important;
+  color:var(--ink);
+}
+.research-navigation strong{font-family:var(--serif);font-size:1.05rem}
+.research-navigation a{display:inline-block;margin:.3rem .9rem .2rem 0;font-weight:600}
+.research-navigation p{max-width:75ch;color:var(--ink-soft)}
+.repo-project,.project{
+  border-bottom:1px solid var(--line);
+  padding-bottom:38px;
+  margin-bottom:38px;
+}
+.repo-project-heading h3,#research-bundles .repo-project-heading h3,
+#repositories .repo-project-heading h3{
+  font-size:clamp(1.25rem,1.85vw,1.52rem)!important;
+  line-height:1.29;
+}
+.repo-kicker,.repo-project .repo-kicker{
+  font-family:var(--sans)!important;
+  font-size:.78rem!important;
+  font-weight:700;
+  letter-spacing:.075em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.repo-project-grid{gap:clamp(18px,2.6vw,34px);align-items:start}
+.repo-copy,#research-bundles .repo-copy,
+#repositories .repo-copy,.project-copy{
+  font-size:1rem!important;
+  line-height:1.68!important;
+  color:#293B50
+}
+.repo-visual,.research-card,.system-card{
+  background:#fff;
+  border-color:var(--line);
+  border-radius:5px;
+  box-shadow:0 2px 9px rgba(22,45,68,.035);
+}
+.repo-visual figcaption{
+  color:var(--ink-soft);
+  background:#F8FAFC;
+  border-top:1px solid var(--line);
+  font-size:.84rem!important;
+  line-height:1.55;
+}
+.repo-evidence{
+  background:#F2F7FB!important;
+  border-color:#D3E0EC!important;
+  border-radius:5px;
+}
+.repo-evidence-item{min-width:0}
+.repo-evidence-value,.metrics strong,
+#featured-research .featured-research-evidence strong{
+  font-family:var(--scientific-mono)!important;
+  font-variant-numeric:tabular-nums;
+  font-size:1.05rem!important;
+  letter-spacing:-.025em;
+  color:#123D65;
+}
+.repo-evidence-label{font-family:var(--sans)!important;font-size:.83rem!important;color:#455970}
+.repo-data-note,.pub-note,.pub-meta,.research-card .meta{
+  color:var(--ink-soft);
+  font-size:.88rem!important;
+  line-height:1.58;
+}
+.repo-links a,.resource-box a,.doi-link{
+  font-family:var(--sans)!important;
+  font-size:.87rem!important;
+  text-decoration:none;
+  border-radius:4px;
+}
+.repo-links a:hover,.resource-box a:hover,.doi-link:hover{text-decoration:underline}
+#featured-research .featured-research-grid{gap:13px}
+#featured-research .featured-research-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-top:3px solid var(--accent);
+  border-radius:5px;
+  box-shadow:0 2px 9px rgba(22,45,68,.04);
+  padding:16px;
+}
+#featured-research .featured-research-card h3{font-size:1.19rem!important}
+#featured-research .featured-research-summary{
+  font-size:.92rem!important;line-height:1.58!important;color:#34465B
+}
+#featured-research .featured-research-subtitle{font-size:.87rem!important}
+#featured-research .featured-research-domain,
+#featured-research .featured-research-status{font-size:.77rem!important}
+#featured-research .featured-research-intro{font-size:.95rem!important}
+.pub-list li,#publications .pub-list li{font-size:.97rem!important;line-height:1.62}
+.pub-list a{border-color:var(--line)}
+.skill-group,.pub-group,.education-grid .entry{
+  background:#fff;border-color:var(--line);border-top-color:var(--accent);border-radius:5px
+}
+#publications .pub-title .english-title,#publications .translation{color:#43556C}
+#work .timeline .entry > ul,#work .timeline .entry > ul li{font-size:.95rem!important;line-height:1.6}
+footer{border-top:1px solid var(--line);padding-top:17px;color:var(--ink-soft)}
+@media(max-width:1000px){
+ .page{grid-template-columns:245px minmax(0,1fr)}
+ .sidebar{padding:34px 23px}
+ .content{padding:38px 24px 70px}
+ .repo-project-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:900px){
+ .page{grid-template-columns:1fr}
+ .sidebar{border-right:0;border-bottom:1px solid var(--line);padding:27px 24px}
+ .content{padding:30px 24px 60px}
+ .portfolio-nav{margin-top:16px}
+}
+@media(max-width:620px){
+ body{font-size:16px}
+ .sidebar{padding:22px 18px}
+ .content{padding:25px 18px 50px}
+ .portfolio-nav{grid-template-columns:1fr}
+ .portfolio-nav a{min-height:46px}
+ .repo-project,.project{margin-bottom:28px;padding-bottom:28px}
+ .research-navigation{padding:13px 14px!important}
+ .hero h2{font-size:1.9rem!important}
+ .repo-evidence{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .repo-evidence-value{overflow-wrap:anywhere}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
