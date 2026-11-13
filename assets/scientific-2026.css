@@ -217,3 +217,61 @@ footer{border-top:1px solid var(--line);padding-top:17px;color:var(--ink-soft)}
  .repo-evidence-value{overflow-wrap:anywhere}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Non-interactive, consistent portfolio overview boxes. */
+.content > .portfolio-nav{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:0;
+  margin:0 0 34px;
+  overflow:hidden;
+}
+.portfolio-nav .portfolio-category{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:60px;
+  padding:11px 8px;
+  border-right:1px solid var(--line);
+  background:#fff;
+  color:var(--ink-soft);
+  font-family:var(--sans);
+  font-weight:600;
+  font-size:.86rem;
+  line-height:1.35;
+  text-align:center;
+  cursor:default;
+}
+.portfolio-nav .portfolio-category:last-child{border-right:0}
+.portfolio-nav .portfolio-category.active{
+  background:var(--accent-soft);
+  color:var(--accent-deep);
+  box-shadow:inset 0 3px 0 var(--accent);
+}
+.item-index .study-label{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-height:44px;
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:4px;
+  background:#F1F5F9;
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:.86rem;
+  font-weight:600;
+  line-height:1.35;
+  cursor:default;
+}
+@media(max-width:800px){
+  .content > .portfolio-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .portfolio-nav .portfolio-category{border-bottom:1px solid var(--line)}
+  .portfolio-nav .portfolio-category:nth-child(2n){border-right:0}
+}
+@media(max-width:480px){
+  .content > .portfolio-nav{grid-template-columns:1fr}
+  .portfolio-nav .portfolio-category{border-right:0;border-bottom:1px solid var(--line);min-height:46px}
+  .portfolio-nav .portfolio-category:last-child{border-bottom:0}
+}
