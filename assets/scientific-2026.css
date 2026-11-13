@@ -1540,3 +1540,34 @@ section,.repo-section,.home-page section,.portfolio-detail section,
     grid-template-columns:minmax(0,1fr)!important;
   }
 }
+
+/* Final hierarchy alignment: featured research matches the citation title scale. */
+#featured-research .featured-research-card{
+  border:1px solid #D9E3E9!important;
+  border-top:3px solid #4D8998!important;
+  border-radius:4px!important;
+  background:#FFF!important;
+  padding:10px 12px!important;
+}
+#featured-research .featured-research-card h3{
+  font-family:var(--sans)!important;
+  font-size:var(--compact-title)!important;
+  font-weight:600!important;
+  line-height:1.34!important;
+  margin-bottom:4px!important;
+}
+#featured-research .featured-research-summary{
+  font-family:var(--sans)!important;
+  font-size:var(--compact-body)!important;
+  line-height:1.46!important;
+}
+#featured-research .featured-research-domain,
+#featured-research .featured-research-status,
+#featured-research .featured-research-subtitle{
+  font-family:var(--sans)!important;
+  font-size:var(--compact-meta)!important;
+  line-height:1.36!important;
+}
+#featured-research .featured-research-evidence strong{
+  font-size:.88rem!important;
+}
