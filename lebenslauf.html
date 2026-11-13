@@ -8,9 +8,9 @@
 <link rel="canonical" href="https://devissaputra.github.io/lebenslauf.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Source+Serif+4:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
-:root{--ink:#172B40;--muted:#4E6275;--blue:#135778;--red:#173B55;--line:#D6E0E7;--paper:#fff;--bg:#F6F8FA;--serif:"Source Serif 4",Georgia,serif;--sans:"Source Sans 3",Arial,Helvetica,sans-serif}
+:root{--ink:#172B40;--muted:#4E6275;--blue:#135778;--red:#173B55;--line:#D6E0E7;--paper:#fff;--bg:#F6F8FA;--serif:"IBM Plex Sans",Georgia,serif;--sans:"IBM Plex Sans",Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.54 var(--sans)}
@@ -50,8 +50,39 @@ small{color:var(--muted)}
 @page{size:A4;margin:13mm 13mm}
 @media print{html,body{background:white}body{font-size:10pt;line-height:1.36}.toolbar,.print-note{display:none!important}.page{width:auto;max-width:none;margin:0;padding:0;border:0;box-shadow:none}header{margin-bottom:14px;padding-bottom:10px}h2{font-size:10pt;margin:13px 0 5px;padding-bottom:4px}h3{font-size:10.2pt;margin-top:9px}.citations li{margin-bottom:5px;padding-bottom:5px}a{color:var(--blue)}section{break-inside:auto}.timeline-entry,ul li{break-inside:avoid}h2{break-after:avoid}h1{font-size:20pt}}
 /* Consistent scholarly headings with readable professional body text. */
-body,p,li,dd,dt,blockquote,figcaption,button{font-family:"Source Sans 3",Arial,Helvetica,sans-serif;}
+body,p,li,dd,dt,blockquote,figcaption,button{font-family:"IBM Plex Sans",Arial,Helvetica,sans-serif;}
 h1,h2,h3,h4,h5,h6{font-family:var(--serif)}
+ 
+/* Compact IBM Plex Sans academic CV, retaining the printable document textbox. */
+@media screen{
+ body{font:14px/1.46 "IBM Plex Sans",Arial,sans-serif}
+ .toolbar{font-size:.79rem;gap:10px;padding:10px 14px 7px}
+ .toolbar button{font:600 .78rem "IBM Plex Sans",Arial,sans-serif;padding:6px 10px}
+ .page{padding:21px 26px 25px;margin-bottom:24px;border:1px solid #D9E3E9;box-shadow:0 1px 5px rgba(20,56,79,.05)}
+ header{margin-bottom:10px;padding-bottom:7px}
+ h1{font:600 1.42rem/1.2 "IBM Plex Sans",Arial,sans-serif;margin:0 0 5px}
+ h2{font:600 1.02rem/1.3 "IBM Plex Sans",Arial,sans-serif;letter-spacing:0;text-transform:none;margin:12px 0 5px;padding-bottom:4px}
+ h3{font:600 .94rem/1.3 "IBM Plex Sans",Arial,sans-serif;margin:7px 0 2px}
+ h3 span{font:400 .76rem/1.38 "IBM Plex Sans",Arial,sans-serif;margin-top:2px}
+ .subtitle{font-size:.84rem;margin-bottom:4px}
+ .meta{font-size:.76rem;line-height:1.38}
+ p,li,dd,dt{font-size:.84rem;line-height:1.48}
+ p{margin-bottom:5px}
+ .profile-data{row-gap:3px;grid-template-columns:112px minmax(0,1fr)}
+ .timeline{gap:5px}
+ .timeline-entry{grid-template-columns:112px minmax(0,1fr);gap:6px}
+ .timeline-entry time{font-size:.76rem}
+ ul{margin:3px 0 6px;padding-left:17px}
+ li{margin-bottom:2px}
+ .citations li{margin-bottom:5px;padding-bottom:5px}
+ .note{font-size:.76rem}
+ .print-note{margin-top:12px;padding-top:7px}
+}
+@media screen and (max-width:650px){
+  .page{width:100%;padding:16px 17px}
+  .timeline-entry{grid-template-columns:1fr}
+  .profile-data{grid-template-columns:105px minmax(0,1fr)}
+}
 </style>
 </head>
 <body>
