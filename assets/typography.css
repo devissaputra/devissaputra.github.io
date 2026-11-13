@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
 /*
   Scientific portfolio typography system — 8 November 2026.
   Based on MIT Brand Guide typography principles and MIT Communication Lab
@@ -6,8 +6,8 @@
   Source Sans 3: readable body text. Source Serif 4: scholarly headings. IBM Plex Mono: quantitative labels.
 */
 :root{
-  --sans:"Source Sans 3",Arial,Helvetica,sans-serif;
-  --serif:"Source Serif 4",Georgia,serif;
+  --sans:"IBM Plex Sans",Arial,Helvetica,sans-serif;
+  --serif:"IBM Plex Sans",Georgia,serif;
   --scientific-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
 }
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
@@ -268,12 +268,12 @@ nav.toc a{font-size:.94rem;line-height:1.55;}
 }
 
 /* Unified website font: Source Sans 3 across body, headings, cards and navigation. */
-:root{--sans:"Source Sans 3",Arial,Helvetica,sans-serif;--serif:"Source Sans 3",Arial,Helvetica,sans-serif;}
+:root{--sans:"IBM Plex Sans",Arial,Helvetica,sans-serif;--serif:"IBM Plex Sans",Arial,Helvetica,sans-serif;}
 body,button,input,select,textarea,
 h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,caption,
 .sidebar-top h1,.hero h2,.repo-project h3,.research-card h3,.project h3,
 .pub-title,.featured-research-card h3,.research-profile-lead{
-  font-family:"Source Sans 3",Arial,Helvetica,sans-serif;
+  font-family:"IBM Plex Sans",Arial,Helvetica,sans-serif;
 }
 
 /* Publication audit: only English title text and translations receive grey styling.
