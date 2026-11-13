@@ -508,14 +508,14 @@ h1,h2,h3,h4,h5,h6,
    More efficient interior spacing without compressing body text below readability. */
 @media(min-width:901px){
   .page{
-    width:min(100%,1105px);
-    max-width:1105px!important;
-    grid-template-columns:225px minmax(0,1fr)!important;
+    width:min(100%,1050px);
+    max-width:1050px!important;
+    grid-template-columns:214px minmax(0,1fr)!important;
   }
   .sidebar{padding:29px 19px 25px 25px}
   .content{padding:32px 27px 55px!important}
 }
-section,.repo-section{max-width:825px;margin-bottom:36px}
+section,.repo-section{max-width:784px;margin-bottom:36px}
 section.hero{margin-bottom:23px;padding:19px 21px}
 .hero h2{font-size:clamp(1.76rem,2.45vw,2.15rem)!important;margin-bottom:7px}
 .hero .lede,.portfolio-detail .hero .lede{line-height:1.55!important;font-size:.97rem!important}
@@ -582,7 +582,7 @@ section.hero{margin-bottom:23px;padding:19px 21px}
 .entry{margin-bottom:13px}
 .entry p,.entry li{line-height:1.48}
 footer{margin-top:32px;padding-top:12px}
-@media(min-width:901px) and (max-width:1105px){
+@media(min-width:901px) and (max-width:1050px){
   .page{width:100%}
 }
 @media(max-width:1000px){
@@ -602,4 +602,58 @@ footer{margin-top:32px;padding-top:12px}
   .repo-evidence{grid-template-columns:repeat(2,minmax(0,1fr))}
   .repo-project-heading{margin-bottom:9px}
   .item-index .study-label{min-height:38px}
+}
+
+/* 13 November 2026: portfolio links and colour consistency.
+   Five category cards remain navigational links; topic tags remain plain text. */
+:root{--portfolio-link:#135778}
+.home-page a:link:not(.skip-link),
+.home-page a:visited:not(.skip-link){
+  color:var(--portfolio-link)!important;
+}
+.home-page a:hover:not(.skip-link){
+  color:#0C3C59!important;
+}
+.home-page #portfolio .portfolio-nav{
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  margin-top:14px;
+}
+.home-page #portfolio .portfolio-nav a,
+.home-page #portfolio .portfolio-nav a:visited{
+  color:var(--portfolio-link)!important;
+  cursor:pointer;
+  text-decoration:none;
+}
+.home-page #portfolio .portfolio-nav a:hover,
+.home-page #portfolio .portfolio-nav a:focus-visible{
+  color:#0C3C59!important;
+  background:#E6F2F5;
+  text-decoration:underline;
+}
+.content > .portfolio-nav a.portfolio-category,
+.content > .portfolio-nav a.portfolio-category:visited{
+  color:var(--portfolio-link)!important;
+  text-decoration:none;
+  cursor:pointer;
+  font-family:var(--sans)!important;
+}
+.content > .portfolio-nav a.portfolio-category:hover,
+.content > .portfolio-nav a.portfolio-category:focus-visible{
+  color:#0C3C59!important;
+  background:#D9EAF1;
+  text-decoration:underline;
+}
+.content > .portfolio-nav a.portfolio-category.active{
+  color:#103F59!important;
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+  text-underline-offset:5px;
+}
+@media(max-width:900px){
+  .home-page #portfolio .portfolio-nav{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media(max-width:540px){
+  .home-page #portfolio .portfolio-nav{grid-template-columns:1fr}
 }
