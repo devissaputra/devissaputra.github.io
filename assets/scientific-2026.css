@@ -712,3 +712,80 @@ a:hover{color:#0C3C59}
   .page{width:100%;max-width:100%!important;grid-template-columns:1fr!important}
   .content,.home-page .content{padding:23px 19px 39px!important}
 }
+
+/* Compact work experience timeline | 13 November 2026
+   Reduce role-to-role gaps and text block margins without removing any evidence. */
+#work{margin-bottom:24px!important}
+#work .eyebrow-rule{margin-bottom:9px!important}
+#work .timeline{
+  display:block;
+  padding-left:20px!important;
+  margin:0;
+}
+#work .timeline::before{
+  left:4px;
+  top:5px;
+  bottom:4px;
+}
+#work .timeline .entry{
+  position:relative;
+  padding:0 0 11px!important;
+  margin:0!important;
+}
+#work .timeline .entry:last-child{
+  padding-bottom:0!important;
+}
+#work .timeline .entry::before{
+  left:-20px;
+  top:4px;
+  width:7px;
+  height:7px;
+}
+#work .timeline .entry .years{
+  font-size:.74rem!important;
+  line-height:1.28;
+  margin:0 0 1px!important;
+}
+#work .timeline .entry h3{
+  font-size:.96rem!important;
+  line-height:1.23!important;
+  margin:0 0 1px!important;
+}
+#work .timeline .entry .org{
+  font-size:.8rem!important;
+  line-height:1.32;
+  margin:0 0 3px!important;
+}
+#work .timeline .entry > ul{
+  padding-left:18px;
+  margin:3px 0 0!important;
+  font-size:.9rem!important;
+  line-height:1.42!important;
+}
+#work .timeline .entry > ul li{
+  padding:0;
+  margin:0 0 2px!important;
+  line-height:1.42!important;
+  font-size:inherit!important;
+}
+#work .timeline .entry > ul li:last-child{margin-bottom:0!important}
+/* Reduce vertical whitespace between content sections and within block groups. */
+.home-page section,.portfolio-detail section,
+.home-page .repo-section,.portfolio-detail .repo-section{
+  margin-bottom:25px;
+}
+.home-page .eyebrow-rule,.portfolio-detail .eyebrow-rule{margin-bottom:10px}
+.home-page .entry:not(#work .entry){margin-bottom:8px}
+.education-grid .entry{margin-bottom:0!important}
+.pub-group,.skill-group,.education-grid .entry{padding:11px 12px}
+.pub-list li,#publications .pub-list li{padding-top:5px;padding-bottom:5px}
+#featured-research .featured-research-card{padding:10px!important}
+#featured-research .featured-research-card .featured-research-top{margin-bottom:5px}
+#featured-research .featured-research-card .featured-research-summary{margin-bottom:6px}
+.repo-project,.project{margin-bottom:14px}
+.repo-project-heading{margin-bottom:9px;padding-bottom:7px}
+.repo-copy p,.project-copy p{margin-bottom:7px}
+@media(max-width:900px){
+  #work .timeline .entry{padding-bottom:13px!important}
+  .home-page section,.portfolio-detail section{margin-bottom:26px}
+}
