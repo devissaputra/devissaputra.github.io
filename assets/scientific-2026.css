@@ -508,14 +508,14 @@ h1,h2,h3,h4,h5,h6,
    More efficient interior spacing without compressing body text below readability. */
 @media(min-width:901px){
   .page{
-    width:min(100%,1050px);
-    max-width:1050px!important;
-    grid-template-columns:214px minmax(0,1fr)!important;
+    width:min(100%,945px);
+    max-width:945px!important;
+    grid-template-columns:193px minmax(0,1fr)!important;
   }
   .sidebar{padding:29px 19px 25px 25px}
   .content{padding:32px 27px 55px!important}
 }
-section,.repo-section{max-width:784px;margin-bottom:36px}
+section,.repo-section{max-width:706px;margin-bottom:33px}
 section.hero{margin-bottom:23px;padding:19px 21px}
 .hero h2{font-size:clamp(1.76rem,2.45vw,2.15rem)!important;margin-bottom:7px}
 .hero .lede,.portfolio-detail .hero .lede{line-height:1.55!important;font-size:.97rem!important}
@@ -582,7 +582,7 @@ section.hero{margin-bottom:23px;padding:19px 21px}
 .entry{margin-bottom:13px}
 .entry p,.entry li{line-height:1.48}
 footer{margin-top:32px;padding-top:12px}
-@media(min-width:901px) and (max-width:1050px){
+@media(min-width:901px) and (max-width:945px){
   .page{width:100%}
 }
 @media(max-width:1000px){
@@ -656,4 +656,59 @@ footer{margin-top:32px;padding-top:12px}
 }
 @media(max-width:540px){
   .home-page #portfolio .portfolio-nav{grid-template-columns:1fr}
+}
+
+/* Unified academic heading palette and further 10% width reduction
+   1050px -> 945px.  Existing category and project links remain clickable. */
+:root{
+  --editorial-red:#173B55;
+  --scientific-heading:#173B55;
+  --scientific-link:#135778;
+}
+@media(min-width:901px){
+  .page{width:min(100%,945px)!important;max-width:945px!important;grid-template-columns:193px minmax(0,1fr)!important}
+  .sidebar{padding:25px 15px 23px 19px!important}
+  .content,.home-page .content{padding:26px 19px 44px 18px!important}
+}
+section,.repo-section,.home-page section,.portfolio-detail section,
+.portfolio-detail .repo-section{max-width:100%;margin-bottom:30px}
+h1,h2,h3,h4,h5,h6,
+.hero h2,.portfolio-detail .hero h2,
+.eyebrow-rule h2,.portfolio-detail .eyebrow-rule h2,
+#portfolio .eyebrow-rule h2,#publications .eyebrow-rule h2,
+.repo-section .eyebrow-rule h2,.repo-section .bundle-heading h2,
+#research-bundles .eyebrow-rule h2,#lnd-research-bundles .eyebrow-rule h2,
+.repo-project-heading h3,.research-card h3,.system-card h3,
+.research-card .title,.project h3,.sidebar-top h1{
+  color:var(--scientific-heading)!important;
+}
+.repo-kicker,.project-number,.kicker{
+  color:var(--scientific-link)!important;
+}
+a,a:link,a:visited{color:var(--scientific-link)}
+a:hover{color:#0C3C59}
+.home-page #portfolio .portfolio-nav a,
+.home-page #portfolio .portfolio-nav a:link,
+.home-page #portfolio .portfolio-nav a:visited,
+.content > .portfolio-nav a.portfolio-category{
+  color:var(--scientific-link)!important;
+}
+.content > .portfolio-nav a.portfolio-category.active{
+  color:#103F59!important;
+}
+.eyebrow-rule h2,.portfolio-detail .eyebrow-rule h2{
+  font-size:clamp(1.18rem,1.4vw,1.32rem)!important;
+}
+.hero h2,.portfolio-detail .hero h2{
+  font-size:clamp(1.65rem,2.2vw,2rem)!important;
+}
+.repo-project-heading h3,#research-bundles .repo-project-heading h3,
+#repositories .repo-project-heading h3{
+  font-size:clamp(1.09rem,1.45vw,1.3rem)!important;
+}
+.content > .portfolio-nav .portfolio-category{font-size:.78rem!important;padding:7px 6px}
+.item-index .study-label{font-size:.79rem;padding:6px 8px}
+@media(max-width:900px){
+  .page{width:100%;max-width:100%!important;grid-template-columns:1fr!important}
+  .content,.home-page .content{padding:23px 19px 39px!important}
 }
