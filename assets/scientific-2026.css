@@ -1634,3 +1634,10 @@ section,.repo-section,.home-page section,.portfolio-detail section,
 @media(max-width:900px){
   .page .sidebar .sidebar-bottom{margin-bottom:0!important}
 }
+
+/* Site identity: black name and tagline, with pipe separator. */
+.sidebar .sidebar-top h1,
+.sidebar .sidebar-top .tagline,
+.sidebar .tagline{
+  color:#111111!important;
+}
