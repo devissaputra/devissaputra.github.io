@@ -1606,3 +1606,31 @@ section,.repo-section,.home-page section,.portfolio-detail section,
 .home-page #portfolio .portfolio-nav a:hover{
   background:#DDEEF2!important;
 }
+
+/* Publication original-language weight and sidebar links position | 14 Nov 2026
+   Original title text always uses regular type; English translations alone
+   receive bold emphasis inside each title. Authorship styling is retained. */
+#publications.publication-archive .citation-title{
+  font-family:"IBM Plex Sans",Arial,sans-serif!important;
+  font-weight:400!important;
+}
+#publications.publication-archive .citation-title .translation{
+  display:block;
+  font-weight:700!important;
+  color:#405364!important;
+}
+#publications.publication-archive .citation-title strong:not(.translation),
+#publications.publication-archive .citation-title b:not(.translation){
+  font-weight:400!important;
+}
+/* Move the sidebar Links group up slightly while keeping its labels and URLs. */
+@media(min-width:901px){
+  .page .sidebar .sidebar-bottom{
+    margin-bottom:40px!important;
+    padding-top:12px;
+    row-gap:5px;
+  }
+}
+@media(max-width:900px){
+  .page .sidebar .sidebar-bottom{margin-bottom:0!important}
+}
