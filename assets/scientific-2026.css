@@ -1648,3 +1648,14 @@ section,.repo-section,.home-page section,.portfolio-detail section,
 body { background-color: #E5ECE7 !important; }
 .page .content, .page .home-page .content, .home-page .content { border-left: none !important; }
 .sidebar nav.toc a, .sidebar nav.toc a:hover, .sidebar nav.toc a:focus-visible { border-left: 0 !important; }
+
+/* 2026-11-15: actual sidebar stripe source, remove right border and inset left shadow. */
+.page > .sidebar, .page .sidebar {
+  border-right: 0 !important;
+  border-left: 0 !important;
+  box-shadow: none !important;
+}
+.page > .content, .page main.content {
+  border-left: 0 !important;
+  box-shadow: none !important;
+}
