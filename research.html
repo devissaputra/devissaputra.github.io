@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Research portfolio of Devis Saputra covering degree research, applied R&D, information retrieval, learning systems and AI in education.">
+<meta name="description" content="Research experience of Devis Saputra: learning analytics manuscripts, empirical AI studies, research prototypes, AI engineering, systems engineering, published research and degree projects.">
 <link rel="canonical" href="https://devissaputra.github.io/research.html">
 <meta name="author" content="Devis Saputra">
 <meta property="og:type" content="website">
@@ -514,6 +514,35 @@
 <link rel="stylesheet" href="assets/typography.css?v=20261113-unified-plex-v12">
 <style>.research-evolution{padding:1rem 1.25rem;background:var(--paper-raised);border-left:3px solid var(--accent);margin-bottom:2rem}</style>
 <link rel="stylesheet" href="assets/scientific-2026.css?v=20261114-black-identity-pipe-v15">
+
+<style>
+/* Research experience evidence hierarchy, consistent with the portfolio's existing type and width */
+.research-ledger{max-width:760px;margin-bottom:52px}
+.research-ledger .repo-section-intro{margin-bottom:18px}
+.research-status-key{display:flex;flex-wrap:wrap;gap:9px 16px;font-size:.78rem;color:var(--ink-soft);padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.research-status-key span:before{content:"·";padding-right:7px;color:var(--accent)}
+.research-quicklinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:16px}
+.research-quicklinks a{color:#215C98;text-decoration:none;border-bottom:1px solid var(--line);padding:6px 3px;font-size:.87rem}
+.research-quicklinks a:hover{text-decoration:underline}
+.research-ledger-card{border-left:3px solid #79909A;padding-left:19px;margin-bottom:16px}
+.research-card-manuscript{border-left-color:#4F707D}
+.research-card-empirical{border-left-color:#6E8673}
+.research-ledger-card .meta{margin-bottom:9px}
+.research-ledger-card .research-subtitle{font-size:.89rem;color:var(--ink-soft);margin:7px 0 12px}
+.research-evidence{margin:13px 0 14px;display:grid;gap:9px}
+.research-evidence div{display:grid;grid-template-columns:90px minmax(0,1fr);gap:11px}
+.research-evidence dt{font-size:.8rem;font-weight:700;color:#3C515D}
+.research-evidence dd{margin:0;font-size:.89rem;line-height:1.58;color:var(--ink)}
+.research-record-links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px}
+.research-record-links a,.research-index-entry a,.research-citation-note a{color:#215C98;text-decoration:underline;text-underline-offset:3px}
+.research-group-heading{font-family:var(--sans);font-size:.94rem;font-weight:700;margin:20px 0 12px}
+.research-index-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.research-index-entry{border:1px solid var(--line);background:var(--paper-raised);padding:13px 15px;min-width:0}
+.research-index-entry h4{font-family:var(--sans);font-size:.89rem;line-height:1.4;font-weight:600;margin:0 0 6px}
+.research-index-entry p{margin:0;font-size:.83rem;line-height:1.55;color:#3F4950}
+.research-citation-note{font-size:.85rem;color:var(--ink-soft);margin-top:15px}
+@media(max-width:680px){.research-index-list,.research-quicklinks{grid-template-columns:minmax(0,1fr)}.research-evidence div{grid-template-columns:1fr;gap:2px}.research-ledger-card{padding-left:12px}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -527,8 +556,12 @@
       <nav class="toc" aria-label="Research page navigation">
         <a href="index.html">← Main Portfolio</a>
         <a href="#overview">Overview</a>
+        <a href="#research-experience">Research Experience</a>
+        <a href="#working-manuscripts">Working Manuscripts</a>
+        <a href="#empirical-aied">Empirical Studies</a>
+        <a href="#research-prototype-record">Research Prototypes</a>
         <a href="#degree-research">Degree Research</a>
-        <a href="#projects">Research Projects</a>
+        <a href="#projects">Applied Projects</a>
       </nav>
     </div>
 
@@ -574,7 +607,7 @@
 
     <section class="hero" id="overview">
       <h2>Research</h2>
-      <p class="lede">Degree research and applied projects in information systems, engineering and tourism.</p>
+      <p class="lede">A documented research record across learning analytics, artificial intelligence, systems engineering, degree research and applied projects. Each item distinguishes its research question, supporting evidence and level of validation.</p>
     </section>
 
 
@@ -588,6 +621,158 @@
       <span class="study-label">Sport Tourism</span>
 
     </div>
+
+
+    <section id="research-experience" class="research-ledger" aria-labelledby="experience-title">
+      <div class="eyebrow-rule"><h2 id="experience-title">Research Experience</h2></div>
+      <p class="repo-section-intro">Research work is separated by evidence type. Peer-reviewed publications, working manuscripts, evaluated datasets and research prototypes are not interchangeable. Detailed methods and supporting repositories are linked for inspection.</p>
+      <div class="research-status-key" aria-label="Types of research evidence">
+        <span>Manuscript: not peer reviewed</span><span>Empirical study: dataset evaluation</span><span>Prototype: implemented demonstration</span><span>Publication: peer reviewed</span>
+      </div>
+      <div class="research-quicklinks" aria-label="Browse research categories">
+        <a href="#working-manuscripts">Working manuscripts</a>
+        <a href="#empirical-aied">AI in Education studies</a>
+        <a href="#ai-engineering-record">AI Engineering</a>
+        <a href="#systems-engineering-record">Systems Engineering</a>
+        <a href="#research-prototype-record">Research prototypes</a>
+        <a href="#peer-reviewed-record">Published research</a>
+        <a href="#degree-research">Degree research</a>
+        <a href="#projects">Applied projects</a>
+      </div>
+    </section>
+
+    <section id="working-manuscripts" class="research-ledger" aria-labelledby="manuscripts-title">
+      <div class="eyebrow-rule"><h2 id="manuscripts-title">Working Manuscripts</h2></div>
+      <p class="repo-section-intro">Two independently developed studies in learning analytics. Neither is represented here as a peer-reviewed publication or as a public arXiv preprint.</p>
+      <div class="research-list">
+        <article class="research-card research-ledger-card research-card-manuscript" id="kt_manuscript_record">
+          <div class="meta"><span class="type">Working manuscript</span><span>2026</span><span>arXiv endorsement pending</span></div>
+          <h3>When Knowledge-Tracing Rankings Depend on Available History</h3>
+          <p class="research-subtitle">ASSISTments 2009 and 2015: source correction and matched-information evaluation</p>
+          <dl class="research-evidence">
+            <div><dt>Question</dt><dd>Do source corrections and available learner history change the interpretation of knowledge-tracing model rankings?</dd></div>
+            <div><dt>Method</dt><dd>Data-provenance audit; learner-level held-out evaluation with matched preceding interaction histories; Brier-score comparison.</dd></div>
+            <div><dt>Evidence</dt><dd>817 of 4,148 learner sequences differed across source versions. On 20,592 held-out responses, order-aware logistic regression scored 0.17389 versus 0.17514 for a GRU with up to 20 preceding events.</dd></div>
+            <div><dt>Boundary</dt><dd>The comparison does not isolate an effect of model architecture.</dd></div>
+          </dl>
+          <div class="research-record-links"><a href="aieducation.html#knowledge_tracing_benchmark">Methods and results</a><a href="https://github.com/devissaputra/knowledge_tracing_benchmark" target="_blank" rel="noopener noreferrer">Code and manuscript</a></div>
+        </article>
+        <article class="research-card research-ledger-card research-card-manuscript" id="oulad_manuscript_record">
+          <div class="meta"><span class="type">Working manuscript</span><span>2026</span><span>arXiv submission in preparation</span></div>
+          <h3>Early Assessment Submission and Subsequent Course Outcome</h3>
+          <p class="research-subtitle">OULAD: a day-30 landmark observational analysis with weighting diagnostics</p>
+          <dl class="research-evidence">
+            <div><dt>Question</dt><dd>How is assessment submission by day 30 associated with subsequent outcomes among eligible learners?</dd></div>
+            <div><dt>Method</dt><dd>Day-30 landmark; inverse-probability and overlap weighting; bootstrap intervals, balance and effective-sample-size checks.</dd></div>
+            <div><dt>Evidence</dt><dd>1,820 learners analyzed. Inverse-probability-weighted difference in favorable outcomes: 0.386 (95% bootstrap interval 0.324 to 0.445); overlap-weighted difference: 0.326.</dd></div>
+            <div><dt>Boundary</dt><dd>Large weights, remaining imbalance and an effective sample size of about 510 prevent a causal interpretation.</dd></div>
+          </dl>
+          <div class="research-record-links"><a href="aieducation.html#causal_learning_analytics">Methods and results</a><a href="https://github.com/devissaputra/causal_learning_analytics" target="_blank" rel="noopener noreferrer">Code and manuscript</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="empirical-aied" class="research-ledger" aria-labelledby="aied-title">
+      <div class="eyebrow-rule"><h2 id="aied-title">Empirical AI in Education Studies</h2></div>
+      <p class="repo-section-intro">Completed dataset-based evaluations, with explicit splits, baselines and restrictions on interpretation. Distinct from the two working manuscripts above.</p>
+      <div class="research-list">
+        <article class="research-card research-ledger-card research-card-empirical">
+          <div class="meta"><span class="type">Retrieval benchmark</span><span>SciQ</span></div>
+          <h3>Wrong-Answer-Conditioned Retrieval</h3>
+          <dl class="research-evidence"><div><dt>Question</dt><dd>Does using a wrong-answer option improve retrieval of supporting educational evidence?</dd></div><div><dt>Evaluation</dt><dd>884 questions and 2,652 proxy cases with a shuffled-answer control. BM25 MRR: 0.9472 for question only versus 0.9433 with wrong-answer expansion.</dd></div><div><dt>Boundary</dt><dd>No distinct retrieval advantage was established for wrong-answer expansion.</dd></div></dl>
+          <div class="research-record-links"><a href="aieducation.html#misconception_aware_rag">Study details</a></div>
+        </article>
+        <article class="research-card research-ledger-card research-card-empirical">
+          <div class="meta"><span class="type">Predictive-model audit</span><span>UCI 697</span></div>
+          <h3>Enrollment-Time Dropout-Risk Evaluation</h3>
+          <dl class="research-evidence"><div><dt>Question</dt><dd>What can be predicted using only information available at enrollment?</dd></div><div><dt>Evaluation</dt><dd>4,424 records, 20 predictors and 885 held-out records; ROC-AUC 0.8316 and Brier score 0.1447.</dd></div><div><dt>Boundary</dt><dd>This historical-data audit does not establish deployment readiness; insufficient subgroup data were not treated as evaluable.</dd></div></dl>
+          <div class="research-record-links"><a href="aieducation.html#responsible_aied_evaluation">Study details</a></div>
+        </article>
+        <article class="research-card research-ledger-card research-card-empirical">
+          <div class="meta"><span class="type">Educational NLP benchmark</span><span>TalkMoves</span></div>
+          <h3>Classroom Discourse Classification</h3>
+          <dl class="research-evidence"><div><dt>Question</dt><dd>Can teacher discourse moves be classified while preventing duplicate transcripts from leaking across data splits?</dd></div><div><dt>Evaluation</dt><dd>175,129 utterances in 565 transcript groups. On 113 held-out groups, logistic regression macro-F1 was 0.5198 versus a majority baseline of 0.1152.</dd></div><div><dt>Boundary</dt><dd>Classification performance is not evidence of teaching quality.</dd></div></dl>
+          <div class="research-record-links"><a href="aieducation.html#classroom_discourse_intelligence">Study details</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ai-engineering-record" class="research-ledger" aria-labelledby="aieng-title">
+      <div class="eyebrow-rule"><h2 id="aieng-title">AI Engineering Research</h2></div>
+      <p class="repo-section-intro">Four documented empirical studies and five additional recorded benchmarks. Each tests a distinct engineering question rather than implying an unverified general performance advantage.</p>
+      <h3 class="research-group-heading">Empirical studies</h3>
+      <div class="research-index-list">
+<article class="research-index-entry"><h4><a href="aiengineering.html#classification_calibration">Probability Calibration on UCI Bank Marketing</a></h4><p>Probability reliability versus ranking performance on UCI Bank Marketing.</p></article>
+<article class="research-index-entry"><h4><a href="aiengineering.html#anomaly_detection">Label-Blind Threshold-Aware Anomaly Detection on NAB</a></h4><p>Whether an anomaly operating threshold remains useful under chronological evaluation.</p></article>
+<article class="research-index-entry"><h4><a href="aiengineering.html#explainable_ai">Explainable AI: Model Dependence and Feature Governance</a></h4><p>How feature explanations change across models and feature policies.</p></article>
+<article class="research-index-entry"><h4><a href="aiengineering.html#mini_transformers_sequences">Transformer Forecasting on WDC-SILSO</a></h4><p>Compact Transformer forecasting against simpler baselines on monthly sunspot data.</p></article>
+</div>
+      <h3 class="research-group-heading">Recorded benchmarks</h3>
+      <div class="research-index-list">
+<article class="research-index-entry"><h4><a href="aiengineering.html#imbalanced_learning">Learning from Imbalanced Data</a></h4><p>Minority-class detection under severe class imbalance.</p></article>
+<article class="research-index-entry"><h4><a href="aiengineering.html#pca_clustering">PCA and K-Means Clustering</a></h4><p>Separating clustering selection from two-dimensional visualization.</p></article>
+<article class="research-index-entry"><h4><a href="aiengineering.html#mlp_neural_network">MLP vs Linear Baseline on Handwritten Digits</a></h4><p>Neural-network complexity versus a linear baseline on handwritten digits.</p></article>
+<article class="research-index-entry"><h4><a href="aiengineering.html#cnn_image_classification">CNN vs Flattened Linear Baseline on Digits</a></h4><p>Image structure versus flattened-input classification on handwritten digits.</p></article>
+<article class="research-index-entry"><h4><a href="aiengineering.html#lstm_time_series">LSTM Forecasting for Mauna Loa CO₂</a></h4><p>Compact LSTM versus persistence and autoregressive baselines for CO₂ forecasting.</p></article>
+</div>
+    </section>
+
+    <section id="systems-engineering-record" class="research-ledger" aria-labelledby="sys-title">
+      <div class="eyebrow-rule"><h2 id="sys-title">Systems Engineering Research</h2></div>
+      <p class="repo-section-intro">Four empirical studies of engineering trade-offs, requirements evidence, performance monitoring and project-level variation.</p>
+      <div class="research-index-list">
+<article class="research-index-entry"><h4><a href="systemsengineering.html#empirical_engineering_tradespace">Empirical Engineering Design Trade Space: Concrete Slump Experiments</a></h4><p>Competing material, workability and strength objectives across 103 concrete mixtures.</p></article>
+<article class="research-index-entry"><h4><a href="systemsengineering.html#requirements_evidence_triage">Requirements Classification Evidence Triage on a Gold Standard Benchmark</a></h4><p>Requirements classification and prioritization of limited human review effort.</p></article>
+<article class="research-index-entry"><h4><a href="systemsengineering.html#technical_performance_margin_monitor">Forecast Maturity of Technical Performance Margin on NASA Lithium Ion Battery Aging Data</a></h4><p>How performance-margin forecasts mature across NASA battery aging checkpoints.</p></article>
+<article class="research-index-entry"><h4><a href="systemsengineering.html#engineering_change_dynamics">Cross Project Heterogeneity in Quality Oriented Engineering Change</a></h4><p>Variation in maintenance patterns across 54 Apache software projects.</p></article>
+</div>
+    </section>
+
+    <section id="research-prototype-record" class="research-ledger" aria-labelledby="prototypes-title">
+      <div class="eyebrow-rule"><h2 id="prototypes-title">AI in Education Research Prototypes</h2></div>
+      <p class="repo-section-intro">Inspectable software and methodological demonstrations. Many use synthetic cases, so they are not presented as independently validated field studies or deployed educational interventions.</p>
+      <div class="research-index-list">
+<article class="research-index-entry"><h4><a href="aieducation.html#genai_learning_observatory">GenAI Learning Observatory</a></h4><p>Whether verification and revision can be distinguished from answer adoption in recorded AI-use events.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#teacher_ai_assessment">Teacher–AI Assessment Studio</a></h4><p>How disagreement between human and AI scores can be exposed for review using synthetic ordinal ratings.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#privacy_preserving_learning_analytics">Privacy-Preserving Learning Analytics</a></h4><p>How federated model updates can be organized without centralizing synthetic learner records.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#multimodal_self_regulation_lab">Multimodal Self Regulation Lab</a></h4><p>How multiple synthetic self-regulation signals can be aligned without leakage across data splits.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#learning_design_process_mining">Learning Design Process Mining</a></h4><p>How event traces can reveal design-process variants, transitions and rework in synthetic logs.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#hybrid_intelligence_lab">Hybrid Intelligence Lab</a></h4><p>When human and AI decisions may complement each other in controlled synthetic cases.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#explanation_faithfulness_aied">Explanation Faithfulness for AIED</a></h4><p>Whether an explanation tracks the model's decision rather than merely sounding convincing.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#collaborative_reasoning_analytics">Collaborative Reasoning Analytics</a></h4><p>What explicit dialogue patterns reveal, and what they cannot establish about reasoning.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#cognitive_offloading_analytics">Cognitive Offloading Analytics</a></h4><p>How observable verification, revision and copying behaviors can be combined into a declared proxy.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#adaptive_socratic_tutor">Adaptive Socratic Tutor</a></h4><p>How a transparent hint policy can scaffold learning from questions toward graduated assistance.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#instructor_insight_engine">Instructor Insight Engine</a></h4><p>How synthetic learning events can be aggregated into inspectable summaries for instructors.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#learner_state_sequence_model">Learner State Sequence Model</a></h4><p>How labeled learner-state transitions can be described without asserting causal learning dynamics.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#multimodal_learning_analytics">Multimodal Learning Analytics</a></h4><p>How speech, gaze and click streams can be aligned while preserving session boundaries.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#constructive_alignment_auditor">Constructive Alignment Auditor</a></h4><p>How course outcomes, activities and assessments can be checked for possible alignment gaps.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#assessment_design_lab">Assessment Design Lab</a></h4><p>How item difficulty and discrimination diagnostics can be calculated from synthetic responses.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#learning_experiment_platform">Learning Experiment Platform</a></h4><p>How treatment assignment, outcomes and analyses can be kept connected in a small experiment.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#lesson_design_agent">Lesson Design Agent</a></h4><p>How inspectable rules generate a lesson-plan scaffold from explicit design constraints.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#learner_agency_simulator">Learner Agency Simulator</a></h4><p>How learner choice and adaptive-support policies can be represented in synthetic trajectories.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#competency_gap_intelligence">Competency Gap Intelligence</a></h4><p>How competency requirements can be compared with dated evidence and missing-data flags.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#workplace_learning_recommender">Workplace Learning Recommender</a></h4><p>How a confirmed skill gap and workplace constraints shape a transparent resource shortlist.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#training_transfer_analytics">Training Transfer Analytics</a></h4><p>How workplace application signals can be tracked without mistaking proxies for business impact.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#engagement_early_warning">Engagement Early-Warning System</a></h4><p>How predictors can be restricted to evidence observed before an explicit prediction cutoff.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#curriculum_knowledge_graph">Curriculum Knowledge Graph</a></h4><p>How typed curriculum entities and provenance-labeled links can support consistency checking.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#self_regulated_learning_copilot">Self-Regulated Learning Copilot</a></h4><p>When assistance should be offered, delayed or withheld to preserve learner control.</p></article>
+<article class="research-index-entry"><h4><a href="aieducation.html#feedback_quality_evaluator">Feedback Quality Evaluator</a></h4><p>How feedback can be assessed on separate declared dimensions rather than one opaque score.</p></article>
+</div>
+    </section>
+
+    <section id="peer-reviewed-record" class="research-ledger" aria-labelledby="publications-title">
+      <div class="eyebrow-rule"><h2 id="publications-title">Published Research</h2></div>
+      <p class="repo-section-intro">Six peer-reviewed outputs from 2019 to 2023. Their research questions differ from the current learning analytics manuscripts; all retain their original publication identities.</p>
+      <div class="research-index-list">
+        <article class="research-index-entry"><h4><a href="https://doi.org/10.2991/978-2-38476-064-0_46" target="_blank" rel="noopener noreferrer">Influencing Student Choice (2023)</a></h4><p>Higher education: factors influencing student choice at a boarding private university.</p></article>
+        <article class="research-index-entry"><h4><a href="https://doi.org/10.33379/gtech.v6i2.1577" target="_blank" rel="noopener noreferrer">Courier Route Optimization (2022)</a></h4><p>Operations research: Traveling Salesman Problem applied to courier distribution.</p></article>
+        <article class="research-index-entry"><h4><a href="https://doi.org/10.36352/jik.v4i01.23" target="_blank" rel="noopener noreferrer">Class-Based Warehouse Storage (2020)</a></h4><p>Facility planning: non-cement warehouse layout using item classes.</p></article>
+        <article class="research-index-entry"><h4><a href="#andaliman_dryer">Andaliman Dryer Design (2019)</a></h4><p>Engineering product development using Quality Function Deployment; field-built artifact.</p></article>
+        <article class="research-index-entry"><h4><a href="https://doi.org/10.36275/stsp.v19i2.216" target="_blank" rel="noopener noreferrer">Tourist Satisfaction with Bathing Attractions (2019)</a></h4><p>Tourism evaluation: Customer Satisfaction Index and Importance Performance Analysis.</p></article>
+        <article class="research-index-entry"><h4><a href="#geothermal_exergy">Geothermal Exergy and Exergoeconomics (2019)</a></h4><p>Energy systems: quantitative evaluation of Sarulla geothermal power plant performance.</p></article>
+      </div>
+      <p class="research-citation-note">The complete bibliographic citations and author-name variants remain available on the <a href="index.html#publications">Publications</a> page. A conference contribution on Lake Toba sport tourism is listed separately under Applied Research Projects below.</p>
+    </section>
 
     <section id="degree-research">
       <div class="eyebrow-rule"><h2>Degree Research</h2></div>
