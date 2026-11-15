@@ -1641,3 +1641,10 @@ section,.repo-section,.home-page section,.portfolio-detail section,
 .sidebar .tagline{
   color:#111111!important;
 }
+
+
+/* 2026-11-15: remove left divider and deepen sage-green page background */
+:root { --paper: #E5ECE7; }
+body { background-color: #E5ECE7 !important; }
+.page .content, .page .home-page .content, .home-page .content { border-left: none !important; }
+.sidebar nav.toc a, .sidebar nav.toc a:hover, .sidebar nav.toc a:focus-visible { border-left: 0 !important; }
