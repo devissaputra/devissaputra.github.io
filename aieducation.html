@@ -27,6 +27,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <style>
+/* Compact evidence-first doctoral research framing */
+.doctoral-research-framing{max-width:740px;margin:14px 0 18px;padding:12px 16px;border:1px solid #c9d4d0;border-radius:5px;background:transparent}
+.doctoral-research-framing p{margin:0 0 9px;font-size:.88rem;line-height:1.55}
+.doctoral-research-framing p:last-child{margin-bottom:0}
+.doctoral-research-framing strong{font-weight:650}
+
 :root{--paper:#EEF0EF;--paper-raised:#F5F6F5;--ink:#1B2430;--ink-soft:#5B6660;--line:#C9CDC5;--accent:#2F5D62;--accent-soft:#DDE6E4;--accent-deep:#244A4E;--serif:"Source Serif 4",Georgia,serif;--sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.58}a{color:var(--accent)}h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.18}
 .page{display:grid;grid-template-columns:280px 1fr;max-width:1320px;margin:0 auto;min-height:100vh}.sidebar{padding:46px 32px 38px 40px;position:sticky;top:0;align-self:start;height:100vh;display:flex;flex-direction:column;justify-content:space-between}.sidebar-top h1{font-size:1.72rem}.tagline{margin:12px 0 0;color:var(--ink-soft);font-size:.98rem;max-width:22ch}nav.toc{margin-top:26px}nav.toc a{display:block;padding:6px 0 6px 12px;margin-left:-12px;border-left:2px solid transparent;color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:600}nav.toc a:hover{border-left-color:var(--accent);color:var(--accent)}
@@ -90,7 +96,12 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
       </div>
  <section class="hero" id="overview">
   <h2>AI in Education</h2>
-  <p class="lede">Research in knowledge tracing, learning analytics, retrieval evaluation and responsible AI, alongside prototypes for assessment and learner support.</p>
+  <p class="lede">Empirical research on what educational prediction and retrieval models can reliably establish. Selected studies are presented first; experimental prototypes are documented separately and are not represented as validated interventions.</p>
+  <div class="doctoral-research-framing" aria-label="Research focus and evidence standards">
+  <p><strong>Research questions.</strong> How do knowledge-tracing comparisons change when models receive matched learner history? What can early assessment submission indicate about later outcomes, without assuming causality? How should retrieval and risk models be evaluated when labels, timing, and evidence availability matter?</p>
+  <p><strong>Methodological priorities.</strong> Dataset provenance, information available at prediction time, leakage controls, baselines, uncertainty, and reproducible evaluation. The two existing manuscript projects remain works in progress until their publication status can be independently confirmed.</p>
+  <p><strong>Prospective doctoral direction.</strong> Evidence-grounded educational AI agents that inspect structured records, verify claims using executable checks, and decline to make unsupported inferences. This is a proposed direction, not a finished empirical result.</p>
+  </div>
   <div class="item-index empirical-index" aria-label="Empirical studies">
         <span class="study-label">Knowledge Tracing</span>
         <span class="study-label">Early Assessment</span>
@@ -228,7 +239,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </section>
  <section class="repo-section" id="repositories">
   <div class="eyebrow-rule"><h2>Repositories</h2></div>
-  <p class="repo-section-intro">Of the 26 projects, most are synthetic or rule-based prototypes rather than validated educational interventions. Classroom Discourse Intelligence includes an empirical benchmark on the TalkMoves corpus.</p>
+  <p class="repo-section-intro"><strong>Supporting prototypes and code demonstrations.</strong> Most entries in this section are synthetic or rule-based research prototypes, not validated educational interventions. Classroom Discourse Intelligence additionally includes an empirical benchmark on the TalkMoves corpus. These projects demonstrate exploratory implementation, while the studies above provide the primary empirical research evidence.</p>
       <div class="item-index repo-index" aria-label="Repositories">
         <a href="#genai_learning_observatory">GenAI Learning</a>
         <a href="#teacher_ai_assessment">Teacher AI Assessment</a>
