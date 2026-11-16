@@ -27,6 +27,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <style>
+/* Compact evidence-first doctoral research framing */
+.doctoral-research-framing{max-width:740px;margin:14px 0 18px;padding:12px 16px;border:1px solid #c9d4d0;border-radius:5px;background:transparent}
+.doctoral-research-framing p{margin:0 0 9px;font-size:.88rem;line-height:1.55}
+.doctoral-research-framing p:last-child{margin-bottom:0}
+.doctoral-research-framing strong{font-weight:650}
+
 :root{--paper:#EEF0EF;--paper-raised:#F5F6F5;--ink:#1B2430;--ink-soft:#5B6660;--line:#C9CDC5;--accent:#2F5D62;--accent-soft:#DDE6E4;--accent-deep:#244A4E;--serif:"Source Serif 4",Georgia,serif;--sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.58}a{color:var(--accent)}h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.18}
 .page{display:grid;grid-template-columns:280px 1fr;max-width:1320px;margin:0 auto;min-height:100vh}
@@ -93,7 +99,12 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
       </div>
  <section class="hero" id="overview">
   <h2>AI Engineering</h2>
-  <p class="lede">Empirical studies and engineering benchmarks in calibration, anomaly detection, explainability, forecasting and machine learning.</p>
+  <p class="lede">Applied machine-learning studies organized around measurable engineering questions: calibration, anomaly detection, explanation stability, and forecasting. The primary evidence is the documented experimental design, comparisons, and limitations rather than the number of models implemented.</p>
+  <div class="doctoral-research-framing" aria-label="Research focus and evidence standards">
+  <p><strong>Research questions.</strong> When do probability estimates remain useful after calibration? How should anomaly detectors be evaluated when labels and thresholds are constrained? How stable are model explanations, and what do forecasting benchmarks establish against simpler alternatives?</p>
+  <p><strong>Engineering evidence.</strong> The studies below foreground real datasets, baseline comparisons, data splits, evaluation metrics, and interpretation limits. Additional repositories are supporting benchmarks, not peer-reviewed publications or evidence of production deployment.</p>
+  <p><strong>Prospective doctoral direction.</strong> Reliable AI systems with executable evaluation, traceable evidence, and explicit uncertainty. This direction connects my empirical machine-learning practice with my work in educational data; it is not presented as a completed AI-agent system.</p>
+  </div>
   <div class="item-index empirical-index" aria-label="Empirical studies">
         <span class="study-label">Probability Calibration</span>
         <span class="study-label">Anomaly Detection</span>
@@ -227,7 +238,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  </section>
  <section class="repo-section" id="repositories">
   <div class="eyebrow-rule"><h2>Repositories</h2></div>
-  <p class="repo-section-intro">Five further benchmarks on real datasets, including negative results, with documented splits, baselines and limits.</p>
+  <p class="repo-section-intro"><strong>Supporting engineering benchmarks.</strong> Five additional exercises on real datasets, including negative results, with documented splits, baselines, and limitations. These illustrate practical implementation and evaluation; they should not be confused with deployed production systems or peer-reviewed research.</p>
       <div class="item-index repo-index grid-cols-3" aria-label="Repositories">
         <a href="#imbalanced_learning">Imbalanced Learning</a>
         <a href="#pca_clustering">PCA & Clustering</a>
