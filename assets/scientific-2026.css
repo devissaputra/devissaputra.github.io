@@ -1666,3 +1666,12 @@ html, body { background: #F7F9F8 !important; }
 .page > main.content, .page > .content { background: #E5ECE7 !important; }
 .page > .sidebar, .page .sidebar { border-right: 0 !important; box-shadow: none !important; }
 .page > main.content, .page > .content { border-left: 0 !important; box-shadow: none !important; }
+
+/* 2026-11-17: pure-white surroundings and light-blue central reading column. */
+:root { --paper:#FFFFFF; }
+html, body { background:#FFFFFF !important; }
+.page, .page > .sidebar, .page .sidebar { background:#FFFFFF !important; }
+.page > main.content, .page > .content { background:#EAF5FF !important; }
+/* Preserve the clean, divider-free columns. */
+.page > .sidebar, .page .sidebar { border-right:0 !important; box-shadow:none !important; }
+.page > main.content, .page > .content { border-left:0 !important; box-shadow:none !important; }
