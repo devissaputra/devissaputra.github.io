@@ -115,6 +115,8 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    <a href="#classroom_discourse_intelligence">Classroom Discourse</a>
    <a href="#misconception_aware_rag">Wrong-Answer Retrieval</a>
    <a href="#learning_design_process_mining">Process Mining</a>
+   <a href="#privacy_preserving_learning_analytics">Privacy-Preserving Analytics</a>
+   <a href="#teacher_ai_assessment">Teacher–AI Assessment</a>
   </div>
  </section>
  <section class="repo-section" id="research-bundles">
@@ -263,7 +265,7 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
  <section class="repo-section" id="repositories">
   <div class="eyebrow-rule"><h2>Repositories</h2></div>
   <article class="repo-project" id="learning_design_process_mining">
-  <header class="repo-project-heading"><div class="repo-kicker">AI in Education · Research Prototype · 09</div>
+  <header class="repo-project-heading"><div class="repo-kicker">AI in Education · Research Prototype</div>
     <h3>Learning Design Process Mining</h3></header>
 <div class="repo-project-grid">
    <div class="repo-visuals">
@@ -278,6 +280,38 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
    </div>
   </div>
  </article>
+ <article class="repo-project" id="privacy_preserving_learning_analytics">
+  <header class="repo-project-heading"><div class="repo-kicker">AI in Education · Research Prototype</div>
+    <h3>Privacy-Preserving Learning Analytics</h3></header>
+<div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/privacy_preserving_learning_analytics/review_overview.svg?v=20260927-aied-repositories-2" target="_blank" rel="noopener noreferrer" aria-label="Open Privacy-Preserving Learning Analytics full project story at full size"><img loading="lazy" src="assets/aied/privacy_preserving_learning_analytics/review_overview.svg?v=20260927-aied-repositories-2" alt="Full project story for Privacy-Preserving Learning Analytics: purpose, evidence, core logic, outputs and interpretation limits."></a><figcaption>Full project story: purpose, evidence, logic, outputs and interpretation limit</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/privacy_preserving_learning_analytics/review_calculations.svg?v=20260927-aied-repositories-2" target="_blank" rel="noopener noreferrer" aria-label="Open Privacy-Preserving Learning Analytics data processing workflow at full size"><img loading="lazy" src="assets/aied/privacy_preserving_learning_analytics/review_calculations.svg?v=20260927-aied-repositories-2" alt="Data processing and decision workflow for Privacy-Preserving Learning Analytics, including its key rule or calculation."></a><figcaption>Data processing and decision workflow</figcaption></figure>
+   </div>
+   <div>
+    
+    <div class="repo-copy"><p>Privacy-Preserving Learning Analytics demonstrates how model training can be organized while synthetic learner records remain in local client shards. Each client computes a local gradient, the update can be norm-clipped and perturbed with Gaussian noise, and the server aggregates the resulting updates with explicit client weights. A separate synthetic test set shows how those engineering choices affect predictive utility.</p><p>The repository demonstrates data-local computation, not a formal privacy guarantee. It does not yet implement privacy accounting, ε/δ reporting, secure aggregation or adversarial threat-model evaluation. That distinction is important: the project is a transparent federated-learning scaffold for studying utility and information flow before stronger privacy claims are attempted.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/privacy_preserving_learning_analytics" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a><a href="https://github.com/devissaputra/privacy_preserving_learning_analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a><a href="https://github.com/devissaputra/privacy_preserving_learning_analytics/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-calculator"></i> Method &amp; calculations</a></div>
+   </div>
+  </div>
+ </article>
+ <article class="repo-project" id="teacher_ai_assessment">
+  <header class="repo-project-heading"><div class="repo-kicker">AI in Education · Research Prototype</div>
+    <h3>Teacher–AI Assessment Studio</h3></header>
+<div class="repo-project-grid">
+   <div class="repo-visuals">
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/teacher_ai_assessment/review_overview.svg?v=20260927-aied-repositories-2" target="_blank" rel="noopener noreferrer" aria-label="Open Teacher–AI Assessment Studio full project story at full size"><img loading="lazy" src="assets/aied/teacher_ai_assessment/review_overview.svg?v=20260927-aied-repositories-2" alt="Full project story for Teacher–AI Assessment Studio: purpose, evidence, core logic, outputs and interpretation limits."></a><figcaption>Full project story: purpose, evidence, logic, outputs and interpretation limit</figcaption></figure>
+    <figure class="repo-visual"><a class="figure-link" href="assets/aied/teacher_ai_assessment/review_calculations.svg?v=20260927-aied-repositories-2" target="_blank" rel="noopener noreferrer" aria-label="Open Teacher–AI Assessment Studio data processing workflow at full size"><img loading="lazy" src="assets/aied/teacher_ai_assessment/review_calculations.svg?v=20260927-aied-repositories-2" alt="Data processing and decision workflow for Teacher–AI Assessment Studio, including its key rule or calculation."></a><figcaption>Data processing and decision workflow</figcaption></figure>
+   </div>
+   <div>
+    
+    <div class="repo-copy"><p>Teacher–AI Assessment Studio explores how an AI score can remain subordinate to auditable human review. Synthetic paired human and AI ordinal scores are compared using exact agreement, agreement within one point and quadratic kappa. A separate routing rule sends cases to review when disagreement is large or the simulated AI uncertainty crosses a declared threshold, so the reason for every handoff remains visible.</p><p>The prototype evaluates routing behavior rather than proving that either scorer is correct. Agreement is not accuracy against a gold standard, the uncertainty values are synthetic, and the review threshold has not been validated for real student work. Its value is the decision architecture: two judgments stay separate, uncertainty is explicit, and ambiguous cases do not disappear behind a single automated score.</p></div>
+    
+    <div class="repo-links"><a href="https://github.com/devissaputra/teacher_ai_assessment" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Repository</a><a href="https://github.com/devissaputra/teacher_ai_assessment/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> README</a><a href="https://github.com/devissaputra/teacher_ai_assessment/blob/main/CALCULATIONS.md" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-calculator"></i> Method &amp; calculations</a></div>
+   </div>
+  </div>
+ </article>
  </section>
  <details class="project-directory" id="all-projects">
   <summary>View all 30 projects</summary>
@@ -287,8 +321,8 @@ footer{max-width:940px;margin-top:54px;padding-top:18px;border-top:1px solid var
     <li><a href="https://github.com/devissaputra/misconception_aware_rag">Wrong Answer Conditioned Retrieval on SciQ</a></li>
     <li><a href="https://github.com/devissaputra/responsible_aied_evaluation">Enrollment-Time Dropout Risk Model Audit on UCI 697</a></li>
     <li id="genai_learning_observatory"><a href="https://github.com/devissaputra/genai_learning_observatory">GenAI Learning Observatory</a></li>
-    <li id="teacher_ai_assessment"><a href="https://github.com/devissaputra/teacher_ai_assessment">Teacher–AI Assessment Studio</a></li>
-    <li id="privacy_preserving_learning_analytics"><a href="https://github.com/devissaputra/privacy_preserving_learning_analytics">Privacy-Preserving Learning Analytics</a></li>
+    <li><a href="https://github.com/devissaputra/teacher_ai_assessment">Teacher–AI Assessment Studio</a></li>
+    <li><a href="https://github.com/devissaputra/privacy_preserving_learning_analytics">Privacy-Preserving Learning Analytics</a></li>
     <li id="multimodal_self_regulation_lab"><a href="https://github.com/devissaputra/multimodal_self_regulation_lab">Multimodal Self Regulation Lab</a></li>
     <li><a href="https://github.com/devissaputra/learning_design_process_mining">Learning Design Process Mining</a></li>
     <li id="hybrid_intelligence_lab"><a href="https://github.com/devissaputra/hybrid_intelligence_lab">Hybrid Intelligence Lab</a></li>
